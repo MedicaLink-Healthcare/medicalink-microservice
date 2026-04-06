@@ -131,10 +131,19 @@ async function seedDoctors() {
 
   // Cleanup old doctor accounts
   console.log('[SEED] Cleaning up old doctor accounts...');
+  await providerPrisma.officeHours.deleteMany({});
   await accountsPrisma.staffAccount.deleteMany({
     where: { role: 'DOCTOR' },
   });
   await providerPrisma.doctor.deleteMany({});
+
+  // 0. Fetch the existing WorkLocation
+  const workLocation = await providerPrisma.workLocation.findFirst();
+  if (!workLocation) {
+    console.warn(
+      '[WARN] No WorkLocation found in db. Skipping WorkLocation and OfficeHours seeding.',
+    );
+  }
 
   for (const item of data as any[]) {
     const cleanName = cleanNameForEmail(item.name as string);
@@ -227,6 +236,45 @@ async function seedDoctors() {
       where: { id: account.id },
       data: { doctorId: doctor.id },
     });
+
+    // 5. Link Doctor to WorkLocation and create OfficeHours
+    if (workLocation) {
+      await providerPrisma.doctorWorkLocation.upsert({
+        where: {
+          doctorId_locationId: {
+            doctorId: doctor.id,
+            locationId: workLocation.id,
+          },
+        },
+        update: {},
+        create: {
+          doctorId: doctor.id,
+          locationId: workLocation.id,
+        },
+      });
+
+      // Clear any existing office hours for this doctor to avoid duplicates if JSON has duplicate doctors
+      await providerPrisma.officeHours.deleteMany({
+        where: { doctorId: doctor.id },
+      });
+
+      // Mon-Fri (1-5), 08:00 to 17:00
+      for (let day = 1; day <= 5; day++) {
+        const startTime = new Date('1970-01-01T08:00:00.000Z');
+        const endTime = new Date('1970-01-01T17:00:00.000Z');
+
+        await providerPrisma.officeHours.create({
+          data: {
+            doctorId: doctor.id,
+            workLocationId: workLocation.id,
+            dayOfWeek: day,
+            startTime,
+            endTime,
+            isGlobal: false,
+          },
+        });
+      }
+    }
   }
   console.log(`[SUCCESS] Seeded ${data.length} doctors and accounts.`);
 }
