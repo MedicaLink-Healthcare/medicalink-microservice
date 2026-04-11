@@ -53,6 +53,8 @@ esac
 # Get GitHub repository info
 GITHUB_REPOSITORY=${GITHUB_REPOSITORY:-"ldblcks-258/medicalink-microservice"}
 GITHUB_OWNER=$(echo $GITHUB_REPOSITORY | cut -d'/' -f1)
+# Docker requires all image references to be lowercase
+GITHUB_OWNER=$(echo "$GITHUB_OWNER" | tr '[:upper:]' '[:lower:]')
 
 # Construct image name
 IMAGE_NAME="ghcr.io/${GITHUB_OWNER}/medicalink-${SERVICE_NAME}"

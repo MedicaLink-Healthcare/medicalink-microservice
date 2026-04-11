@@ -25,7 +25,6 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  GITHUB_OWNER: ${{ github.repository_owner }}
   IMAGE_TAG: production-${{ github.sha }}
 
 jobs:
@@ -116,12 +115,17 @@ jobs:
         if: steps.check-service.outputs.needs_build == 'true'
         uses: docker/setup-buildx-action@v3
 
+      - name: Set lowercase owner
+        if: steps.check-service.outputs.needs_build == 'true'
+        id: owner
+        run: echo "lowercase=$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+
       - name: Log in to Container Registry
         if: steps.check-service.outputs.needs_build == 'true'
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ env.GITHUB_OWNER }}
+          username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract metadata
@@ -129,7 +133,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/${{ env.GITHUB_OWNER }}/medicalink-${{ matrix.service }}
+          images: ghcr.io/${{ steps.owner.outputs.lowercase }}/medicalink-${{ matrix.service }}
           tags: |
             type=raw,value=${{ env.IMAGE_TAG }}
             type=raw,value=${{ env.IMAGE_TAG }}-{{sha}}
@@ -212,8 +216,9 @@ jobs:
       - name: Deployment Summary
         if: steps.check-service.outputs.needs_deploy == 'true'
         run: |
+          OWNER_LC=$(echo '${{ github.repository_owner }}' | tr '[:upper:]' '[:lower:]')
           echo "## Production Deployment" >> $GITHUB_STEP_SUMMARY
-          echo "Deployed **${{ matrix.service }}** → ghcr.io/${{ env.GITHUB_OWNER }}/medicalink-${{ matrix.service }}:${{ env.IMAGE_TAG }}" >> $GITHUB_STEP_SUMMARY
+          echo "Deployed **${{ matrix.service }}** → ghcr.io/${OWNER_LC}/medicalink-${{ matrix.service }}:${{ env.IMAGE_TAG }}" >> $GITHUB_STEP_SUMMARY
 
   notify-completion:
     needs: [ci, detect-changes, build-services, deploy-services]
