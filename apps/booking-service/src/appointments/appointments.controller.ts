@@ -94,10 +94,19 @@ export class AppointmentsController {
   }
 
   @MessagePattern(BOOKING_PATTERNS.CREATE_APPOINTMENT_FROM_EVENT)
-  createAppointmentFromEvent(
+  async createAppointmentFromEvent(
     @Payload() dto: PublicCreateAppointmentFromEventDto,
   ) {
-    return this.appointmentsService.createAppointmentFromEvent(dto);
+    try {
+      return await this.appointmentsService.createAppointmentFromEvent(dto);
+    } catch (error: any) {
+      if (error?.code === 'P2000') {
+        throw new BadRequestError(
+          'One or more fields exceed the maximum allowed length.',
+        );
+      }
+      throw error;
+    }
   }
 
   @MessagePattern(BOOKING_PATTERNS.LIST_EVENTS_BY_FILTER)

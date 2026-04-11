@@ -340,11 +340,81 @@ async function seedBlogs() {
   console.log(`[SUCCESS] Seeded ${data.length} blogs.`);
 }
 
+async function seedFaqs() {
+  console.log('[SEED] Seeding FAQs...');
+  await contentPrisma.faq.deleteMany({});
+  await contentPrisma.faq.createMany({
+    data: [
+      {
+        question: 'How do I book an appointment?',
+        answer:
+          'You can book an appointment via our website by navigating to the "Book Appointment" page. Select your preferred doctor and available time slot, fill in your details, and confirm the booking instantly.',
+        order: 1,
+      },
+      {
+        question: 'Do you offer telemedicine services?',
+        answer:
+          'Yes! We offer virtual consultations for selective specialties. You will get a Zoom link upon booking confirmation.',
+        order: 2,
+      },
+      {
+        question: 'How to retrieve my patient records?',
+        answer:
+          'You can use the Patient Lookup function in our navigation bar. Just enter your registered phone number to view your history.',
+        order: 3,
+      },
+      {
+        question: 'Can I cancel or reschedule my appointment?',
+        answer:
+          'Absolutely. Please refer to your booking confirmation email for a direct link to reschedule or call our support line at least 24 hours in advance.',
+        order: 4,
+      },
+    ],
+  });
+  console.log('[SUCCESS] Seeded FAQs.');
+}
+
+async function seedTestimonials() {
+  console.log('[SEED] Seeding Testimonials...');
+  await contentPrisma.testimonial.deleteMany({});
+  await contentPrisma.testimonial.createMany({
+    data: [
+      {
+        authorName: 'Sarah Jenkins',
+        authorTitle: 'Patient',
+        content:
+          'The doctors at Medicalink were incredibly professional and empathetic. Using this platform to book was completely frictionless!',
+        rating: 5,
+        isFeatured: true,
+      },
+      {
+        authorName: 'David Lee',
+        authorTitle: 'Patient',
+        content:
+          'AI Doctor Finder really helped me figure out which specialist I needed. Outstanding technical capabilities mixed with excellent healthcare.',
+        rating: 5,
+        isFeatured: true,
+      },
+      {
+        authorName: 'Emily Clark',
+        authorTitle: 'Parent',
+        content:
+          'I booked an appointment for my son in under 2 minutes. The clinic wait time was almost zero because everything was perfectly scheduled.',
+        rating: 5,
+        isFeatured: false,
+      },
+    ],
+  });
+  console.log('[SUCCESS] Seeded Testimonials.');
+}
+
 async function main() {
   try {
     await seedSpecialties();
     await seedDoctors();
     await seedBlogs();
+    await seedFaqs();
+    await seedTestimonials();
   } catch (error) {
     console.error('[ERROR] Seeding failed:', error);
   } finally {

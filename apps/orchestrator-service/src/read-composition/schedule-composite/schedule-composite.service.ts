@@ -67,11 +67,35 @@ export class ScheduleCompositeService {
       throw new BadRequestError('doctorId and serviceDate are required');
     }
 
+    let isToday = false;
+    let currentMinutesUtc = 0;
+
     if (!allowPast) {
-      const now = new Date();
+      const nowUtc = new Date();
       const serviceDateUtc = toUtcDate(serviceDate);
-      if (serviceDateUtc < now) {
+
+      const todayUtc = new Date(
+        Date.UTC(
+          nowUtc.getUTCFullYear(),
+          nowUtc.getUTCMonth(),
+          nowUtc.getUTCDate(),
+        ),
+      );
+      const sDayUtc = new Date(
+        Date.UTC(
+          serviceDateUtc.getUTCFullYear(),
+          serviceDateUtc.getUTCMonth(),
+          serviceDateUtc.getUTCDate(),
+        ),
+      );
+
+      if (sDayUtc.getTime() < todayUtc.getTime()) {
         return [];
+      }
+
+      if (sDayUtc.getTime() === todayUtc.getTime()) {
+        isToday = true;
+        currentMinutesUtc = nowUtc.getUTCHours() * 60 + nowUtc.getUTCMinutes();
       }
     }
 
@@ -172,7 +196,15 @@ export class ScheduleCompositeService {
       ) {
         const s = t;
         const e = t + durationMinutes;
-        if (!overlaps(s, e)) {
+
+        let isPastSlot = false;
+        if (!allowPast && isToday) {
+          if (s <= currentMinutesUtc) {
+            isPastSlot = true;
+          }
+        }
+
+        if (!overlaps(s, e) && !isPastSlot) {
           slots.push({
             timeStart: this.minutesToHhmm(s),
             timeEnd: this.minutesToHhmm(e),

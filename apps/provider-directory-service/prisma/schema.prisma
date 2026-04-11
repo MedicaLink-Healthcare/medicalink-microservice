@@ -9,15 +9,14 @@ datasource db {
 }
 
 model Specialty {
-  id          String   @id @default(cuid())
-  name        String   @unique @db.VarChar(120)
-  slug        String   @unique @db.VarChar(140)
-  description String?  @db.Text
-  iconUrl     String?  @map("icon_url") @db.VarChar(255)
-  isActive    Boolean  @default(true) @map("is_active")
-  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
-
+  id                String                 @id @default(cuid())
+  name              String                 @unique @db.VarChar(120)
+  slug              String                 @unique @db.VarChar(140)
+  description       String?
+  isActive          Boolean                @default(true) @map("is_active")
+  createdAt         DateTime               @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt         DateTime               @updatedAt @map("updated_at") @db.Timestamptz(6)
+  iconUrl           String?                @map("icon_url") @db.VarChar(255)
   doctorSpecialties DoctorSpecialty[]
   infoSections      SpecialtyInfoSection[]
 
@@ -25,75 +24,71 @@ model Specialty {
 }
 
 model SpecialtyInfoSection {
-  id          String   @id @default(cuid())
-  specialtyId String   @map("specialty_id") @db.VarChar(27)
-  name        String   @db.VarChar(120)
-  content     String?  @db.Text
-  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
-
-  specialty Specialty @relation(fields: [specialtyId], references: [id], onDelete: Cascade)
+  id          String    @id @default(cuid())
+  specialtyId String    @map("specialty_id") @db.VarChar(27)
+  name        String    @db.VarChar(120)
+  content     String?
+  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt   DateTime  @updatedAt @map("updated_at") @db.Timestamptz(6)
+  specialty   Specialty @relation(fields: [specialtyId], references: [id], onDelete: Cascade)
 
   @@index([specialtyId], map: "idx_specialty_info_sections_specialty")
   @@map("specialty_info_sections")
 }
 
 model WorkLocation {
-  id           String   @id @default(cuid())
-  name         String   @db.VarChar(160)
-  address      String?  @db.VarChar(255)
-  phone        String?  @db.VarChar(32)
-  timezone     String   @default("Asia/Ho_Chi_Minh") @db.VarChar(64)
-  googleMapUrl String?  @map("google_map_url") @db.VarChar(500)
-  isActive     Boolean  @default(true) @map("is_active")
-  createdAt    DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt    DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
-
+  id                  String               @id @default(cuid())
+  name                String               @db.VarChar(160)
+  address             String?              @db.VarChar(255)
+  phone               String?              @db.VarChar(32)
+  timezone            String               @default("Asia/Ho_Chi_Minh") @db.VarChar(64)
+  isActive            Boolean              @default(true) @map("is_active")
+  createdAt           DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt           DateTime             @updatedAt @map("updated_at") @db.Timestamptz(6)
+  googleMapUrl        String?              @map("google_map_url") @db.VarChar(500)
   doctorWorkLocations DoctorWorkLocation[]
-  schedules           Schedule[]
   officeHours         OfficeHours[]
+  schedules           Schedule[]
 
   @@index([name], map: "idx_work_locations_name")
   @@map("work_locations")
 }
 
 model Doctor {
-  id              String   @id @default(cuid())
-  staffAccountId  String   @unique @map("staff_account_id")
-  fullName        String   @map("full_name") @db.VarChar(100) @default("")  // Denormalized from accounts-service
-  isMale          Boolean? @map("is_male") @default(true)                  // Denormalized from accounts-service
-  isActive        Boolean  @default(true) @map("is_active")
-  degree          String?  @db.VarChar(100)
-  position        String[]
-  introduction    String?  @db.Text
-  introductionText String?  @db.Text @map("introduction_text")
-  memberships     String[]
-  awards          String[]
-  research        String?  @db.Text
-  trainingProcess String[] @map("training_process")
-  experience      String[]
-  avatarUrl       String?  @map("avatar_url") @db.VarChar
-  portrait        String?  @db.VarChar
-  createdAt       DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt       DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
-  appointmentDuration Int      @map("appointment_duration") @default(30)
-
+  id                  String               @id @default(cuid())
+  staffAccountId      String               @unique @map("staff_account_id")
+  isActive            Boolean              @default(true) @map("is_active")
+  degree              String?              @db.VarChar(100)
+  position            String[]
+  introduction        String?
+  memberships         String[]
+  awards              String[]
+  research            String?
+  trainingProcess     String[]             @map("training_process")
+  experience          String[]
+  avatarUrl           String?              @map("avatar_url") @db.VarChar
+  portrait            String?              @db.VarChar
+  createdAt           DateTime             @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt           DateTime             @updatedAt @map("updated_at") @db.Timestamptz(6)
+  appointmentDuration Int                  @default(30) @map("appointment_duration")
+  fullName            String               @default("") @map("full_name") @db.VarChar(100)
+  isMale              Boolean?             @default(true) @map("is_male")
+  introductionText    String?              @map("introduction_text")
   doctorSpecialties   DoctorSpecialty[]
   doctorWorkLocations DoctorWorkLocation[]
-  schedules           Schedule[]
   officeHours         OfficeHours[]
+  schedules           Schedule[]
 
   @@map("doctors")
 }
 
 model DoctorSpecialty {
-  id          String   @id @default(cuid())
-  doctorId    String   @map("doctor_id") @db.VarChar(27)
-  specialtyId String   @map("specialty_id") @db.VarChar(27)
-  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-
-  doctor    Doctor    @relation(fields: [doctorId], references: [id], onDelete: Cascade)
-  specialty Specialty @relation(fields: [specialtyId], references: [id], onDelete: Cascade)
+  id          String    @id @default(cuid())
+  doctorId    String    @map("doctor_id") @db.VarChar(27)
+  specialtyId String    @map("specialty_id") @db.VarChar(27)
+  createdAt   DateTime  @default(now()) @map("created_at") @db.Timestamptz(6)
+  doctor      Doctor    @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  specialty   Specialty @relation(fields: [specialtyId], references: [id], onDelete: Cascade)
 
   @@unique([doctorId, specialtyId])
   @@index([specialtyId], map: "idx_doctor_specialties_specialty")
@@ -101,32 +96,30 @@ model DoctorSpecialty {
 }
 
 model DoctorWorkLocation {
-  id         String   @id @default(cuid())
-  doctorId   String   @map("doctor_id") @db.VarChar(27)
-  locationId String   @map("location_id") @db.VarChar(27)
-  createdAt  DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-
-  doctor   Doctor       @relation(fields: [doctorId], references: [id], onDelete: Cascade)
-  location WorkLocation @relation(fields: [locationId], references: [id], onDelete: Cascade)
+  id         String       @id @default(cuid())
+  doctorId   String       @map("doctor_id") @db.VarChar(27)
+  locationId String       @map("location_id") @db.VarChar(27)
+  createdAt  DateTime     @default(now()) @map("created_at") @db.Timestamptz(6)
+  doctor     Doctor       @relation(fields: [doctorId], references: [id], onDelete: Cascade)
+  location   WorkLocation @relation(fields: [locationId], references: [id], onDelete: Cascade)
 
   @@unique([doctorId, locationId])
   @@map("doctor_work_locations")
 }
 
 model Schedule {
-  id          String   @id @default(cuid())
-  doctorId    String   @map("doctor_id") @db.VarChar(27)
-  locationId  String   @map("location_id") @db.VarChar(27)
-  serviceDate DateTime @map("service_date") @db.Date
-  timeStart   DateTime @map("time_start") @db.Time(6)
-  timeEnd     DateTime @map("time_end") @db.Time(6)
-  capacity    Int      @default(1) @db.SmallInt
-  isActive    Boolean  @default(true) @map("is_active")
-  createdAt   DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt   DateTime @updatedAt @map("updated_at") @db.Timestamptz(6)
-
-  doctor   Doctor       @relation(fields: [doctorId], references: [id], onDelete: Restrict)
-  location WorkLocation @relation(fields: [locationId], references: [id], onDelete: Restrict)
+  id          String       @id @default(cuid())
+  doctorId    String       @map("doctor_id") @db.VarChar(27)
+  locationId  String       @map("location_id") @db.VarChar(27)
+  serviceDate DateTime     @map("service_date") @db.Date
+  timeStart   DateTime     @map("time_start") @db.Time(6)
+  timeEnd     DateTime     @map("time_end") @db.Time(6)
+  capacity    Int          @default(1) @db.SmallInt
+  isActive    Boolean      @default(true) @map("is_active")
+  createdAt   DateTime     @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt   DateTime     @updatedAt @map("updated_at") @db.Timestamptz(6)
+  doctor      Doctor       @relation(fields: [doctorId], references: [id])
+  location    WorkLocation @relation(fields: [locationId], references: [id])
 
   @@unique([doctorId, locationId, serviceDate, timeStart, timeEnd])
   @@index([serviceDate], map: "idx_schedules_service_date")
@@ -136,18 +129,17 @@ model Schedule {
 }
 
 model OfficeHours {
-  id             String      @id @default(cuid())
-  doctorId       String?     @map("doctor_id") @db.VarChar(27)
-  workLocationId String?     @map("work_location_id") @db.VarChar(27)
-  dayOfWeek      Int         @map("day_of_week") @db.SmallInt
-  startTime      DateTime    @map("start_time") @db.Time(6)
-  endTime        DateTime    @map("end_time")   @db.Time(6)
-  isGlobal       Boolean     @map("is_global") @default(false)
-  createdAt      DateTime    @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt      DateTime    @updatedAt @map("updated_at") @db.Timestamptz(6)
-
-  doctor         Doctor?     @relation(fields: [doctorId], references: [id], onDelete: SetNull)
-  workLocation   WorkLocation? @relation(fields: [workLocationId], references: [id], onDelete: SetNull)
+  id             String        @id @default(cuid())
+  doctorId       String?       @map("doctor_id") @db.VarChar(27)
+  workLocationId String?       @map("work_location_id") @db.VarChar(27)
+  dayOfWeek      Int           @map("day_of_week") @db.SmallInt
+  startTime      DateTime      @map("start_time") @db.Time(6)
+  endTime        DateTime      @map("end_time") @db.Time(6)
+  isGlobal       Boolean       @default(false) @map("is_global")
+  createdAt      DateTime      @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime      @updatedAt @map("updated_at") @db.Timestamptz(6)
+  doctor         Doctor?       @relation(fields: [doctorId], references: [id])
+  workLocation   WorkLocation? @relation(fields: [workLocationId], references: [id])
 
   @@index([workLocationId, dayOfWeek], map: "idx_office_hours_location_day")
   @@index([doctorId, workLocationId, dayOfWeek], map: "idx_office_hours_doctor_location_day")

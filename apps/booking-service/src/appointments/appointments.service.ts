@@ -185,12 +185,17 @@ export class AppointmentsService {
     const now = new Date();
     const appointment = await this.prisma.$transaction(async (tx) => {
       const ev = await tx.event.findUnique({ where: { id: dto.eventId } });
-      if (!ev) throw new NotFoundError('Event not found');
+      if (!ev)
+        throw new BadRequestError(
+          'The reserved time slot has expired or is no longer available. Please select a new slot.',
+        );
       if (!ev.serviceDate || !ev.timeStart || !ev.timeEnd)
         throw new BadRequestError('Event missing time info');
       if (!ev.isTempHold) throw new BadRequestError('Event is not a temp hold');
       if (ev.expiresAt && ev.expiresAt <= now)
-        throw new BadRequestError('Temp event has expired');
+        throw new BadRequestError(
+          'The reserved time slot has expired or is no longer available. Please select a new slot.',
+        );
 
       const doctorAccountId =
         ev.doctorAccountId ??
@@ -220,7 +225,7 @@ export class AppointmentsService {
           doctorId: ev.doctorId as string,
           locationId: ev.locationId as string,
           specialtyId: dto.specialtyId,
-          reason: dto.reason ?? undefined,
+          reason: dto.reason ? dto.reason.trim().substring(0, 255) : undefined,
           status: AppointmentStatus.BOOKED,
         },
       });
