@@ -3,4 +3,9 @@ export interface SpecialtyDto {
   name: string;
   slug: string;
   description?: string;
+  aliases?: string[];
+  commonSymptoms?: string[];
+  commonConditions?: string[];
+  keywords?: string[];
+  expertise?: string[];
 }

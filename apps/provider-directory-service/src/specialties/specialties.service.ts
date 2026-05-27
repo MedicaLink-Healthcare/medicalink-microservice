@@ -217,6 +217,11 @@ export class SpecialtiesService {
       iconUrl: specialty.iconUrl,
       isActive: specialty.isActive,
       infoSectionsCount: specialty.infoSectionsCount || 0,
+      aliases: specialty.aliases || [],
+      commonSymptoms: specialty.commonSymptoms || [],
+      commonConditions: specialty.commonConditions || [],
+      keywords: specialty.keywords || [],
+      expertise: specialty.expertise || [],
     };
 
     // Only include timestamps if they exist (when includeMetadata is true)

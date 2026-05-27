@@ -126,10 +126,7 @@ export class DoctorRepository {
           : {
               isMale: true,
               introduction: true,
-              memberships: true,
-              awards: true,
-              research: true,
-              trainingProcess: true,
+              education: true,
               experience: true,
             }),
         doctorSpecialties: {

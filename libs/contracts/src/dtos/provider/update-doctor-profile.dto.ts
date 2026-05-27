@@ -25,24 +25,10 @@ export class UpdateDoctorProfileDto {
   @IsOptional()
   introduction?: string;
 
-  @IsArray({ message: 'Memberships must be an array' })
-  @IsString({ each: true, message: 'Each membership must be a string' })
+  @IsArray({ message: 'Education must be an array' })
+  @IsString({ each: true, message: 'Each education step must be a string' })
   @IsOptional()
-  memberships?: string[];
-
-  @IsArray({ message: 'Awards must be an array' })
-  @IsString({ each: true, message: 'Each award must be a string' })
-  @IsOptional()
-  awards?: string[];
-
-  @IsString({ message: 'Research must be a string' })
-  @IsOptional()
-  research?: string;
-
-  @IsArray({ message: 'Training process must be an array' })
-  @IsString({ each: true, message: 'Each training step must be a string' })
-  @IsOptional()
-  trainingProcess?: string[];
+  education?: string[];
 
   @IsArray({ message: 'Experience must be an array' })
   @IsString({ each: true, message: 'Each experience must be a string' })
@@ -71,4 +57,41 @@ export class UpdateDoctorProfileDto {
   @IsNumber({}, { message: 'appointmentDuration must be a number' })
   @Min(1, { message: 'appointmentDuration must be at least 1 minute' })
   appointmentDuration?: number;
+
+  @IsNumber({}, { message: 'Ratings must be a number' })
+  @IsOptional()
+  ratings?: number;
+
+  @IsNumber({}, { message: 'Service cost must be a number' })
+  @IsOptional()
+  serviceCost?: number;
+
+  @IsNumber({}, { message: 'Experience years must be a number' })
+  @IsOptional()
+  experienceYears?: number;
+
+  @IsArray({ message: 'Conditions must be an array' })
+  @IsString({ each: true, message: 'Each condition must be a string' })
+  @IsOptional()
+  conditions?: string[];
+
+  @IsArray({ message: 'Symptoms must be an array' })
+  @IsString({ each: true, message: 'Each symptom must be a string' })
+  @IsOptional()
+  symptoms?: string[];
+
+  @IsArray({ message: 'Expertise must be an array' })
+  @IsString({ each: true, message: 'Each expertise must be a string' })
+  @IsOptional()
+  expertise?: string[];
+
+  @IsArray({ message: 'Procedures must be an array' })
+  @IsString({ each: true, message: 'Each procedure must be a string' })
+  @IsOptional()
+  procedures?: string[];
+
+  @IsArray({ message: 'Patient groups must be an array' })
+  @IsString({ each: true, message: 'Each patient group must be a string' })
+  @IsOptional()
+  patientGroups?: string[];
 }

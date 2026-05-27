@@ -12,6 +12,14 @@ export interface DoctorDto {
   ratingAvg: number;
   reviewCount: number;
   appointmentDuration?: number;
+  serviceCost?: number;
+  conditions?: string[];
+  symptoms?: string[];
+  expertise?: string[];
+  procedures?: string[];
+  patientGroups?: string[];
+  education?: string[];
+  experience?: string[];
   specialties?: SpecialtyDto[];
   workLocations?: WorkLocationDto[];
 }

@@ -24,6 +24,7 @@ const contentPrisma = new ContentClient({
 });
 
 const CRAWL_DATA_DIR = path.join(__dirname, '../../crawl-data/data');
+const NEW_DATA_DIR = path.join(__dirname, '../data');
 
 function slugify(text: string) {
   return text
@@ -92,26 +93,44 @@ const SPECIALTY_MAPPING: Record<string, string> = {
 
 async function seedSpecialties() {
   console.log('[SEED] Seeding Specialties...');
-  const dataPath = path.join(CRAWL_DATA_DIR, 'specialties-data.json');
+  const dataPath = path.join(NEW_DATA_DIR, 'specialties_cleaned.json');
   if (!fs.existsSync(dataPath)) {
     console.warn('[WARN] Specialties data not found, skipping.');
     return;
   }
 
-  const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const fileData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const data = fileData.specialties || fileData;
+
+  console.log('[SEED] Cleaning up old specialties...');
+  await providerPrisma.doctorSpecialty.deleteMany({}); // Delete relations first to avoid foreign key issues
+  await providerPrisma.specialtyInfoSection.deleteMany({});
+  await providerPrisma.specialty.deleteMany({});
+
   for (const item of data as any[]) {
-    const slug = slugify(item.name as string);
+    const slug = item.slug || slugify(item.name as string);
     await providerPrisma.specialty.upsert({
       where: { slug },
       update: {
-        description: item.introduction as string,
-        iconUrl: item.imageUrl as string,
+        description: item.description as string,
+        iconUrl: item.icon_url as string,
+        aliases: item.aliases || [],
+        commonSymptoms: item.common_symptoms || [],
+        commonConditions: item.common_conditions || [],
+        keywords: item.keywords || [],
+        expertise: item.expertise || [],
       },
       create: {
+        id: item.id, // preserve ID for doctor linking
         name: item.name as string,
         slug,
-        description: item.introduction as string,
-        iconUrl: item.imageUrl as string,
+        description: item.description as string,
+        iconUrl: item.icon_url as string,
+        aliases: item.aliases || [],
+        commonSymptoms: item.common_symptoms || [],
+        commonConditions: item.common_conditions || [],
+        keywords: item.keywords || [],
+        expertise: item.expertise || [],
       },
     });
   }
@@ -120,22 +139,24 @@ async function seedSpecialties() {
 
 async function seedDoctors() {
   console.log('[SEED] Seeding Doctors and Accounts...');
-  const dataPath = path.join(CRAWL_DATA_DIR, 'doctors-data.json');
+  const dataPath = path.join(NEW_DATA_DIR, 'doctors_cleaned.json');
   if (!fs.existsSync(dataPath)) {
     console.warn('[WARN] Doctors data not found, skipping.');
     return;
   }
 
-  const data = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const fileData = JSON.parse(fs.readFileSync(dataPath, 'utf-8'));
+  const data = fileData.doctors || fileData;
   const passwordHash = await bcrypt.hash('Doctor123!', 10);
 
   // Cleanup old doctor accounts
   console.log('[SEED] Cleaning up old doctor accounts...');
   await providerPrisma.officeHours.deleteMany({});
+  await providerPrisma.doctorWorkLocation.deleteMany({});
+  await providerPrisma.doctor.deleteMany({});
   await accountsPrisma.staffAccount.deleteMany({
     where: { role: 'DOCTOR' },
   });
-  await providerPrisma.doctor.deleteMany({});
 
   // 0. Fetch the existing WorkLocation
   const workLocation = await providerPrisma.workLocation.findFirst();
@@ -146,7 +167,9 @@ async function seedDoctors() {
   }
 
   for (const item of data as any[]) {
-    const cleanName = cleanNameForEmail(item.name as string);
+    const cleanName = cleanNameForEmail(
+      item.full_name || (item.name as string),
+    );
     const email = `${slugify(cleanName)}@gmail.com`;
     const phone = generateFakePhone();
     const dob = generateFakeDOB();
@@ -155,19 +178,20 @@ async function seedDoctors() {
     const account = await accountsPrisma.staffAccount.upsert({
       where: { email },
       update: {
-        fullName: item.name,
+        fullName: item.full_name || item.name,
         phone,
         dateOfBirth: dob,
-        isMale: Math.random() > 0.3,
+        isMale: item.is_male !== undefined ? item.is_male : Math.random() > 0.3,
       },
       create: {
-        fullName: item.name,
+        id: item.staff_account_id, // reuse id from file if available
+        fullName: item.full_name || item.name,
         email,
         passwordHash,
         role: 'DOCTOR',
         phone,
         dateOfBirth: dob,
-        isMale: Math.random() > 0.3,
+        isMale: item.is_male !== undefined ? item.is_male : Math.random() > 0.3,
       },
     });
 
@@ -175,43 +199,50 @@ async function seedDoctors() {
     const doctor = await providerPrisma.doctor.upsert({
       where: { staffAccountId: account.id },
       update: {
-        fullName: item.name,
-        degree: item.title,
-        position: [item.position].filter(Boolean),
-        introduction: item.biography || item.description,
-        memberships: item.memberships || [],
-        awards: item.awards || [],
-        experience: item.workExperience || [],
-        avatarUrl: item.imageUrl,
-        research: JSON.stringify(item.research),
+        fullName: item.full_name || item.name,
+        degree: item.degree || item.title,
+        position: item.position ? [item.position] : [],
+        introduction: item.introduction || item.biography || item.description,
+        experience: item.experience || item.workExperience || [],
+        avatarUrl: item.avatar_url || item.imageUrl,
+        education: item.education || [],
+        ratings: item.ratings || null,
+        serviceCost: item.service_cost || null,
+        experienceYears: item.experience_years || null,
+        conditions: item.conditions || [],
+        symptoms: item.symptoms || [],
+        expertise: item.expertise || [],
+        procedures: item.procedures || [],
+        patientGroups: item.patient_groups || [],
+        specialtyIds: item.specialty_ids || [],
       },
       create: {
+        id: item.id, // reuse id from file
         staffAccountId: account.id,
-        fullName: item.name,
-        degree: item.title,
-        position: [item.position].filter(Boolean),
-        introduction: item.biography || item.description,
-        memberships: item.memberships || [],
-        awards: item.awards || [],
-        experience: item.workExperience || [],
-        avatarUrl: item.imageUrl,
-        research: JSON.stringify(item.research),
+        fullName: item.full_name || item.name,
+        degree: item.degree || item.title,
+        position: item.position ? [item.position] : [],
+        introduction: item.introduction || item.biography || item.description,
+        experience: item.experience || item.workExperience || [],
+        avatarUrl: item.avatar_url || item.imageUrl,
+        education: item.education || [],
+        ratings: item.ratings || null,
+        serviceCost: item.service_cost || null,
+        experienceYears: item.experience_years || null,
+        conditions: item.conditions || [],
+        symptoms: item.symptoms || [],
+        expertise: item.expertise || [],
+        procedures: item.procedures || [],
+        patientGroups: item.patient_groups || [],
+        specialtyIds: item.specialty_ids || [],
       },
     });
 
     // 3. Link Specialties
-    if (item.specialties && (item.specialties as any[]).length > 0) {
-      for (const specName of item.specialties as string[]) {
-        const normalizedName = normalizeSpecialtyName(specName);
-        let slug = slugify(normalizedName);
-
-        // Apply manual mapping if exists
-        if (SPECIALTY_MAPPING[slug]) {
-          slug = SPECIALTY_MAPPING[slug];
-        }
-
+    if (item.specialty_ids && (item.specialty_ids as string[]).length > 0) {
+      for (const specId of item.specialty_ids as string[]) {
         const spec = await providerPrisma.specialty.findUnique({
-          where: { slug },
+          where: { id: specId },
         });
         if (spec) {
           await providerPrisma.doctorSpecialty.upsert({

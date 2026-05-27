@@ -1,4 +1,5 @@
 import {
+  IsArray,
   IsOptional,
   IsString,
   IsUrl,
@@ -20,4 +21,29 @@ export class CreateSpecialtyDto {
   @IsString({ message: 'Icon URL must be a string' })
   @IsUrl({}, { message: 'Icon URL must be a valid URL' })
   iconUrl?: string;
+
+  @IsOptional()
+  @IsArray({ message: 'Aliases must be an array' })
+  @IsString({ each: true, message: 'Each alias must be a string' })
+  aliases?: string[];
+
+  @IsOptional()
+  @IsArray({ message: 'Common symptoms must be an array' })
+  @IsString({ each: true, message: 'Each common symptom must be a string' })
+  commonSymptoms?: string[];
+
+  @IsOptional()
+  @IsArray({ message: 'Common conditions must be an array' })
+  @IsString({ each: true, message: 'Each common condition must be a string' })
+  commonConditions?: string[];
+
+  @IsOptional()
+  @IsArray({ message: 'Keywords must be an array' })
+  @IsString({ each: true, message: 'Each keyword must be a string' })
+  keywords?: string[];
+
+  @IsOptional()
+  @IsArray({ message: 'Expertise must be an array' })
+  @IsString({ each: true, message: 'Each expertise must be a string' })
+  expertise?: string[];
 }

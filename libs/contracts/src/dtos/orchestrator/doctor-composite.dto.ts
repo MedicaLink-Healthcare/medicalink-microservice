@@ -24,14 +24,20 @@ export interface DoctorCompositeData {
   degree?: string;
   position: string[];
   introduction?: string;
-  memberships: string[];
-  awards: string[];
-  research?: string;
-  trainingProcess: string[];
+  education: string[];
   experience: string[];
   avatarUrl?: string | null;
   portrait?: string | null;
   appointmentDuration?: number;
+  ratings?: number | null;
+  serviceCost?: number | null;
+  experienceYears?: number | null;
+  conditions: string[];
+  symptoms: string[];
+  expertise: string[];
+  procedures: string[];
+  patientGroups: string[];
+  specialtyIds: string[];
 
   // Relations
   specialties?: {

@@ -17,6 +17,11 @@ model Specialty {
   createdAt         DateTime               @default(now()) @map("created_at") @db.Timestamptz(6)
   updatedAt         DateTime               @updatedAt @map("updated_at") @db.Timestamptz(6)
   iconUrl           String?                @map("icon_url") @db.VarChar(255)
+  aliases           String[]
+  commonSymptoms    String[]               @map("common_symptoms")
+  commonConditions  String[]               @map("common_conditions")
+  keywords          String[]
+  expertise         String[]
   doctorSpecialties DoctorSpecialty[]
   infoSections      SpecialtyInfoSection[]
 
@@ -61,10 +66,7 @@ model Doctor {
   degree              String?              @db.VarChar(100)
   position            String[]
   introduction        String?
-  memberships         String[]
-  awards              String[]
-  research            String?
-  trainingProcess     String[]             @map("training_process")
+  education           String[]
   experience          String[]
   avatarUrl           String?              @map("avatar_url") @db.VarChar
   portrait            String?              @db.VarChar
@@ -73,7 +75,15 @@ model Doctor {
   appointmentDuration Int                  @default(30) @map("appointment_duration")
   fullName            String               @default("") @map("full_name") @db.VarChar(100)
   isMale              Boolean?             @default(true) @map("is_male")
-  introductionText    String?              @map("introduction_text")
+  ratings             Float?
+  serviceCost         Int?                 @map("service_cost")
+  experienceYears     Int?                 @map("experience_years")
+  conditions          String[]
+  symptoms            String[]
+  expertise           String[]
+  procedures          String[]
+  patientGroups       String[]               @map("patient_groups")
+  specialtyIds        String[]               @map("specialty_ids")
   doctorSpecialties   DoctorSpecialty[]
   doctorWorkLocations DoctorWorkLocation[]
   officeHours         OfficeHours[]
