@@ -1,8 +1,8 @@
 import { Type } from 'class-transformer';
 import {
   ArrayMaxSize,
-  ArrayMinSize,
   IsArray,
+  IsOptional,
   IsString,
   MaxLength,
   MinLength,
@@ -16,6 +16,20 @@ export class SpecialtyCatalogItemDto {
   @IsString()
   @MaxLength(256)
   name!: string;
+  @IsOptional()
+  @IsArray()
+  @IsString({ each: true })
+  aliases?: string[];
+
+  @IsOptional()
+  @IsArray()
+  @IsString({ each: true })
+  commonSymptoms?: string[];
+
+  @IsOptional()
+  @IsArray()
+  @IsString({ each: true })
+  keywords?: string[];
 }
 
 /**
@@ -27,10 +41,10 @@ export class SpecialtySuggestionRequestDto {
   @MaxLength(4000, { message: 'Mô tả không được vượt quá 4000 ký tự' })
   symptoms!: string;
 
+  @IsOptional()
   @IsArray()
-  @ArrayMinSize(1, { message: 'Cần ít nhất một chuyên khoa trong catalog' })
   @ArrayMaxSize(120)
   @ValidateNested({ each: true })
   @Type(() => SpecialtyCatalogItemDto)
-  specialties!: SpecialtyCatalogItemDto[];
+  specialties?: SpecialtyCatalogItemDto[];
 }

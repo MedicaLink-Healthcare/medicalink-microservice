@@ -39,7 +39,7 @@
         "Chăm sóc sức khỏe tâm thần"
       ],
       "description": "Bác sĩ gia đình là chuyên khoa y tế tập trung vào việc cung cấp dịch vụ chăm sóc sức khỏe toàn diện cho cá nhân và gia đình, từ việc phòng ngừa, chẩn đoán đến điều trị các bệnh lý thông thường và mãn tính. Chuyên khoa này đóng vai trò quan trọng trong việc quản lý bệnh lý nền tảng, bao gồm các bệnh lý như tiểu đường, tăng huyết áp, và bệnh tim mạch, đồng thời hỗ trợ bệnh nhân trong việc duy trì sức khỏe và cải thiện chất lượng cuộc sống.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-khamsuckhoetongquat.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -130,7 +130,7 @@
         "Quản lý bệnh lý tim mạch"
       ],
       "description": "Chuyên khoa Tim mạch là lĩnh vực y học chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến tim và hệ thống mạch máu. Chức năng chính của chuyên khoa này bao gồm việc phát hiện sớm các bệnh lý tim mạch, quản lý các yếu tố nguy cơ như tăng huyết áp, tiểu đường, và cholesterol cao, cũng như thực hiện các can thiệp điều trị như đặt stent, phẫu thuật bắc cầu động mạch và điều trị bằng thuốc. Các bệnh lý nền tảng thường gặp trong chuyên khoa này bao gồm bệnh động mạch vành, suy tim, rối loạn nhịp tim và bệnh van tim.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-timmach.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -181,7 +181,7 @@
         "Chăm sóc dinh dưỡng"
       ],
       "description": "Chuyên khoa Tiêu hóa - Gan mật tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ tiêu hóa, gan và mật. Chuyên khoa này đóng vai trò quan trọng trong việc phát hiện sớm và điều trị các bệnh lý như viêm gan, xơ gan, ung thư gan, bệnh lý đường mật và các rối loạn tiêu hóa. Đội ngũ bác sĩ chuyên khoa sử dụng các phương pháp chẩn đoán hiện đại và các liệu pháp điều trị tiên tiến nhằm cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-tieuhoa.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -231,7 +231,7 @@
         "Thăm khám và điều trị rối loạn tăng trưởng"
       ],
       "description": "Chuyên khoa Nội tiết tập trung vào việc chẩn đoán, điều trị và quản lý các rối loạn liên quan đến hormone và tuyến nội tiết. Các bác sĩ nội tiết học nghiên cứu và điều trị các bệnh lý như tiểu đường, rối loạn tuyến giáp, hội chứng Cushing, và các rối loạn khác liên quan đến hormone. Chuyên khoa này đóng vai trò quan trọng trong việc cải thiện chất lượng cuộc sống cho bệnh nhân thông qua việc kiểm soát và điều trị các bệnh lý nền tảng, từ đó giảm thiểu các biến chứng và nâng cao sức khỏe tổng quát.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitiet.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -279,7 +279,7 @@
         "Quản lý hen suyễn"
       ],
       "description": "Chuyên khoa Hô hấp tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ hô hấp, bao gồm phổi, khí quản, phế quản và các cấu trúc liên quan. Chuyên khoa này đóng vai trò quan trọng trong việc điều trị các bệnh lý nền tảng như hen suyễn, bệnh phổi tắc nghẽn mạn tính (COPD), viêm phổi và ung thư phổi. Các bác sĩ hô hấp sử dụng nhiều phương pháp điều trị, từ thuốc đến các kỹ thuật can thiệp, nhằm cải thiện chất lượng cuộc sống cho bệnh nhân và giảm thiểu các triệu chứng hô hấp.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-hohap.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -326,7 +326,7 @@
         "Phẫu thuật thần kinh"
       ],
       "description": "Chuyên khoa Thần kinh tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ thần kinh, bao gồm não, tủy sống và các dây thần kinh ngoại biên. Chuyên khoa này đóng vai trò quan trọng trong việc phục hồi chức năng cho bệnh nhân mắc các rối loạn thần kinh, từ các bệnh lý cấp tính như đột quỵ đến các bệnh lý mãn tính như bệnh Alzheimer và Parkinson. Thông qua các phương pháp điều trị đa dạng, bao gồm thuốc, vật lý trị liệu và can thiệp phẫu thuật, chuyên khoa Thần kinh hướng tới việc cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noithankinh.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -369,7 +369,7 @@
         "Điều trị đau mãn tính"
       ],
       "description": "Chuyên khoa Cơ xương khớp tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ thống cơ, xương và khớp. Chức năng điều trị của chuyên khoa này bao gồm việc phục hồi chức năng vận động, giảm đau và cải thiện chất lượng cuộc sống cho bệnh nhân. Các bệnh lý nền tảng thường gặp trong chuyên khoa này bao gồm viêm khớp, thoái hóa khớp, chấn thương thể thao và các rối loạn cơ xương khớp khác.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-coxuongkhop.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -413,7 +413,7 @@
         "Thẩm mỹ da"
       ],
       "description": "Chuyên khoa Da liễu là lĩnh vực y học chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến da, tóc và móng. Chức năng chính của chuyên khoa này bao gồm việc phát hiện và điều trị các bệnh lý da liễu như viêm da, nấm, mụn trứng cá, và các bệnh tự miễn. Ngoài ra, chuyên khoa còn đóng vai trò quan trọng trong việc tư vấn và điều trị các vấn đề về thẩm mỹ da, giúp cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-dalieu.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -460,7 +460,7 @@
         "Điều trị bằng thuốc điều chỉnh miễn dịch"
       ],
       "description": "Chuyên khoa Dị ứng - Miễn dịch lâm sàng tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ miễn dịch và phản ứng dị ứng. Chuyên khoa này đóng vai trò quan trọng trong việc phát hiện và điều trị các bệnh lý nền tảng như hen suyễn, viêm mũi dị ứng, và các bệnh tự miễn. Các bác sĩ trong lĩnh vực này sử dụng các phương pháp điều trị hiện đại, bao gồm liệu pháp miễn dịch và thuốc điều chỉnh miễn dịch, nhằm cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=D%E1%BB%8B%20%E1%BB%A9ng%20-%20Mi%E1%BB%85n%20d%E1%BB%8Bch%20l%C3%A2m%20s%C3%A0ng&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -508,7 +508,7 @@
         "Chẩn đoán hình ảnh tiết niệu"
       ],
       "description": "Chuyên khoa Tiết niệu là lĩnh vực y học chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến hệ thống tiết niệu, bao gồm thận, niệu quản, bàng quang và niệu đạo. Chức năng chính của chuyên khoa này là điều trị các rối loạn và bệnh lý ảnh hưởng đến chức năng tiết niệu, từ các bệnh lý cấp tính như viêm đường tiết niệu đến các bệnh lý mạn tính như suy thận, sỏi thận, và ung thư tiết niệu. Chuyên khoa Tiết niệu cũng đóng vai trò quan trọng trong việc phát hiện và quản lý các bệnh lý nền tảng như tiểu đường, tăng huyết áp và các rối loạn nội tiết có thể ảnh hưởng đến sức khỏe của hệ thống tiết niệu.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-tietnieu.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -555,7 +555,7 @@
         "Liệu pháp nhóm"
       ],
       "description": "Chuyên khoa Tâm thần tập trung vào việc chẩn đoán, điều trị và phòng ngừa các rối loạn tâm lý và hành vi. Chức năng điều trị của chuyên khoa này bao gồm việc sử dụng các phương pháp tâm lý, liệu pháp thuốc và can thiệp xã hội nhằm cải thiện sức khỏe tâm thần của bệnh nhân. Các bệnh lý nền tảng thường gặp trong chuyên khoa Tâm thần bao gồm trầm cảm, lo âu, rối loạn tâm thần phân liệt và rối loạn lưỡng cực.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-tamly.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -602,7 +602,7 @@
         "Gen trị liệu"
       ],
       "description": "Chuyên khoa Ung bướu là lĩnh vực y học chuyên sâu nghiên cứu, chẩn đoán và điều trị các loại ung thư. Chức năng chính của chuyên khoa này bao gồm việc phát hiện sớm, điều trị bằng phẫu thuật, hóa trị, xạ trị và các phương pháp điều trị hỗ trợ nhằm cải thiện chất lượng cuộc sống cho bệnh nhân. Các bệnh lý nền tảng thường gặp trong chuyên khoa này bao gồm ung thư vú, ung thư phổi, ung thư đại trực tràng, và ung thư dạ dày, trong đó việc phát hiện sớm và điều trị kịp thời là rất quan trọng để nâng cao tỷ lệ sống sót cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-ungbuou.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -644,7 +644,7 @@
         "Chăm sóc cuối đời"
       ],
       "description": "Lão khoa là chuyên khoa y tế tập trung vào việc chăm sóc sức khỏe cho người cao tuổi, nhằm cải thiện chất lượng cuộc sống và quản lý các bệnh lý mãn tính thường gặp ở nhóm đối tượng này. Chuyên khoa lão khoa không chỉ điều trị các bệnh lý mà còn chú trọng đến việc phòng ngừa, phục hồi chức năng và hỗ trợ tâm lý cho bệnh nhân. Các bác sĩ lão khoa thường làm việc với các bệnh lý nền tảng như bệnh tim mạch, tiểu đường, bệnh lý thần kinh và các rối loạn tâm thần, nhằm tối ưu hóa sức khỏe và sự độc lập của người cao tuổi.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=L%C3%A3o%20khoa&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -690,7 +690,7 @@
         "dinh dưỡng cho trẻ em"
       ],
       "description": "Chuyên khoa Dinh dưỡng tập trung vào việc nghiên cứu và ứng dụng các nguyên tắc dinh dưỡng nhằm điều trị và phòng ngừa các bệnh lý liên quan đến chế độ ăn uống. Chuyên khoa này đóng vai trò quan trọng trong việc quản lý các bệnh lý nền tảng như tiểu đường, béo phì, rối loạn lipid máu, và các bệnh lý tiêu hóa. Thông qua việc xây dựng chế độ ăn hợp lý và cá nhân hóa, chuyên khoa Dinh dưỡng giúp cải thiện sức khỏe tổng thể và nâng cao chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=Dinh%20d%C6%B0%E1%BB%A1ng&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -736,7 +736,7 @@
         "phục hồi chức năng thính giác"
       ],
       "description": "Chuyên khoa Tai Mũi Họng (TMH) tập trung vào việc chẩn đoán, điều trị và phòng ngừa các bệnh lý liên quan đến tai, mũi và họng. Chuyên khoa này đóng vai trò quan trọng trong việc cải thiện chất lượng cuộc sống của bệnh nhân thông qua các phương pháp điều trị nội khoa và ngoại khoa, đồng thời cung cấp các dịch vụ chăm sóc sức khỏe toàn diện cho các bệnh lý nền tảng như viêm nhiễm, dị ứng, và các rối loạn về thính giác.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-taimuihong.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -778,7 +778,7 @@
         "Điều trị bệnh khô mắt"
       ],
       "description": "Chuyên khoa Mắt là lĩnh vực y học chuyên sâu nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến mắt và hệ thống thị giác. Chức năng điều trị của chuyên khoa này không chỉ bao gồm việc phục hồi thị lực mà còn tập trung vào việc quản lý các bệnh lý nền tảng như đục thủy tinh thể, glaucoma, và các bệnh lý võng mạc. Đội ngũ bác sĩ chuyên khoa Mắt sử dụng các kỹ thuật hiện đại để can thiệp và điều trị, nhằm nâng cao chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=M%E1%BA%AFt&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -826,7 +826,7 @@
         "Nha khoa trẻ em"
       ],
       "description": "Chuyên khoa Răng Hàm Mặt là lĩnh vực y học chuyên sâu nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến răng, hàm và mặt. Chức năng điều trị của chuyên khoa này không chỉ bao gồm việc phục hồi chức năng nhai và thẩm mỹ khuôn mặt mà còn liên quan đến việc điều trị các bệnh lý nền tảng như viêm nướu, sâu răng, và các rối loạn khớp thái dương hàm. Bên cạnh đó, chuyên khoa này cũng đóng vai trò quan trọng trong việc phát hiện và điều trị các bệnh lý toàn thân có liên quan đến sức khỏe răng miệng.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=R%C4%83ng%20H%C3%A0m%20M%E1%BA%B7t&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -869,7 +869,7 @@
         "Tư vấn sức khỏe sinh sản"
       ],
       "description": "Sản phụ khoa là chuyên khoa y tế tập trung vào việc chăm sóc sức khỏe phụ nữ trong suốt quá trình mang thai, sinh nở và sau sinh, cũng như các vấn đề liên quan đến hệ sinh sản. Chuyên khoa này không chỉ điều trị các bệnh lý liên quan đến thai kỳ mà còn bao gồm các bệnh lý nền tảng như rối loạn nội tiết, bệnh lý phụ khoa và các vấn đề sức khỏe sinh sản khác. Chức năng điều trị của sản phụ khoa bao gồm tư vấn, theo dõi thai kỳ, thực hiện các thủ thuật sinh nở và can thiệp y tế cần thiết nhằm đảm bảo sức khỏe cho mẹ và bé.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-san.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -912,7 +912,7 @@
         "Nội tiết sinh sản"
       ],
       "description": "Nam khoa là chuyên khoa y tế tập trung vào việc chẩn đoán, điều trị và phòng ngừa các bệnh lý liên quan đến hệ thống sinh sản và tiết niệu ở nam giới. Chuyên khoa này không chỉ điều trị các vấn đề về sức khỏe sinh sản như rối loạn cương dương, vô sinh, mà còn quản lý các bệnh lý nền tảng như viêm nhiễm đường tiết niệu, ung thư tuyến tiền liệt và các rối loạn hormone. Nam khoa đóng vai trò quan trọng trong việc cải thiện chất lượng cuộc sống và sức khỏe tổng thể của nam giới.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-namhoc.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -956,7 +956,7 @@
         "Phẫu thuật nội soi điều trị hiếm muộn"
       ],
       "description": "Chuyên khoa Hiếm muộn - Hỗ trợ sinh sản tập trung vào việc chẩn đoán và điều trị các vấn đề liên quan đến khả năng sinh sản của cả nam và nữ. Chuyên khoa này cung cấp các phương pháp hỗ trợ sinh sản như thụ tinh trong ống nghiệm (IVF), tiêm tinh trùng vào bào tương trứng (ICSI) và các kỹ thuật khác nhằm giúp các cặp vợ chồng gặp khó khăn trong việc có con. Ngoài ra, chuyên khoa cũng chú trọng đến việc xác định và điều trị các bệnh lý nền tảng như rối loạn nội tiết, bệnh lý buồng trứng, và các vấn đề về tinh trùng, từ đó nâng cao hiệu quả điều trị và tỷ lệ thành công.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=Hi%E1%BA%BFm%20mu%E1%BB%99n%20-%20H%E1%BB%97%20tr%E1%BB%A3%20sinh%20s%E1%BA%A3n&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -1004,7 +1004,7 @@
         "Nhi khoa tâm lý"
       ],
       "description": "Nhi khoa là chuyên khoa y tế tập trung vào việc chăm sóc sức khỏe và điều trị các bệnh lý ở trẻ em từ sơ sinh đến tuổi vị thành niên. Chuyên khoa này không chỉ đảm nhận việc chẩn đoán và điều trị các bệnh lý thông thường mà còn quản lý các bệnh lý nền tảng phức tạp, bao gồm các rối loạn di truyền, bệnh lý nội tiết, và các vấn đề tâm lý. Nhi khoa đóng vai trò quan trọng trong việc theo dõi sự phát triển và tăng trưởng của trẻ, đảm bảo trẻ em nhận được sự chăm sóc y tế toàn diện và kịp thời.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-nhi.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -1047,7 +1047,7 @@
         "Quản lý đau"
       ],
       "description": "Ngoại tổng quát là chuyên khoa y tế chuyên điều trị các bệnh lý liên quan đến phẫu thuật và can thiệp ngoại khoa. Chuyên khoa này đảm nhận việc chẩn đoán, điều trị và theo dõi các bệnh lý từ nhẹ đến nặng, bao gồm các bệnh lý về tiêu hóa, tiết niệu, nội tiết, và các tổn thương do chấn thương. Ngoại tổng quát không chỉ tập trung vào phẫu thuật mà còn bao gồm các phương pháp điều trị không phẫu thuật, nhằm mang lại sự phục hồi toàn diện cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=Ngo%E1%BA%A1i%20t%E1%BB%95ng%20qu%C3%A1t&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -1090,7 +1090,7 @@
         "Phục hồi chức năng"
       ],
       "description": "Chấn thương chỉnh hình là chuyên khoa y tế chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến hệ thống cơ xương khớp, bao gồm các chấn thương do tai nạn, bệnh lý bẩm sinh, thoái hóa khớp và các rối loạn khác. Chuyên khoa này không chỉ tập trung vào việc phục hồi chức năng vận động cho bệnh nhân mà còn chú trọng đến việc cải thiện chất lượng cuộc sống thông qua các phương pháp điều trị nội khoa, phẫu thuật và phục hồi chức năng.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=Ch%E1%BA%A5n%20th%C6%B0%C6%A1ng%20ch%E1%BB%89nh%20h%C3%ACnh&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -1135,7 +1135,7 @@
         "Điều trị đau thần kinh"
       ],
       "description": "Ngoại thần kinh là chuyên khoa y tế chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến hệ thần kinh, bao gồm não, tủy sống và các dây thần kinh ngoại biên. Chuyên khoa này tập trung vào việc can thiệp phẫu thuật để điều trị các tình trạng như u não, chấn thương sọ não, thoát vị đĩa đệm, và các bệnh lý khác ảnh hưởng đến chức năng thần kinh. Ngoài ra, ngoại thần kinh còn đóng vai trò quan trọng trong việc phục hồi chức năng cho bệnh nhân sau phẫu thuật và cải thiện chất lượng cuộc sống.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=Ngo%E1%BA%A1i%20th%E1%BA%A7n%20kinh&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -1179,7 +1179,7 @@
         "Chẩn đoán hình ảnh lồng ngực"
       ],
       "description": "Chuyên khoa Lồng ngực - Mạch máu tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ thống lồng ngực và mạch máu. Chuyên khoa này đóng vai trò quan trọng trong việc điều trị các bệnh lý như bệnh tim mạch, bệnh phổi, và các rối loạn mạch máu, nhằm cải thiện chất lượng cuộc sống cho bệnh nhân. Các phương pháp điều trị bao gồm can thiệp phẫu thuật, điều trị nội khoa và các kỹ thuật tiên tiến như thông tim và siêu âm tim.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=L%E1%BB%93ng%20ng%E1%BB%B1c%20-%20M%E1%BA%A1ch%20m%C3%A1u&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -1222,7 +1222,7 @@
         "Phẫu thuật tạo hình vùng bụng"
       ],
       "description": "Phẫu thuật tạo hình - Thẩm mỹ là một chuyên khoa y tế chuyên sâu, tập trung vào việc phục hồi và cải thiện hình dáng, chức năng của các bộ phận trên cơ thể thông qua các kỹ thuật phẫu thuật. Chuyên khoa này không chỉ điều trị các vấn đề về thẩm mỹ mà còn phục hồi các tổn thương do chấn thương, bệnh lý bẩm sinh hoặc hậu phẫu. Các bác sĩ phẫu thuật tạo hình - thẩm mỹ thường làm việc với các bệnh lý nền tảng như dị tật bẩm sinh, ung thư, chấn thương, và các vấn đề về da liễu, nhằm mang lại sự tự tin và cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=Ph%E1%BA%ABu%20thu%E1%BA%ADt%20t%E1%BA%A1o%20h%C3%ACnh%20-%20Th%E1%BA%A9m%20m%E1%BB%B9&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -1265,7 +1265,7 @@
         "Phục hồi chức năng tim mạch"
       ],
       "description": "Phục hồi chức năng là một chuyên khoa y tế tập trung vào việc cải thiện và phục hồi khả năng vận động, chức năng sinh hoạt và chất lượng cuộc sống cho bệnh nhân bị suy giảm chức năng do chấn thương, bệnh lý hoặc các yếu tố khác. Chuyên khoa này áp dụng các phương pháp điều trị đa dạng như vật lý trị liệu, liệu pháp nghề nghiệp, và các kỹ thuật can thiệp khác nhằm giúp bệnh nhân phục hồi tối đa khả năng hoạt động và tái hòa nhập cộng đồng.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-phuchoichucnang.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -1312,7 +1312,7 @@
         "Chẩn đoán theo Đông y"
       ],
       "description": "Y học cổ truyền là một lĩnh vực y học có nguồn gốc từ các phương pháp điều trị truyền thống, tập trung vào việc cân bằng năng lượng trong cơ thể và phục hồi sức khỏe thông qua các liệu pháp tự nhiên như châm cứu, bấm huyệt, thảo dược và dinh dưỡng. Chuyên khoa này chủ yếu điều trị các bệnh lý mãn tính, rối loạn chức năng và các triệu chứng không rõ nguyên nhân, đồng thời hỗ trợ điều trị các bệnh lý nền tảng như đau nhức xương khớp, rối loạn tiêu hóa, stress và các vấn đề về hô hấp.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://ui-avatars.com/api/?name=Y%20h%E1%BB%8Dc%20c%E1%BB%95%20truy%E1%BB%81n&background=random&color=fff&rounded=true&size=200",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"
@@ -1362,7 +1362,7 @@
         "Sinh thiết"
       ],
       "description": "Chuyên khoa Chẩn đoán hình ảnh & Điện quang can thiệp là lĩnh vực y học chuyên sâu, tập trung vào việc sử dụng các kỹ thuật hình ảnh để chẩn đoán và điều trị các bệnh lý. Chuyên khoa này không chỉ giúp phát hiện sớm các bệnh lý mà còn hỗ trợ trong việc thực hiện các can thiệp điều trị như sinh thiết, đặt ống dẫn lưu, và điều trị các bệnh lý mạch máu. Các kỹ thuật như MRI, CT, siêu âm và X-quang đóng vai trò quan trọng trong việc xác định chính xác tình trạng bệnh lý, từ đó đưa ra phương pháp điều trị hiệu quả nhất cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
+      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-chandoanhinhanh.png",
       "is_active": true,
       "created_at": "2026-03-26T08:26:53.495Z",
       "updated_at": "2026-03-26T08:26:53.495Z"

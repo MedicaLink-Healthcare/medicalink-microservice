@@ -49,4 +49,12 @@ export class DoctorRecommendationRequestDto {
   @ArrayMaxSize(24)
   @IsString({ each: true })
   specialtyIds?: string[];
+
+  /**
+   * Truyền mảng triệu chứng đã được trích xuất từ suggest-specialties để tối ưu hóa tìm kiếm.
+   */
+  @IsOptional()
+  @IsArray()
+  @IsString({ each: true })
+  extractedSymptoms?: string[];
 }

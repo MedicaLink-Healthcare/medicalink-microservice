@@ -224,7 +224,10 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "NGND.GS.TS.BS Trần Quán Anh, một trong những người tiên phong trong lĩnh vực Tiết niệu tại Việt Nam, đã có hơn 50 năm cống hiến cho nền y học nước nhà. Ông là Tổng Thư ký Hội Tiết niệu – Thận học Việt Nam và là hội viên của Hội Tiết niệu thế giới (S.I.U). Với nhiều công trình nghiên cứu và tham gia các hội nghị quốc tế, bác sĩ Trần Quán Anh không chỉ nổi bật trong lĩnh vực điều trị mà còn là người xây dựng nền tảng cho ngành Nam học tại Việt Nam. Triết lý khám chữa bệnh của ông luôn hướng tới sự tận tâm và hiệu quả trong từng ca điều trị.",
       "experience_years": 50,
-      "education": [],
+      "education": [
+        "Học hàm: Giáo sư / Phó Giáo sư Y học",
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
       "experience": [
         "Hội Tiết niệu – Thận học Việt Nam",
         "Bệnh viện Việt – Đức, Hà Nội"
@@ -281,8 +284,17 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TTƯT.PGS.TS.BS Vũ Lê Chuyên là một trong những người tiên phong trong lĩnh vực phẫu thuật nội soi tiết niệu tại Việt Nam. Với hơn 40 năm kinh nghiệm trong ngành Tiết niệu – Thận học, ông đã có nhiều đóng góp quan trọng và đạt được nhiều thành tựu nổi bật. Là Chủ tịch Hội Tiết niệu – Thận học Việt Nam, ông đã tham gia nhiều hội nghị khoa học quốc tế và có hơn 300 bài báo cáo được công nhận. Ông luôn tâm niệm rằng 'bệnh nhân cần bác sĩ làm hết sức mình', và đã giúp đỡ rất nhiều người tìm lại ý nghĩa cuộc sống.",
       "experience_years": 40,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Giảng viên kiêm nhiệm bộ môn Niệu – Đại học Y Dược TP.HCM",
+        "Giảng viên Bộ môn Niệu – Đại học Phạm Ngọc Thạch"
+      ],
+      "experience": [
+        "Chủ tịch Hội Tiết niệu – Thận học Việt Nam",
+        "Tổng thư ký Liên đoàn Niệu khoa Đông Nam Á (FAUA)",
+        "Ủy viên Thường vụ Hội Ngoại khoa Việt Nam (VSS)",
+        "Ủy viên Ban chấp hành Tổng hội Y học Việt Nam (VMA)",
+        "Phó Chủ tịch Hội đồng Tài chính Hội Niệu khoa Á châu (UAA)"
+      ],
       "id": "cmnb8qr86001mvky06ax6rhp0",
       "staff_account_id": "cmnb8qr7x0004vky0u9d5thim",
       "full_name": "TTƯT.PGS.TS.BS VŨ LÊ CHUYÊN",
@@ -381,7 +393,11 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "PGS.TS.BS Trần Quang Bính, Giám đốc chuyên môn BVĐK Tâm Anh TP.HCM, là một trong những chuyên gia hàng đầu trong lĩnh vực Nội khoa tại Việt Nam với gần 40 năm kinh nghiệm khám chữa bệnh. Ông đã tu nghiệp tại nhiều quốc gia và tham gia các chương trình nghiên cứu khoa học với WHO và các trường đại học danh tiếng. Với chuyên môn sâu về bệnh lý tim mạch và tiêu hóa, bác sĩ Bính luôn cam kết mang đến dịch vụ y tế chất lượng cao và chăm sóc tận tâm cho bệnh nhân.",
       "experience_years": 40,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ đa khoa, 1981",
+        "Tu nghiệp tại Malaysia, Thái Lan, Australia, Hà Lan",
+        "Tham quan học tập về đào tạo nhân lực y tế của Nhật Bản trong chương trình hợp tác với tổ chức JICA Nhật Bản"
+      ],
       "experience": [
         "Bệnh viện Chợ Rẫy",
         "Bệnh viện Quốc tế City"
@@ -707,7 +723,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "PGS.TS.BS Lê Hoàng, Giám đốc Trung tâm Hỗ trợ Sinh sản BVĐK Tâm Anh, là một trong những chuyên gia hàng đầu trong lĩnh vực sản phụ khoa tại Việt Nam. Với gần 30 năm kinh nghiệm, ông đã giúp hàng ngàn cặp vợ chồng vô sinh hiếm muộn hiện thực hóa giấc mơ làm cha mẹ. Ông không chỉ là một bác sĩ tài năng mà còn là một nhà nghiên cứu xuất sắc với hàng trăm bài báo khoa học và nhiều đề tài cấp Nhà nước. Triết lý của ông là luôn nỗ lực không ngừng để nâng cao chuyên môn và mang lại hạnh phúc cho những người mong con.",
       "experience_years": 30,
-      "education": [],
+      "education": [
+        "Đào tạo về kỹ thuật thụ tinh ống nghiệm (IVF) ở nước ngoài"
+      ],
       "experience": [
         "Trung tâm Hỗ trợ Sinh sản BVĐK Tâm Anh"
       ],
@@ -762,8 +780,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với hơn 30 năm kinh nghiệm trong lĩnh vực Nhi khoa, TS.BS Cam Ngọc Phượng đã cống hiến không ngừng nghỉ cho sự nghiệp chăm sóc sức khỏe trẻ em. Bác sĩ không chỉ là một chuyên gia hàng đầu trong việc phát hiện và điều trị các bệnh lý bẩm sinh mà còn là một người thầy tận tâm trong việc đào tạo thế hệ bác sĩ trẻ. Tại Trung tâm Sơ sinh Bệnh viện Đa khoa Tâm Anh TP.HCM, bác sĩ luôn nỗ lực mang lại những phương pháp chăm sóc và điều trị tốt nhất, giúp trẻ em sớm khỏe mạnh và phát triển toàn diện.",
       "experience_years": 30,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
+      "experience": [
+        "Giám đốc Trung tâm Sơ sinh Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM",
+        "Công tác tại Trung tâm Sơ sinh Bệnh viện Đa khoa Tâm Anh TP.HCM"
+      ],
       "id": "cmnb8qrlf0022vky0d11jvv3i",
       "staff_account_id": "cmnb8qrl2000avky0ilqr6bzk",
       "full_name": "TS.BS CAM NGỌC PHƯỢNG",
@@ -817,7 +840,10 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TS.BS Nguyễn Thế Trường, một bác sĩ chuyên khoa Tiết niệu với hơn 30 năm kinh nghiệm, đã có những đóng góp đáng kể cho ngành y tế Việt Nam. Sau khi tốt nghiệp từ Đại học Y Hà Nội, ông đã tu nghiệp tại Cộng hòa Pháp, nơi ông tiếp thu những kỹ thuật tiên tiến nhất. Ông đã được vinh danh với nhiều giải thưởng cao quý từ Bộ Y tế và Chính phủ, nhờ vào những nghiên cứu khoa học và thành công trong điều trị các bệnh lý về Tiết niệu. Với triết lý khám chữa bệnh tận tâm và chuyên nghiệp, ông luôn nỗ lực mang lại sức khỏe tốt nhất cho bệnh nhân.",
       "experience_years": 30,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ đa khoa, ĐH Y Hà Nội",
+        "Tu nghiệp tại Cộng hòa Pháp"
+      ],
       "experience": [],
       "id": "cmnb8qrmk0025vky08gxwe8p8",
       "staff_account_id": "cmnb8qrm9000bvky09ct0dmmb",
@@ -1009,8 +1035,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với hơn 35 năm kinh nghiệm trong lĩnh vực Tai Mũi Họng, GS.TS.BS Lê Minh Kỳ là một trong những chuyên gia hàng đầu tại BVĐK Tâm Anh. Ông đã không ngừng cập nhật kiến thức và tham gia nghiên cứu các phương pháp điều trị tiên tiến, từ phẫu thuật mũi xoang đến ứng dụng công nghệ Laser trong điều trị. Sự tận tâm và triết lý khám chữa bệnh của bác sĩ Kỳ là mang lại sự phục hồi triệt để cho bệnh nhân, giúp họ lấy lại sức khỏe và chất lượng cuộc sống.",
       "experience_years": 35,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tu nghiệp tại Pháp",
+        "Tu nghiệp tại Nhật",
+        "Tu nghiệp tại Hoa Kỳ"
+      ],
+      "experience": [
+        "Phụ trách chuyên môn khoa Tai Mũi Họng, BVĐK Tâm Anh"
+      ],
       "id": "cmnb8qrpf002evky0fmlym0ff",
       "staff_account_id": "cmnb8qrpa000evky0kcwzx3qp",
       "full_name": "GS.TS.BS LÊ MINH KỲ",
@@ -1188,7 +1220,10 @@
         "Bác sĩ Nội trú chuyên ngành Ung thư - Đại học Y Dược TP HCM",
         "Chuyên khoa 1 chuyên ngành Ung thư - Đại học Y Dược TP HCM"
       ],
-      "experience": [],
+      "experience": [
+        "Bác sĩ tại Bệnh viện Ung bướu TP.HCM",
+        "Công tác tại một số bệnh viện lớn"
+      ],
       "id": "cmnb8qrxf002rvky0j53x08cb",
       "staff_account_id": "cmnb8qrx3000jvky0rr2zyyvi",
       "full_name": "TS.BS LÊ TẤN ĐẠT",
@@ -1241,8 +1276,13 @@
       "position": "Giám đốc Trung tâm Hỗ trợ sinh sản tại Hệ thống Y tế MedicaLink",
       "introduction": "ThS.BS Giang Huỳnh Như là bác sĩ chuyên khoa Sản phụ khoa với gần 20 năm kinh nghiệm trong lĩnh vực hỗ trợ sinh sản, hiện đang giữ chức vụ Giám đốc Trung tâm Hỗ trợ sinh sản tại Hệ thống Y tế MedicaLink. Với phong cách thăm khám nhẹ nhàng và tận tâm, bác sĩ đã giúp nhiều cặp vợ chồng hiếm muộn tìm được hạnh phúc. Bác sĩ không ngừng cập nhật và ứng dụng những thành tựu y học mới nhất để mang lại hiệu quả điều trị cao nhất cho bệnh nhân.",
       "experience_years": 20,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Thạc sĩ Y khoa"
+      ],
+      "experience": [
+        "Giám đốc Trung tâm Hỗ trợ sinh sản, Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM",
+        "Gần 20 năm công tác tại các bệnh viện lớn trong nước"
+      ],
       "id": "cmnb8qs06002svky0yk3jd9so",
       "staff_account_id": "cmnb8qrzz000kvky02g1cvr9m",
       "full_name": "ThS.BS GIANG HUỲNH NHƯ",
@@ -1264,7 +1304,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau bụng",
+        "Mệt mỏi kéo dài",
+        "Sụt cân không rõ nguyên nhân",
+        "Chảy máu bất thường",
+        "Đau đầu thường xuyên"
+      ],
       "expertise": [
         "Nội soi tiết niệu",
         "Phẫu thuật tiết niệu",
@@ -1291,8 +1337,20 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "BS.CKII Trần Thị Thanh Nga là bác sĩ có chuyên môn sâu và kinh nghiệm lâu năm trong lĩnh vực xét nghiệm tại Việt Nam. Với hơn 30 năm kinh nghiệm, bác sĩ đã đóng góp tích cực vào việc chẩn đoán và điều trị bệnh thông qua các xét nghiệm và kỹ thuật y học cận lâm sàng. Bác sĩ thường xuyên tham gia giảng dạy tại Đại học Y Dược TP.HCM và đã thực hiện nhiều nghiên cứu khoa học có giá trị, khẳng định vị thế của mình trong ngành y tế.",
       "experience_years": 30,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tham gia giảng dạy thực hành cho sinh viên tại Đại học Y Dược TP.HCM",
+        "Hướng dẫn luận văn Nội trú, chuyên khoa I, Thạc sĩ, cử nhân cho Trung tâm đào tạo"
+      ],
+      "experience": [
+        "Bác sĩ có chuyên môn sâu trong lĩnh vực xét nghiệm tại Việt Nam",
+        "Tham gia và chủ trì các hội nghị Truyền Nhiễm Toàn Quốc",
+        "Báo cáo tại các hội nghị Truyền Nhiễm, Hồi sức Cấp cứu và Chống độc, Hô hấp, Tiết niệu, Ngoại khoa, Vi sinh lâm sàng, Kiểm soát nhiễm khuẩn",
+        "Tham gia hội nghị khoa học tại Bệnh viện Chợ Rẫy",
+        "Tham gia hội nghị khoa học tại Đại học Y Dược TP.HCM",
+        "Tham gia hội nghị khoa học tại Đại học Y khoa Phạm Ngọc Thạch",
+        "Tham gia hội nghị khoa học tại Đại học Y Cần Thơ",
+        "Tham gia các bệnh viện Tỉnh phía Nam"
+      ],
       "id": "cmnb8qs0v002vvky05dvnjot0",
       "staff_account_id": "cmnb8qs0o000lvky09qn45xe1",
       "full_name": "BS.CKII TRẦN THỊ THANH NGA",
@@ -1504,8 +1562,15 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "GS.TS.BS Hoàng Anh Dũng là một chuyên gia hàng đầu trong lĩnh vực nội tổng quát với nhiều năm kinh nghiệm làm việc tại các bệnh viện danh tiếng trên thế giới. Ông đã có những đóng góp quan trọng trong việc nâng cao chất lượng dịch vụ y tế tại Bệnh viện Đa khoa Tâm Anh, đồng thời tích cực tham gia vào các nghiên cứu và hợp tác quốc tế trong lĩnh vực y tế. Với triết lý khám chữa bệnh dựa trên sự kết hợp giữa khoa học và nhân văn, bác sĩ Dũng luôn hướng tới việc mang lại sự chăm sóc tốt nhất cho bệnh nhân.",
       "experience_years": 15,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Học hàm: Giáo sư / Phó Giáo sư Y học",
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
+      "experience": [
+        "Bác sĩ ngoại khoa tại Bệnh viện Đa khoa Tâm Anh",
+        "Tu nghiệp tại các bệnh viện lớn trên thế giới",
+        "Tham mưu giúp Ban lãnh đạo Bệnh viện ký kết hợp tác với nhiều tổ chức trong nước và quốc tế"
+      ],
       "id": "cmnb8qs3o0037vky0m6d054qr",
       "staff_account_id": "cmnb8qs3h000pvky0j18jyn5r",
       "full_name": "GS.TS.BS HOÀNG ANH DŨNG",
@@ -1556,8 +1621,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TTƯT.PGS.TS.BSCC Nguyễn Xuân Hiền là một chuyên gia hàng đầu trong lĩnh vực Chẩn đoán hình ảnh và Điện quang can thiệp với gần 30 năm kinh nghiệm. Ông đã có những đóng góp quan trọng trong việc điều trị các bệnh lý phức tạp như u xơ tuyến tiền liệt và lạc nội mạc tử cung thông qua các kỹ thuật can thiệp tiên tiến. Với nhiều bằng khen và giải thưởng cao quý từ Bộ Y tế và các cơ quan y tế địa phương, PGS Hiền luôn nỗ lực không ngừng để nâng cao chất lượng chăm sóc sức khỏe cho bệnh nhân, thực hiện triết lý “Lương y như từ mẫu” trong suốt quá trình công tác.",
       "experience_years": 30,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Phó chủ nhiệm bộ môn Kỹ thuật Hình ảnh Y học, Trường ĐH Y Dược, Đại học Quốc gia"
+      ],
+      "experience": [
+        "Phó Giám đốc Trung tâm Điện quang BV Bạch Mai",
+        "Chuyên gia hàng đầu về Chẩn đoán hình ảnh và Điện quang can thiệp"
+      ],
       "id": "cmnb8qs4e003avky03zpsyhx1",
       "staff_account_id": "cmnb8qs47000qvky0pq65rm9a",
       "full_name": "TTƯT.PGS.TS.BSCC NGUYỄN XUÂN HIỀN",
@@ -1733,8 +1803,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BS Lê Đăng Khoa là một chuyên gia hàng đầu trong lĩnh vực Sản phụ khoa với nhiều năm kinh nghiệm tại các bệnh viện lớn khu vực phía Nam. Ông đã đóng góp tích cực vào việc hỗ trợ các cặp vợ chồng vô sinh hiếm muộn, mang lại niềm hạnh phúc cho nhiều gia đình. Với sự tham gia thường xuyên tại các hội nghị quốc tế và các nghiên cứu chuyên sâu, bác sĩ Lê Đăng Khoa luôn cập nhật những phương pháp điều trị hiện đại nhất, cam kết mang đến dịch vụ chăm sóc sức khỏe sinh sản tốt nhất cho bệnh nhân.",
       "experience_years": 10,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Thạc sĩ Y khoa"
+      ],
+      "experience": [
+        "ThS.BS tại Trung tâm Hỗ trợ sinh sản, Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM",
+        "Tham gia các hội nghị chuyên ngành ASRM, ESHRE và ASPIRE"
+      ],
       "id": "cmnb8qs61003fvky0551eggvc",
       "staff_account_id": "cmnb8qs5w000tvky08pxgnfr7",
       "full_name": "ThS.BS LÊ ĐĂNG KHOA",
@@ -1788,7 +1863,9 @@
       "position": "Phó Giám đốc Trung tâm Hỗ trợ sinh sản tại Bệnh viện Đa khoa Tâm Anh Hà Nội",
       "introduction": "BS Nguyễn Thị Liên Hương là một chuyên gia hàng đầu trong lĩnh vực Sản phụ khoa với hơn 20 năm kinh nghiệm. Bác sĩ đã có nhiều đóng góp quan trọng trong nghiên cứu và giảng dạy tại Đại học Y Hà Nội, nơi đã đào tạo nhiều thế hệ bác sĩ ưu tú. Hiện tại, bác sĩ đang giữ chức vụ Phó Giám đốc Trung tâm Hỗ trợ sinh sản tại Bệnh viện Đa khoa Tâm Anh Hà Nội, nơi sở hữu hệ thống LAB IVF hiện đại nhất. Với triết lý khám chữa bệnh tận tâm và chuyên nghiệp, bác sĩ luôn nỗ lực mang lại những giải pháp tốt nhất cho sức khỏe sinh sản của phụ nữ.",
       "experience_years": 20,
-      "education": [],
+      "education": [
+        "Giảng viên kiêm nhiệm bộ môn Mô – Công nghệ Phôi tại Đại học Y Hà Nội"
+      ],
       "experience": [
         "Bệnh viện Phụ sản Trung ương",
         "Trung tâm Hỗ trợ sinh sản, Bệnh viện Đa khoa Tâm Anh Hà Nội"
@@ -1814,7 +1891,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau bụng",
+        "Chóng mặt",
+        "Sụt cân không rõ nguyên nhân",
+        "Mệt mỏi kéo dài",
+        "Khó tiêu"
+      ],
       "expertise": [
         "Chẩn đoán hình ảnh",
         "Điện quang can thiệp",
@@ -1835,7 +1918,9 @@
       "position": "Giám đốc Trung tâm Chẩn đoán hình ảnh tại Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM",
       "introduction": "Với gần 25 năm kinh nghiệm trong lĩnh vực y tế và chẩn đoán hình ảnh, TS.BS Hồ Hoàng Phương đã đảm nhận nhiều vị trí quan trọng tại các bệnh viện lớn, bao gồm Trưởng khoa Chẩn đoán hình ảnh tại Bệnh viện Cấp cứu Trưng Vương. Hiện tại, ông đang giữ chức vụ Giám đốc Trung tâm Chẩn đoán hình ảnh tại Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM. Với kiến thức chuyên môn sâu rộng và sự nhiệt huyết trong công việc, TS.BS Hồ Hoàng Phương đã góp phần quan trọng trong việc chẩn đoán sớm và chính xác các bệnh phức tạp, mang lại cơ hội sống khỏe mạnh cho hàng triệu người dân.",
       "experience_years": 25,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
       "experience": [
         "Bệnh viện Cấp cứu Trưng Vương",
         "Bệnh viện Đại học Y dược (cơ sở 2)",
@@ -1890,8 +1975,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Bác sĩ Lưu Kính Khương, với gần 20 năm kinh nghiệm trong lĩnh vực y tế, đã khẳng định được vị thế của mình như một chuyên gia hàng đầu trong công tác gây mê và hồi sức. Ông là người tiên phong trong việc thực hiện phương pháp gây mê mổ sọ não khi bệnh nhân vẫn tỉnh, đồng thời cũng là bác sĩ đầu tiên của Việt Nam được đào tạo về gây mê trong phẫu thuật robot tại châu Á - Thái Bình Dương. Với triết lý khám chữa bệnh tận tâm và chuyên nghiệp, bác sĩ Khương luôn nỗ lực mang lại sự an toàn và hiệu quả tối ưu cho từng ca phẫu thuật.",
       "experience_years": 20,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Được đào tạo gây mê trong phẫu thuật robot tại châu Á – Thái Bình Dương"
+      ],
+      "experience": [
+        "Bác sĩ gây mê tại Bệnh viện",
+        "Người đầu tiên thực hiện phương pháp gây mê mổ sọ não khi bệnh nhân vẫn tỉnh tại Việt Nam"
+      ],
       "id": "cmnb8qsbe003vvky0z1zrudkn",
       "staff_account_id": "cmnb8qsb30011vky0e35p9tv9",
       "full_name": "BS.CKII LƯU KÍNH KHƯƠNG",
@@ -1945,7 +2035,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "PGS.TS.BS Nguyễn Đức Hinh là một trong những chuyên gia hàng đầu trong lĩnh vực Sản phụ khoa tại Việt Nam, với gần 40 năm kinh nghiệm trong nghề. Ông đã có nhiều đóng góp quan trọng cho sự phát triển của ngành, đặc biệt trong việc ứng dụng các kỹ thuật phẫu thuật tiên tiến và hỗ trợ sinh sản. Với vai trò là Phó Giám đốc chuyên môn tại Bệnh viện Phụ sản Trung ương và Hiệu trưởng trường Đại học Y Hà Nội, PGS Nguyễn Đức Hinh không chỉ là một bác sĩ xuất sắc mà còn là một người thầy tận tâm, truyền đạt kiến thức và kinh nghiệm cho nhiều thế hệ bác sĩ trẻ. Triết lý khám chữa bệnh của ông luôn hướng tới sự an toàn và sức khỏe tốt nhất cho bệnh nhân.",
       "experience_years": 40,
-      "education": [],
+      "education": [
+        "PGS.TS.BS tại Đại học Y Hà Nội"
+      ],
       "experience": [
         "Phó chủ nhiệm Bộ môn Sản – Phụ khoa Đại học Y Hà Nội",
         "Hiệu trưởng trường Đại học Y Hà Nội",
@@ -2004,8 +2096,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "PGS.TS.BS Lưu Thị Hồng, với hơn 30 năm kinh nghiệm trong lĩnh vực Sản phụ khoa, hiện đang giữ chức vụ Phó Giám đốc Trung tâm Sản phụ khoa tại BVĐK Tâm Anh Hà Nội. Bác sĩ đã có nhiều nghiên cứu khoa học giá trị về sức khỏe sinh sản phụ nữ và luôn nỗ lực mang lại hạnh phúc cho hàng triệu thai phụ. Với triết lý khám chữa bệnh dựa trên sự tận tâm và chuyên môn cao, bác sĩ Lưu Thị Hồng cam kết cung cấp dịch vụ y tế chất lượng nhất cho bệnh nhân.",
       "experience_years": 30,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Đào tạo chuyên sâu trong lĩnh vực điều trị các bệnh phụ khoa",
+        "Tu nghiệp trong và ngoài nước"
+      ],
+      "experience": [
+        "Phó Giám đốc Trung tâm Sản phụ khoa, BVĐK Tâm Anh Hà Nội",
+        "Hơn 30 năm kinh nghiệm trong lĩnh vực Sản phụ khoa"
+      ],
       "id": "cmnb8qs9k003qvky0j935y4yq",
       "staff_account_id": "cmnb8qs9d000yvky02nyn88i9",
       "full_name": "TTND.PGS.TS.BS.CKII LƯU THỊ HỒNG",
@@ -2111,8 +2209,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với gần nửa thế kỷ cống hiến cho nghề Y, TTUT.BS.CKII Đỗ Ngọc Lâm đã trở thành một trong những chuyên gia hàng đầu trong lĩnh vực Gây mê hồi sức và Nội tổng quát. Ông không chỉ áp dụng những kỹ thuật tiên tiến nhất để điều trị bệnh nhân mà còn tích cực tham gia giảng dạy, truyền đạt kiến thức cho các thế hệ bác sĩ tương lai. Với nhiều đề tài nghiên cứu và thành tựu nổi bật, bác sĩ Đỗ Ngọc Lâm đã được ghi nhận với nhiều danh hiệu và giải thưởng, khẳng định vị thế của mình trong ngành y tế.",
       "experience_years": 50,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa II"
+      ],
+      "experience": [
+        "Trưởng khoa Gây mê hồi sức, Bệnh viện Đa khoa Tâm Anh Hà Nội",
+        "Tham gia các chương trình đào tạo, thực tập ở cả môi trường trong nước và quốc tế"
+      ],
       "id": "cmnb8qsar003uvky04uizlf89",
       "staff_account_id": "cmnb8qsal0010vky0cy0yuhup",
       "full_name": "TTƯT.BS.CKII ĐỖ NGỌC LÂM",
@@ -2134,7 +2237,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau bụng",
+        "Sụt cân không rõ nguyên nhân",
+        "Mệt mỏi kéo dài",
+        "Chảy máu bất thường",
+        "Ho có đờm lẫn máu"
+      ],
       "expertise": [
         "Giải phẫu bệnh",
         "Tế bào học"
@@ -2147,8 +2256,15 @@
       "position": "Giám đốc Trung tâm Giải phẫu bệnh và Tế bào của Bệnh viện Đa khoa Tâm Anh",
       "introduction": "PGS.TS.BS Trịnh Tuấn Dũng, với hơn 35 năm kinh nghiệm trong lĩnh vực Giải phẫu bệnh và Tế bào học, hiện đang giữ vị trí Giám đốc Trung tâm Giải phẫu bệnh và Tế bào của Bệnh viện Đa khoa Tâm Anh. Ông là một trong những chuyên gia hàng đầu tại Việt Nam, nổi bật với khả năng đánh giá và đọc kết quả giải phẫu bệnh một cách chính xác, góp phần quan trọng trong việc chẩn đoán sớm các bệnh lý ung thư. Với nhiều công trình nghiên cứu có giá trị ứng dụng cao và vai trò Chủ tịch Hội Giải phẫu bệnh và Tế bào học Việt Nam, ông luôn cam kết mang lại dịch vụ y tế chất lượng cao nhất cho bệnh nhân.",
       "experience_years": 35,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ loại ưu, Học viện Quân y"
+      ],
+      "experience": [
+        "Giám đốc Trung tâm Giải phẫu bệnh và Tế bào, Bệnh viện Đa khoa Tâm Anh",
+        "Chủ tịch Hội Giải phẫu bệnh và Tế bào học Việt Nam",
+        "Bác sĩ tại Bệnh viện Trung ương Quân đội 108",
+        "Chiến sĩ tại Lữ đoàn Tăng thiết giáp 215"
+      ],
       "id": "cmnb8qsne004vvky0k3b3by46",
       "staff_account_id": "cmnb8qsn6001dvky08l695env",
       "full_name": "PGS.TS.BS TRỊNH TUẤN DŨNG",
@@ -2262,8 +2378,15 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với 36 năm công tác, Thầy thuốc ưu tú, Thạc sĩ, Bác sĩ Chuyên khoa II Chu Tấn Sĩ đã cống hiến hết mình cho ngành Y và lĩnh vực Ngoại Thần kinh. Ông là một trong những chuyên gia hàng đầu tại Việt Nam trong phẫu thuật thần kinh, nổi bật với những ca mổ phức tạp và thành công. Đặc biệt, ông đã triển khai thành công phẫu thuật sọ não bằng hệ thống Robot Modus V Synaptive, đánh dấu một bước tiến lớn trong y học tại Châu Á.",
       "experience_years": 36,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Bác sĩ Nội trú chuyên ngành Phẫu thuật Thần kinh tại Pháp"
+      ],
+      "experience": [
+        "Thầy thuốc ưu tú, Thạc sĩ, Bác sĩ Chuyên khoa II",
+        "Cống hiến cho ngành Y và lĩnh vực Ngoại Thần kinh",
+        "Bác sĩ điều trị phẫu thuật thần kinh tại Việt Nam",
+        "Triển khai phẫu thuật sọ não bằng hệ thống Robot Modus V Synaptive vào tháng 2 năm 2019"
+      ],
       "id": "cmnb8qse20042vky0a2luyxei",
       "staff_account_id": "cmnb8qsds0014vky000bzb9ml",
       "full_name": "TTƯT.ThS.BS.CKII CHU TẤN SĨ",
@@ -2446,8 +2569,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "PGS. TS. BS Vũ Thị Thanh Thủy là một chuyên gia hàng đầu trong lĩnh vực Nội Cơ Xương Khớp với nhiều năm kinh nghiệm khám và điều trị các bệnh lý xương khớp. Với triết lý 'Vì sức khỏe và niềm hạnh phúc của bệnh nhân', bác sĩ không ngừng nâng cao kiến thức chuyên môn và tham gia tích cực vào các hiệp hội y tế danh tiếng như Hội Loãng xương Hà Nội và Hội thấp khớp học Việt Nam. Bác sĩ đã có nhiều đóng góp quan trọng trong việc nghiên cứu và điều trị các bệnh lý phức tạp liên quan đến xương khớp.",
       "experience_years": 15,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Học hàm: Giáo sư / Phó Giáo sư Y học",
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
+      "experience": [
+        "PGS. TS. BS tại các hiệp hội như Hội Loãng xương Hà Nội, Hội thấp khớp học Việt Nam, Hội loãng xương thế giới",
+        "Chuyên gia về chuyên ngành Nội Cơ Xương Khớp"
+      ],
       "id": "cmnb8qtjd006qvky0uujoih2s",
       "staff_account_id": "cmnb8qtj70024vky0fvj3gsci",
       "full_name": "PGS.TS.BS VŨ THỊ THANH THỦY",
@@ -2646,7 +2775,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau nhức xương khớp",
+        "Sưng tấy khớp",
+        "Giới hạn vận động khớp",
+        "Cảm giác cứng khớp vào buổi sáng",
+        "Mệt mỏi và suy nhược cơ thể"
+      ],
       "expertise": [
         "Chẩn đoán hình ảnh cơ xương khớp",
         "Phẫu thuật chỉnh hình",
@@ -2786,8 +2921,15 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với hơn 35 năm kinh nghiệm trong lĩnh vực hô hấp, TTƯT.PGS.TS.BS Chu Thị Hạnh đã điều trị thành công hàng ngàn ca bệnh từ các bệnh lý phổ biến đến hiếm gặp. Bà là một trong những chuyên gia hàng đầu tại Việt Nam, hiện đang giữ chức vụ Phó chủ tịch Hội hô hấp Việt Nam. Với triết lý khám chữa bệnh tận tâm và luôn cập nhật những tiến bộ mới nhất trong y học, bà cam kết mang lại sự chăm sóc tốt nhất cho bệnh nhân.",
       "experience_years": 35,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Phó giáo sư tại Đại học Y Hà Nội",
+        "Giảng viên Giảng dạy lâm sàng cho sinh viên đại học và sau đại học"
+      ],
+      "experience": [
+        "TTƯT.PGS.TS.BS Chu Thị Hạnh đã công tác hơn 35 năm trong lĩnh vực khám, điều trị các bệnh lý hô hấp",
+        "Phó chủ tịch Hội hô hấp Việt Nam",
+        "Tham gia nghiên cứu khoa học và viết sách cùng tài liệu giảng dạy"
+      ],
       "id": "cmnb8qsmq004svky01tq6khei",
       "staff_account_id": "cmnb8qsmk001cvky080h7qxo7",
       "full_name": "TTƯT.PGS.TS.BS CHU THỊ HẠNH",
@@ -2965,8 +3107,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với gần 40 năm kinh nghiệm trong việc nghiên cứu và điều trị các bệnh lý về tim mạch, TTND.PGS.TS.BS Nguyễn Thị Bạch Yến không chỉ là người bác sĩ nhận được sự tin tưởng của hàng ngàn bệnh nhân mà còn là người thầy của nhiều thế hệ bác sĩ tim mạch. Với tinh thần trách nhiệm, tâm huyết và sự cống hiến không ngừng nghỉ trong lĩnh vực tim mạch, bà đã đạt được hàng loạt những danh hiệu cao quý như: Danh hiệu thầy thuốc nhân dân, Huân chương Lao động hạng 3 và giải thưởng nhà nước về khoa học công nghệ.",
       "experience_years": 40,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Học hàm: Giáo sư / Phó Giáo sư Y học",
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
+      "experience": [
+        "TTND.PGS.TS.BS Nguyễn Thị Bạch Yến - Bác sĩ điều trị các bệnh lý về tim mạch",
+        "Giảng viên - Người thầy của nhiều thế hệ bác sĩ tim mạch"
+      ],
       "id": "cmnb8qss50054vky0ckpte48h",
       "staff_account_id": "cmnb8qsrx001gvky0c23p56dn",
       "full_name": "TTND.PGS.TS.BS NGUYỄN THỊ BẠCH YẾN",
@@ -3252,8 +3400,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Tiến sĩ, bác sĩ Từ Thành Trí Dũng là một trong những chuyên gia hàng đầu trong lĩnh vực Nam học tại Việt Nam với hơn 33 năm kinh nghiệm tại các bệnh viện lớn khu vực phía Nam. Ông không chỉ cập nhật và ứng dụng những phương pháp điều trị hiện đại nhất mà còn tích cực tham gia các chương trình trao đổi với các chuyên gia quốc tế. Với triết lý khám chữa bệnh dựa trên sự hiểu biết và đồng cảm, bác sĩ Từ Thành Trí Dũng luôn nỗ lực mang lại chất lượng cuộc sống tốt nhất cho bệnh nhân.",
       "experience_years": 33,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
+      "experience": [
+        "Bác sĩ hàng đầu trong lĩnh vực Nam học tại Việt Nam",
+        "Hơn 33 năm kinh nghiệm thực tiễn tại các bệnh viện lớn khu vực phía Nam",
+        "Tham gia các chương trình liên kết, trao đổi với các chuyên gia nam học hàng đầu thế giới"
+      ],
       "id": "cmnb8qsu9005dvky0m5y4u4ux",
       "staff_account_id": "cmnb8qsu2001jvky0zlx4hffy",
       "full_name": "TS.BS TỪ THÀNH TRÍ DŨNG",
@@ -3370,7 +3524,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TS.BS Hoàng Kim Ước, Trưởng khoa Nội tiết – Đái tháo đường tại Bệnh viện Đa khoa Tâm Anh, Hà Nội, là một trong những chuyên gia hàng đầu trong lĩnh vực nội tiết và đái tháo đường tại Việt Nam. Với hơn 36 năm kinh nghiệm, ông đã có những đóng góp quan trọng cho nền y học, bao gồm việc biên soạn tài liệu hướng dẫn kiểm soát bệnh nội tiết và đái tháo đường thai kỳ. Ông là hội viên của nhiều tổ chức y tế danh tiếng và đã nhận nhiều bằng khen từ Bộ Y tế, khẳng định sự tận tâm và chuyên nghiệp trong công tác khám chữa bệnh.",
       "experience_years": 36,
-      "education": [],
+      "education": [
+        "Đại học Y Hà Nội"
+      ],
       "experience": [
         "Bệnh viện Đa khoa Tâm Anh",
         "Bệnh viện Nội tiết trung ương"
@@ -3427,8 +3583,15 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TTUT.BS.CKII Lê Tố Như là một bác sĩ Nhi khoa với hơn 35 năm kinh nghiệm, chuyên sâu trong lĩnh vực hồi sức Nhi và sơ sinh. Với sự am hiểu sâu sắc về các bệnh lý hô hấp ở trẻ em, bác sĩ đã cứu sống hàng ngàn ca trẻ đẻ non và điều trị thành công nhiều bệnh lý phức tạp. Được đào tạo tại các quốc gia có nền y học phát triển như Italia, Nhật Bản, và Mỹ, bác sĩ luôn cập nhật những kỹ thuật và kiến thức mới nhất trong điều trị. Sự cống hiến không ngừng nghỉ của bác sĩ đã mang lại niềm tin và hy vọng cho nhiều gia đình.",
       "experience_years": 35,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Đào tạo và tu nghiệp tại Italia",
+        "Đào tạo và tu nghiệp tại Nhật Bản",
+        "Đào tạo và tu nghiệp tại Mỹ"
+      ],
+      "experience": [
+        "TTUT.BS.CKII Lê Tố Như",
+        "Bác sĩ Khoa sơ sinh"
+      ],
       "id": "cmnb8qsw9005mvky0g76tkyy5",
       "staff_account_id": "cmnb8qsw3001mvky076kt6l2p",
       "full_name": "TTUT.BS.CKII LÊ TỐ NHƯ",
@@ -3542,8 +3705,15 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TS.BS Hoàng Thị Diễm Thúy là chuyên gia hàng đầu trong lĩnh vực Nội tiết nhi và Thận nhi, với 33 năm kinh nghiệm trong việc khám và điều trị các vấn đề liên quan đến tăng trưởng và dậy thì sớm ở trẻ em. Bà đã có nhiều năm tu nghiệp tại Pháp và Bỉ, mang về những tiến bộ y học hiện đại để áp dụng vào thực tiễn khám chữa bệnh tại Việt Nam. Với triết lý khám chữa bệnh tận tâm và chú trọng đến sự phát triển toàn diện của trẻ, TS.BS Diễm Thúy không ngừng nỗ lực nâng cao chất lượng cuộc sống cho bệnh nhi và gia đình.",
       "experience_years": 33,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tu nghiệp tại Pháp (1991-1993)",
+        "Tu nghiệp tại Pháp (1995-1997)",
+        "Tu nghiệp tại Bỉ (2004)"
+      ],
+      "experience": [
+        "33 năm thâm niên trong nghề",
+        "Chuyên gia trong lĩnh vực Thận nhi, Nội tiết nhi"
+      ],
       "id": "cmnb8qvlc00dqvky06acbtjpa",
       "staff_account_id": "cmnb8qvl5004qvky0aw4amtxj",
       "full_name": "TS.BS HOÀNG THỊ DIỄM THÚY",
@@ -3596,8 +3766,12 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với nhiều năm kinh nghiệm công tác tại những bệnh viện lớn về ung bướu, cùng kiến thức và kỹ năng thực hành y khoa thường xuyên được cập nhật theo xu hướng điều trị trên Thế giới, TS.BS Vũ Hữu Khiêm đã điều trị thành công nhiều trường hợp bệnh và dành được sự tín nhiệm cao của người bệnh. Không chỉ dành thời gian cho công tác khám chữa bệnh, TS.BS Vũ Hữu Khiêm còn dành nhiều thời gian và tâm huyết cho việc nghiên cứu khoa học. Chính vì vậy, bác sĩ đã sở hữu rất nhiều nghiên cứu khoa học giá trị và tham gia viết nhiều cuốn sách đã được xuất bản và các bài báo đăng trên tạp chí trong nước và quốc tế.",
       "experience_years": 15,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
+      "experience": [
+        "Trưởng khoa Ung bướu tại Bệnh viện Đa khoa Tâm Anh, Hà Nội"
+      ],
       "id": "cmnb8qt0v005vvky0wjede1bs",
       "staff_account_id": "cmnb8qt0p001pvky09pjqh17j",
       "full_name": "TS.BS VŨ HỮU KHIÊM",
@@ -3775,7 +3949,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TTƯT.TS.BS Lê Thị Diễm Tuyết là một chuyên gia hàng đầu trong lĩnh vực hồi sức cấp cứu và chống độc với hơn 35 năm kinh nghiệm. Bác sĩ đã có nhiều đóng góp quan trọng tại Bệnh viện Bạch Mai, nơi bà từng giữ chức vụ Phó khoa Hồi sức tích cực. Với triết lý khám chữa bệnh tận tâm và chuyên nghiệp, bác sĩ Diễm Tuyết luôn nỗ lực mang lại sự chăm sóc tốt nhất cho bệnh nhân, đồng thời là giảng viên chính tại Đại học Y Hà Nội, nơi bà truyền đạt kiến thức và kinh nghiệm cho thế hệ bác sĩ tương lai.",
       "experience_years": 35,
-      "education": [],
+      "education": [
+        "Giảng viên chính bộ môn Hồi sức cấp cứu, Đại học Y Hà Nội"
+      ],
       "experience": [
         "Bệnh viện Bạch Mai",
         "Đại học Y Hà Nội"
@@ -3820,8 +3996,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với hơn 20 năm kinh nghiệm trong lĩnh vực chẩn đoán hình ảnh, TS.BS Nguyễn Duy Trinh đã có những đóng góp quan trọng tại các bệnh viện hàng đầu trên cả nước. Ông đã chẩn đoán thành công nhiều ca bệnh phức tạp, đặc biệt trong các lĩnh vực đau cột sống, khớp vai và đau do thần kinh ngoại biên. TS.BS Nguyễn Duy Trinh không chỉ là một bác sĩ xuất sắc mà còn là một nhà nghiên cứu và giảng dạy, giúp nâng cao kiến thức cho các bác sĩ trẻ, từ đó cải thiện chất lượng chẩn đoán và điều trị cho bệnh nhân.",
       "experience_years": 20,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
+      "experience": [
+        "Phó giám đốc – Trung tâm Chẩn đoán hình ảnh – BVĐK Tâm Anh Hà Nội",
+        "Chẩn đoán hình ảnh tại bệnh viện tuyến đầu trên cả nước"
+      ],
       "id": "cmnb8qt4f0063vky00upvydsg",
       "staff_account_id": "cmnb8qt48001tvky0ngn6ejun",
       "full_name": "TS.BS NGUYỄN DUY TRINH",
@@ -3954,7 +4135,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Chóng mặt",
+        "Tim đập nhanh"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -3981,7 +4168,10 @@
         "Thạc sĩ Chẩn đoán Hình ảnh - 2012",
         "CKII Tổ chức quản lý y tế - 2021"
       ],
-      "experience": [],
+      "experience": [
+        "Phó trưởng khoa – Trưởng khoa Chẩn đoán Hình ảnh, Bệnh viện TP.Thủ Đức",
+        "Phó Giám đốc Trung tâm Chẩn đoán Hình ảnh & Điện quang Can thiệp, Bệnh viện Đa khoa Tâm Anh TP.HCM"
+      ],
       "id": "cmnb8qt6c0065vky0uwxpkde9",
       "staff_account_id": "cmnb8qt63001vvky0h1llfoms",
       "full_name": "THS.BS.CKII CHÂU THỊ NGỌC ÁNH",
@@ -4032,8 +4222,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với hơn 10 năm kinh nghiệm trong lĩnh vực Chẩn đoán hình ảnh và điện quang can thiệp, BSCKII. BSNT Lê Văn Khánh đã thực hiện thành công hàng nghìn ca đốt sóng cao tần RFA tuyến giáp và các kỹ thuật can thiệp phức tạp khác. Ông đã tham gia nhiều khóa học chuyên sâu tại Hàn Quốc, nâng cao kỹ năng và kiến thức chuyên môn. Được đồng nghiệp và lãnh đạo viện đánh giá cao về chuyên môn và sự nhiệt huyết, BS Khánh hiện là thành viên của hội Điện quang và Y học hạt nhân.",
       "experience_years": 10,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Khóa học chuyên sâu tại Hàn Quốc về cắt u hút u vú chân không VABB",
+        "Khóa học chuyên sâu tại Hàn Quốc về đốt sóng cao tầng RFA tuyến giáp"
+      ],
+      "experience": [
+        "Bác sĩ Chuyên khoa II tại TT Chẩn đoán hình ảnh và Điện quang can thiệp, Bệnh viện Đa khoa Tâm Anh Hà Nội",
+        "Công tác tại các bệnh viện tuyến đầu của cả nước trong lĩnh vực Chẩn đoán hình ảnh và điện quang can thiệp"
+      ],
       "id": "cmnb8qt7d0066vky02ql6miox",
       "staff_account_id": "cmnb8qt77001wvky0la70jcld",
       "full_name": "BS.CKII LÊ VĂN KHÁNH",
@@ -4083,8 +4279,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BSCKII Nguyễn Lê Vinh là một bác sĩ có hơn 20 năm kinh nghiệm trong lĩnh vực Nội tổng quát, hiện đang giữ vị trí Phó Khoa Phẫu thuật Tim, Mạch máu và Lồng ngực tại Bệnh viện Đa khoa Tâm Anh Hà Nội. Với sự tận tâm và chuyên môn vững vàng, bác sĩ đã thực hiện thành công hàng trăm ca phẫu thuật, giúp bệnh nhân vượt qua những tình huống nguy hiểm. Bác sĩ không chỉ chú trọng đến việc điều trị mà còn tích cực tham gia nghiên cứu, mang lại nhiều kết quả có giá trị cho cộng đồng. Triết lý khám chữa bệnh của bác sĩ là coi bệnh nhân như người thân, luôn sẵn sàng lắng nghe và hỗ trợ từng trường hợp cụ thể.",
       "experience_years": 20,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Thạc sĩ Y khoa",
+        "Tốt nghiệp Bác sĩ Chuyên khoa II"
+      ],
+      "experience": [
+        "Phó Khoa Phẫu thuật Tim, Mạch máu và Lồng ngực, Bệnh viện Đa khoa Tâm Anh Hà Nội"
+      ],
       "id": "cmnb8qu2c008pvky08e72qo0k",
       "staff_account_id": "cmnb8qu25002vvky0xezqqdw8",
       "full_name": "ThS.BSCKII NGUYỄN LÊ VINH",
@@ -4187,7 +4388,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với hơn 20 năm kinh nghiệm trong lĩnh vực chẩn đoán hình ảnh, BSCKII. Lưu Công Thành đã cùng các cộng sự kịp thời đưa ra những chẩn đoán chính xác, phối hợp chặt chẽ cùng các khoa lâm sàng để chẩn đoán đúng và đồng thời đưa ra các phác đồ điều trị bệnh phù hợp, cá thể hóa với từng đối tượng. Ông đã nhận được nhiều bằng khen từ Bộ Y Tế, minh chứng cho sự cố gắng không ngừng nghỉ trong lĩnh vực này. Mục tiêu lớn nhất của BSCKII. Lưu Công Thành là giúp bệnh nhân rút ngắn thời gian điều trị và dự phòng bệnh tật trong tương lai.",
       "experience_years": 20,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa II"
+      ],
       "experience": [],
       "id": "cmnb8qt860067vky0sd9udnkw",
       "staff_account_id": "cmnb8qt7z001xvky0x8iroijg",
@@ -4240,8 +4443,17 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TTƯT.TS.BS CKII Lê Văn Tuấn, với hơn 30 năm kinh nghiệm trong lĩnh vực Chấn thương Chỉnh hình, đã có nhiều đóng góp quan trọng cho nền y tế Việt Nam. Ông từng giữ chức vụ Phó chủ tịch Hội Chấn thương chỉnh hình TP HCM và hiện là Ủy viên ban chấp hành của Hội Chấn thương Chỉnh hình Việt Nam. Với phương châm 'Sống giản dị, làm việc nghiêm túc', bác sĩ Tuấn luôn nỗ lực giúp bệnh nhân vượt qua khó khăn và đào tạo nhiều thế hệ bác sĩ có tâm và có tầm.",
       "experience_years": 30,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Phó trưởng bộ môn Chấn thương chỉnh hình, Đại học Y dược TP HCM"
+      ],
+      "experience": [
+        "Trưởng khoa Khoa Chấn thương chỉnh hình, Bệnh viện Chợ Rẫy",
+        "Phụ trách khoa Khoa Phục hồi chức năng, Bệnh viện Chợ Rẫy",
+        "Giám đốc Trung tâm Chấn thương Chỉnh hình, Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM",
+        "Phó chủ tịch Hội Chấn thương chỉnh hình TP HCM",
+        "Ủy viên ban chấp hành của Hội Chấn thương Chỉnh hình TP.HCM",
+        "Ủy viên ban chấp hành của Hội Chấn thương Chỉnh hình Việt Nam"
+      ],
       "id": "cmnb8qsd6003zvky0lxe6wt0v",
       "staff_account_id": "cmnb8qscz0013vky05cxul4vc",
       "full_name": "TTƯT.TS.BS.CKII LÊ VĂN TUẤN",
@@ -4428,7 +4640,10 @@
         "Khóa đào tạo tại Bệnh viện Royal North Shore, trường Đại học Sydney",
         "Khóa đào tạo tại Bệnh viện Kyoto"
       ],
-      "experience": [],
+      "experience": [
+        "Chuyên gia hàng đầu tại Việt Nam trong lĩnh vực Nội – Nội tiết",
+        "Khám sức khỏe tổng quát tại Bệnh viện Đa khoa Tâm Anh Hà Nội"
+      ],
       "id": "cmnb8qtdm006hvky09tiyfbeu",
       "staff_account_id": "cmnb8qtdf0021vky0w28attg2",
       "full_name": "TS.BS LÊ BÁ NGỌC",
@@ -4540,7 +4755,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Bác sĩ CKII Trương Thị Vành Khuyên, với hơn 26 năm kinh nghiệm trong lĩnh vực Nội tiết – Đái tháo đường, đã khám và điều trị cho hàng ngàn bệnh nhân. Bác sĩ từng giữ chức vụ trưởng khoa Nội tại Bệnh viện Gia An 115, nơi bà đã đóng góp không nhỏ vào việc nâng cao chất lượng chăm sóc sức khỏe. Với triết lý khám chữa bệnh tập trung vào việc hiểu rõ từng cá thể bệnh nhân, bác sĩ Khuyên luôn nỗ lực giúp bệnh nhân đạt được mục tiêu kiểm soát đường huyết hiệu quả.",
       "experience_years": 26,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa II"
+      ],
       "experience": [
         "Bệnh viện Gia An 115"
       ],
@@ -4566,7 +4783,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau nhức xương khớp",
+        "Sưng tấy khớp",
+        "Giảm khả năng vận động",
+        "Cảm giác cứng khớp vào buổi sáng",
+        "Đau lưng"
+      ],
       "expertise": [
         "Chẩn đoán hình ảnh cơ xương khớp",
         "Phẫu thuật chỉnh hình",
@@ -4709,7 +4932,10 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BS Nguyễn Minh Trí Viên là chuyên gia phẫu thuật tim hàng đầu tại Việt Nam với hơn 30 năm kinh nghiệm trong lĩnh vực phẫu thuật tim bẩm sinh và người lớn. Ông đã được đào tạo bài bản tại các bệnh viện danh tiếng ở Pháp và Úc, và hiện đang công tác tại MedicaLink. Với triết lý khám chữa bệnh tận tâm và chuyên nghiệp, ThS.BS Nguyễn Minh Trí đã mang lại cuộc sống mới cho hàng vạn bệnh nhân, đặc biệt là trẻ em mắc bệnh tim bẩm sinh phức tạp.",
       "experience_years": 30,
-      "education": [],
+      "education": [
+        "Bác sĩ nội trú Bệnh viện Broussais, Paris năm 1992 – 1993",
+        "Bác sĩ thường trú Bệnh viện Royal Children, Melbourne năm 2002"
+      ],
       "experience": [
         "Viện Tim TP.HCM",
         "Bệnh viện Nhi Đồng 2",
@@ -5017,7 +5243,11 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TS.BS Nguyễn Anh Dũng là một chuyên gia hàng đầu trong lĩnh vực Phẫu thuật Tim mạch và Lồng ngực với gần 30 năm kinh nghiệm. Ông đã được đào tạo tại các cơ sở y tế danh tiếng như bệnh viện Claude Bernard (Pháp) và các bệnh viện lớn tại TP.HCM. Với triết lý khám chữa bệnh là 'hạnh phúc của người bệnh là hạnh phúc của chính mình', TS.BS Nguyễn Anh Dũng luôn tiên phong trong việc áp dụng các kỹ thuật tim mạch mới và hiện đại, nhằm mang lại kết quả điều trị tốt nhất cho bệnh nhân.",
       "experience_years": 30,
-      "education": [],
+      "education": [
+        "Đào tạo và tham gia phẫu thuật can thiệp tim, mạch máu tại bệnh viện Claude Bernard (Pháp)",
+        "Viện tim TP.HCM",
+        "Bệnh viện Đại học Y Dược TP.HCM"
+      ],
       "experience": [
         "Bệnh viện Claude Bernard (Pháp)",
         "Viện tim TP.HCM",
@@ -5139,8 +5369,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với hơn 25 năm kinh nghiệm trong lĩnh vực Nội tim mạch, BS.CKI Huỳnh Phúc Nguyên đã khẳng định được vị thế của mình qua nhiều vai trò quan trọng trong khám và điều trị bệnh nhân tim mạch. Ông không chỉ tham gia điều trị nội trú và ngoại trú mà còn tích cực hội chẩn các ca bệnh phức tạp, đặc biệt trong hồi sức tích cực. BS.CKI Huỳnh Phúc Nguyên luôn đặt trách nhiệm và sự tận tâm với người bệnh lên hàng đầu, coi đó là động lực để mang lại hiệu quả điều trị tốt nhất. Ông cũng thường xuyên tham gia các hội thảo chuyên sâu, chia sẻ kiến thức và kinh nghiệm quý báu với các thế hệ bác sĩ trẻ.",
       "experience_years": 25,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa I"
+      ],
+      "experience": [
+        "Bác sĩ điều trị tại Bệnh viện Chợ Rẫy TP.HCM",
+        "Trưởng khoa Hồi sức Nội Tim mạch tại Trung tâm Tim mạch, Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM"
+      ],
       "id": "cmnb8qtqt007hvky0euwovuwm",
       "staff_account_id": "cmnb8qtqm002dvky01y4vi1aq",
       "full_name": "BS.CKI HUỲNH PHÚC NGUYÊN",
@@ -5257,7 +5492,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BS Nguyễn Đỗ Thùy Giang là một chuyên gia hàng đầu trong lĩnh vực Ung Bướu với hơn 26 năm kinh nghiệm, từng công tác tại Bệnh viện Ung bướu và Bộ môn Ung thư Đại học Y Dược TP.HCM. Với chuyên môn sâu về phẫu thuật bệnh lý tuyến vú, bác sĩ không chỉ mang đến những phương pháp điều trị tiên tiến mà còn chú trọng đến tâm lý và sự an tâm của bệnh nhân. Bác sĩ luôn mong muốn lan tỏa kiến thức và truyền cảm hứng cho các đồng nghiệp trẻ, nhằm mang lại cơ hội điều trị tốt nhất cho bệnh nhân ung thư vú.",
       "experience_years": 26,
-      "education": [],
+      "education": [
+        "Thạc sĩ Bác sĩ tại Đại học Y Dược TP.HCM"
+      ],
       "experience": [
         "Bệnh viện Ung bướu",
         "Bộ môn Ung thư Đại học Y Dược TP.HCM"
@@ -5284,7 +5521,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Ho kéo dài",
+        "Mệt mỏi vô cớ",
+        "Chóng mặt"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -5338,7 +5581,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Tim đập nhanh hoặc không đều",
+        "Chóng mặt hoặc ngất xỉu"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -5420,8 +5669,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "BS.CKII Thân Thị Minh Trung, phó trưởng khoa Nội thần kinh tại BVĐK Tâm Anh, là một bác sĩ được nhiều bệnh nhân yêu mến nhờ vào chuyên môn cao và phong thái gần gũi. Với hơn 20 năm kinh nghiệm tại các bệnh viện hàng đầu TP.HCM và thời gian tu nghiệp tại Pháp, bác sĩ đã áp dụng nhiều phương pháp tiên tiến trong điều trị. Ông đã nhận được Kỷ niệm chương Vì sức khỏe Nhân dân năm 2019 từ Sở Y tế TP.Hồ Chí Minh, khẳng định những đóng góp của mình cho ngành y tế.",
       "experience_years": 20,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tu nghiệp chuyên ngành Nội thần kinh ở Pháp"
+      ],
+      "experience": [
+        "Phó trưởng khoa Nội thần kinh tại BVĐK Tâm Anh",
+        "Hơn 20 năm kinh nghiệm tại các bệnh viện chủ chốt ở TP.HCM"
+      ],
       "id": "cmnb8qtve007yvky0c2561t9b",
       "staff_account_id": "cmnb8qtv7002kvky08lokvjes",
       "full_name": "BS.CKII THÂN THỊ MINH TRUNG",
@@ -5592,7 +5846,9 @@
       "position": "Bác sĩ điều trị cấp cao tại BVĐK Tâm Anh, TP.HCM",
       "introduction": "Với hơn 20 năm kinh nghiệm trong lĩnh vực y khoa, TS.BS Trần Minh Giang đã khẳng định được vị thế của mình trong việc điều trị các bệnh lý nội khoa nặng và cấp cứu. Ông từng giữ chức vụ Phó khoa Hồi sức tại Bệnh viện Nhân dân Gia Định và hiện đang đảm trách vai trò Phó khoa Hồi sức tích cực – chống độc tại BVĐK Tâm Anh. Bác sĩ Minh Giang không chỉ nổi bật với khả năng chẩn đoán và điều trị hiệu quả mà còn tích cực tham gia nghiên cứu khoa học nhằm nâng cao chất lượng khám chữa bệnh.",
       "experience_years": 20,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
       "experience": [
         "Bệnh viện Nhân dân Gia Định",
         "BVĐK Tâm Anh"
@@ -5727,7 +5983,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Tim đập nhanh hoặc không đều",
+        "Chóng mặt hoặc ngất xỉu"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -6155,7 +6417,10 @@
       "position": "Phó khoa Tiết niệu, Trưởng đơn vị Ung thư tiết niệu tại Bệnh viện Đa khoa Tâm Anh TP.HCM",
       "introduction": "ThS.BS.CKI Nguyễn Tân Cương là một chuyên gia hàng đầu trong lĩnh vực Tiết Niệu – Nam khoa với nhiều năm kinh nghiệm làm việc tại các bệnh viện uy tín như Bệnh viện Đại học Y Dược TP.HCM. Ông được đồng nghiệp và bệnh nhân đánh giá cao nhờ vào sự tận tâm và chuyên môn vững vàng. Luôn cập nhật kiến thức mới và tham gia tích cực vào các hiệp hội y tế trong nước và quốc tế, ThS.BS.CKI Tân Cương cam kết mang đến phác đồ điều trị tối ưu nhất cho từng bệnh nhân, giúp họ cải thiện chất lượng cuộc sống và tìm thấy hạnh phúc trong cuộc sống lứa đôi.",
       "experience_years": 10,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Thạc sĩ Y khoa",
+        "Tốt nghiệp Bác sĩ Chuyên khoa I"
+      ],
       "experience": [
         "Bệnh viện Đại học Y Dược TP.HCM",
         "Bệnh viện Đa khoa Tâm Anh TP.HCM"
@@ -6208,8 +6473,13 @@
       "position": "Trưởng đơn vị Hỗ trợ sinh sản tại Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM",
       "introduction": "BS.CKI Châu Hoàng Phương Thảo hiện đang giữ chức vụ Trưởng đơn vị Hỗ trợ sinh sản tại Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM. Với gần 20 năm kinh nghiệm trong lĩnh vực hỗ trợ sinh sản, bác sĩ không chỉ được đồng nghiệp và chuyên gia đầu ngành đánh giá cao mà còn nhận được sự tin tưởng từ nhiều cặp vợ chồng đang tìm kiếm con cái. Bác sĩ Châu Hoàng Phương Thảo luôn tâm huyết trong việc khám, chẩn đoán và điều trị vô sinh – hiếm muộn, đồng thời tham gia giảng dạy và biên soạn tài liệu cho các thế hệ bác sĩ trẻ.",
       "experience_years": 20,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa I"
+      ],
+      "experience": [
+        "Trưởng đơn vị Hỗ trợ sinh sản, Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM",
+        "Tham gia biên soạn tài liệu, giảng dạy chương trình đào tạo liên tục về kiến thức và kỹ năng hỗ trợ sinh sản cơ bản trên lâm sàng"
+      ],
       "id": "cmnb8qu5u0094vky0xofeha7m",
       "staff_account_id": "cmnb8qu5p0030vky0fcrixunq",
       "full_name": "BS.CKI CHÂU HOÀNG PHƯƠNG THẢO",
@@ -6256,7 +6526,9 @@
       "position": "Trưởng Lab, Trung tâm Hỗ trợ sinh sản tại MedicaLink",
       "introduction": "Thạc sĩ Nguyễn Ngọc Quỳnh, Trưởng Lab tại Trung tâm Hỗ trợ sinh sản Bệnh viện Đa khoa Tâm Anh TP.HCM, với nhiều năm kinh nghiệm trong lĩnh vực hỗ trợ sinh sản, đã làm chủ nhiều kỹ thuật hiện đại nhằm tăng khả năng có con cho các cặp vợ chồng vô sinh hiếm muộn. Với tâm niệm mang tiếng cười trẻ thơ đến mọi nhà, Thạc sĩ Quỳnh luôn chú trọng đến việc theo dõi và chăm sóc sức khỏe toàn diện cho trẻ em, đảm bảo sự phát triển tốt nhất cho thế hệ tương lai.",
       "experience_years": 10,
-      "education": [],
+      "education": [
+        "Thạc sĩ"
+      ],
       "experience": [
         "Trung tâm Hỗ trợ sinh sản, Bệnh viện Đa khoa Tâm Anh TP.HCM"
       ],
@@ -6365,8 +6637,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BS.CKII Dương Quang Huy là một chuyên gia hàng đầu trong lĩnh vực sức khỏe sinh sản nam giới với hơn 15 năm kinh nghiệm. Ông đã tham gia nhiều chương trình đào tạo quốc tế, đặc biệt là tại trường Đại học Dược John Hopkins, Hoa Kỳ. Với sự tận tâm và chuyên môn sâu, ông đã thực hiện thành công nhiều ca phẫu thuật phức tạp, góp phần cải thiện chất lượng cuộc sống cho nhiều nam giới vô sinh hiếm muộn. Triết lý khám chữa bệnh của ông là luôn đồng hành và hỗ trợ bệnh nhân trong hành trình tìm kiếm hạnh phúc gia đình.",
       "experience_years": 15,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Chương trình đào tạo sức khỏe nam giới tại trường Đại học Dược John Hopkins, Hoa Kỳ"
+      ],
+      "experience": [
+        "15 năm công tác tại các bệnh viện lớn khu vực phía Nam",
+        "Công tác tại Trung tâm Hỗ trợ sinh sản, Hệ thống Bệnh viện Đa khoa Tâm Anh"
+      ],
       "id": "cmnb8qu7x009dvky0g0zc7plk",
       "staff_account_id": "cmnb8qu7q0033vky0x5as1eku",
       "full_name": "ThS.BS.CKII DƯƠNG QUANG HUY",
@@ -6536,7 +6813,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Bác sĩ Phạm Thị Mỹ Tú, với trái tim đầy nhiệt huyết và đam mê với nghề y, đã dành nhiều thời gian để học tập và nghiên cứu trong lĩnh vực Sản phụ khoa. Hiện đang công tác tại Trung tâm Hỗ trợ sinh sản, Bệnh viện Đa khoa Tâm Anh TP.HCM, bác sĩ đã có nhiều kinh nghiệm trong việc hỗ trợ các cặp vợ chồng vô sinh hiếm muộn. Với triết lý khám chữa bệnh tận tâm và chuyên nghiệp, bác sĩ luôn nỗ lực mang lại những giải pháp tốt nhất cho bệnh nhân.",
       "experience_years": 8,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Đa khoa"
+      ],
       "experience": [
         "Bệnh viện Đa khoa Gia đình Đà Nẵng",
         "Bệnh viện Đa khoa Tâm Anh TP.HCM"
@@ -6562,7 +6841,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Ho kéo dài",
+        "Đau nhức xương khớp",
+        "Mệt mỏi vô cớ"
+      ],
       "expertise": [
         "Hóa trị",
         "Xạ trị",
@@ -6620,7 +6905,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Chóng mặt",
+        "Tim đập nhanh"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -6799,7 +7090,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Chóng mặt",
+        "Tim đập nhanh"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -6853,7 +7150,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Tim đập nhanh hoặc không đều",
+        "Chóng mặt hoặc ngất xỉu"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -6967,7 +7270,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi không rõ nguyên nhân",
+        "Tim đập nhanh hoặc không đều",
+        "Chóng mặt hoặc ngất xỉu"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -7020,7 +7329,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Tim đập nhanh hoặc không đều",
+        "Chóng mặt hoặc ngất xỉu"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -7253,7 +7568,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau bụng",
+        "Chảy máu bất thường",
+        "Mệt mỏi kéo dài",
+        "Buồn nôn và nôn",
+        "Khó chịu vùng chậu"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -7331,8 +7652,13 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với 25 năm kinh nghiệm trong lĩnh vực Gây mê Hồi sức và ICU, BS.CKI Đỗ Hữu Nam đã khẳng định được vị thế của mình trong ngành y tế. Ông không chỉ là một bác sĩ tận tâm mà còn là một nhà nghiên cứu khoa học, từng tham gia viết sách và bài báo chuyên ngành. Hiện tại, ông công tác tại Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM, nơi có cơ sở vật chất hiện đại và danh tiếng trong việc chăm sóc sức khỏe. Triết lý làm việc của ông là 'An toàn – Hiệu quả – Lấy người bệnh làm trung tâm', điều này thể hiện rõ trong từng ca mổ mà ông tham gia.",
       "experience_years": 25,
-      "education": [],
-      "experience": [],
+      "education": [
+        "BS.CKI Đỗ Hữu Nam tham gia viết sách về lĩnh vực “CRRT – Lọc máu liên tục” (2013)"
+      ],
+      "experience": [
+        "Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM",
+        "Bác sĩ Gây mê Hồi sức và ICU"
+      ],
       "id": "cmnb8qujr00anvky0no8jgpww",
       "staff_account_id": "cmnb8qujk003lvky0jqeqczgb",
       "full_name": "BS.CKI ĐỖ HỮU NAM",
@@ -7391,7 +7717,13 @@
         "Bác sĩ nội trú - Đại học Y Hà Nội",
         "Bác sĩ chuyên khoa II - Đại học Y Hà Nội"
       ],
-      "experience": [],
+      "experience": [
+        "Bác sĩ điều trị ung thư tại Khoa Ung bướu, BVĐK Tâm Anh Hà Nội",
+        "Tham gia đào tạo, giảng dạy, chỉ đạo tuyến",
+        "Viết sách chuyên ngành",
+        "Nghiên cứu khoa học",
+        "Báo cáo tại nhiều hội nghị chuyên ngành"
+      ],
       "id": "cmnb8quk800aovky0tdnnyuzd",
       "staff_account_id": "cmnb8quk2003mvky0o7pj7e6c",
       "full_name": "BS.CKII NGÔ TRƯỜNG SƠN",
@@ -7444,8 +7776,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "TTƯT.PGS.TS.BSCC Ngô Thị Tính là một chuyên gia hàng đầu trong lĩnh vực ung bướu với hơn 30 năm kinh nghiệm. Bác sĩ đã công tác tại nhiều bệnh viện lớn và không ngừng cập nhật các phương pháp điều trị hiện đại, giúp hàng ngàn bệnh nhân vượt qua ung thư và cải thiện chất lượng sống. Với nhiều nghiên cứu khoa học giá trị và sự tham gia tích cực vào các hiệp hội ung thư quốc tế, bác sĩ Tính cam kết mang đến những giải pháp điều trị tốt nhất cho bệnh nhân tại Việt Nam.",
       "experience_years": 30,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Học hàm: Giáo sư / Phó Giáo sư Y học",
+        "Tốt nghiệp Tiến sĩ Y khoa"
+      ],
+      "experience": [
+        "Công tác tại BVĐK Tâm Anh Hà Nội",
+        "Công tác tại Phòng khám Đa khoa Tâm Anh Cầu Giấy"
+      ],
       "id": "cmnb8quld00asvky0jjvpanae",
       "staff_account_id": "cmnb8qul6003ovky0n4wo8gkf",
       "full_name": "TTƯT.PGS.TS.BSCC Ngô Thị Tính",
@@ -7562,7 +7900,9 @@
         "Thạc sĩ chuyên ngành Sản Phụ khoa tại Đại học Y dược Thành phố Hồ Chí Minh (2014)",
         "Bác sĩ Chuyên khoa II chuyên ngành Sản Phụ khoa tại Đại học Y khoa Phạm Ngọc Thạch (2023)"
       ],
-      "experience": [],
+      "experience": [
+        "Trưởng đơn vị Sản Phụ khoa, Bệnh viện Đa khoa Tâm Anh TP.HCM (Cơ sở P.Tân Hưng – Quận 7 cũ)"
+      ],
       "id": "cmnb8qumk00awvky01mdq7xub",
       "staff_account_id": "cmnb8qumd003qvky03c8r9tsi",
       "full_name": "THS.BS.CKII HÀ HUỲNH KIM YẾN",
@@ -7683,7 +8023,9 @@
       "position": "Bác sĩ Đơn vị Sản Phụ khoa tại Bệnh viện Đa khoa Tâm Anh",
       "introduction": "BS.CKII Huỳnh Kim Khoe là một bác sĩ Sản Phụ khoa với hơn 42 năm kinh nghiệm trong lĩnh vực thăm khám và điều trị các bệnh lý liên quan đến sản phụ khoa. Ông đã từng giữ nhiều vị trí quan trọng tại các bệnh viện lớn như Bệnh viện Hùng Vương và Bệnh viện Quốc tế Mỹ. Với chuyên môn sâu và sự tận tâm, bác sĩ Khoe luôn được bệnh nhân và đồng nghiệp kính trọng. Triết lý của ông là 'Khám chữa bệnh cứu người là mục tiêu phấn đấu, là sự nghiệp mà cả đời bác sĩ theo đuổi'.",
       "experience_years": 42,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa II"
+      ],
       "experience": [
         "Bệnh viện Hùng Vương",
         "Bệnh viện Mê Kông",
@@ -7924,7 +8266,12 @@
         "Thạc sĩ Ngoại khoa (2007)",
         "Tiến sĩ Y học tại Viện Nghiên cứu Khoa học Y Dược Lâm sàng 108 (2019)"
       ],
-      "experience": [],
+      "experience": [
+        "Chuyên gia trong lĩnh vực Chấn thương chỉnh hình và Phẫu thuật tạo hình",
+        "Điều trị thành công nhiều ca bệnh khó trong lĩnh vực vi phẫu",
+        "Nghiên cứu đặc điểm chẩn đoán và kết quả điều trị phẫu thuật tổn thương động mạch chi dưới tại Bệnh viện Việt Đức",
+        "Nghiên cứu ứng dụng kỹ thuật vi phẫu trong trồng nối chi thể đứt rời"
+      ],
       "id": "cmnb8qusn00b8vky01p481wtf",
       "staff_account_id": "cmnb8qusg003uvky0eq0rdjy0",
       "full_name": "TS.BS CHẾ ĐÌNH NGHĨA",
@@ -7980,8 +8327,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BSNT Nguyễn Thị Thanh Tâm, với hơn 20 năm kinh nghiệm trong lĩnh vực Sản phụ khoa, là một bác sĩ tận tâm và chuyên nghiệp. Bác sĩ không chỉ nổi bật trong việc chăm sóc sức khỏe phụ nữ mà còn là một chuyên gia hàng đầu trong các phẫu thuật tạo hình và thẩm mỹ. Với triết lý 'Hết bệnh triệt để, an toàn tối đa', bác sĩ luôn nỗ lực mang lại sự tự tin và sức khỏe cho từng bệnh nhân. Bác sĩ đã từng công tác tại nhiều cơ sở y tế danh tiếng và hiện đang là bác sĩ điều trị cấp cao tại MedicaLink.",
       "experience_years": 20,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Thạc sĩ Y khoa"
+      ],
+      "experience": [
+        "Bác sĩ Sản Phụ khoa tại Trung Tâm Sản Phụ khoa, Bệnh viện Đa khoa Tâm Anh TP.HCM",
+        "Kinh nghiệm hơn 20 năm trong lĩnh vực Sản Phụ khoa",
+        "Nghiên cứu chuyên sâu về lĩnh vực Sàn chậu nữ trong 17 năm"
+      ],
       "id": "cmnb8qutv00bbvky071m6dbcf",
       "staff_account_id": "cmnb8qut8003vvky0zclrk95p",
       "full_name": "ThS.BSNT NGUYỄN THỊ THANH TÂM",
@@ -8098,7 +8451,10 @@
       "position": "Bác sĩ Sản Phụ khoa tại Trung tâm Sản Phụ khoa – Bệnh viện Đa khoa Tâm Anh TP.HCM",
       "introduction": "ThS.BSNT.CKI Trần Lâm Khoa là một chuyên gia hàng đầu trong lĩnh vực Sản Phụ khoa với gần 20 năm kinh nghiệm. Ông đã được đào tạo và làm việc tại Bệnh viện Necker, một trong những trung tâm chẩn đoán tiền sản lớn nhất tại Pháp, nơi ông đã tiếp xúc với nhiều ca bệnh phức tạp. Hiện tại, bác sĩ Khoa không chỉ điều trị mà còn tham gia giảng dạy tại Đại học Y Dược TP.Hồ Chí Minh, mang đến cho bệnh nhân sự chăm sóc tận tâm và chuyên nghiệp nhất.",
       "experience_years": 20,
-      "education": [],
+      "education": [
+        "Tu nghiệp tại Bệnh viện Necker, Pháp",
+        "Giảng dạy tại Đại học Y Dược TP.Hồ Chí Minh"
+      ],
       "experience": [
         "Bệnh viện Necker",
         "Bệnh viện Từ Dũ",
@@ -8157,7 +8513,10 @@
         "Thạc sĩ chuyên ngành Huyết học tại Đại học Y dược TP.HCM",
         "Bác sĩ chuyên khoa II chuyên ngành Quản lý y tế tại Đại học Y dược Cần Thơ"
       ],
-      "experience": [],
+      "experience": [
+        "Phó khoa Kiểm soát nhiễm khuẩn tại Hệ thống Bệnh viện Đa khoa Tâm Anh TP.HCM",
+        "Bác sĩ lâm sàng"
+      ],
       "id": "cmnb8quyc00bnvky0b0fhp23q",
       "staff_account_id": "cmnb8quxv003zvky0n4474bre",
       "full_name": "TTƯT.ThS.BS.CKII  HUỲNH THỊ THANH TRANG",
@@ -8267,8 +8626,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BS.CKII Phan Thị Phương Thảo là một bác sĩ Nội Tim mạch với hơn 29 năm kinh nghiệm trong lĩnh vực y tế. Với triết lý khám chữa bệnh tận tâm và chuyên nghiệp, bác sĩ luôn đặt lợi ích của bệnh nhân lên hàng đầu, từ việc xây dựng phác đồ điều trị đến việc theo dõi sát sao quá trình hồi phục. Bác sĩ Phương Thảo không ngừng nâng cao kiến thức chuyên môn để mang đến những phương pháp điều trị tối ưu nhất cho bệnh nhân, đồng thời luôn tạo dựng niềm tin và sự gần gũi với từng bệnh nhân mà mình chăm sóc.",
       "experience_years": 29,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Thạc sĩ Y khoa",
+        "Tốt nghiệp Bác sĩ Chuyên khoa II"
+      ],
+      "experience": [
+        "ThS.BS.CKII Phan Thị Phương Thảo",
+        "Bác sĩ Nội Tim mạch"
+      ],
       "id": "cmnb8qw1100euvky0g6jkmulg",
       "staff_account_id": "cmnb8qw0w0058vky0462bc11y",
       "full_name": "THS.BS.CKII PHAN THỊ PHƯƠNG THẢO",
@@ -8442,7 +8807,12 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "BS.CKII Lê Thị Kim Liên là một chuyên gia hàng đầu trong lĩnh vực tiêu hóa và gan mật với hơn 15 năm kinh nghiệm trong thăm khám, chẩn đoán và điều trị các bệnh lý nội khoa. Bác sĩ đã có cơ hội học tập và làm việc tại các bệnh viện danh tiếng như Bệnh viện Bạch Mai và Bệnh viện Hoàng gia Adelaide, nơi đã giúp bác sĩ tích lũy kiến thức và kỹ năng chuyên sâu. Với tâm huyết nghiên cứu và cống hiến cho ngành y, bác sĩ Liên không chỉ mang đến sự chăm sóc tận tâm cho bệnh nhân mà còn đóng góp vào sự phát triển của y học thông qua các công trình nghiên cứu khoa học có giá trị.",
       "experience_years": 15,
-      "education": [],
+      "education": [
+        "Đại học Chemeketa (Mỹ)",
+        "Bệnh viện Bạch Mai",
+        "Bệnh viện Hoàng gia Adelaide (Úc)",
+        "Bệnh viện St Vincent, Sydney (Úc)"
+      ],
       "experience": [
         "Bệnh viện Bãi Cháy",
         "BVĐK Tâm Anh Hà Nội"
@@ -8526,7 +8896,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau bụng",
+        "Buồn nôn",
+        "Tiêu chảy",
+        "Chán ăn",
+        "Vàng da"
+      ],
       "expertise": [
         "Nội soi tiêu hóa",
         "Siêu âm gan mật",
@@ -8967,7 +9343,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với nhiều năm kinh nghiệm trong lĩnh vực Nội tổng hợp và công tác tại bệnh viện tuyến đầu của cả nước, BSNT. Nguyễn Văn Ngân đã điều trị thành công hàng trăm ca bệnh hô hấp phổ biến như viêm phế quản, viêm phổi, COPD, hen phế quản, ung thư phổi, cũng như các bệnh hô hấp chuyên sâu như lao, bệnh tích protein phế nang, viêm phổi kẽ, xơ phổi vô căn, Sarcoidosis. Là thành viên tích cực của Hội hô hấp Việt Nam, Hội hô hấp Hà Nội, Hội hô hấp Thành phố Hồ Chí Minh, BS Nguyễn Văn Ngân luôn dẫn đầu trong các hoạt động, hội thảo về chuyên môn, cập nhật những kỹ thuật mới và ứng dụng linh hoạt, sáng tạo trong việc điều trị cho người bệnh một cách hiệu quả nhất.",
       "experience_years": 10,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Thạc sĩ Y khoa"
+      ],
       "experience": [
         "Khoa Nội hô hấp, BVĐK Tâm Anh Hà Nội"
       ],
@@ -9136,8 +9514,12 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BSNT. Thân Thị Ngọc Lan là một bác sĩ chuyên khoa hô hấp với hơn 10 năm kinh nghiệm trong lĩnh vực khám và điều trị các bệnh lý hô hấp. Với sự tận tâm và chu đáo, bác sĩ đã giúp nhiều bệnh nhân vượt qua những vấn đề sức khỏe phức tạp. Bác sĩ từng tham gia nhiều chương trình đào tạo khoa học liên đại học Pháp – Việt, mang đến những phương pháp chẩn đoán và điều trị tiên tiến nhất. Tại Khoa Nội Hô hấp, Bệnh viện Đa Khoa Tâm Anh Hà Nội, bác sĩ luôn là lựa chọn tin cậy của bệnh nhân.",
       "experience_years": 10,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tham gia nhiều đào tạo khoa học liên đại học Pháp – Việt về phương pháp chẩn đoán và điều trị bệnh lý hô hấp"
+      ],
+      "experience": [
+        "Khoa Nội Hô hấp, Bệnh viện Đa Khoa Tâm Anh Hà Nội"
+      ],
       "id": "cmnb8qvbc00cuvky006bsr1bd",
       "staff_account_id": "cmnb8qvb2004evky08azrueeo",
       "full_name": "ThS.BSNT THÂN THỊ NGỌC LAN",
@@ -9313,7 +9695,13 @@
         "Thạc sĩ chuyên ngành da liễu, Đại học Y Hà Nội, 2009",
         "Bác sĩ chuyên khoa II da liễu, Đại học Y Hà Nội, 2018"
       ],
-      "experience": [],
+      "experience": [
+        "Bác sĩ lâm sàng trong lĩnh vực da liễu và thẩm mỹ nội khoa",
+        "Nhà nghiên cứu và giảng viên tại Đại học Y dược Đại học Quốc gia Hà Nội",
+        "Giảng viên tại Học viện Y dược học cổ truyền",
+        "Giảng viên tại Đại học Kinh doanh công nghệ",
+        "Giảng viên chính các khóa đào tạo liên tục trong lĩnh vực da liễu thẩm mỹ"
+      ],
       "id": "cmnb8qveb00d3vky05n40mzpx",
       "staff_account_id": "cmnb8qve2004hvky034wmovm1",
       "full_name": "BS.CKII ĐÀM THỊ THÚY HỒNG",
@@ -9367,7 +9755,9 @@
         "Bác Sĩ Nội Trú tại Đại học Y Hà Nội năm 2001",
         "Bác Sĩ Chuyên Khoa II năm 2020"
       ],
-      "experience": [],
+      "experience": [
+        "Trưởng khoa Da liễu tại Bệnh viện Đa khoa Tâm Anh Hà Nội"
+      ],
       "id": "cmnb8qvf200d4vky0goawgril",
       "staff_account_id": "cmnb8qves004ivky0udum6mb2",
       "full_name": "BS.CKII NGUYỄN THỊ NGỌC YẾN",
@@ -9423,7 +9813,9 @@
       "education": [
         "Đại học Y khoa Phạm Ngọc Thạch"
       ],
-      "experience": [],
+      "experience": [
+        "Bác sĩ Ngoại – Tiết niệu tại Bệnh viện Đa khoa Tâm Anh TP.HCM"
+      ],
       "id": "cmnb8qw8v00frvky0u6h3vy3g",
       "staff_account_id": "cmnb8qw8o005jvky0hbzzluqq",
       "full_name": "BS.CKI PHAN HUỲNH TIẾN ĐẠT",
@@ -9903,7 +10295,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau bụng",
+        "Chóng mặt",
+        "Mệt mỏi kéo dài",
+        "Sụt cân không rõ nguyên nhân",
+        "Khó tiêu"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -10090,8 +10488,12 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Bác sĩ Quản Thị Bính Thìn là một chuyên gia hàng đầu trong lĩnh vực Chẩn đoán hình ảnh với gần 20 năm kinh nghiệm công tác tại Bệnh viện Đa khoa Tâm Anh, Hà Nội. Với những kiến thức sâu rộng và kỹ năng chuyên môn vững vàng, bác sĩ đã thực hiện thành công nhiều kỹ thuật chẩn đoán và can thiệp, giúp phát hiện và điều trị kịp thời cho bệnh nhân. Triết lý khám chữa bệnh của bác sĩ là luôn đặt sức khỏe và sự an toàn của bệnh nhân lên hàng đầu, đồng thời không ngừng cập nhật công nghệ mới để nâng cao chất lượng dịch vụ y tế.",
       "experience_years": 20,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa I"
+      ],
+      "experience": [
+        "Công tác tại khoa Chẩn đoán hình ảnh, Bệnh viện Đa khoa Tâm Anh, Hà Nội"
+      ],
       "id": "cmnb8qvok00e0vky0utttasfp",
       "staff_account_id": "cmnb8qvof004wvky00tqxlgyg",
       "full_name": "BS.CKI QUẢN THỊ BÍNH THÌN",
@@ -10144,8 +10546,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Với hơn 30 năm kinh nghiệm trong lĩnh vực tim mạch, ThS.BS Nguyễn Quốc Khánh đã khẳng định được vị thế của mình trong ngành y. Ông đã có nhiều năm tu nghiệp tại nước ngoài và hiện đang công tác tại Khoa tim mạch Bệnh viện 19-8 Bộ Công an. Được biết đến với những nghiên cứu có giá trị cao và khả năng chẩn đoán chính xác, bác sĩ Khánh luôn nỗ lực không ngừng để mang lại những giải pháp điều trị tốt nhất cho bệnh nhân. Triết lý của ông là luôn đặt sức khỏe và sự an toàn của bệnh nhân lên hàng đầu.",
       "experience_years": 30,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tu nghiệp ở nước ngoài",
+        "Theo học bác sĩ chuyên khoa tại Học viện Quân Y",
+        "Cao học tại Học viện Quân Y"
+      ],
+      "experience": [
+        "Công tác tại Khoa tim mạch Bệnh viện 19-8 Bộ Công an"
+      ],
       "id": "cmnb8qw1o00exvky0n6q3ssmb",
       "staff_account_id": "cmnb8qw1h0059vky0wycbhrzo",
       "full_name": "THS.BS NGUYỄN QUỐC KHÁNH",
@@ -10186,7 +10594,9 @@
       "position": "Bác sĩ điều trị cấp cao tại Bệnh viện Đa khoa Tâm Anh, Hà Nội",
       "introduction": "Bác sĩ Lê Văn Thành là một chuyên gia hàng đầu trong lĩnh vực chẩn đoán hình ảnh và điện quang can thiệp với hơn 20 năm kinh nghiệm. Ông đã từng công tác tại các bệnh viện danh tiếng như Bệnh viện Bạch Mai và Bệnh viện Giao thông Vận tải Trung ương, nơi ông đã tích lũy được nhiều kiến thức quý báu. Hiện tại, bác sĩ Thành đang làm việc tại Bệnh viện Đa khoa Tâm Anh, nơi ông tiếp tục cống hiến cho sự nghiệp chăm sóc sức khỏe cộng đồng với triết lý khám chữa bệnh tận tâm và hiệu quả.",
       "experience_years": 20,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa I"
+      ],
       "experience": [
         "Bệnh viện Bạch Mai",
         "Bệnh viện Giao thông Vận tải Trung ương",
@@ -10242,8 +10652,12 @@
       "position": "Phó khoa tại khoa Sơ sinh Bệnh viện Đa khoa Tâm Anh, Hà Nội",
       "introduction": "Với nhiều năm công tác trong lĩnh vực Nhi – Sơ sinh, BS.CKI Nguyễn Văn Toản đã điều trị thành công nhiều ca bệnh trẻ sinh non, nhiễm trùng, suy hô hấp và sàng lọc phát hiện các bệnh lý bẩm sinh, đưa ra phác đồ điều trị kịp thời. Luôn tận tụy khi thăm khám và nỗ lực hết mình trong quá trình điều trị, bác sĩ Nguyễn Văn Toản là cái tên quen thuộc nhận được sự tín nhiệm cao từ các bậc cha mẹ khi lựa chọn bác sĩ chăm sóc và khám bệnh.",
       "experience_years": 10,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa I"
+      ],
+      "experience": [
+        "Phó khoa tại khoa Sơ sinh Bệnh viện Đa khoa Tâm Anh, Hà Nội"
+      ],
       "id": "cmnb8qvpk00e2vky0hh6not9n",
       "staff_account_id": "cmnb8qvpc004yvky0zit81qbt",
       "full_name": "BS.CKI NGUYỄN VĂN TOẢN",
@@ -10301,7 +10715,9 @@
         "Chuyên khoa I tại Đại học Y Dược TP.HCM",
         "Khóa học Hand-on Filler Injection tại ĐH Mahidol Thái Lan"
       ],
-      "experience": [],
+      "experience": [
+        "Công tác tại chuyên khoa Da liễu – Thẩm mỹ Da, Bệnh viện đa khoa Tâm Anh TP.HCM"
+      ],
       "id": "cmnb8qvr100e5vky0igeeewgc",
       "staff_account_id": "cmnb8qvqt004zvky06nxw9av4",
       "full_name": "BS.CKI NGUYỄN THỊ KIM DUNG",
@@ -10413,8 +10829,17 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BS.CKII Trần Thị Thúy Hằng là bác sĩ chuyên khoa Tai Mũi Họng với hơn 15 năm kinh nghiệm tại các bệnh viện hàng đầu Việt Nam. Bác sĩ không chỉ nổi bật với chuyên môn sâu về nội soi và phẫu thuật tai mũi họng, mà còn được biết đến với sự tận tâm và chu đáo trong việc chăm sóc bệnh nhân. Với kinh nghiệm tu nghiệp tại các bệnh viện danh tiếng như Bệnh viện Lariboisiere (Pháp) và Bệnh viện Đại học Zurich (Thụy Sỹ), bác sĩ luôn cập nhật những tiến bộ mới nhất trong y học để mang lại hiệu quả điều trị tốt nhất cho bệnh nhân. Triết lý của bác sĩ là kết hợp giữa y đức và y thuật, nhằm đảm bảo sự an toàn và sức khỏe cho người bệnh.",
       "experience_years": 15,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ đa khoa",
+        "Tu nghiệp tại Bệnh viện Lariboisiere (Pháp)",
+        "Tu nghiệp tại Bệnh viện Đại học Zurich (Thụy Sỹ)"
+      ],
+      "experience": [
+        "Bác sĩ có nhiều năm kinh nghiệm trong lĩnh vực Thanh học tại Việt Nam",
+        "15 năm kinh nghiệm thực tiễn tại các bệnh viện uy tín",
+        "Can thiệp điều trị kịp thời và thành công nhiều ca cấp cứu tai mũi họng",
+        "Phẫu thuật tai, phẫu thuật mũi xoang & đầu cổ"
+      ],
       "id": "cmnb8qrq8002hvky0uvw1fab9",
       "staff_account_id": "cmnb8qrq2000fvky0cn8soxml",
       "full_name": "THS.BS.CKII TRẦN THỊ THÚY HẰNG",
@@ -10590,8 +11015,15 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Bác sĩ CKII Phạm Thanh Xuân là một trong những chuyên gia hàng đầu trong lĩnh vực Nhi khoa tại Bệnh viện Đa Khoa Tâm Anh Hà Nội, nơi ông đã góp phần xây dựng khoa Nhi trở thành một trong những khoa mũi nhọn. Với gần 40 năm kinh nghiệm, bác sĩ không chỉ nổi bật trong việc điều trị các bệnh lý phức tạp ở trẻ em mà còn tích cực tham gia giảng dạy, truyền đạt kiến thức và đam mê cho thế hệ bác sĩ trẻ. Triết lý khám chữa bệnh của bác sĩ luôn gắn liền với việc nâng cao tri thức và thái độ ứng xử trong y tế.",
       "experience_years": 40,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ Chuyên khoa II"
+      ],
+      "experience": [
+        "Đặt nền móng xây dựng khoa Nhi tại Bệnh viện Đa Khoa Tâm Anh Hà Nội",
+        "Khoa vệ tinh của Bệnh viện Nhi Trung ương",
+        "Bác sĩ Nhi khoa với gần 40 năm kinh nghiệm",
+        "Tham gia công tác giảng dạy cho các thế hệ bác sĩ trẻ"
+      ],
       "id": "cmnb8qvyz00elvky0hju6bn35",
       "staff_account_id": "cmnb8qvyt0055vky0sb4bausa",
       "full_name": "BS.CKII PHẠM THANH XUÂN",
@@ -10613,7 +11045,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Chóng mặt",
+        "Tim đập nhanh"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -10639,7 +11077,10 @@
         "Chuyên khoa 2 Nội tim mạch - Đại học Y khoa Phạm Ngọc Thạch",
         "Chứng chỉ siêu âm tim - Học Mãi Foundation, Úc"
       ],
-      "experience": [],
+      "experience": [
+        "Công tác tại Viện Tim TP.HCM",
+        "Làm việc tại Trung tâm Tim mạch, Bệnh viện Đa khoa Tâm Anh TP.HCM"
+      ],
       "id": "cmnb8qvzq00eovky0o5hp2kml",
       "staff_account_id": "cmnb8qvzj0056vky0ner9jmik",
       "full_name": "BS.CKII TRẦN THỊ TUYẾT LAN",
@@ -10662,7 +11103,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Chóng mặt",
+        "Tim đập nhanh"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -10774,7 +11221,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi không rõ nguyên nhân",
+        "Chóng mặt",
+        "Tim đập nhanh hoặc không đều"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -10828,7 +11281,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi không rõ nguyên nhân",
+        "Chóng mặt",
+        "Tim đập nhanh hoặc không đều"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -11046,8 +11505,14 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "Bác sĩ Cao cấp, Thầy thuốc ưu tú, CKII Võ Hoàng Minh Hiền có hơn 45 năm kinh nghiệm trong lĩnh vực nội tiết và nội khoa. Với triết lý khám chữa bệnh tận tâm và chuyên nghiệp, bác sĩ đã góp phần quan trọng trong việc điều trị cho nhiều bệnh nhân mắc các bệnh lý phức tạp như tiểu đường, cường giáp và ung thư giáp. Bác sĩ từng công tác tại Bộ môn Nội khoa, Đại học Y Dược TP.HCM, nơi đã đào tạo nhiều thế hệ bác sĩ tương lai.",
       "experience_years": 45,
-      "education": [],
-      "experience": [],
+      "education": [
+        "Tốt nghiệp Bác sĩ đa khoa, ĐH Y Dược TP.HCM",
+        "Tu nghiệp tại Hungary"
+      ],
+      "experience": [
+        "Cán bộ giảng dạy tại Bộ môn Nội khoa, Đại học Y Dược TP.HCM",
+        "Bác sĩ tại Bệnh viện Chợ Rẫy, khoa Nội tiết"
+      ],
       "id": "cmnb8qsxs005svky0q3jq8qfh",
       "staff_account_id": "cmnb8qsxl001ovky0bel8daq2",
       "full_name": "TTƯT.BS.CKII VÕ HOÀNG MINH HIỀN",
@@ -11256,7 +11721,13 @@
         "chẩn đoán cận lâm sàng nâng cao",
         "xét nghiệm tầm soát y khoa chuyên sâu"
       ],
-      "symptoms": [],
+      "symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Mệt mỏi vô cớ",
+        "Tim đập nhanh hoặc không đều",
+        "Chóng mặt hoặc ngất xỉu"
+      ],
       "expertise": [
         "Siêu âm tim",
         "Điện tâm đồ",
@@ -11275,7 +11746,9 @@
       "position": "Bác sĩ điều trị cấp cao tại Bệnh viện Đa khoa Tâm Anh TP.HCM",
       "introduction": "BS.CKI Hồ Thị Tuyết Mai là một bác sĩ chuyên khoa Nội tim mạch với hơn 13 năm kinh nghiệm trong lĩnh vực tim mạch. Bác sĩ đã có thời gian công tác tại Bệnh viện tim Tâm Đức và hiện đang làm việc tại Bệnh viện Đa khoa Tâm Anh TP.HCM. Với niềm đam mê nghiên cứu và khám chữa bệnh, bác sĩ Tuyết Mai luôn nỗ lực nâng cao tay nghề và kiến thức chuyên môn, đặc biệt trong các lĩnh vực siêu âm tim và can thiệp mạch vành. Triết lý khám chữa bệnh của bác sĩ là luôn đặt bệnh nhân làm trung tâm, với mong muốn mang lại sức khỏe và niềm vui cho từng bệnh nhân.",
       "experience_years": 13,
-      "education": [],
+      "education": [
+        "Chuyên khoa Nội tim mạch"
+      ],
       "experience": [
         "Bệnh viện tim Tâm Đức",
         "Bệnh viện Đa khoa Tâm Anh TP.HCM"
@@ -11333,7 +11806,9 @@
       "position": "Bác sĩ điều trị cấp cao tại MedicaLink",
       "introduction": "ThS.BS Văn Thị Thu Hương là một bác sĩ chuyên khoa Tim mạch Nhi với gần 10 năm kinh nghiệm trong ngành y. Chị đã từng công tác tại Bệnh viện Nhi Đồng 1 và Bệnh viện Nhi Đồng 2, nơi chị đã tích lũy được nhiều kiến thức và kỹ năng quý giá. Với tâm huyết và sự đồng cảm với các bệnh nhi, chị luôn nỗ lực tìm kiếm những phương pháp điều trị tốt nhất để mang lại sức khỏe cho các em. Chị tin rằng, bên cạnh chuyên môn, sự kết nối và giao tiếp với bệnh nhân là yếu tố quan trọng trong việc xây dựng mối quan hệ tốt đẹp giữa bác sĩ và người bệnh.",
       "experience_years": 10,
-      "education": [],
+      "education": [
+        "Tốt nghiệp Thạc sĩ Y khoa"
+      ],
       "experience": [
         "Bệnh viện Nhi Đồng 1",
         "Bệnh viện Nhi Đồng 2"

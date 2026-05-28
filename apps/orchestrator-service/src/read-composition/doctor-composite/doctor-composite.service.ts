@@ -10,6 +10,7 @@ import {
   STAFFS_PATTERNS,
   StaffQueryDto,
   DoctorSearchCompositeQueryDto,
+  DoctorProfileQueryDto,
   DoctorCompositeResultDto,
   DoctorCompositeListResultDto,
   DoctorCompositeData,
@@ -138,10 +139,38 @@ export class DoctorCompositeService extends BaseCompositeService<
   async listDoctorCompositesAdmin(
     query: StaffQueryDto,
   ): Promise<DoctorCompositeListResultDto> {
+    const hasExtraFilters =
+      (query as any).specialtyIds !== undefined ||
+      (query as any).workLocationIds !== undefined;
+    if (hasExtraFilters) {
+      return this.listDoctorCompositesPublic(query as any);
+    }
+
     const cacheKey = this.buildListCacheKey({
       ...query,
       __admin: true,
     });
+
+    const accountsPayload = {
+      page: query.page,
+      limit: query.limit,
+      role: query.role,
+      search: query.search || (query as any).fullName,
+      email: query.email,
+      isMale: query.isMale,
+      isActive: query.isActive,
+      createdFrom: query.createdFrom,
+      createdTo: query.createdTo,
+      sortBy: query.sortBy,
+      sortOrder: query.sortOrder,
+    };
+
+    // Remove undefined properties
+    Object.keys(accountsPayload).forEach(
+      (key) =>
+        accountsPayload[key as keyof typeof accountsPayload] === undefined &&
+        delete accountsPayload[key as keyof typeof accountsPayload],
+    );
 
     const result = await this.searchCompositeWithCache<
       IStaffAccount,
@@ -152,7 +181,7 @@ export class DoctorCompositeService extends BaseCompositeService<
         primaryFetch: {
           client: this.accountsClient,
           pattern: DOCTOR_ACCOUNTS_PATTERNS.FIND_ALL,
-          payload: query,
+          payload: accountsPayload,
           timeoutMs: 12000,
           serviceName: 'accounts-service',
         },
@@ -174,6 +203,7 @@ export class DoctorCompositeService extends BaseCompositeService<
       },
       (account: IStaffAccount, profiles: DoctorProfileData[]) => {
         const profile = profiles.find((p) => p.staffAccountId === account.id);
+
         if (!profile && query.isActive !== undefined) {
           return null;
         } else if (!profile) {
@@ -187,6 +217,53 @@ export class DoctorCompositeService extends BaseCompositeService<
           } as DoctorCompositeData;
         }
         return this.mergeData(account, profile);
+      },
+    );
+
+    return result;
+  }
+
+  /**
+   * Public list composite: uses provider-directory as primary fetch for correct filter pagination
+   */
+  async listDoctorCompositesPublic(
+    query: DoctorProfileQueryDto,
+  ): Promise<DoctorCompositeListResultDto> {
+    const cacheKey = this.buildListCacheKey({
+      ...query,
+      __public: true,
+    });
+
+    const result = await this.searchCompositeWithCache<
+      DoctorProfileData,
+      IStaffAccount
+    >(
+      query,
+      {
+        primaryFetch: {
+          client: this.providerClient,
+          pattern: DOCTOR_PROFILES_PATTERNS.GET_PUBLIC_LIST,
+          payload: query,
+          timeoutMs: 12000,
+          serviceName: 'provider-directory-service',
+        },
+        secondaryFetch: (profiles: DoctorProfileData[]) => ({
+          client: this.accountsClient,
+          pattern: STAFFS_PATTERNS.FIND_BY_IDS,
+          payload: { staffIds: profiles.map((p) => p.staffAccountId) },
+          timeoutMs: 10000,
+          serviceName: 'accounts-service',
+        }),
+        cacheKey,
+        cacheTtl: CACHE_TTL.SHORT,
+        skipCache: (query as any)?.skipCache ?? false,
+        extractIds: (profiles) => profiles.map((p) => p.staffAccountId),
+        extractMeta: (primaryResult) => primaryResult.meta,
+      },
+      (profile: DoctorProfileData, accounts: IStaffAccount[]) => {
+        const account = accounts.find((a) => a.id === profile.staffAccountId);
+        if (!account) return null;
+        return this.sanitizePublicComposite(this.mergeData(account, profile));
       },
     );
 

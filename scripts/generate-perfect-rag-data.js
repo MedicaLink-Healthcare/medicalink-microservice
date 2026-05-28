@@ -190,8 +190,8 @@ YÊU CẦU LÀM GIÀU THUỘC TÍNH PHỤC VỤ TRUY VẤN VÀ GỢI Ý MÔ HÌN
 6. position: Chuỗi chức danh nghiệp vụ hiện tại sạch rác thương hiệu cũ, gắn liền với cơ sở mới (Ví dụ: "Bác sĩ điều trị cấp cao tại MedicaLink").
 7. introduction: ĐOẠN VĂN TIỂU SỬ CHI TIẾT, HẤP DẪN VÀ CHUYÊN NGHIỆP DÀNH CHO GIAO DIỆN NGƯỜI DÙNG (UI). Viết thành một đoạn văn hoàn chỉnh (khoảng 3-5 câu), văn phong trang trọng, đáng tin cậy. Nhấn mạnh thế mạnh chuyên môn, kinh nghiệm nổi bật, nơi từng công tác danh tiếng, và triết lý khám chữa bệnh (nếu có). Nội dung cần được cá nhân hóa cao độ.
 8. experience_years: Số nguyên (Integer). Rút trích chính xác số năm thực tế. Nghiêm cấm gán cứng.
-9. education: BẮT BUỘC bóc tách mốc học tập/bằng cấp/khóa đào tạo từ DỮ LIỆU ĐÀO TẠO GỐC thành mảng.
-10. experience: BẮT BUỘC bóc tách cơ quan/đơn vị công tác cũ từ DỮ LIỆU KINH NGHIỆM GỐC thành mảng. Lấy tên hội nhóm, đơn vị y tế.
+9. education: BẮT BUỘC bóc tách mốc học tập/bằng cấp/khóa đào tạo từ DỮ LIỆU ĐÀO TẠO GỐC thành mảng. NẾU RỖNG, BẮT BUỘC tự bóc tách từ GIỚI THIỆU LÝ LỊCH GỐC.
+10. experience: BẮT BUỘC bóc tách cơ quan/đơn vị công tác cũ từ DỮ LIỆU KINH NGHIỆM GỐC thành mảng (lấy tên đơn vị y tế). NẾU RỖNG, BẮT BUỘC tự bóc tách từ GIỚI THIỆU LÝ LỊCH GỐC.
 
 RÀNG BUỘC KIỂM TRA ĐỘ CHÍNH XÁC DỮ LIỆU (DATA INTEGRITY):
 1. Đối với bác sĩ thuộc cận lâm sàng thuần túy (Xét nghiệm, Giải phẫu bệnh, Vi sinh, Tế bào học): KHÔNG ĐƯỢC tự ý bịa các bệnh lý lâm sàng vào "conditions" hay "symptoms". Nếu làm xét nghiệm/vi sinh, "conditions" chỉ ghi các hạng mục như: "xét nghiệm máu", "tầm soát vi khuẩn", "phân tích tế bào học"... Mảng symptoms để rỗng.
@@ -352,7 +352,9 @@ async function generateVietnameseSpecialty(meta) {
       expertise: data.expertise || [],
       description: data.description,
       icon_url:
-        'https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png',
+        'https://ui-avatars.com/api/?name=' +
+        encodeURIComponent(meta.name) +
+        '&background=random&color=fff&rounded=true&size=200',
       is_active: true,
       created_at: '2026-03-26T08:26:53.495Z',
       updated_at: '2026-03-26T08:26:53.495Z',
