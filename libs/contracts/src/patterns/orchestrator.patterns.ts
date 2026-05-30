@@ -18,6 +18,7 @@ export const ORCHESTRATOR_PATTERNS = {
   DOCTOR_GET_COMPOSITE: 'orchestrator.doctor.getComposite',
   DOCTOR_GET_COMPOSITE_BY_ID: 'orchestrator.doctor.getCompositeById',
   DOCTOR_LIST_COMPOSITE: 'orchestrator.doctor.listComposite',
+  DOCTOR_PUBLIC_LIST_COMPOSITE: 'orchestrator.doctor.publicListComposite',
 
   // Blog composition (read)
   BLOG_GET_COMPOSITE: 'orchestrator.blog.getComposite',

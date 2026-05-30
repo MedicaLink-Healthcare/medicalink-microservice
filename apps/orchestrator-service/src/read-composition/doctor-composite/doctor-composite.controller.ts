@@ -34,4 +34,9 @@ export class DoctorCompositeController {
   async listDoctorComposites(@Payload() query: StaffQueryDto) {
     return this.doctorCompositeService.listDoctorCompositesAdmin(query);
   }
+
+  @MessagePattern(ORCHESTRATOR_PATTERNS.DOCTOR_PUBLIC_LIST_COMPOSITE)
+  async listDoctorCompositesPublic(@Payload() query: StaffQueryDto) {
+    return this.doctorCompositeService.listDoctorCompositesPublic(query as any);
+  }
 }

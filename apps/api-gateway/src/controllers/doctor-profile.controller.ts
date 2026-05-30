@@ -50,6 +50,15 @@ type DoctorPublicListItem = Pick<
   | 'specialties'
   | 'workLocations'
   | 'appointmentDuration'
+  | 'conditions'
+  | 'symptoms'
+  | 'expertise'
+  | 'procedures'
+  | 'patientGroups'
+  | 'experienceYears'
+  | 'education'
+  | 'experience'
+  | 'specialtyIds'
 >;
 
 type DoctorPublicProfile = Omit<
@@ -93,7 +102,7 @@ export class DoctorProfileController {
 
     const result = await this.microserviceService.sendWithTimeout<any>(
       this.orchestratorClient,
-      ORCHESTRATOR_PATTERNS.DOCTOR_LIST_COMPOSITE,
+      ORCHESTRATOR_PATTERNS.DOCTOR_PUBLIC_LIST_COMPOSITE,
       filters,
       { timeoutMs: 15000 },
     );
@@ -252,6 +261,15 @@ export class DoctorProfileController {
       specialties: doctor.specialties,
       workLocations: doctor.workLocations,
       appointmentDuration: doctor.appointmentDuration,
+      conditions: doctor.conditions,
+      symptoms: doctor.symptoms,
+      expertise: doctor.expertise,
+      procedures: doctor.procedures,
+      patientGroups: doctor.patientGroups,
+      experienceYears: doctor.experienceYears,
+      education: doctor.education,
+      experience: doctor.experience,
+      specialtyIds: doctor.specialtyIds,
     };
   }
 
