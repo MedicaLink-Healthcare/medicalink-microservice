@@ -143,7 +143,9 @@ export class DoctorCompositeService extends BaseCompositeService<
       (query as any).specialtyIds !== undefined ||
       (query as any).workLocationIds !== undefined;
     if (hasExtraFilters) {
-      return this.listDoctorCompositesPublic(query as any);
+      return this.listDoctorCompositesPublic(
+        query as unknown as DoctorProfileQueryDto,
+      );
     }
 
     const cacheKey = this.buildListCacheKey({

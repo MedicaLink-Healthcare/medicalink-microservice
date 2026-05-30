@@ -2,7 +2,7 @@ import { Controller } from '@nestjs/common';
 import { MessagePattern, Payload } from '@nestjs/microservices';
 import { DoctorCompositeService } from './doctor-composite.service';
 import { ORCHESTRATOR_PATTERNS } from '@app/contracts/patterns';
-import { StaffQueryDto } from '@app/contracts';
+import { StaffQueryDto, DoctorProfileQueryDto } from '@app/contracts';
 
 @Controller()
 export class DoctorCompositeController {
@@ -37,6 +37,8 @@ export class DoctorCompositeController {
 
   @MessagePattern(ORCHESTRATOR_PATTERNS.DOCTOR_PUBLIC_LIST_COMPOSITE)
   async listDoctorCompositesPublic(@Payload() query: StaffQueryDto) {
-    return this.doctorCompositeService.listDoctorCompositesPublic(query as any);
+    return this.doctorCompositeService.listDoctorCompositesPublic(
+      query as unknown as DoctorProfileQueryDto,
+    );
   }
 }

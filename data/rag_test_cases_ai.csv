@@ -1,0 +1,753 @@
+﻿Query,Expected_Specialty,Test_Type
+"Mấy hôm nay em đau đầu quá, k biết phải làm sao?",Bác sĩ gia đình,Symptoms Only
+"Cả ngày em thấy mệt mỏi, không muốn ăn gì cả.",Bác sĩ gia đình,Symptoms Only
+"Em bị ho suốt, có khi nào bị bệnh nặng không?",Bác sĩ gia đình,Symptoms Only
+"Sốt cao quá, em thấy chóng mặt, có phải đi khám không?",Bác sĩ gia đình,Symptoms Only
+"Đau bụng dữ dội, em lo quá, có cần đi viện gấp không?",Bác sĩ gia đình,Symptoms Only
+"Khó thở, em không biết có phải do dị ứng không nữa.",Bác sĩ gia đình,Symptoms Only
+"Em thấy đầu nặng nè, có phải bệnh gì không hả bác?",Bác sĩ gia đình,Symptoms Only
+"Mệt mỏi quá, không biết có phải bị tiểu đường không?",Bác sĩ gia đình,Symptoms Only
+"Đau đầu nửa năm nay, không hết, em sợ quá.",Bác sĩ gia đình,Symptoms Only
+"Ho liên tục, mà không có đờm, có phải bệnh phổi không?",Bác sĩ gia đình,Symptoms Only
+Em có bị bệnh tim mạch không khi mà thấy khó thở?,Bác sĩ gia đình,Condition Only
+"Em muốn tìm bác sĩ khám bệnh tiểu đường, phải đi đâu?",Bác sĩ gia đình,Condition Only
+"Tôi nghe nói bệnh tăng huyết áp rất nguy hiểm, có đúng không?",Bác sĩ gia đình,Condition Only
+"Bệnh lý tâm thần là gì vậy bác, tôi cần khám không?",Bác sĩ gia đình,Condition Only
+"Tôi bị bệnh hô hấp mãn tính, có thuốc nào điều trị không?",Bác sĩ gia đình,Condition Only
+"Em bị đau bụng và đã bị tiểu đường, phải làm sao?",Bác sĩ gia đình,Mixed
+"Khó thở mà em cũng bị bệnh tim mạch, có nguy hiểm không?",Bác sĩ gia đình,Mixed
+Em mệt mỏi và đang lo lắng về bệnh tăng huyết áp.,Bác sĩ gia đình,Mixed
+"Em đau đầu mà có bệnh lý tâm thần, phải đi khám không?",Bác sĩ gia đình,Mixed
+Em ho nhiều và có tiền sử bệnh hô hấp mãn tính.,Bác sĩ gia đình,Mixed
+"Em thấy chóng mặt và đau đầu, có phải do viêm xoang không?",Bác sĩ gia đình,Edge Case
+"Em đau bụng mà có thể là đau dạ dày, phải khám ở đâu?",Bác sĩ gia đình,Edge Case
+"Khó thở do cảm lạnh, có nên tới bác sĩ gia đình không?",Bác sĩ gia đình,Edge Case
+"Em đau đầu mà có dấu hiệu của bệnh thần kinh, có phải bác sĩ gia đình không?",Bác sĩ gia đình,Edge Case
+"Mệt mỏi với triệu chứng giống như trầm cảm, còn khám ở đâu?",Bác sĩ gia đình,Edge Case
+"Chả hiểu sao dạo này em hay đau ngực, có khi khó thở nữa.",Nội tổng quát,Symptoms Only
+"Em thấy mệt mỏi, người cứ yếu xìu, không biết có sao không?",Nội tổng quát,Symptoms Only
+"Người ta bảo tôi sốt, mà giờ tự dưng buồn nôn, có phải đi khám không?",Nội tổng quát,Symptoms Only
+"Dạo này em ăn uống không ngon, lại còn đau bụng nữa.",Nội tổng quát,Symptoms Only
+"Sao em thấy đau ngực mà khó thở lắm, em lo quá.",Nội tổng quát,Symptoms Only
+"Cứ mệt mệt, mà không biết nguyên nhân từ đâu.",Nội tổng quát,Symptoms Only
+"Sao tự dưng em tăng cân, lại thấy mệt mỏi nữa.",Nội tổng quát,Symptoms Only
+"Em có triệu chứng khó thở, có phải bệnh gì nặng không?",Nội tổng quát,Symptoms Only
+"Mới thấy đau bụng mà không hiểu tại sao, lo lắm.",Nội tổng quát,Symptoms Only
+"Chả nhẽ em bị bệnh gì mà thấy buồn nôn, sốt liên tục?",Nội tổng quát,Symptoms Only
+Tôi nghe nói bệnh tim mạch thì khám khoa nào?,Nội tổng quát,Condition Only
+Muốn khám bệnh đái tháo đường thì đi đâu?,Nội tổng quát,Condition Only
+Khám bệnh cao huyết áp thì chắc phải vô khoa nào nhỉ?,Nội tổng quát,Condition Only
+Bệnh thận mạn tính thì phải khám ở khoa nào?,Nội tổng quát,Condition Only
+"Tôi bị viêm gan, có cần khám nội tổng quát không?",Nội tổng quát,Condition Only
+"Em thấy mệt mỏi, lại hay buồn nôn, có phải do bệnh tim mạch không?",Nội tổng quát,Mixed
+"Người tôi gầy quá, lại còn đau bụng, có phải đái tháo đường không?",Nội tổng quát,Mixed
+"Dạo này tôi hay khó thở, có phải là bệnh phổi không?",Nội tổng quát,Mixed
+"Mệt mỏi, đau ngực, chắc có vấn đề về tim mạch chăng?",Nội tổng quát,Mixed
+"Sốt, buồn nôn, không biết có phải bệnh gì nặng không?",Nội tổng quát,Mixed
+"Em đau bụng, nhưng cũng thấy chóng mặt, có phải bị tiêu hóa không?",Nội tổng quát,Edge Case
+"Em thấy mệt mỏi, lại còn nhức đầu, có phải viêm não không?",Nội tổng quát,Edge Case
+"Tôi bị ho, khó thở, có phải đi khám phổi không?",Nội tổng quát,Edge Case
+"Dạo này em hay buồn nôn với chóng mặt, chắc có vấn đề gì không?",Nội tổng quát,Edge Case
+"Sao tự dưng thấy đau đầu với đau bụng, có phải bệnh gì không?",Nội tổng quát,Edge Case
+"Em thấy đau ngực quá, không biết có phải bệnh tim không?",Tim mạch,Symptoms Only
+Chả nhẽ mệt mỏi suốt ngày là dấu hiệu của bệnh tim?,Tim mạch,Symptoms Only
+"Tôi bị khó thở, có khi nào tôi bị bệnh tim không?",Tim mạch,Symptoms Only
+"Đau ngực như dao đâm, lo quá, có phải bệnh gì nặng không?",Tim mạch,Symptoms Only
+"Mình thấy chân sưng phù, có liên quan gì đến tim không nhỉ?",Tim mạch,Symptoms Only
+"Nhịp tim của em không đều, có phải đi khám không?",Tim mạch,Symptoms Only
+"Chưa bao giờ thấy mình mệt mỏi như bây giờ, có phải bệnh tim không?",Tim mạch,Symptoms Only
+"Em có cảm giác như tim đập nhanh, thỉnh thoảng khó thở, có sao không?",Tim mạch,Symptoms Only
+"Tôi bị chóng mặt và đau ngực, không biết có phải bệnh tim không?",Tim mạch,Symptoms Only
+"Cháu nghe nói đau ngực là dấu hiệu của bệnh tim, đúng không?",Tim mạch,Symptoms Only
+Tôi bị bệnh động mạch vành thì nên khám ở đâu?,Tim mạch,Condition Only
+Muốn điều trị suy tim thì cần gặp bác sĩ chuyên khoa nào?,Tim mạch,Condition Only
+Nếu tôi bị rối loạn nhịp tim thì khám khoa nào là hợp lý?,Tim mạch,Condition Only
+"Tôi có triệu chứng của bệnh van tim, đi khám ở đâu?",Tim mạch,Condition Only
+"Tôi bị tăng huyết áp, có nên đi khám tim mạch không?",Tim mạch,Condition Only
+"Em thấy đau ngực và nghĩ có thể là bệnh động mạch vành, em nên làm gì?",Tim mạch,Mixed
+"Mệt mỏi và khó thở, có phải do suy tim không?",Tim mạch,Mixed
+"Nhịp tim không đều cùng với đau ngực, có thể là bệnh gì?",Tim mạch,Mixed
+"Chân sưng phù, liệu có liên quan đến bệnh van tim không?",Tim mạch,Mixed
+"Tôi có triệu chứng khó thở, nhưng cũng thấy chóng mặt, phải làm sao?",Tim mạch,Mixed
+"Tôi thấy khó thở và cũng bị sốt, không biết có bị bệnh tim không?",Tim mạch,Edge Case
+"Em bị khó thở và đau bụng, có liên quan gì đến tim không?",Tim mạch,Edge Case
+"Tôi bị đau ngực mà cũng có triệu chứng của cúm, có sao không?",Tim mạch,Edge Case
+"Cháu thấy đau đầu và khó thở, có phải khám tim không?",Tim mạch,Edge Case
+"Tôi thấy chân sưng và cũng bị đau lưng, có liên quan đến bệnh tim không?",Tim mạch,Edge Case
+"Dạo này em hay bị đau bụng, không biết có bệnh gì không?",Tiêu hóa - Gan mật,Symptoms Only
+"Tôi thấy buồn nôn suốt mấy ngày nay, có phải đi khám không?",Tiêu hóa - Gan mật,Symptoms Only
+"Chả nhẽ lại bị viêm gan, nhưng mà em chỉ bị nôn mửa thôi.",Tiêu hóa - Gan mật,Symptoms Only
+"Nghe nói đau bụng là triệu chứng của sỏi mật, có đúng không?",Tiêu hóa - Gan mật,Symptoms Only
+Có ai bị tiêu chảy kéo dài mà không biết nguyên nhân không?,Tiêu hóa - Gan mật,Symptoms Only
+"Mấy bữa nay tôi sụt cân nhanh quá, lo quá đi!",Tiêu hóa - Gan mật,Symptoms Only
+Vàng da có phải triệu chứng của bệnh gan không?,Tiêu hóa - Gan mật,Symptoms Only
+Ngứa da có liên quan gì đến gan không nhỉ?,Tiêu hóa - Gan mật,Symptoms Only
+Nhiều lúc thấy đau bụng dưới mà không biết phải làm sao.,Tiêu hóa - Gan mật,Symptoms Only
+Bệnh Crohn mà có triệu chứng như buồn nôn thì sao?,Tiêu hóa - Gan mật,Symptoms Only
+"Tôi bị bệnh viêm gan virus, thì khám ở đâu?",Tiêu hóa - Gan mật,Condition Only
+Có phải xơ gan thì phải đi khám chuyên khoa tiêu hóa không?,Tiêu hóa - Gan mật,Condition Only
+Muốn biết về điều trị ung thư gan thì khám khoa gì?,Tiêu hóa - Gan mật,Condition Only
+"Tôi bị sỏi mật, có cần khám chuyên khoa không?",Tiêu hóa - Gan mật,Condition Only
+Khám bệnh Crohn thì nên đến khoa nào?,Tiêu hóa - Gan mật,Condition Only
+"Mấy hôm nay tôi đau bụng và bị tiêu chảy, có phải viêm đại tràng không?",Tiêu hóa - Gan mật,Mixed
+"Em thấy vàng da và ngứa, có nghi ngờ về bệnh gan không?",Tiêu hóa - Gan mật,Mixed
+"Đang điều trị sỏi mật mà vẫn thấy đau bụng, có sao không?",Tiêu hóa - Gan mật,Mixed
+Bị viêm loét đại tràng cũng có thể dẫn đến sụt cân không?,Tiêu hóa - Gan mật,Mixed
+"Thấy đau bụng và buồn nôn, có phải đi khám ngay không?",Tiêu hóa - Gan mật,Mixed
+Ngứa da và nổi mẩn có phải là triệu chứng của bệnh tiêu hóa không?,Tiêu hóa - Gan mật,Edge Case
+"Tôi bị đau bụng dưới và cũng hay bị đau đầu, có liên quan gì không?",Tiêu hóa - Gan mật,Edge Case
+Bệnh Crohn mà có triệu chứng như ho khan thì sao?,Tiêu hóa - Gan mật,Edge Case
+Có khi nào vàng da là triệu chứng của bệnh phổi không nhỉ?,Tiêu hóa - Gan mật,Edge Case
+"Tôi thấy đau bụng và khó thở, có thể là bệnh gì?",Tiêu hóa - Gan mật,Edge Case
+"Em thấy khát nước quá trời, không biết có sao không?",Nội tiết,Symptoms Only
+"Tôi mệt mỏi suốt ngày, chẳng có sức làm gì cả.",Nội tiết,Symptoms Only
+Có ai bị giảm cân không rõ nguyên nhân như tui không?,Nội tiết,Symptoms Only
+"Gần đây tôi tăng cân mà không hiểu tại sao, lo quá!",Nội tiết,Symptoms Only
+"Kinh nguyệt của tôi bị rối loạn, không biết có phải vấn đề gì không?",Nội tiết,Symptoms Only
+"Tôi hay thay đổi tâm trạng bất thường, cảm thấy không ổn.",Nội tiết,Symptoms Only
+"Da tôi khô quá, không biết có ảnh hưởng gì đến sức khỏe không?",Nội tiết,Symptoms Only
+Nghe nói bệnh tuyến giáp có triệu chứng gì nhỉ?,Nội tiết,Symptoms Only
+"Em thấy da mình nhờn quá, không biết có bệnh gì không?",Nội tiết,Symptoms Only
+"Tôi không biết có phải mình bị tiểu đường không nữa, vì khát nước liên tục.",Nội tiết,Symptoms Only
+"Mẹ tôi bị bệnh Addison, cần khám ở khoa nào?",Nội tiết,Condition Only
+"Mình có triệu chứng của hội chứng Cushing, có nên đi khám không?",Nội tiết,Condition Only
+"Tôi bị suy giáp, muốn biết khám ở đâu?",Nội tiết,Condition Only
+"Mình có rối loạn tăng trưởng, nên đi khám khoa nào?",Nội tiết,Condition Only
+Tôi nghe nói bệnh PCOS cần điều trị ở chuyên khoa nào?,Nội tiết,Condition Only
+"Tôi khát nước nhiều và hay mệt mỏi, có thể bị tiểu đường không?",Nội tiết,Mixed
+Gần đây tôi tăng cân bất thường và có triệu chứng của hội chứng buồng trứng đa nang.,Nội tiết,Mixed
+"Da tôi nhờn và tâm trạng thì thay đổi, có phải là vấn đề tuyến giáp không?",Nội tiết,Mixed
+"Tôi cảm thấy mệt mỏi và có dấu hiệu suy giáp, có cần khám không?",Nội tiết,Mixed
+"Mình có dấu hiệu của hội chứng Cushing và khát nước nhiều, nên làm gì?",Nội tiết,Mixed
+"Mệt mỏi, khát nước nhưng cũng bị đau đầu, có phải đi khám nội tiết không?",Nội tiết,Edge Case
+"Tôi có triệu chứng như khát nước, nhưng cũng hay đau dạ dày, có sao không?",Nội tiết,Edge Case
+"Kinh nguyệt không đều nhưng cũng bị đau lưng, có cần khám nội tiết không?",Nội tiết,Edge Case
+"Nếu tôi bị tiểu đường nhưng cũng có triệu chứng của bệnh tim, thì sao nhỉ?",Nội tiết,Edge Case
+"Em thấy da nhờn và cũng hay bị đau đầu, không biết có liên quan đến nội tiết không?",Nội tiết,Edge Case
+"Mình bị khó thở, thấy tức ngực quá, không biết có sao không?",Hô hấp,Symptoms Only
+"Mỗi lần ho, mình thấy đau ngực lắm, chắc bị gì nặng?",Hô hấp,Symptoms Only
+"Hóng hớt đi khám mà chỉ ho không thôi, có cần đi không ta?",Hô hấp,Symptoms Only
+"Khó thở quá, mà còn khò khè nữa, có phải bệnh hen không?",Hô hấp,Symptoms Only
+"Mình thấy mệt mỏi và thở không ra hơi, có phải bị viêm phổi không?",Hô hấp,Symptoms Only
+"Đờm ra nhiều, ho liên tục, không biết có phải bệnh gì không?",Hô hấp,Symptoms Only
+"Nghe nói hen suyễn khó thở, mình cũng khó thở mà không biết có bị không?",Hô hấp,Symptoms Only
+"Thở dốc, đau ngực, mệt mỏi quá, chắc mình bị bệnh gì đó?",Hô hấp,Symptoms Only
+"Ho khan, đau ngực, mệt mỏi, không biết có phải viêm phế quản không?",Hô hấp,Symptoms Only
+"Khò khè, ho có đờm, thấy khó thở, chắc bệnh nặng lắm?",Hô hấp,Symptoms Only
+"Tôi bị hen suyễn, giờ đang thấy khó thở, có nên đi khám không?",Hô hấp,Condition Only
+Nếu tôi bị COPD thì khám ở đâu?,Hô hấp,Condition Only
+"Tôi bị viêm phổi, muốn điều trị thì nên đi gặp bác sĩ chuyên khoa nào?",Hô hấp,Condition Only
+"Mình bị xơ phổi, không biết phải làm sao?",Hô hấp,Condition Only
+Nếu muốn kiểm tra ung thư phổi thì phải đến khoa nào?,Hô hấp,Condition Only
+"Mình thấy ho, khó thở, có thể mình bị viêm phế quản hay hen suyễn?",Hô hấp,Mixed
+"Khó thở và có đờm, chắc mình bị COPD hay viêm phổi?",Hô hấp,Mixed
+"Tôi có triệu chứng ho, mệt mỏi, và nghi ngờ mình bị bệnh phổi tắc nghẽn mạn tính.",Hô hấp,Mixed
+"Đau ngực, khó thở, và có tiền sử bị hen suyễn, tôi phải làm sao?",Hô hấp,Mixed
+"Nếu tôi thấy khò khè và đau ngực, có khả năng tôi bị viêm phổi không?",Hô hấp,Mixed
+"Tôi bị đau ngực và cảm thấy chóng mặt, có thể bị bệnh tim không hay là bệnh hô hấp?",Hô hấp,Edge Case
+"Khó thở kèm theo sốt, không biết có phải bị viêm phổi hay cảm cúm không?",Hô hấp,Edge Case
+Có phải viêm phế quản không nếu tôi đờm ra nhiều mà không sốt?,Hô hấp,Edge Case
+"Tôi thấy khó thở và đau bụng, không biết có liên quan gì đến phổi không?",Hô hấp,Edge Case
+"Nếu ho có đờm và đau đầu, thì có phải là bệnh hô hấp không?",Hô hấp,Edge Case
+"Dạo này em hay bị đau đầu, cảm giác như nó nặng nặng á.",Thần kinh,Symptoms Only
+Chả nhẽ mình bị chóng mặt thật à? Không biết có phải đi khám không?,Thần kinh,Symptoms Only
+"Tôi có cảm giác yếu cơ tay chân, không biết có sao không?",Thần kinh,Symptoms Only
+"Mỗi lần đứng lên là tôi lại thấy hoa mắt chóng mặt, lo quá.",Thần kinh,Symptoms Only
+"Em bị rối loạn cảm giác, không biết có phải bệnh nặng không?",Thần kinh,Symptoms Only
+"Thỉnh thoảng tôi bị co giật, không biết có bệnh gì không?",Thần kinh,Symptoms Only
+"Nhiều khi tôi không nhớ chuyện đã xảy ra, có phải bệnh Alzheimer không?",Thần kinh,Symptoms Only
+"Cảm giác đầu óc mình mơ màng lắm, có phải bị bệnh không nhỉ?",Thần kinh,Symptoms Only
+"Trời ơi, sao tự dưng tôi lại thấy đau nửa đầu như vậy?",Thần kinh,Symptoms Only
+"Tôi hay quên lắm, có phải tôi bị bệnh nặng không?",Thần kinh,Symptoms Only
+"Tôi nghe nói đột quỵ là gì, liệu tôi có bị không?",Thần kinh,Condition Only
+Muốn biết bệnh Alzheimer khám ở đâu?,Thần kinh,Condition Only
+"Tôi nghi ngờ mình bị bệnh Parkinson, khám khoa nào?",Thần kinh,Condition Only
+Có ai biết bệnh đa xơ cứng chữa trị ở đâu hông?,Thần kinh,Condition Only
+Nếu bị chấn thương sọ não thì nên đi khám ở đâu?,Thần kinh,Condition Only
+"Tôi đau đầu nhưng cũng thấy mệt mỏi, có phải đột quỵ không?",Thần kinh,Mixed
+"Em bị chóng mặt và lo lắng, liệu có phải bệnh Parkinson không?",Thần kinh,Mixed
+"Tôi yếu cơ mà không biết là bị bệnh gì, có phải đa xơ cứng không?",Thần kinh,Mixed
+Có phải rối loạn trí nhớ là triệu chứng của bệnh Alzheimer không?,Thần kinh,Mixed
+"Mình hay bị co giật và đau đầu, liệu có liên quan đến đột quỵ không?",Thần kinh,Mixed
+"Tôi thấy chóng mặt và buồn nôn, có phải liên quan đến dạ dày không?",Thần kinh,Edge Case
+Thỉnh thoảng tôi thấy tê tay nhưng cũng có thể do ngồi lâu không nhỉ?,Thần kinh,Edge Case
+"Tôi bị mất ngủ và đau đầu, có phải do thần kinh không?",Thần kinh,Edge Case
+"Mỗi lần căng thẳng, tôi lại thấy đau bụng, có phải lo âu không?",Thần kinh,Edge Case
+"Em thấy mệt mỏi và tay chân yếu, có phải thiếu vitamin không?",Thần kinh,Edge Case
+"Mỗi lần trời trở lạnh là khớp của tôi đau nhức như bị đâm vậy, có ai giống tôi không?",Cơ xương khớp,Symptoms Only
+"Em bị sưng khớp tay, nó đau lắm, không biết có làm sao không?",Cơ xương khớp,Symptoms Only
+"Tôi thấy chân mình cứng lại mỗi sáng, khó chịu quá, ai có cách nào không?",Cơ xương khớp,Symptoms Only
+"Đau khớp lưng quá trời, không nằm được, có ai biết bị gì không?",Cơ xương khớp,Symptoms Only
+"Hôm nay thấy yếu cơ quá, cảm giác như không nâng nổi tay nữa.",Cơ xương khớp,Symptoms Only
+"Tôi bị đau ở khớp gối, cảm giác như nó cộm lên, có phải viêm khớp không?",Cơ xương khớp,Symptoms Only
+"Nghe nói bệnh gout đau dữ lắm, không biết triệu chứng của nó là gì nhỉ?",Cơ xương khớp,Symptoms Only
+"Mấy hôm nay tự dưng thấy khớp ngón tay sưng phù lên, có sao không?",Cơ xương khớp,Symptoms Only
+Có phải đau khớp chỉ do tuổi tác không hay còn nguyên nhân nào khác?,Cơ xương khớp,Symptoms Only
+"Mỗi lần đi lại là thấy đau nhức ở hông, chả nhẽ tôi bị thoái hóa khớp?",Cơ xương khớp,Symptoms Only
+Nếu tôi có triệu chứng đau nhức khớp và sưng thì nên khám ở đâu?,Cơ xương khớp,Condition Only
+"Bác sĩ ơi, tôi có bị viêm khớp dạng thấp không khi mà khớp tôi hay cứng?",Cơ xương khớp,Condition Only
+"Tôi nghi bị bệnh gout, nên đi khám ở khoa nào?",Cơ xương khớp,Condition Only
+"Tôi bị chấn thương thể thao, không biết có cần khám chuyên khoa không?",Cơ xương khớp,Condition Only
+"Tôi đang lo lắng về tình trạng thoái hóa khớp của mình, có cách nào điều trị không?",Cơ xương khớp,Condition Only
+"Tôi thấy khớp chân tôi đau và sưng, có phải là dấu hiệu của bệnh gout không?",Cơ xương khớp,Mixed
+"Chân tôi yếu đi, không biết có phải là viêm khớp không nhỉ?",Cơ xương khớp,Mixed
+"Đau khớp tay, không cử động được, có thể là thoái hóa khớp không?",Cơ xương khớp,Mixed
+"Tôi bị chấn thương thể thao, khớp gối đau và sưng, có sao không?",Cơ xương khớp,Mixed
+"Tôi thấy cứng khớp vào buổi sáng, không biết có phải viêm khớp dạng thấp không?",Cơ xương khớp,Mixed
+"Tôi thấy nhức mỏi khắp người, mà cũng có triệu chứng như đau bụng, không biết có phải bệnh gì không?",Cơ xương khớp,Edge Case
+"Người tôi dạo này yếu đi, mà hay bị đau đầu nữa, không biết có liên quan không?",Cơ xương khớp,Edge Case
+"Tôi đau nhức khớp, mà cũng thấy mệt mỏi, không biết có phải bị viêm gan không?",Cơ xương khớp,Edge Case
+"Tôi thấy chân tay mình yếu đi, mà đau bụng nữa, có phải liên quan đến tiêu hóa không?",Cơ xương khớp,Edge Case
+"Tôi có triệu chứng đau khớp và cũng bị sốt, không biết có phải bị virus không?",Cơ xương khớp,Edge Case
+"Da em ngứa ghê lắm, không biết làm sao giờ?",Da liễu,Symptoms Only
+"Bà chị ơi, tại sao da tôi lại đỏ lên như vậy nhỉ?",Da liễu,Symptoms Only
+"Tôi bị khô da, có phải tôi bị gì nghiêm trọng không?",Da liễu,Symptoms Only
+"Em bị mụn ở mặt, mà không biết làm sao để hết?",Da liễu,Symptoms Only
+"Ngứa lắm, chắc tôi bị dị ứng hay sao ấy?",Da liễu,Symptoms Only
+"Da tôi lột ra từng mảng, thấy ghê quá!",Da liễu,Symptoms Only
+Có ai bị sưng tấy ở tay như tôi không nhỉ?,Da liễu,Symptoms Only
+"Mỗi lần tắm xong là da tôi ngứa, không biết có sao không?",Da liễu,Symptoms Only
+"Tôi thấy mụn trứng cá mọc nhiều, phải làm sao bây giờ?",Da liễu,Symptoms Only
+"Mấy tháng nay da tôi bị ngứa và đỏ, có phải viêm da không?",Da liễu,Symptoms Only
+"Tôi bị bệnh vẩy nến, thì khám ở khoa nào?",Da liễu,Condition Only
+Cần điều trị nấm da thì đến gặp bác sĩ chuyên khoa nào?,Da liễu,Condition Only
+Bệnh chàm có chữa được không? Tôi phải khám ở đâu?,Da liễu,Condition Only
+"Mình bị viêm da cơ địa, có cần phải đi khám không?",Da liễu,Condition Only
+"Tôi đang nghi ngờ mình bị mụn trứng cá, khám ở khoa nào là đúng?",Da liễu,Condition Only
+"Tôi bị ngứa và có mụn, có phải bị mụn trứng cá không?",Da liễu,Mixed
+"Da tôi lột và rất ngứa, có thể là viêm da cơ địa không?",Da liễu,Mixed
+"Mụn mọc nhiều và da tôi đỏ, chắc là bị viêm da chứ?",Da liễu,Mixed
+"Tôi có triệu chứng ngứa và sưng tấy, có phải nấm da không?",Da liễu,Mixed
+"Da lột và ngứa, liệu có phải là bệnh vẩy nến không?",Da liễu,Mixed
+"Tôi bị ngứa và khó chịu, mà lại có cả triệu chứng sốt nhẹ, không biết có sao không?",Da liễu,Edge Case
+"Da tôi nổi mụn và cũng hơi ho, có liên quan gì không?",Da liễu,Edge Case
+"Ngứa da và có triệu chứng đau đầu, chắc không phải bệnh da liễu nhỉ?",Da liễu,Edge Case
+"Tôi bị sưng tấy ở tay nhưng cũng bị ho nhẹ, có phải khám khoa da liễu không?",Da liễu,Edge Case
+"Da tôi đỏ và ngứa, mà tôi cũng thấy mệt mỏi, không biết khám ở đâu?",Da liễu,Edge Case
+"Em bị ngứa mũi quá trời, không biết phải làm sao?",Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+"Mẹ ơi, con hắt hơi suốt ngày, chắc con bị gì nè?",Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+Chả nhẽ lại bị chảy nước mũi chăng? Tại sao lại thế nhỉ?,Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+"Tôi cảm thấy khó thở quá, như có cái gì đó đè lên ngực.",Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+"Ngứa ngáy khắp người làm tôi khó chịu ghê, phải làm sao bây giờ?",Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+"Tôi bị phát ban ở tay, ko biết có phải dị ứng không nhỉ?",Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+"Có ai đó bị sưng tấy ở mặt như tôi không, chả nhẽ lại dị ứng?",Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+"Hắt xì liên tục, cảm giác như mình bị cảm lạnh hay sao ấy.",Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+"Mỗi lần ăn hải sản là lại bị ngứa, có phải tôi bị dị ứng thực phẩm không?",Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+"Tôi thấy khó thở mỗi khi tiếp xúc với phấn hoa, không biết có phải bị dị ứng không?",Dị ứng - Miễn dịch lâm sàng,Symptoms Only
+"Tôi hay bị viêm mũi dị ứng, cần khám ở khoa nào?",Dị ứng - Miễn dịch lâm sàng,Condition Only
+Có ai biết bệnh hen suyễn thì khám ở đâu không?,Dị ứng - Miễn dịch lâm sàng,Condition Only
+"Tôi đang gặp vấn đề với viêm da dị ứng, cần được điều trị.",Dị ứng - Miễn dịch lâm sàng,Condition Only
+"Làm thế nào để điều trị bệnh tự miễn, tôi phải đến khoa nào?",Dị ứng - Miễn dịch lâm sàng,Condition Only
+Bị dị ứng thuốc thì khám ở đâu để điều trị?,Dị ứng - Miễn dịch lâm sàng,Condition Only
+"Tôi bị khó thở và hay hắt hơi, có phải do viêm mũi dị ứng không?",Dị ứng - Miễn dịch lâm sàng,Mixed
+"Mỗi lần ăn đồ ăn có đạm động vật là tôi phát ban, chắc tôi bị dị ứng thực phẩm.",Dị ứng - Miễn dịch lâm sàng,Mixed
+"Tôi có triệu chứng khó thở và sưng tấy, không biết đó có phải là hen suyễn không?",Dị ứng - Miễn dịch lâm sàng,Mixed
+"Em bị ngứa da rồi phát ban, có phải là viêm da dị ứng không?",Dị ứng - Miễn dịch lâm sàng,Mixed
+"Tôi bị chảy nước mũi và hắt hơi, có phải do dị ứng phấn hoa không?",Dị ứng - Miễn dịch lâm sàng,Mixed
+"Tôi thấy đau đầu và buồn nôn, có phải bị dị ứng thực phẩm không?",Dị ứng - Miễn dịch lâm sàng,Edge Case
+"Thỉnh thoảng tôi bị ngứa mắt và chảy nước mắt, có phải do viêm kết mạc không?",Dị ứng - Miễn dịch lâm sàng,Edge Case
+"Tôi bị khó thở và tức ngực, có liên quan gì đến vấn đề tim mạch không?",Dị ứng - Miễn dịch lâm sàng,Edge Case
+"Chả nhẽ tôi bị dị ứng mà lại bị đau bụng, có phải không nhỉ?",Dị ứng - Miễn dịch lâm sàng,Edge Case
+"Tôi đau đầu và thấy chóng mặt, không biết có phải dị ứng không?",Dị ứng - Miễn dịch lâm sàng,Edge Case
+"Mình bị đau lưng dữ dội, không biết có sao không nhỉ?",Tiết niệu,Symptoms Only
+"Tiểu buốt quá, cảm giác như bị kim châm ấy!",Tiết niệu,Symptoms Only
+"Thỉnh thoảng tiểu ra máu, lo quá!",Tiết niệu,Symptoms Only
+"Đau bụng dưới quá, có phải bị gì nghiêm trọng không?",Tiết niệu,Symptoms Only
+"Mỗi lần đi tiểu là lại đau nhói, không chịu nổi!",Tiết niệu,Symptoms Only
+"Đi tiểu nhiều lần, mà không uống nước nhiều, có sao không?",Tiết niệu,Symptoms Only
+"Khi đi tiểu thấy khó khăn quá, có phải bệnh gì không?",Tiết niệu,Symptoms Only
+"Đau lưng dưới, mà hình như cũng có triệu chứng tiểu buốt nữa.",Tiết niệu,Symptoms Only
+"Nghe nói bị sỏi thận thì tiểu ra máu, không biết đúng không?",Tiết niệu,Symptoms Only
+"Mình có triệu chứng khó tiểu, chắc mình bị sao hả bác sĩ?",Tiết niệu,Symptoms Only
+"Tôi bị viêm đường tiết niệu, cần khám ở khoa nào?",Tiết niệu,Condition Only
+"Mình có bệnh sỏi thận, cần điều trị ở đâu?",Tiết niệu,Condition Only
+"Tôi bị bệnh suy thận mạn, có nên gặp bác sĩ chuyên khoa không?",Tiết niệu,Condition Only
+"Tôi có triệu chứng của ung thư bàng quang, khám ở đâu?",Tiết niệu,Condition Only
+"Mình nghi ngờ bị ung thư thận, cần làm xét nghiệm gì?",Tiết niệu,Condition Only
+"Tôi đau bụng dưới và có bệnh sỏi thận, cần làm gì bây giờ?",Tiết niệu,Mixed
+Mình tiểu ra máu và lo lắng về bệnh viêm đường tiết niệu.,Tiết niệu,Mixed
+"Đau lưng và khó tiểu, không biết có phải liên quan đến sỏi thận không?",Tiết niệu,Mixed
+"Mình bị tiểu buốt và nghi ngờ bị ung thư bàng quang, nên khám ở đâu?",Tiết niệu,Mixed
+"Tôi đi tiểu nhiều lần và có triệu chứng suy thận, có liên quan không?",Tiết niệu,Mixed
+"Tôi bị đau lưng và cũng bị đau đầu, có phải đến khoa Tiết niệu không?",Tiết niệu,Edge Case
+"Mình cảm thấy khó tiểu và cũng hay chóng mặt, không biết đi khám ở đâu?",Tiết niệu,Edge Case
+"Tôi bị tiểu buốt và có triệu chứng đau mắt, có liên quan gì không?",Tiết niệu,Edge Case
+"Mình bị đau bụng và cũng có triệu chứng ho, không biết có phải khám Tiết niệu không?",Tiết niệu,Edge Case
+"Tôi tiểu ra máu và có triệu chứng đau đầu, liệu có chuyện gì nghiêm trọng không?",Tiết niệu,Edge Case
+"Mình dạo này thấy chán nản, không muốn làm gì cả.",Tâm thần,Symptoms Only
+"Mỗi khi ra ngoài là lại thấy lo lắng, không biết làm sao.",Tâm thần,Symptoms Only
+"Tôi thường xuyên mất ngủ, cứ trằn trọc mãi không ngủ được.",Tâm thần,Symptoms Only
+"Gần đây tôi hay thay đổi tâm trạng, lúc vui lúc buồn, không hiểu sao nữa.",Tâm thần,Symptoms Only
+"Chả hiểu sao dạo này tôi khó tập trung, làm việc gì cũng thấy mệt mỏi.",Tâm thần,Symptoms Only
+"Có ai bị tự hại như tôi không, cảm giác buồn chán quá!",Tâm thần,Symptoms Only
+"Hôm nay lại thấy buồn, không muốn gặp ai cả.",Tâm thần,Symptoms Only
+"Mình hay lo lắng về tương lai, không biết có phải bệnh không nhỉ?",Tâm thần,Symptoms Only
+"Mỗi lần thi cử là tôi lại thấy hồi hộp, có phải triệu chứng lo âu không?",Tâm thần,Symptoms Only
+"Tôi không muốn ăn gì cả, có phải rối loạn ăn uống không?",Tâm thần,Symptoms Only
+Tôi bị trầm cảm thì nên khám ở khoa nào?,Tâm thần,Condition Only
+Muốn biết khám tâm thần cho chứng rối loạn lo âu thì đi đâu?,Tâm thần,Condition Only
+Bệnh tâm thần phân liệt điều trị ở đâu vậy mọi người?,Tâm thần,Condition Only
+"Tôi có triệu chứng PTSD, khám ở khoa nào thì tốt?",Tâm thần,Condition Only
+Rối loạn lưỡng cực thì cần điều trị như thế nào?,Tâm thần,Condition Only
+"Dạo này mình hay buồn, có thể là trầm cảm, mà cũng hay lo lắng nữa.",Tâm thần,Mixed
+"Mình không ăn được, có thể là rối loạn ăn uống và cũng thấy mệt mỏi.",Tâm thần,Mixed
+"Thỉnh thoảng tôi lại cảm thấy hoang tưởng, có phải là triệu chứng của rối loạn tâm thần không?",Tâm thần,Mixed
+"Tôi hay cáu gắt và cũng cảm thấy buồn, có phải bị rối loạn lưỡng cực không?",Tâm thần,Mixed
+"Tôi hay nghĩ về những điều tiêu cực, có phải là trầm cảm không?",Tâm thần,Mixed
+"Mình không ngủ được, nhưng cũng thấy đau đầu, có phải khám tâm thần không?",Tâm thần,Edge Case
+"Tôi hay lo âu nhưng cũng thấy đau bụng, không biết nên khám ở đâu?",Tâm thần,Edge Case
+"Mình cảm thấy chán nản, lại cũng hay nhức đầu, có nên khám tâm thần không?",Tâm thần,Edge Case
+"Dạo này tôi không muốn ăn, nhưng cũng bị đau bụng, có phải khám tâm thần không?",Tâm thần,Edge Case
+"Tôi thấy mình hay khóc nhưng cũng bị ho, không biết có phải khám tâm thần không?",Tâm thần,Edge Case
+"Dạo này tôi thấy sụt cân nhiều quá, mà không hiểu tại sao. Có phải tôi bị bệnh gì không?",Ung bướu,Symptoms Only
+"Mệt mỏi kéo dài quá, không biết có phải do sức khỏe kém hay là có vấn đề gì nghiêm trọng không?",Ung bướu,Symptoms Only
+"Có ai giống tôi không, tự dưng đau nhức khắp người mà không rõ nguyên nhân. Chả nhẽ là ung thư?",Ung bướu,Symptoms Only
+"Thấy thay đổi thói quen đi tiêu, giờ đi nhiều hơn và có cảm giác đau bụng. Không biết có bị bệnh gì không?",Ung bướu,Symptoms Only
+"Khó thở lắm, mà không bị bệnh phổi thì có thể là gì? Lo quá!",Ung bướu,Symptoms Only
+"Ho kéo dài mấy tháng nay mà không khỏi, liệu có phải tôi bị ung thư không?",Ung bướu,Symptoms Only
+"Tôi có triệu chứng sụt cân, mệt mỏi mà không rõ lý do. Có ai nghĩ là ung thư không?",Ung bướu,Symptoms Only
+"Mình đang lo lắng vì thấy có khối u nhỏ ở ngực, không biết có nguy hiểm không?",Ung bướu,Symptoms Only
+"Đau bụng thường xuyên, và có cảm giác khó tiêu. Có phải đi khám ung bướu không?",Ung bướu,Symptoms Only
+"Sụt cân thấy ghê, mà không hiểu lý do. Có phải liên quan đến ung thư không?",Ung bướu,Symptoms Only
+Tôi bị ung thư phổi thì nên khám ở khoa nào? Cần phải làm gì để điều trị?,Ung bướu,Condition Only
+Muốn biết nếu có triệu chứng đau ngực thì có phải đi khám ung bướu không?,Ung bướu,Condition Only
+"Nếu tôi bị ung thư vú, hiện tại có cần phải kiểm tra gì không?",Ung bướu,Condition Only
+"Tôi nghe nói ung thư dạ dày nguy hiểm lắm, phải không? Có cách nào điều trị tốt không?",Ung bướu,Condition Only
+Bị ung thư da thì điều trị như thế nào? Chữa ở đâu tốt?,Ung bướu,Condition Only
+"Mệt mỏi kéo dài và có khối u ở bụng, liệu có phải là ung thư đại trực tràng không?",Ung bướu,Mixed
+"Tôi thấy khó thở và đã từng có tiền sử ung thư phổi, có nên đi khám ngay không?",Ung bướu,Mixed
+"Thay đổi thói quen đi tiêu và có cảm giác đau bụng, có phải đi khám ung bướu không?",Ung bướu,Mixed
+"Sụt cân không rõ nguyên nhân và có khối u ở ngực, bây giờ phải làm sao?",Ung bướu,Mixed
+"Khó thở và ho kéo dài, nhưng tôi không bị bệnh phổi. Liệu có phải là ung thư không?",Ung bướu,Mixed
+"Tôi có triệu chứng đau bụng, nhưng cũng có thể là đau dạ dày. Liệu có liên quan đến ung bướu không?",Ung bướu,Edge Case
+"Thay đổi thói quen đi tiểu, nhưng cũng thấy mệt mỏi. Liệu có phải ung bướu không?",Ung bướu,Edge Case
+"Ho nhiều tháng nay, mà không bị cảm cúm. Không biết có phải ung thư phổi không?",Ung bướu,Edge Case
+"Sụt cân và có cảm giác đau lưng, nhưng cũng nghĩ đến bệnh thận. Có phải đi khám ung bướu không?",Ung bướu,Edge Case
+"Khó tiêu và cảm giác đầy bụng, nhưng không rõ có phải ung thư không? Phải làm gì?",Ung bướu,Edge Case
+"Mệt mỏi quá, không biết làm sao mà ngủ được nữa!",Lão khoa,Symptoms Only
+"Đau nhức cơ xương, thấy như mình già đi từng ngày.",Lão khoa,Symptoms Only
+"Cứ sao tôi lại hay quên, có phải dấu hiệu của bệnh không nhỉ?",Lão khoa,Symptoms Only
+"Tôi thấy hay bị khó tiêu, không biết có phải do tuổi tác không?",Lão khoa,Symptoms Only
+"Dạo này mình mệt mỏi quá, không biết có ai giống mình không?",Lão khoa,Symptoms Only
+"Ngủ không ngon, sáng dậy thấy mệt mỏi, chắc mình già thật rồi.",Lão khoa,Symptoms Only
+"Tôi lo lắng quá, không biết đau nhức xương có phải là bệnh gì?",Lão khoa,Symptoms Only
+"Chắc mình bị Alzheimer, vì sao hay quên vậy trời!",Lão khoa,Symptoms Only
+"Cảm thấy đau nhức, có phải do loãng xương không?",Lão khoa,Symptoms Only
+"Mệt quá, không biết làm sao với cái tiêu hóa của mình.",Lão khoa,Symptoms Only
+"Có ai mà bị mệt như tôi không, chắc mình bị bệnh nặng rồi.",Lão khoa,Symptoms Only
+Tôi bị bệnh tim thì khám khoa nào cho đúng?,Lão khoa,Condition Only
+"Muốn điều trị tiểu đường, nên tìm bác sĩ chuyên khoa nào?",Lão khoa,Condition Only
+Bệnh Alzheimer thì khám ở đâu cho tốt?,Lão khoa,Condition Only
+"Tôi có bệnh Parkinson, muốn biết nên khám ở khoa nào?",Lão khoa,Condition Only
+Bị loãng xương thì có cần phải khám không?,Lão khoa,Condition Only
+"Mình thấy đau nhức xương khớp mà cũng bị tiểu đường, không biết là do đâu?",Lão khoa,Mixed
+"Dạo này hay quên, chắc có phải do bệnh Alzheimer không?",Lão khoa,Mixed
+"Ngủ không ngon, có phải do bệnh tim không?",Lão khoa,Mixed
+"Cảm thấy mệt mỏi, có phải do loãng xương không nhỉ?",Lão khoa,Mixed
+"Khó tiêu và đau nhức, có phải là dấu hiệu của bệnh gì nghiêm trọng không?",Lão khoa,Mixed
+"Hay mệt mà cũng thấy chóng mặt, có phải là bệnh gì khác không nhưng mình già rồi?",Lão khoa,Edge Case
+"Tôi thấy đau đầu mà cũng khó tiêu, không biết có cần khám không?",Lão khoa,Edge Case
+"Mệt mỏi mà lại có triệu chứng như ngộ độc thực phẩm, có liên quan gì không?",Lão khoa,Edge Case
+"Cảm thấy chóng mặt, có phải là triệu chứng của bệnh tim không?",Lão khoa,Edge Case
+"Ngủ không ngon mà lại khó thở, không biết có liên quan gì không?",Lão khoa,Edge Case
+"Dạo này em thấy mệt mỏi quá, không biết có phải do ăn uống không?",Dinh dưỡng,Symptoms Only
+"Tôi giảm cân không rõ lý do, thấy lo quá!",Dinh dưỡng,Symptoms Only
+"Chả biết sao mà mình cứ thèm ăn kinh khủng, ăn hoài không hết!",Dinh dưỡng,Symptoms Only
+"Bụng của tôi đau nhức, có phải do ăn uống không nhỉ?",Dinh dưỡng,Symptoms Only
+"Mình hay bị tiêu chảy, có ảnh hưởng tới sức khỏe không?",Dinh dưỡng,Symptoms Only
+"Em bị táo bón, không biết nên ăn gì cho nó hết?",Dinh dưỡng,Symptoms Only
+"Tôi thấy ai cũng bảo ăn uống đúng cách sẽ khỏe hơn, mà mình cứ mệt mỏi mãi!",Dinh dưỡng,Symptoms Only
+Có ai từng bị thèm ăn không kiểm soát như tôi chưa?,Dinh dưỡng,Symptoms Only
+"Mệt quá, không biết có phải do chế độ ăn uống của mình không nhỉ?",Dinh dưỡng,Symptoms Only
+"Mình hay đau bụng sau khi ăn, không biết có phải do thức ăn không?",Dinh dưỡng,Symptoms Only
+"Tôi bị bệnh tiểu đường, phải ăn uống kiêng khem như thế nào?",Dinh dưỡng,Condition Only
+"Nghe nói béo phì nguy hiểm lắm, khám khoa nào thì tốt?",Dinh dưỡng,Condition Only
+"Tôi muốn điều trị rối loạn lipid máu, có cần thay đổi chế độ ăn không?",Dinh dưỡng,Condition Only
+Huyết áp cao thì nên ăn uống như thế nào cho hợp lý?,Dinh dưỡng,Condition Only
+Bệnh tim mạch có cần kiêng cữ gì trong thực đơn không?,Dinh dưỡng,Condition Only
+"Tôi hay bị mệt mỏi và bị tiểu đường, không biết ăn gì cho tốt?",Dinh dưỡng,Mixed
+"Mình bị béo phì, mà hay bị đau bụng, không biết làm sao?",Dinh dưỡng,Mixed
+Có ai bị rối loạn tiêu hóa và thèm ăn không kiểm soát không?,Dinh dưỡng,Mixed
+"Tôi có huyết áp cao và thường xuyên đau bụng, không biết có liên quan gì không?",Dinh dưỡng,Mixed
+"Nghe nói ăn uống không đúng cách có thể làm tăng rối loạn lipid máu, có đúng không?",Dinh dưỡng,Mixed
+"Mình bị đau đầu và thấy mệt, có phải do thiếu chất không?",Dinh dưỡng,Edge Case
+"Tôi bị tiêu chảy nhưng cũng hay bị lo âu, không biết có liên quan gì không?",Dinh dưỡng,Edge Case
+Có ai bị đau bụng và cảm thấy buồn nôn không? Tôi có nên đi khám không?,Dinh dưỡng,Edge Case
+"Bụng tôi hay đau, mà cũng bị ợ nóng, không biết nên ăn gì?",Dinh dưỡng,Edge Case
+"Mệt mỏi và thèm ăn, nhưng cũng bị chóng mặt, có phải đi khám không nhỉ?",Dinh dưỡng,Edge Case
+"Em bị đau họng quá trời, ngứa ngứa mà ko nuốt đc nữa.",Tai Mũi Họng,Symptoms Only
+"Mũi em bị nghẹt, thở khó khăn, không biết phải làm sao?",Tai Mũi Họng,Symptoms Only
+"Chảy mũi liên tục, em thấy mệt mỏi quá!",Tai Mũi Họng,Symptoms Only
+"Tôi bị đau tai, nghe không rõ, bực mình ghê.",Tai Mũi Họng,Symptoms Only
+"Thỉnh thoảng ho nhiều, không biết có sao không?",Tai Mũi Họng,Symptoms Only
+"Khó thở, ngực nặng nề, không biết có bị bệnh gì không?",Tai Mũi Họng,Symptoms Only
+"Em ho khan, cổ họng rát mà không thấy đỡ.",Tai Mũi Họng,Symptoms Only
+"Tôi cảm thấy họng mình như có gì đó mắc kẹt, lo quá.",Tai Mũi Họng,Symptoms Only
+"Chị ơi, em bị ngứa mũi, hắt xì quá trời luôn!",Tai Mũi Họng,Symptoms Only
+"Em thấy họng mình sưng lên, có phải viêm họng không?",Tai Mũi Họng,Symptoms Only
+"Tôi bị viêm xoang, không biết khám ở đâu?",Tai Mũi Họng,Condition Only
+"Tôi có triệu chứng đau họng, có phải bị viêm họng không?",Tai Mũi Họng,Condition Only
+"Dạo này tôi hay bị chảy mũi, có phải khám khoa Tai Mũi Họng không?",Tai Mũi Họng,Condition Only
+Tôi nghe nói bị polyp mũi thì phải đi khám khoa nào?,Tai Mũi Họng,Condition Only
+"Tôi bị viêm tai giữa, có nên đi khám ngay không?",Tai Mũi Họng,Condition Only
+"Em bị đau họng và cảm cúm, có phai là viêm họng k?",Tai Mũi Họng,Mixed
+"Nghe đồn em bị dị ứng mũi, nhưng giờ lại đau tai, phải làm sao?",Tai Mũi Họng,Mixed
+"Em ho nhiều và có mũi xanh, đi khám có sao không?",Tai Mũi Họng,Mixed
+"Em thấy họng sưng và cũng bị nghẹt mũi, có thể bị bệnh gì?",Tai Mũi Họng,Mixed
+Khó thở và nghe nói đau tai thì có phải đi khám Tai Mũi Họng không?,Tai Mũi Họng,Mixed
+"Tôi có triệu chứng như là ho và đau bụng, không biết có phải Tai Mũi Họng không?",Tai Mũi Họng,Edge Case
+"Em bị ngứa mắt và đau họng, không biết khám ở đâu?",Tai Mũi Họng,Edge Case
+"Tôi có triệu chứng như chóng mặt và đau tai, có phải khám Tai Mũi Họng không?",Tai Mũi Họng,Edge Case
+"Em bị sốt và đau họng, liệu có cần khám Tai Mũi Họng không?",Tai Mũi Họng,Edge Case
+"Tôi thấy đau đầu và nghẹt mũi, có phải khám khoa Tai Mũi Họng không?",Tai Mũi Họng,Edge Case
+"Hôm nay tự dưng mắt mờ quá, không thấy gì hết.",Mắt,Symptoms Only
+"Đau mắt quá, làm ơn cho hỏi có phải bị bệnh gì không?",Mắt,Symptoms Only
+"Mắt em ngứa quá, chả biết làm sao cả.",Mắt,Symptoms Only
+"Chảy nước mắt liên tục, có phải là vấn đề gì nghiêm trọng không?",Mắt,Symptoms Only
+"Nghe nói bị khô mắt thì khó chịu lắm, có đúng không?",Mắt,Symptoms Only
+"Mắt bị đỏ và ngứa, chắc có bị viêm không nhỉ?",Mắt,Symptoms Only
+"Mấy hôm nay thấy khó nhìn vào ban đêm, không biết có sao không.",Mắt,Symptoms Only
+"Bị mờ mắt mà không rõ nguyên nhân, có phải tôi bị bệnh gì không?",Mắt,Symptoms Only
+"Mình thấy mắt ngứa và chảy nước, có nên đi khám không?",Mắt,Symptoms Only
+"Mắt đau quá, chắc có phải đục thủy tinh thể không?",Mắt,Symptoms Only
+"Tôi nghe nói viêm kết mạc gây ngứa mắt, có đúng không?",Mắt,Symptoms Only
+"Tôi bị đục thủy tinh thể, khám ở đâu thì tốt?",Mắt,Condition Only
+"Nghe nói bệnh glaucom rất nguy hiểm, có ai biết điều trị không?",Mắt,Condition Only
+"Mình đang bị bệnh khô mắt, có bác sĩ nào chữa tốt không?",Mắt,Condition Only
+"Bệnh võng mạc tiểu đường có nguy hiểm không, khám ở đâu?",Mắt,Condition Only
+"Mắt tôi bị đau do viêm kết mạc, cần khám ngay.",Mắt,Condition Only
+"Bị mờ mắt và nghi ngờ là đục thủy tinh thể, làm sao để chữa?",Mắt,Mixed
+"Chảy nước mắt và ngứa mắt, có thể bị bệnh gì không?",Mắt,Mixed
+"Khó nhìn ban đêm, có phải tôi bị glaucom không?",Mắt,Mixed
+"Mắt đỏ và ngứa, chắc tôi bị viêm kết mạc phải không?",Mắt,Mixed
+"Tôi thấy mắt mờ và chảy nước, có nguy cơ bị gì không?",Mắt,Mixed
+"Mắt khó chịu, nhưng cũng có thể là dị ứng, có khám ở khoa nào không?",Mắt,Edge Case
+"Em thấy hơi choáng và đau đầu, có liên quan đến mắt không?",Mắt,Edge Case
+"Mắt tôi bị đỏ và kèm theo chảy mũi, có phải là viêm không?",Mắt,Edge Case
+"Cháu bị đau mắt mà cũng hơi sổ mũi, chắc không phải mắt nhỉ?",Mắt,Edge Case
+"Tôi thấy khó nhìn, nhưng cũng hay chóng mặt, có liên quan không?",Mắt,Edge Case
+"Em đau răng quá, không biết làm sao giờ?",Răng Hàm Mặt,Symptoms Only
+"Chảy máu nướu khi đánh răng, có bị sao không?",Răng Hàm Mặt,Symptoms Only
+"Miệng em hôi quá, không hiểu sao, có phải viêm gì không?",Răng Hàm Mặt,Symptoms Only
+"Tôi thấy nướu sưng lên, có cần đi khám không?",Răng Hàm Mặt,Symptoms Only
+"Khó khăn khi nhai thức ăn, có phải bị bệnh gì không?",Răng Hàm Mặt,Symptoms Only
+"Răng khôn mọc lệch, đau quá không ăn uống được!",Răng Hàm Mặt,Symptoms Only
+"Em bị rối loạn khớp hàm, không mở miệng được, có cách nào chữa không?",Răng Hàm Mặt,Symptoms Only
+"Răng của tôi bị sâu nặng, có cách nào chữa trị không?",Răng Hàm Mặt,Symptoms Only
+"Chảy máu khi ăn đồ cứng, có phải viêm nướu không?",Răng Hàm Mặt,Symptoms Only
+"Đau nhức răng dữ dội, không biết đi khám ở đâu?",Răng Hàm Mặt,Symptoms Only
+"Tôi bị sâu răng, khám ở khoa nào?",Răng Hàm Mặt,Condition Only
+Viêm nướu thì phải điều trị như thế nào?,Răng Hàm Mặt,Condition Only
+"Tôi nghi bị viêm tủy răng, có cần đi khám không?",Răng Hàm Mặt,Condition Only
+"Răng khôn mọc lệch, có cần phải nhổ không?",Răng Hàm Mặt,Condition Only
+"Tôi bị rối loạn khớp thái dương hàm, khám ở đâu?",Răng Hàm Mặt,Condition Only
+"Em đau răng và có dấu hiệu sâu răng nặng, phải làm sao?",Răng Hàm Mặt,Mixed
+"Tôi thấy nướu bị sưng và nghi viêm nướu, có phải không?",Răng Hàm Mặt,Mixed
+"Răng khôn của tôi đau và chảy máu nướu, có nên đi khám không?",Răng Hàm Mặt,Mixed
+"Em bị hôi miệng và đau nướu, có phải viêm gì không?",Răng Hàm Mặt,Mixed
+"Rối loạn khớp hàm và đau răng cùng lúc, có nghiêm trọng không?",Răng Hàm Mặt,Mixed
+"Em có triệu chứng đau đầu và đau răng, có liên quan không?",Răng Hàm Mặt,Edge Case
+"Tôi bị chóng mặt và đau nhức răng, có phải đi khám không?",Răng Hàm Mặt,Edge Case
+Có phải đau bụng và đau răng là dấu hiệu của bệnh gì nghiêm trọng không?,Răng Hàm Mặt,Edge Case
+"Em bị đau răng và có triệu chứng sốt, có phải đi khám khẩn không?",Răng Hàm Mặt,Edge Case
+"Khám răng nhưng cũng thấy đau ở cổ họng, có liên quan gì không?",Răng Hàm Mặt,Edge Case
+"Em bị đau bụng dưới, không biết có phải có thai không?",Sản phụ khoa,Symptoms Only
+"Chị ơi, em thấy mình chảy máu âm đạo, có sao không?",Sản phụ khoa,Symptoms Only
+"Mệt mỏi quá chị ơi, không biết có phải do kinh nguyệt không nhỉ?",Sản phụ khoa,Symptoms Only
+"Em thường xuyên buồn nôn, có phải là dấu hiệu gì không?",Sản phụ khoa,Symptoms Only
+Nói thật là em thấy đau bụng dưới như có cái gì đó không ổn.,Sản phụ khoa,Symptoms Only
+"Chị ơi, em thấy kinh nguyệt không đều, có nên đi khám không?",Sản phụ khoa,Symptoms Only
+"Em đang bị đau bụng, mà không biết nó có phải do viêm nhiễm không?",Sản phụ khoa,Symptoms Only
+"Em có triệu chứng mệt mỏi thường xuyên, có phải đi khám không?",Sản phụ khoa,Symptoms Only
+Chảy máu âm đạo không đau có phải là bình thường không?,Sản phụ khoa,Symptoms Only
+Mình có thai mà bị đau bụng dưới thì có nguy hiểm không?,Sản phụ khoa,Symptoms Only
+"Tôi bị Thai ngoài tử cung, phải đi khám ở đâu?",Sản phụ khoa,Condition Only
+"Mình bị rối loạn kinh nguyệt, có cần đến bệnh viện không?",Sản phụ khoa,Condition Only
+"Tôi nghe nói u xơ tử cung nguy hiểm lắm, có nên đi khám ngay không?",Sản phụ khoa,Condition Only
+Có phải viêm nhiễm phụ khoa cần điều trị sớm không?,Sản phụ khoa,Condition Only
+Sảy thai thì khám ở đâu để được điều trị tốt nhất?,Sản phụ khoa,Condition Only
+Em đau bụng dưới và lo lắng vì có khả năng bị thai ngoài tử cung.,Sản phụ khoa,Mixed
+"Chị ơi, em thấy chảy máu âm đạo và đang rất hoang mang vì có thể là sảy thai.",Sản phụ khoa,Mixed
+"Mình hay buồn nôn và kinh nguyệt không đều, có phải là dấu hiệu của bệnh gì không?",Sản phụ khoa,Mixed
+"Em bị đau bụng dưới, không biết có phải do u xơ tử cung không?",Sản phụ khoa,Mixed
+"Chị ơi, em mệt mỏi và có dấu hiệu viêm nhiễm phụ khoa, có phải đi khám ngay không?",Sản phụ khoa,Mixed
+"Em bị đau bụng và đôi khi thấy chóng mặt, không biết có phải do thai không?",Sản phụ khoa,Edge Case
+"Chảy máu âm đạo và cảm thấy đau đầu, có phải là bị bệnh gì khác không?",Sản phụ khoa,Edge Case
+Mình thấy mệt mỏi mà không biết có phải do stress hay là bệnh gì không?,Sản phụ khoa,Edge Case
+"Em thấy đau bụng và có triệu chứng giống như viêm ruột thừa, nhưng mà lại có thai.",Sản phụ khoa,Edge Case
+"Em đau bụng dưới mà lại thấy buồn nôn, có phải bị vấn đề gì khác không?",Sản phụ khoa,Edge Case
+"Chả hiểu sao dạo này em hay bị đau khi đi tè, có ai giống em ko?",Nam khoa,Symptoms Only
+"Cứ mỗi lần quan hệ là em lại thấy không cương được, lo quá!",Nam khoa,Symptoms Only
+"Em bị tiểu nhiều lần, đặc biệt là ban đêm, có sao không?",Nam khoa,Symptoms Only
+"Tui thấy đau vùng chậu, không biết có phải bệnh gì nghiêm trọng không?",Nam khoa,Symptoms Only
+"Em xuất tinh sớm quá, làm thế nào để cải thiện đây?",Nam khoa,Symptoms Only
+"Thỉnh thoảng em cảm thấy cương ko đủ, có phải bị rối loạn cương dương không?",Nam khoa,Symptoms Only
+"Đau khi đi tiểu quá trời mà không biết lý do, ai có kinh nghiệm chia sẻ cho em với!",Nam khoa,Symptoms Only
+"Em hay thấy vùng chậu bị đau nhức, có khi nào bị viêm tuyến tiền liệt không?",Nam khoa,Symptoms Only
+"Đi tiểu nhiều lần trong ngày, em lo quá không biết có bị bệnh gì không?",Nam khoa,Symptoms Only
+"Sao em cảm thấy cương không được như trước, có ai giúp em với?",Nam khoa,Symptoms Only
+"Tôi bị vô sinh, thì nên khám ở khoa nào?",Nam khoa,Condition Only
+Có ai biết bệnh viêm tuyến tiền liệt thì khám ở đâu không?,Nam khoa,Condition Only
+"Tôi nghi có ung thư tuyến tiền liệt, cần đến khám gấp!",Nam khoa,Condition Only
+Muốn điều trị rối loạn cương dương thì đến khoa nào?,Nam khoa,Condition Only
+"Tôi bị nhiễm trùng đường tiết niệu, không biết khám ở đâu cho đúng?",Nam khoa,Condition Only
+"Gần đây em thấy đau khi đi tiểu và có hiện tượng xuất tinh sớm, không biết có bị bệnh gì không?",Nam khoa,Mixed
+Em hay tiểu nhiều lần và đang lo lắng về tình trạng vô sinh của mình.,Nam khoa,Mixed
+"Thỉnh thoảng đau vùng chậu và có cảm giác không cương được, em phải làm sao?",Nam khoa,Mixed
+"Đau khi đi tiểu và em thấy có dấu hiệu viêm tuyến tiền liệt, cần tìm bác sĩ!",Nam khoa,Mixed
+"Em xuất tinh sớm và sợ rằng mình có bệnh gì đó nghiêm trọng, xin tư vấn.",Nam khoa,Mixed
+"Em bị tiểu nhiều lần, nhưng cũng thấy mệt mỏi và đau đầu, có phải đi khám nội không?",Nam khoa,Edge Case
+"Đau vùng chậu nhưng cũng thấy hơi buồn nôn, không biết có phải vào khoa tiêu hóa không?",Nam khoa,Edge Case
+"Thỉnh thoảng em bị đau khi đi tiểu và có cảm giác chóng mặt, có phải khám khoa khác không?",Nam khoa,Edge Case
+"Em xuất tinh sớm và thỉnh thoảng có cảm giác khó thở, không biết có cần khám bệnh tim không?",Nam khoa,Edge Case
+"Tôi có triệu chứng đau khi đi tiểu và cũng thấy khó ngủ, không biết nên khám khoa nào?",Nam khoa,Edge Case
+"Mình đã cố gắng bầu bí hơn 1 năm mà chẳng thấy gì, lo quá!",Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+"Cứ mỗi tháng là thấy kinh nguyệt không đều, có sao không nhỉ?",Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+Chả nhẽ mình bị đau bụng dưới do không có thai sao?,Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+"Hóng có em bé mà chả thấy gì, bực quá!",Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+"Kinh nguyệt của mình thất thường quá, có phải rối loạn nội tiết không?",Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+"Giảm ham muốn tình dục, không biết có liên quan gì đến việc có thai không?",Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+"Đau bụng dưới, mình nghĩ có vấn đề gì không nhỉ?",Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+"Thỉnh thoảng mình thấy kinh nguyệt không đều, có đáng lo không?",Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+"Hơn 1 năm rồi mà vẫn chưa có baby, có phải mình có vấn đề không?",Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+"Mình thấy kinh nguyệt không đều, chắc phải đi khám thôi!",Hiếm muộn - Hỗ trợ sinh sản,Symptoms Only
+Tôi muốn biết mình bị rối loạn rụng trứng thì khám ở khoa nào?,Hiếm muộn - Hỗ trợ sinh sản,Condition Only
+Có phải tắc ống dẫn trứng thì phải đi khám Hiếm muộn không?,Hiếm muộn - Hỗ trợ sinh sản,Condition Only
+"Tôi nghi là mình suy giảm chất lượng tinh trùng, cần đi khám ở đâu?",Hiếm muộn - Hỗ trợ sinh sản,Condition Only
+"Tôi có triệu chứng của lạc nội mạc tử cung, nên khám ở chuyên khoa nào?",Hiếm muộn - Hỗ trợ sinh sản,Condition Only
+Muốn biết về điều trị u xơ tử cung thì nên đến khoa nào?,Hiếm muộn - Hỗ trợ sinh sản,Condition Only
+"Mình thấy đau bụng và khó có thai, có phải mình bị lạc nội mạc tử cung không?",Hiếm muộn - Hỗ trợ sinh sản,Mixed
+"Mình bị tắc ống dẫn trứng, có triệu chứng đau bụng dưới, làm sao bây giờ?",Hiếm muộn - Hỗ trợ sinh sản,Mixed
+"Kinh nguyệt không đều và nghi ngờ rối loạn rụng trứng, có phải đi khám không?",Hiếm muộn - Hỗ trợ sinh sản,Mixed
+"Mình đã cố gắng bầu bí nhưng thấy giảm ham muốn tình dục, có liên quan không?",Hiếm muộn - Hỗ trợ sinh sản,Mixed
+"Tôi bị đau bụng dưới và lo lắng về khả năng có thai, có phải đi khám không?",Hiếm muộn - Hỗ trợ sinh sản,Mixed
+"Mình có triệu chứng đau bụng nhưng cũng hay bị mệt mỏi, có phải rối loạn nội tiết không?",Hiếm muộn - Hỗ trợ sinh sản,Edge Case
+"Mình thấy khó có thai nhưng cũng hay chóng mặt, có liên quan đến khoa Hiếm muộn không?",Hiếm muộn - Hỗ trợ sinh sản,Edge Case
+"Mình bị đau bụng và thấy khó tiêu, có khi nào là do vấn đề về sinh sản không?",Hiếm muộn - Hỗ trợ sinh sản,Edge Case
+"Kinh nguyệt không đều, có thể do stress nhiều quá không hay liên quan đến Hiếm muộn?",Hiếm muộn - Hỗ trợ sinh sản,Edge Case
+"Có triệu chứng đau bụng dưới nhưng cũng hay buồn nôn, có phải đi khám không nhỉ?",Hiếm muộn - Hỗ trợ sinh sản,Edge Case
+"Tôi bị sốt cao và ho suốt ngày, không biết phải làm sao?",Nhi khoa,Symptoms Only
+"Con em bị nôn mửa và đau bụng, có phải bị bệnh nặng không?",Nhi khoa,Symptoms Only
+"Sao mà con em ho nhiều quá, có phải bị viêm phổi không?",Nhi khoa,Symptoms Only
+"Em thấy con sốt, phát ban và khó thở, lo quá đi!",Nhi khoa,Symptoms Only
+"Bé nhà em bị tiêu chảy liên tục, khổ ghê!",Nhi khoa,Symptoms Only
+"Bé bị ho và sốt, có nên cho đi khám không?",Nhi khoa,Symptoms Only
+"Nhìn con mà thấy phát ban, chắc là bị bệnh tay chân miệng?",Nhi khoa,Symptoms Only
+"Con tôi tự dưng hắt hơi nhiều, có cần khám không nhỉ?",Nhi khoa,Symptoms Only
+"Con em khó thở, không biết sao nữa, có nên đi bệnh viện ngay không?",Nhi khoa,Symptoms Only
+"Tôi lo lắng vì con hay bị nôn, không biết có phải bệnh gì không?",Nhi khoa,Symptoms Only
+"Bé nhà tôi bị cảm cúm, khám ở khoa nào thì tốt?",Nhi khoa,Condition Only
+"Tôi nghe nói viêm tai giữa ở trẻ em rất phổ biến, đúng không?",Nhi khoa,Condition Only
+"Con tôi bị bệnh tiêu chảy cấp, cần phải điều trị ra sao?",Nhi khoa,Condition Only
+"Muốn khám bệnh hen suyễn, em nên tới khoa nào?",Nhi khoa,Condition Only
+Tôi cần tìm bác sĩ để điều trị rối loạn tăng trưởng cho con.,Nhi khoa,Condition Only
+"Con tôi bị sốt và cảm cúm, có phải là bệnh tay chân miệng không?",Nhi khoa,Mixed
+"Bé nhà tôi đang ho và có dấu hiệu viêm phổi, tôi phải làm sao?",Nhi khoa,Mixed
+"Con em có triệu chứng tiêu chảy và đau bụng, có thể bị bệnh gì?",Nhi khoa,Mixed
+"Tôi thấy con bị phát ban và sốt, liệu có phải là bệnh gì nghiêm trọng không?",Nhi khoa,Mixed
+"Bé hay khó thở và có dấu hiệu cảm cúm, đi khám ngay không?",Nhi khoa,Mixed
+"Con tôi thấy mệt mỏi, đau bụng và không ăn uống gì cả, có phải bệnh dạ dày không?",Nhi khoa,Edge Case
+"Bé bị đau đầu và sốt, có phải là bệnh gì khác không?",Nhi khoa,Edge Case
+"Con hay bị ho và có triệu chứng dị ứng, có cần khám không?",Nhi khoa,Edge Case
+"Tôi thấy con có triệu chứng ho và ngứa mũi, có phải viêm mũi không?",Nhi khoa,Edge Case
+"Bé nhà tôi bị sốt và đi ngoài liên tục, có phải là tiêu chảy cấp không?",Nhi khoa,Edge Case
+"Tôi bị đau bụng dữ dội, không biết có phải viêm ruột thừa không?",Ngoại tổng quát,Symptoms Only
+"Bác sĩ ơi, em bị sốt và nôn mửa, có phải đi khám không?",Ngoại tổng quát,Symptoms Only
+"Mình bị đau bụng mà lại khó tiêu, không biết có phải có vấn đề gì không?",Ngoại tổng quát,Symptoms Only
+Chả nhẽ mình bị sỏi mật? Bụng đau mà cứ nôn mãi.,Ngoại tổng quát,Symptoms Only
+Thấy chảy máu khi đi đại tiện thì có sao không bác sĩ?,Ngoại tổng quát,Symptoms Only
+"Đau bụng dưới bên phải, có thể là viêm ruột thừa không nhỉ?",Ngoại tổng quát,Symptoms Only
+"Em thấy bụng mình căng tức, khó tiêu lắm, có phải đi khám không?",Ngoại tổng quát,Symptoms Only
+"Tôi bị sốt cao, nôn ra máu thì có nguy hiểm không?",Ngoại tổng quát,Symptoms Only
+"Bụng khó chịu quá, có phải bệnh trĩ không ta?",Ngoại tổng quát,Symptoms Only
+"Đau bụng mà cũng thấy mệt mỏi, không biết có liên quan đến ung thư gì không?",Ngoại tổng quát,Symptoms Only
+Mình bị thoát vị thì phải khám khoa nào?,Ngoại tổng quát,Condition Only
+"Bác sĩ cho em hỏi, em có bị viêm ruột thừa thì có chữa được không?",Ngoại tổng quát,Condition Only
+"Tôi muốn điều trị sỏi mật, phải làm sao?",Ngoại tổng quát,Condition Only
+Có ai biết bệnh trĩ thì phải khám ở đâu không?,Ngoại tổng quát,Condition Only
+"Em nghi ngờ mình bị ung thư đường tiêu hóa, phải đi khám ở khoa nào?",Ngoại tổng quát,Condition Only
+"Tôi bị đau bụng và nghi ngờ bị sỏi mật, có phải đến khoa ngoại tổng quát không?",Ngoại tổng quát,Mixed
+"Đau bụng mà thấy chảy máu khi đi cầu, không biết có phải bệnh trĩ không?",Ngoại tổng quát,Mixed
+"Bác sĩ ơi, tôi bị sốt và đau bụng, có phải viêm ruột thừa không nhỉ?",Ngoại tổng quát,Mixed
+"Mình đau bụng dưới, có thể là thoát vị không?",Ngoại tổng quát,Mixed
+"Tôi thấy khó tiêu và có triệu chứng giống như bệnh trĩ, có nên khám không?",Ngoại tổng quát,Mixed
+"Em có đau đầu nhưng cũng buồn nôn, không biết có phải đi khám ngoại tổng quát không?",Ngoại tổng quát,Edge Case
+"Bác sĩ ơi, em bị ho và đau bụng thì có cần khám khoa ngoại không?",Ngoại tổng quát,Edge Case
+"Tôi thấy chóng mặt nhưng cũng đau bụng, không biết có liên quan đến ngoại tổng quát không?",Ngoại tổng quát,Edge Case
+Có ai bị đau bụng kèm sốt không? Thì phải khám khoa nào?,Ngoại tổng quát,Edge Case
+"Em thấy đau lưng nhưng cũng có triệu chứng đau bụng, có phải đi khám ngoại tổng quát không?",Ngoại tổng quát,Edge Case
+"Em đau nhức khớp gối quá trời, không biết có bị làm sao không?",Chấn thương chỉnh hình,Symptoms Only
+"Tôi thấy chỗ xương cánh tay sưng tấy, đau nhức mỗi lần cử động.",Chấn thương chỉnh hình,Symptoms Only
+"Bị tê bì chân, đi lại khó khăn quá, có phải bị gãy xương không?",Chấn thương chỉnh hình,Symptoms Only
+"Chân tui bị biến dạng sau khi té ngã, giờ không đi được nữa.",Chấn thương chỉnh hình,Symptoms Only
+"Mấy nay thấy đau nhức xương khớp, không biết có phải viêm khớp không?",Chấn thương chỉnh hình,Symptoms Only
+"Tôi bị đau lưng lắm, mà nghe nói là bệnh thoái hóa khớp.",Chấn thương chỉnh hình,Symptoms Only
+"Chỗ tay bị sưng, đau nhức, chắc ăn chắc bị trật khớp.",Chấn thương chỉnh hình,Symptoms Only
+"Đau nhức ở đầu gối, không cử động được, có phải chấn thương thể thao không?",Chấn thương chỉnh hình,Symptoms Only
+"Em thấy bị tê bì tay, có thể do làm việc quá sức không?",Chấn thương chỉnh hình,Symptoms Only
+"Tôi thấy chân bị sưng và đau nhức, chắc phải đi khám thôi.",Chấn thương chỉnh hình,Symptoms Only
+Tôi bị gãy xương thì khám khoa nào?,Chấn thương chỉnh hình,Condition Only
+Muốn điều trị bệnh thoái hóa khớp thì đi đâu khám?,Chấn thương chỉnh hình,Condition Only
+"Trật khớp thì cần làm gì, khám ở đâu?",Chấn thương chỉnh hình,Condition Only
+"Tôi bị đau khớp gối, không biết có phải viêm khớp không?",Chấn thương chỉnh hình,Condition Only
+Có bệnh chấn thương thể thao nào phổ biến không?,Chấn thương chỉnh hình,Condition Only
+"Em bị đau nhức xương khớp từ lâu rồi, chắc là gãy xương, mà giờ không biết phải đi khám sao.",Chấn thương chỉnh hình,Mixed
+"Chỗ tay em bị sưng và đau, em lo quá, có thể là trật khớp không?",Chấn thương chỉnh hình,Mixed
+"Tôi thấy đau ở đầu gối, có phải bị thoái hóa khớp không?",Chấn thương chỉnh hình,Mixed
+"Chân tôi bị tê bì và không đi lại được, chắc chắn là bị gãy xương.",Chấn thương chỉnh hình,Mixed
+"Em bị đau nhức từ khi chơi thể thao, có thể bị chấn thương thể thao không?",Chấn thương chỉnh hình,Mixed
+"Tôi bị đau khớp và ngứa, có phải bị dị ứng không?",Chấn thương chỉnh hình,Edge Case
+"Chân tôi bị đau và sưng, mà không biết có phải do viêm da không?",Chấn thương chỉnh hình,Edge Case
+"Tôi cảm thấy tê bì tay và có triệu chứng như là đau đầu, có sao không?",Chấn thương chỉnh hình,Edge Case
+"Chỗ chân đau nhức, mà giờ thấy đau lưng nữa, có phải đi khám không?",Chấn thương chỉnh hình,Edge Case
+"Bị đau cổ tay và có triệu chứng như đau bụng, không biết khám ở đâu?",Chấn thương chỉnh hình,Edge Case
+"Tôi bị đau đầu quá trời, không biết làm sao?",Ngoại thần kinh,Symptoms Only
+Chả nhẽ tôi bị tê bì tay chân thì nên đi khám ở đâu?,Ngoại thần kinh,Symptoms Only
+"Đau đầu, chóng mặt, mà không biết lý do gì cả!",Ngoại thần kinh,Symptoms Only
+"Em hay bị co giật, chắc có vấn đề gì đó nghiêm trọng hả bác sĩ?",Ngoại thần kinh,Symptoms Only
+"Chắc tôi bị rối loạn cảm giác, tay chân cứ tê tê!",Ngoại thần kinh,Symptoms Only
+"Mỗi lần đau đầu, tôi lại thấy buồn nôn, có phải tôi bị bệnh gì không?",Ngoại thần kinh,Symptoms Only
+"Tôi thấy người yếu đi, nhất là chân, có phải tôi bị bệnh gì nặng không?",Ngoại thần kinh,Symptoms Only
+"Tôi đau nửa đầu, chóng mặt lắm, không biết có vấn đề gì hả bác?",Ngoại thần kinh,Symptoms Only
+"Ê, bác sĩ ơi, sao em lại thấy tê bì tay chân hoài vậy?",Ngoại thần kinh,Symptoms Only
+"Đau đầu liên tục, thấy khó chịu quá, có thuốc gì chữa không?",Ngoại thần kinh,Symptoms Only
+Tôi bị bệnh đột quỵ thì có chữa được không?,Ngoại thần kinh,Condition Only
+Muốn khám bệnh Parkinson thì phải gặp bác sĩ nào?,Ngoại thần kinh,Condition Only
+Bị bệnh Alzheimer thì có phương pháp điều trị nào không?,Ngoại thần kinh,Condition Only
+"Tôi có triệu chứng thoát vị đĩa đệm, nên khám ở khoa nào?",Ngoại thần kinh,Condition Only
+"Chấn thương sọ não có nguy hiểm không, chữa như nào?",Ngoại thần kinh,Condition Only
+Tôi bị đau đầu và bác sĩ bảo tôi có thể bị u não. Vậy điều trị ra sao?,Ngoại thần kinh,Mixed
+"Em bị chóng mặt và bác sĩ nghi ngờ đột quỵ, em phải làm sao?",Ngoại thần kinh,Mixed
+"Tay chân tê bì, có thể là dấu hiệu của bệnh Parkinson không?",Ngoại thần kinh,Mixed
+"Tôi cảm thấy yếu cơ, bác sĩ bảo có thể do thoát vị đĩa đệm?",Ngoại thần kinh,Mixed
+Rối loạn cảm giác có phải là triệu chứng của bệnh Alzheimer không?,Ngoại thần kinh,Mixed
+"Tôi bị đau đầu và thấy mệt mỏi, chắc không phải bệnh tâm lý đâu nhỉ?",Ngoại thần kinh,Edge Case
+"Người tôi cứ yếu đi, nhưng lại bị ho và sốt, có phải đi khám ở khoa nào không?",Ngoại thần kinh,Edge Case
+"Đang bị đau đầu mà lại thấy đau bụng, không biết đi khám ở đâu?",Ngoại thần kinh,Edge Case
+"Chồng tôi bị chóng mặt nhưng lại có triệu chứng ho khan, phải làm sao?",Ngoại thần kinh,Edge Case
+"Tôi thấy tê bì tay chân và cũng bị ho, không biết có liên quan gì không?",Ngoại thần kinh,Edge Case
+"Tôi bị đau ngực, cảm giác như có ai bóp chặt vậy.",Lồng ngực - Mạch máu,Symptoms Only
+"Dạo này tôi khó thở quá, không biết có phải bệnh gì không.",Lồng ngực - Mạch máu,Symptoms Only
+"Bị ho có đờm, mệt mỏi, mà sao không hết, lo quá.",Lồng ngực - Mạch máu,Symptoms Only
+"Chóng mặt làm tôi thấy sợ, có ai đã từng bị như vậy chưa?",Lồng ngực - Mạch máu,Symptoms Only
+"Mỗi lần lên cầu thang là thấy khó thở, chắc mình bị gì nặng lắm.",Lồng ngực - Mạch máu,Symptoms Only
+"Mệt mỏi kéo dài, không biết có phải do bệnh tim không nhỉ?",Lồng ngực - Mạch máu,Symptoms Only
+"Đau nhói ở lồng ngực, tưởng bệnh gì nguy hiểm lắm.",Lồng ngực - Mạch máu,Symptoms Only
+"Thỉnh thoảng tôi thấy tức ngực, khó thở, không biết có làm sao không.",Lồng ngực - Mạch máu,Symptoms Only
+"Mình bị ho mà đờm có màu vàng, có phải đi khám không?",Lồng ngực - Mạch máu,Symptoms Only
+"Có ai bị chóng mặt, tim đập nhanh không? Lo quá.",Lồng ngực - Mạch máu,Symptoms Only
+"Tôi nghe nói bệnh động mạch vành nguy hiểm lắm, có đúng không?",Lồng ngực - Mạch máu,Condition Only
+Nếu bị COPD thì khám ở chuyên khoa nào?,Lồng ngực - Mạch máu,Condition Only
+"Tôi bị tăng huyết áp, có cần khám lồng ngực không?",Lồng ngực - Mạch máu,Condition Only
+Bệnh phổi có ảnh hưởng đến tim không nhỉ?,Lồng ngực - Mạch máu,Condition Only
+"Chồng tôi bị bệnh mạch máu ngoại biên, có phải đi khám không?",Lồng ngực - Mạch máu,Condition Only
+"Tôi đau ngực và có tiền sử bệnh động mạch vành, nên khám ở đâu?",Lồng ngực - Mạch máu,Mixed
+"Bị ho có đờm và khó thở, có phải tôi bị COPD không?",Lồng ngực - Mạch máu,Mixed
+"Mệt mỏi và chóng mặt, có liên quan đến bệnh tim không nhỉ?",Lồng ngực - Mạch máu,Mixed
+"Tôi có triệu chứng tức ngực nhưng lại nghĩ mình bị cảm cúm, phải làm sao?",Lồng ngực - Mạch máu,Mixed
+"Đau ngực, khó thở, nhưng cũng có ho khan, liệu có phải viêm phổi không?",Lồng ngực - Mạch máu,Mixed
+"Mình vừa bị cảm mà lại thấy tức ngực, không biết có liên quan gì không?",Lồng ngực - Mạch máu,Edge Case
+Có ai thấy đau bụng mà lại nghĩ đến bệnh tim không?,Lồng ngực - Mạch máu,Edge Case
+"Mệt mỏi, chóng mặt, mà sao lại thấy đau đầu nữa, có thể có vấn đề về tim không?",Lồng ngực - Mạch máu,Edge Case
+"Thấy khó thở nhưng cũng có triệu chứng của viêm họng, có phải đi khám không?",Lồng ngực - Mạch máu,Edge Case
+"Mình ho mà thấy đau ngực, có phải viêm phổi hay bệnh tim không?",Lồng ngực - Mạch máu,Edge Case
+"Em có cái sẹo lồi trên má, thấy nó ngày càng to ra, lo quá!",Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+"Mặt em thấy mất cân đối, bên trái thì to hơn bên phải, không biết có cách nào khắc phục không?",Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+"Chị có cái tổn thương da, nó ngứa và đỏ, mà không biết phải làm sao?",Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+"Em thấy có dấu hiệu dị tật bẩm sinh trên mặt, không biết đi khám ở đâu?",Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+"Mặt em bị chấn thương, giờ nhìn xấu quá, có phương pháp nào giúp không ạ?",Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+"Sẹo xấu quá, em muốn hỏi có cách nào làm mờ không?",Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+"Em bị dị tật bẩm sinh, mong muốn phẫu thuật nhưng không biết chi phí thế nào?",Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+Có ai bị tổn thương da mà không biết làm sao chữa không?,Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+"Mặt em có dấu hiệu chấn thương, cảm thấy đau và sưng, có cần phải đi khám ngay không?",Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+"Em bị ngã nên có vết thương trên mặt, giờ có sẹo, lo lắng quá!",Phẫu thuật tạo hình - Thẩm mỹ,Symptoms Only
+"Mình bị bệnh ung thư da, không biết nên khám ở chuyên khoa nào?",Phẫu thuật tạo hình - Thẩm mỹ,Condition Only
+"Tôi có dấu hiệu dị tật bẩm sinh, muốn tìm bác sĩ phẫu thuật thẩm mỹ?",Phẫu thuật tạo hình - Thẩm mỹ,Condition Only
+"Tôi bị chấn thương mặt, cần khám ở đâu để điều trị?",Phẫu thuật tạo hình - Thẩm mỹ,Condition Only
+"Muốn hỏi về chi phí phẫu thuật cho bệnh sẹo, khám chuyên khoa nào?",Phẫu thuật tạo hình - Thẩm mỹ,Condition Only
+"Tôi mắc phải bệnh lý liên quan đến mất mô, cần tư vấn điều trị?",Phẫu thuật tạo hình - Thẩm mỹ,Condition Only
+"Em có cái sẹo lồi và bị ung thư da, không biết phải làm sao?",Phẫu thuật tạo hình - Thẩm mỹ,Mixed
+"Mặt em bị chấn thương và giờ có dấu hiệu dị tật, có thể phẫu thuật không?",Phẫu thuật tạo hình - Thẩm mỹ,Mixed
+"Em bị tổn thương da do tai nạn, giờ có sẹo, có cách nào làm đẹp lại không?",Phẫu thuật tạo hình - Thẩm mỹ,Mixed
+"Em có chấn thương mặt và thấy mất cân đối, không biết phải làm sao?",Phẫu thuật tạo hình - Thẩm mỹ,Mixed
+"Mình có dấu hiệu dị tật bẩm sinh và bị sẹo, không biết khám ở đâu?",Phẫu thuật tạo hình - Thẩm mỹ,Mixed
+"Em cảm thấy mệt mỏi, nhưng có sẹo lồi, không biết có phải đến chuyên khoa không?",Phẫu thuật tạo hình - Thẩm mỹ,Edge Case
+"Tôi bị dị tật bẩm sinh và giờ có dấu hiệu viêm da, có nên đi khám không?",Phẫu thuật tạo hình - Thẩm mỹ,Edge Case
+"Em bị đau đầu và cũng có sẹo, không biết có liên quan gì không?",Phẫu thuật tạo hình - Thẩm mỹ,Edge Case
+"Mặt em có dấu hiệu tổn thương da nhưng cũng hay bị đau bụng, có nên đi khám không?",Phẫu thuật tạo hình - Thẩm mỹ,Edge Case
+"Tôi bị sẹo trên mặt và cũng hay chóng mặt, không biết có liên quan gì không?",Phẫu thuật tạo hình - Thẩm mỹ,Edge Case
+"Hôm nay em thấy đau nhức cơ quá, không biết làm sao giờ?",Phục hồi chức năng,Symptoms Only
+"Mệt mỏi quá, không có sức để làm gì cả!",Phục hồi chức năng,Symptoms Only
+"Tôi bị tê bì chân tay, có phải đi khám không nhỉ?",Phục hồi chức năng,Symptoms Only
+"Đau lưng quá trời, không biết có phải do bệnh xương khớp không?",Phục hồi chức năng,Symptoms Only
+"Tôi không vận động được như trước, cảm giác khó chịu quá.",Phục hồi chức năng,Symptoms Only
+"Giảm khả năng vận động, không biết ai giúp được không?",Phục hồi chức năng,Symptoms Only
+"Chân em cứ tê tê, không biết có bị gì không?",Phục hồi chức năng,Symptoms Only
+"Sao dạo này mệt mỏi quá, không có sức làm việc!",Phục hồi chức năng,Symptoms Only
+"Khó khăn trong sinh hoạt hàng ngày quá, ai giúp em với?",Phục hồi chức năng,Symptoms Only
+"Bị đau nhức cơ suốt ngày, có nên đi khám không?",Phục hồi chức năng,Symptoms Only
+"Mình bị đột quỵ, giờ phải khám chuyên khoa nào?",Phục hồi chức năng,Condition Only
+"Tôi có bệnh lý thần kinh, muốn điều trị ở đâu?",Phục hồi chức năng,Condition Only
+Chấn thương thể thao thì nên khám khoa gì?,Phục hồi chức năng,Condition Only
+Bệnh lý hô hấp thì có cần phục hồi chức năng không?,Phục hồi chức năng,Condition Only
+"Tôi bị bệnh lý cơ xương khớp, có cách nào điều trị không?",Phục hồi chức năng,Condition Only
+"Tôi thấy đau nhức cơ, có thể là do tôi bị đột quỵ không?",Phục hồi chức năng,Mixed
+"Giảm khả năng vận động sau khi bị chấn thương thể thao, tôi nên làm gì?",Phục hồi chức năng,Mixed
+"Bị tê bì tay chân mà tôi cũng có bệnh lý thần kinh, có nên đi khám không?",Phục hồi chức năng,Mixed
+"Mệt mỏi kéo dài, có thể là dấu hiệu của bệnh lý hô hấp không?",Phục hồi chức năng,Mixed
+"Đau nhức cơ nhiều quá, không biết có phải do bệnh lý cơ xương khớp không?",Phục hồi chức năng,Mixed
+"Tôi bị đau đầu mà cũng thấy khó thở, không biết có nên khám phục hồi chức năng không?",Phục hồi chức năng,Edge Case
+"Thỉnh thoảng tôi thấy chóng mặt và đau nhức cơ, có nguy hiểm không?",Phục hồi chức năng,Edge Case
+"Mình có cảm giác tê bì và cũng bị đau ngực, có phải đi khám không?",Phục hồi chức năng,Edge Case
+"Tôi thấy mệt mỏi mà cũng bị ho, không biết khám ở đâu?",Phục hồi chức năng,Edge Case
+"Bị đau lưng mà cũng bị tức ngực, có nên tới phục hồi chức năng không?",Phục hồi chức năng,Edge Case
+"Mình thấy cơ thể đau nhức khắp nơi, không biết có phải bị bệnh gì không nhỉ?",Y học cổ truyền,Symptoms Only
+"Hồi dạo này hay mệt mỏi quá, không biết có phải do ăn uống không?",Y học cổ truyền,Symptoms Only
+"Tôi bị rối loạn tiêu hóa, bụng lúc nào cũng khó chịu, có thuốc gì không?",Y học cổ truyền,Symptoms Only
+"Ngủ không được, hay trằn trọc lắm, có ai cũng bị như vậy không?",Y học cổ truyền,Symptoms Only
+"Bị cảm cúm mà ho mãi không dứt, có cách nào chữa không?",Y học cổ truyền,Symptoms Only
+"Đau đầu lắm, mà chả biết nguyên nhân từ đâu, ai có kinh nghiệm không?",Y học cổ truyền,Symptoms Only
+"Thấy đau lưng mà không hiểu sao, chắc tại làm việc nhiều?",Y học cổ truyền,Symptoms Only
+"Mệt mỏi suốt ngày, có ai giúp được tôi không?",Y học cổ truyền,Symptoms Only
+"Bụng dạo này hay đau, chắc là dạ dày, có thuốc gì tốt?",Y học cổ truyền,Symptoms Only
+"Tôi thấy huyết áp cao quá, có nên đi khám không?",Y học cổ truyền,Symptoms Only
+"Bị tiểu đường, đang tìm chỗ khám cho đúng chuyên khoa.",Y học cổ truyền,Condition Only
+"Tôi muốn điều trị viêm khớp, không biết khám ở đâu được?",Y học cổ truyền,Condition Only
+"Đau lưng, không biết có chữa được không, khám ở khoa nào?",Y học cổ truyền,Condition Only
+"Tôi bị rối loạn lo âu, không biết có chuyên khoa nào không?",Y học cổ truyền,Condition Only
+Huyết áp cao chữa ở đâu là tốt nhất?,Y học cổ truyền,Condition Only
+"Tôi có triệu chứng đau nhức cơ thể và bị bệnh dạ dày, nên khám ở đâu?",Y học cổ truyền,Mixed
+"Mệt mỏi và đau lưng, có liên quan đến tiểu đường không?",Y học cổ truyền,Mixed
+"Tôi bị cảm cúm và thường hay mất ngủ, có nên đi khám không?",Y học cổ truyền,Mixed
+"Đau đầu mà tôi có tiền sử huyết áp cao, có nguy hiểm không?",Y học cổ truyền,Mixed
+"Rối loạn tiêu hóa mà tôi lại bị bệnh dạ dày, chữa thế nào?",Y học cổ truyền,Mixed
+"Bị đau đầu nhưng không biết có phải do stress hay không, có ai giúp?",Y học cổ truyền,Edge Case
+"Mình thấy mệt mỏi và ăn không ngon, có phải dấu hiệu của bệnh gì không?",Y học cổ truyền,Edge Case
+"Tôi thấy đau lưng mà lại hay bị tiêu chảy, có liên quan không nhỉ?",Y học cổ truyền,Edge Case
+"Bị cảm cúm mà thấy đau nhức tay chân, chắc là không phải cảm cúm đi?",Y học cổ truyền,Edge Case
+"Tôi bị rối loạn tiêu hóa, mà cũng hay đau đầu, không biết khám khoa nào?",Y học cổ truyền,Edge Case
+"Tôi bị đau bụng nhiều quá, không biết có vấn đề gì không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+"Đau ngực, cảm thấy khó chịu, không biết có nên đi khám không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+"Chả nhẽ mình bị bệnh gì nặng, khó thở mà cứ tưởng là mệt mỏi thôi.",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+"Mấy nay sốt, thấy trong người mệt mỏi quá, lo quá.",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+"Có triệu chứng sưng tấy ở chân, có phải đi khám không nhỉ?",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+"Đau bụng dữ dội, có cách nào chữa không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+"Mệt mỏi suốt ngày, có ai giống mình không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+"Khó thở mà không biết nguyên nhân từ đâu, lo lắng quá.",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+"Gần đây tôi thấy đau ngực, chắc phải đi khám thôi.",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+"Sốt cao mà không thấy đỡ, có phải bệnh gì nghiêm trọng không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Symptoms Only
+Tôi bị ung thư thì nên khám ở khoa nào?,Chẩn đoán hình ảnh & Điện quang can thiệp,Condition Only
+Có bị bệnh tim mạch thì đi khám ở đâu nhỉ?,Chẩn đoán hình ảnh & Điện quang can thiệp,Condition Only
+Muốn điều trị bệnh lý gan thì khám khoa nào?,Chẩn đoán hình ảnh & Điện quang can thiệp,Condition Only
+Bệnh lý thận cần phải làm xét nghiệm gì?,Chẩn đoán hình ảnh & Điện quang can thiệp,Condition Only
+Chấn thương nặng thì khám ở khoa nào cho tốt?,Chẩn đoán hình ảnh & Điện quang can thiệp,Condition Only
+"Tôi đau bụng và nghi ngờ ung thư, có nên đi chụp X-quang không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Mixed
+"Khó thở nhưng lại nghĩ mình bị bệnh phổi, có cần chụp CT không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Mixed
+"Sốt và đau bụng, không biết có phải viêm ruột thừa không, cần chụp gì không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Mixed
+"Đau ngực mà lại thấy có triệu chứng của bệnh tim mạch, có nên đi chụp không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Mixed
+"Mệt mỏi mà lại nghĩ tới bệnh lý gan, có cần siêu âm không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Mixed
+"Tôi bị đau bụng, không biết có phải đau dạ dày hay là bệnh gì khác, cần đi khám không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Edge Case
+"Khó thở mà lại nghĩ đến bệnh tiểu đường, có nên siêu âm không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Edge Case
+"Sưng tấy chân mà lại lo lắng về bệnh tim, có cần đi khám không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Edge Case
+"Đau ngực mà nghĩ tới bệnh xương khớp, có cần chụp không nhỉ?",Chẩn đoán hình ảnh & Điện quang can thiệp,Edge Case
+"Chả nhẽ đau bụng mà lại chỉ nghĩ đến viêm họng, có nên đi khám không?",Chẩn đoán hình ảnh & Điện quang can thiệp,Edge Case
