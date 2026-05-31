@@ -30,44 +30,58 @@ def evaluate():
     correct_top3 = 0
     
     try:
+        total_rows = sum(1 for _ in open(file_path, "r", encoding="utf-8-sig")) - 1
+        
         with open(file_path, "r", encoding="utf-8-sig") as f:
             reader = csv.DictReader(f)
             for i, row in enumerate(reader):
-                if i >= 50:
-                    break
-                    
                 query = row["Query"]
                 expected = row["Expected_Specialty"]
                 
                 payload = json.dumps({"symptoms": query}).encode("utf-8")
                 req = urllib.request.Request(api_url, data=payload, headers={"Content-Type": "application/json"})
                 
-                try:
-                    with urllib.request.urlopen(req) as response:
-                        res_data = json.loads(response.read().decode("utf-8"))
-                        
-                        data = res_data.get("data", {})
-                        if "response" in res_data:
-                            data = res_data["response"]
+                max_retries = 5
+                backoff = 10
+                for attempt in range(max_retries):
+                    try:
+                        with urllib.request.urlopen(req) as response:
+                            res_data = json.loads(response.read().decode("utf-8"))
                             
-                        spec_ids = data.get("specialty_ids", [])
-                        top_names = [id_to_name.get(sid, sid) for sid in spec_ids]
-                        
-                        if top_names and expected.lower() in top_names[0].lower():
-                            correct_top1 += 1
-                            correct_top3 += 1
+                            data = res_data.get("data", {})
+                            if "response" in res_data:
+                                data = res_data["response"]
+                                
+                            spec_ids = data.get("specialty_ids", [])
+                            top_names = [id_to_name.get(sid, sid) for sid in spec_ids]
+                            
+                            if top_names and expected.lower() in top_names[0].lower():
+                                correct_top1 += 1
+                                correct_top3 += 1
+                            else:
+                                for name in top_names[:3]:
+                                    if expected.lower() in name.lower():
+                                        correct_top3 += 1
+                                        break
+                                        
+                            # Print only every 10th row to reduce spam, or if it's the last few
+                            if (i + 1) % 10 == 0 or (i + 1) == total_rows:
+                                print(f"[{i+1}/{total_rows}] Expected: {expected} | Got: {top_names}")
+                        break  # Success, exit retry loop
+                    except urllib.error.HTTPError as e:
+                        if e.code == 429:
+                            print(f"Rate limited on row {i}. Waiting {backoff} seconds (Attempt {attempt+1}/{max_retries})...")
+                            time.sleep(backoff)
+                            backoff *= 2  # Exponential backoff
                         else:
-                            for name in top_names[:3]:
-                                if expected.lower() in name.lower():
-                                    correct_top3 += 1
-                                    break
-                                    
-                        print(f"[{i+1}/50] Expected: {expected} | Got: {top_names}")
-                except Exception as e:
-                    print(f"Error on API row {i}: {e}")
+                            print(f"HTTP Error on row {i}: {e}")
+                            break
+                    except Exception as e:
+                        print(f"Error on API row {i}: {e}")
+                        break
                 
                 total += 1
-                time.sleep(1.0)  # Avoid rate limits
+                time.sleep(4.5)  # Strict delay to avoid 15 RPM rate limits
                 
         if total > 0:
             print(f"\n--- EVALUATION RESULTS ---")
