@@ -128,6 +128,34 @@ export class DoctorProfileController {
     return this.mapToPublicProfile(result.data);
   }
 
+  @Public()
+  @Post('/public/bulk')
+  async getPublicProfilesBulk(
+    @Body() body: { ids: string[] },
+  ): Promise<DoctorPublicProfile[]> {
+    if (!body?.ids || !Array.isArray(body.ids)) {
+      return [];
+    }
+    const profiles = await Promise.all(
+      body.ids.map((id) =>
+        this.microserviceService
+          .sendWithTimeout<any>(
+            this.orchestratorClient,
+            ORCHESTRATOR_PATTERNS.DOCTOR_GET_COMPOSITE_BY_ID,
+            { doctorId: id },
+            { timeoutMs: 10000 },
+          )
+          .catch((err) => {
+            console.error(`Failed to fetch doctor ${id}`, err);
+            return null;
+          }),
+      ),
+    );
+    return profiles
+      .filter((p) => p && p.data)
+      .map((p) => this.mapToPublicProfile(p.data));
+  }
+
   @RequirePermission('doctors', 'read', { isSelf: true })
   @Get('me')
   getMyProfile(@CurrentUser() user: JwtPayloadDto) {

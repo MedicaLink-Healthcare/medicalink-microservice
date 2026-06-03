@@ -105,6 +105,7 @@ export class AppointmentsService {
           priceAmount: dto.priceAmount ?? 0,
           currency: dto.currency ?? 'VND',
           status: AppointmentStatus.BOOKED,
+          aiTriageData: dto.aiTriageData ?? undefined,
         },
       });
 
@@ -181,6 +182,7 @@ export class AppointmentsService {
     patientId: string;
     reason?: string;
     specialtyId: string;
+    aiTriageData?: Record<string, any>;
   }): Promise<Appointment> {
     const now = new Date();
     const appointment = await this.prisma.$transaction(async (tx) => {
@@ -227,6 +229,7 @@ export class AppointmentsService {
           specialtyId: dto.specialtyId,
           reason: dto.reason ? dto.reason.trim().substring(0, 255) : undefined,
           status: AppointmentStatus.BOOKED,
+          aiTriageData: dto.aiTriageData ?? undefined,
         },
       });
 

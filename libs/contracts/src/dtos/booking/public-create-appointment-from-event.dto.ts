@@ -1,4 +1,4 @@
-import { IsNotEmpty, IsString } from 'class-validator';
+import { IsNotEmpty, IsString, IsOptional } from 'class-validator';
 
 export class PublicCreateAppointmentFromEventDto {
   @IsString()
@@ -16,4 +16,7 @@ export class PublicCreateAppointmentFromEventDto {
   @IsString()
   @IsNotEmpty()
   reason: string;
+
+  @IsOptional()
+  aiTriageData?: Record<string, any>;
 }

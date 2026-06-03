@@ -57,4 +57,11 @@ export class DoctorRecommendationRequestDto {
   @IsArray()
   @IsString({ each: true })
   extractedSymptoms?: string[];
+
+  /**
+   * CQU Data (Clinical Query Understanding) từ suggest-specialties để phục vụ Reranking đa yếu tố.
+   */
+  @IsOptional()
+  @Allow()
+  cquData?: Record<string, any>;
 }

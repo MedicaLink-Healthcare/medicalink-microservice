@@ -79,4 +79,7 @@ export class CreateAppointmentDto {
       'Status must be one of the following: ' + APPOINTMENT_STATUSES.join(', '),
   })
   status?: string;
+
+  @IsOptional()
+  aiTriageData?: Record<string, any>;
 }

@@ -59,6 +59,7 @@ model Appointment {
   updatedAt   DateTime          @updatedAt @map("updated_at") @db.Timestamptz(6)
   cancelledAt DateTime?         @map("cancelled_at") @db.Timestamptz(6)
   completedAt DateTime?         @map("completed_at") @db.Timestamptz(6)
+  aiTriageData Json?            @map("ai_triage_data")
 
   // Relation
   patient     Patient           @relation(fields: [patientId], references: [id], onDelete: Restrict)

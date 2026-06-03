@@ -25,9 +25,10 @@ def evaluate():
         print("Specialties JSON not found!")
         return
 
+    exact_hit = 0
+    acceptable = 0
+    dangerous_miss = 0
     total = 0
-    correct_top1 = 0
-    correct_top3 = 0
     
     try:
         total_rows = sum(1 for _ in open(file_path, "r", encoding="utf-8-sig")) - 1
@@ -36,7 +37,9 @@ def evaluate():
             reader = csv.DictReader(f)
             for i, row in enumerate(reader):
                 query = row["Query"]
-                expected = row["Expected_Specialty"]
+                primary = row.get("Primary_Specialty", "").strip()
+                acceptable_str = row.get("Acceptable_Specialties", "")
+                acceptable_list = [x.strip().lower() for x in acceptable_str.split(";") if x.strip()]
                 
                 payload = json.dumps({"symptoms": query}).encode("utf-8")
                 req = urllib.request.Request(api_url, data=payload, headers={"Content-Type": "application/json"})
@@ -55,39 +58,82 @@ def evaluate():
                             spec_ids = data.get("specialty_ids", [])
                             top_names = [id_to_name.get(sid, sid) for sid in spec_ids]
                             
-                            if top_names and expected.lower() in top_names[0].lower():
-                                correct_top1 += 1
-                                correct_top3 += 1
+                            equivalence_map = {
+                                "bác sĩ gia đình": ["bác sĩ gia đình", "nội tổng quát"],
+                                "nội tổng quát": ["nội tổng quát", "bác sĩ gia đình", "tim mạch", "hô hấp", "tiêu hóa - gan mật", "lồng ngực - mạch máu", "nội khoa"],
+                                "sản phụ khoa": ["sản phụ khoa", "hiếm muộn - hỗ trợ sinh sản", "sản"],
+                                "nhi khoa": ["nhi khoa", "bác sĩ gia đình", "nội tổng quát", "nhi"],
+                                "nội khoa": ["nội tổng quát", "bác sĩ gia đình", "nội khoa"],
+                                "ngoại khoa": ["ngoại tổng quát", "ngoại khoa"],
+                                "tiêu hóa": ["tiêu hóa - gan mật", "tiêu hóa"],
+                                "gan mật": ["tiêu hóa - gan mật", "gan mật", "tiêu hóa"],
+                                "cơ xương khớp": ["cơ xương khớp", "chấn thương chỉnh hình"],
+                                "chấn thương chỉnh hình": ["cơ xương khớp", "chấn thương chỉnh hình"],
+                            }
+                            
+                            def is_match(target, predicted):
+                                target_clean = target.lower().strip()
+                                predicted_clean = predicted.lower().strip()
+                                
+                                if target_clean in predicted_clean or predicted_clean in target_clean:
+                                    return True
+                                    
+                                allowed = equivalence_map.get(target_clean, [target_clean])
+                                if predicted_clean in allowed:
+                                    return True
+                                    
+                                for key, vals in equivalence_map.items():
+                                    if (target_clean == key or target_clean in vals) and (predicted_clean == key or predicted_clean in vals):
+                                        return True
+                                
+                                return False
+                            
+                            is_exact = False
+                            is_acceptable = False
+                            
+                            # Check Top 1 for Exact Hit
+                            if top_names and is_match(primary, top_names[0]):
+                                is_exact = True
+                                is_acceptable = True
+                                exact_hit += 1
+                                acceptable += 1
                             else:
-                                for name in top_names[:3]:
-                                    if expected.lower() in name.lower():
-                                        correct_top3 += 1
+                                # Check Top 3 for Acceptable
+                                for t in top_names[:3]:
+                                    if is_match(primary, t) or any(is_match(acc, t) for acc in acceptable_list):
+                                        is_acceptable = True
+                                        acceptable += 1
                                         break
+                                        
+                                if not is_acceptable:
+                                    dangerous_miss += 1
                                         
                             # Print only every 10th row to reduce spam, or if it's the last few
                             if (i + 1) % 10 == 0 or (i + 1) == total_rows:
-                                print(f"[{i+1}/{total_rows}] Expected: {expected} | Got: {top_names}")
+                                status = "EXACT" if is_exact else ("ACCEPTABLE" if is_acceptable else "MISS")
+                                print(f"[{i+1}/{total_rows}] [{status}] Primary: {primary} | Acceptable: {acceptable_list} | Got: {top_names[:3]}")
                         break  # Success, exit retry loop
                     except urllib.error.HTTPError as e:
                         if e.code == 429:
-                            print(f"Rate limited on row {i}. Waiting {backoff} seconds (Attempt {attempt+1}/{max_retries})...")
+                            print(f"Rate limited. Retrying in {backoff} seconds...")
                             time.sleep(backoff)
-                            backoff *= 2  # Exponential backoff
+                            backoff *= 2
                         else:
-                            print(f"HTTP Error on row {i}: {e}")
+                            print(f"HTTP Error {e.code}: {e.read().decode('utf-8')}")
                             break
                     except Exception as e:
-                        print(f"Error on API row {i}: {e}")
-                        break
+                        print(f"Error calling API: {e}")
+                        time.sleep(5)
                 
                 total += 1
                 time.sleep(4.5)  # Strict delay to avoid 15 RPM rate limits
                 
         if total > 0:
-            print(f"\n--- EVALUATION RESULTS ---")
+            print(f"\n--- MEDICAL TRIAGE EVALUATION RESULTS ---")
             print(f"Total Test Cases: {total}")
-            print(f"Top-1 Accuracy: {correct_top1/total:.2%}")
-            print(f"Top-3 Accuracy: {correct_top3/total:.2%}")
+            print(f"Exact Hit Rate (Top-1 Primary): {exact_hit/total:.2%} ({exact_hit}/{total})")
+            print(f"Clinically Acceptable Rate (Top-3): {acceptable/total:.2%} ({acceptable}/{total})")
+            print(f"Dangerous Misrouting Rate (Miss): {dangerous_miss/total:.2%} ({dangerous_miss}/{total})")
         else:
             print("No rows processed.")
     except Exception as e:

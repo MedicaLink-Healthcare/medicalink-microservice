@@ -13,27 +13,34 @@ const outputCsv = path.join(dataDir, 'rag_test_cases_ai.csv');
 
 async function generateTestCasesForSpecialty(specialty) {
   const prompt = `
-Bạn là một chuyên gia AI chuyên tạo dữ liệu kiểm thử (Test Data Generation) cho hệ thống y tế.
-Nhiệm vụ của bạn là tạo ra 25 câu query (câu hỏi/mô tả triệu chứng của bệnh nhân) dành riêng cho chuyên khoa: "${specialty.name}".
+Bạn là một chuyên gia AI và Y sĩ lâm sàng (Clinical Triage Expert) chuyên tạo dữ liệu kiểm thử cho hệ thống phân loại y tế.
+Nhiệm vụ của bạn là tạo ra 25 câu query (câu hỏi/mô tả triệu chứng của bệnh nhân) tập trung chính vào chuyên khoa: "${specialty.name}".
 
 Thông tin chuyên khoa để tham khảo:
-- Tên chuyên khoa: ${specialty.name}
+- Tên chuyên khoa (Primary): ${specialty.name}
 - Triệu chứng phổ biến: ${specialty.common_symptoms ? specialty.common_symptoms.join(', ') : ''}
 - Bệnh lý phổ biến: ${specialty.common_conditions ? specialty.common_conditions.join(', ') : ''}
 
+QUY TẮC Y KHOA QUAN TRỌNG (MULTI-LABEL TRIAGE):
+Trong y khoa, một triệu chứng (VD: Đau ngực, Ho kéo dài, Sụt cân) có thể thuộc về nhiều chuyên khoa khác nhau do sự chồng chéo (overlap). Hệ thống của chúng tôi là Semantic Routing, vì vậy việc overlap là một tính năng, không phải là lỗi.
+Do đó, với mỗi câu query bạn tạo ra, bạn phải cung cấp:
+1. Primary_Specialty: Chính là "${specialty.name}".
+2. Acceptable_Specialties: Một mảng chứa tên các chuyên khoa khác CÓ THỂ chấp nhận được cho triệu chứng này (Ví dụ: nếu Primary là "Hô hấp" với triệu chứng "ho ra máu", thì Acceptable có thể là ["Ung bướu", "Tai Mũi Họng"]).
+
 YÊU CẦU DỮ LIỆU ĐẦU RA:
 Tạo 25 test cases đa dạng, bao gồm:
-1. Symptoms Only (10 câu): Chỉ mô tả triệu chứng. Cần đa dạng hóa văn phong (than vãn, lo lắng, hỏi đáp), CỐ TÌNH sai lỗi chính tả tự nhiên của người Việt, dùng từ ngữ dân dã, viết tắt.
-2. Condition Only (5 câu): Chỉ hỏi về bệnh lý (ví dụ: tôi bị bệnh X thì khám khoa nào, muốn điều trị bệnh Y).
+1. Symptoms Only (10 câu): Chỉ mô tả triệu chứng. Cần đa dạng hóa văn phong, CỐ TÌNH sai lỗi chính tả tự nhiên, dùng từ ngữ dân dã.
+2. Condition Only (5 câu): Chỉ hỏi về bệnh lý (ví dụ: tôi bị bệnh X thì khám khoa nào).
 3. Mixed (5 câu): Kết hợp cả triệu chứng và bệnh lý nền.
-4. Edge Case / Overlapping (5 câu): Cố tình đưa vào 1-2 triệu chứng dễ nhầm lẫn với khoa khác, nhưng BẮT BUỘC phải có "từ khóa neo (anchor keyword)" quyết định để hệ thống RAG bắt được chính xác về khoa "${specialty.name}".
+4. Edge Case / Overlapping (5 câu): Cố tình đưa vào triệu chứng chồng chéo cao, rất dễ nhầm lẫn. Bắt buộc phải liệt kê các khoa dễ nhầm lẫn đó vào Acceptable_Specialties.
 
 ĐỊNH DẠNG ĐẦU RA (JSON OBJECT DUY NHẤT, KHÔNG DÙNG MARKDOWN BLOCK CODE):
 {
   "test_cases": [
     {
       "Query": "Nội dung câu hỏi của bệnh nhân...",
-      "Expected_Specialty": "${specialty.name}",
+      "Primary_Specialty": "${specialty.name}",
+      "Acceptable_Specialties": ["Khoa A", "Khoa B"],
       "Test_Type": "Symptoms Only | Condition Only | Mixed | Edge Case"
     }
   ]
@@ -126,12 +133,18 @@ async function run() {
   );
 
   // Ghi ra file CSV (Tự viết CSV)
-  let csvContent = '\\ufeffQuery,Expected_Specialty,Test_Type\\n';
+  let csvContent =
+    '\ufeffQuery,Primary_Specialty,Acceptable_Specialties,Test_Type\n';
   allTestCases.forEach((tc) => {
     const query = escapeCsvField(tc.Query);
-    const expected = escapeCsvField(tc.Expected_Specialty);
+    const primary = escapeCsvField(tc.Primary_Specialty);
+    const acceptableArr = Array.isArray(tc.Acceptable_Specialties)
+      ? tc.Acceptable_Specialties
+      : [];
+    const acceptable = escapeCsvField(acceptableArr.join(';'));
     const testType = escapeCsvField(tc.Test_Type);
-    csvContent += query + ',' + expected + ',' + testType + '\\n';
+    csvContent +=
+      query + ',' + primary + ',' + acceptable + ',' + testType + '\n';
   });
 
   fs.writeFileSync(outputCsv, csvContent, 'utf8');

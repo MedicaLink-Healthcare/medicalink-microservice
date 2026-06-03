@@ -1,6 +1,49 @@
 {
   "specialties": [
     {
+      "id": "cmnde90369e8b17431587bedd",
+      "name": "Nội tổng quát",
+      "slug": "noi-tong-quat",
+      "aliases": [
+        "Nội khoa",
+        "Nội tổng quát",
+        "Nội tim mạch"
+      ],
+      "common_symptoms": [
+        "Khám tổng quát",
+        "Bệnh lý đa cơ quan",
+        "Sụt cân không rõ nguyên nhân",
+        "Tầm soát bệnh lý nội khoa",
+        "Theo dõi bệnh mạn tính"
+      ],
+      "common_conditions": [
+        "Tăng huyết áp",
+        "Đái tháo đường",
+        "Bệnh tim mạch",
+        "Bệnh phổi tắc nghẽn mạn tính (COPD)",
+        "Viêm gan",
+        "Bệnh thận mạn tính",
+        "Rối loạn lipid máu"
+      ],
+      "keywords": [
+        "Nội tổng quát",
+        "Chẩn đoán nội khoa",
+        "Điều trị bệnh lý nội khoa",
+        "Quản lý bệnh mãn tính",
+        "Khám sức khỏe tổng quát"
+      ],
+      "expertise": [
+        "Chẩn đoán hình ảnh",
+        "Nội soi tiêu hóa",
+        "Siêu âm bụng",
+        "Điều trị bệnh lý tim mạch",
+        "Quản lý bệnh lý nội tiết"
+      ],
+      "description": "Nội tổng quát là chuyên khoa y tế chuyên điều trị và quản lý các bệnh lý nội khoa, bao gồm các bệnh lý về tim mạch, hô hấp, tiêu hóa, thận, nội tiết và các rối loạn chuyển hóa. Chuyên khoa này đóng vai trò quan trọng trong việc chẩn đoán, điều trị và theo dõi các bệnh lý nền tảng, giúp cải thiện chất lượng cuộc sống cho bệnh nhân và giảm thiểu biến chứng. Nội tổng quát cũng thường xuyên phối hợp với các chuyên khoa khác để cung cấp dịch vụ chăm sóc toàn diện cho bệnh nhân.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/noi_tong_quat.png",
+      "is_active": true
+    },
+    {
       "id": "cmn45e60480f0734fbe84de7e",
       "name": "Bác sĩ gia đình",
       "slug": "bac-si-gia-dinh",
@@ -39,56 +82,8 @@
         "Chăm sóc sức khỏe tâm thần"
       ],
       "description": "Bác sĩ gia đình là chuyên khoa y tế tập trung vào việc cung cấp dịch vụ chăm sóc sức khỏe toàn diện cho cá nhân và gia đình, từ việc phòng ngừa, chẩn đoán đến điều trị các bệnh lý thông thường và mãn tính. Chuyên khoa này đóng vai trò quan trọng trong việc quản lý bệnh lý nền tảng, bao gồm các bệnh lý như tiểu đường, tăng huyết áp, và bệnh tim mạch, đồng thời hỗ trợ bệnh nhân trong việc duy trì sức khỏe và cải thiện chất lượng cuộc sống.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-khamsuckhoetongquat.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmnde90369e8b17431587bedd",
-      "name": "Nội tổng quát",
-      "slug": "noi-tong-quat",
-      "aliases": [
-        "Nội khoa",
-        "Nội tổng quát",
-        "Nội tiết",
-        "Nội tim mạch"
-      ],
-      "common_symptoms": [
-        "Khám tổng quát",
-        "Bệnh lý đa cơ quan",
-        "Sụt cân không rõ nguyên nhân",
-        "Tầm soát bệnh lý nội khoa",
-        "Theo dõi bệnh mạn tính"
-      ],
-      "common_conditions": [
-        "Tăng huyết áp",
-        "Đái tháo đường",
-        "Bệnh tim mạch",
-        "Bệnh phổi tắc nghẽn mạn tính (COPD)",
-        "Viêm gan",
-        "Bệnh thận mạn tính",
-        "Rối loạn lipid máu"
-      ],
-      "keywords": [
-        "Nội tổng quát",
-        "Chẩn đoán nội khoa",
-        "Điều trị bệnh lý nội khoa",
-        "Quản lý bệnh mãn tính",
-        "Khám sức khỏe tổng quát"
-      ],
-      "expertise": [
-        "Chẩn đoán hình ảnh",
-        "Nội soi tiêu hóa",
-        "Siêu âm bụng",
-        "Điều trị bệnh lý tim mạch",
-        "Quản lý bệnh lý nội tiết"
-      ],
-      "description": "Nội tổng quát là chuyên khoa y tế chuyên điều trị và quản lý các bệnh lý nội khoa, bao gồm các bệnh lý về tim mạch, hô hấp, tiêu hóa, thận, nội tiết và các rối loạn chuyển hóa. Chuyên khoa này đóng vai trò quan trọng trong việc chẩn đoán, điều trị và theo dõi các bệnh lý nền tảng, giúp cải thiện chất lượng cuộc sống cho bệnh nhân và giảm thiểu biến chứng. Nội tổng quát cũng thường xuyên phối hợp với các chuyên khoa khác để cung cấp dịch vụ chăm sóc toàn diện cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitonghop.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/ChuyenKhoa.png",
+      "is_active": true
     },
     {
       "id": "cmn305ee71e46d24f2396fe68",
@@ -114,11 +109,11 @@
         "Tăng huyết áp"
       ],
       "keywords": [
-        "tim mạch",
-        "bệnh tim",
-        "điều trị tim mạch",
-        "suy tim",
-        "rối loạn nhịp tim"
+        "Tim mạch",
+        "Bệnh tim",
+        "Điều trị tim mạch",
+        "Suy tim",
+        "Rối loạn nhịp tim"
       ],
       "expertise": [
         "Siêu âm tim",
@@ -128,159 +123,8 @@
         "Quản lý bệnh lý tim mạch"
       ],
       "description": "Chuyên khoa Tim mạch là lĩnh vực y học chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến tim và hệ thống mạch máu. Chức năng chính của chuyên khoa này bao gồm việc phát hiện sớm các bệnh lý tim mạch, quản lý các yếu tố nguy cơ như tăng huyết áp, tiểu đường, và cholesterol cao, cũng như thực hiện các can thiệp điều trị như đặt stent, phẫu thuật bắc cầu động mạch và điều trị bằng thuốc. Các bệnh lý nền tảng thường gặp trong chuyên khoa này bao gồm bệnh động mạch vành, suy tim, rối loạn nhịp tim và bệnh van tim.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-timmach.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmna8cf9e42b9c14beca968d2",
-      "name": "Tiêu hóa - Gan mật",
-      "slug": "tieu-hoa-gan-mat",
-      "aliases": [
-        "Tiêu hóa",
-        "Gan mật",
-        "Khoa Tiêu hóa - Gan mật"
-      ],
-      "common_symptoms": [
-        "Đau bụng",
-        "Buồn nôn",
-        "Nôn mửa",
-        "Tiêu chảy",
-        "Sụt cân",
-        "Vàng da",
-        "Ngứa da"
-      ],
-      "common_conditions": [
-        "Viêm gan virus",
-        "Xơ gan",
-        "Ung thư gan",
-        "Sỏi mật",
-        "Bệnh Crohn",
-        "Viêm loét đại tràng",
-        "Rối loạn tiêu hóa chức năng"
-      ],
-      "keywords": [
-        "tiêu hóa",
-        "gan mật",
-        "viêm gan",
-        "xơ gan",
-        "ung thư gan",
-        "bệnh đường mật",
-        "rối loạn tiêu hóa"
-      ],
-      "expertise": [
-        "Nội soi tiêu hóa",
-        "Siêu âm gan mật",
-        "Chẩn đoán hình ảnh",
-        "Điều trị nội khoa",
-        "Phẫu thuật gan mật",
-        "Hóa trị liệu",
-        "Chăm sóc dinh dưỡng"
-      ],
-      "description": "Chuyên khoa Tiêu hóa - Gan mật tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ tiêu hóa, gan và mật. Chuyên khoa này đóng vai trò quan trọng trong việc phát hiện sớm và điều trị các bệnh lý như viêm gan, xơ gan, ung thư gan, bệnh lý đường mật và các rối loạn tiêu hóa. Đội ngũ bác sĩ chuyên khoa sử dụng các phương pháp chẩn đoán hiện đại và các liệu pháp điều trị tiên tiến nhằm cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-tieuhoa.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmn347714c1937b4ebd858bd6",
-      "name": "Nội tiết",
-      "slug": "noi-tiet",
-      "aliases": [
-        "Nội tiết học",
-        "Nội tiết",
-        "Endocrinology"
-      ],
-      "common_symptoms": [
-        "Khát nước nhiều",
-        "Mệt mỏi",
-        "Giảm cân không rõ nguyên nhân",
-        "Tăng cân bất thường",
-        "Rối loạn kinh nguyệt",
-        "Thay đổi tâm trạng",
-        "Da khô hoặc nhờn"
-      ],
-      "common_conditions": [
-        "Tiểu đường type 1 và type 2",
-        "Bệnh tuyến giáp (cường giáp, suy giáp)",
-        "Hội chứng Cushing",
-        "Hội chứng buồng trứng đa nang (PCOS)",
-        "Rối loạn tăng trưởng",
-        "Bệnh Addison",
-        "Rối loạn chuyển hóa"
-      ],
-      "keywords": [
-        "Nội tiết",
-        "Tiểu đường",
-        "Tuyến giáp",
-        "Hormone",
-        "Rối loạn nội tiết",
-        "Chẩn đoán nội tiết",
-        "Điều trị nội tiết"
-      ],
-      "expertise": [
-        "Chẩn đoán và điều trị tiểu đường",
-        "Quản lý rối loạn tuyến giáp",
-        "Điều trị hội chứng Cushing",
-        "Chẩn đoán và điều trị PCOS",
-        "Quản lý rối loạn chuyển hóa",
-        "Thăm khám và điều trị rối loạn tăng trưởng"
-      ],
-      "description": "Chuyên khoa Nội tiết tập trung vào việc chẩn đoán, điều trị và quản lý các rối loạn liên quan đến hormone và tuyến nội tiết. Các bác sĩ nội tiết học nghiên cứu và điều trị các bệnh lý như tiểu đường, rối loạn tuyến giáp, hội chứng Cushing, và các rối loạn khác liên quan đến hormone. Chuyên khoa này đóng vai trò quan trọng trong việc cải thiện chất lượng cuộc sống cho bệnh nhân thông qua việc kiểm soát và điều trị các bệnh lý nền tảng, từ đó giảm thiểu các biến chứng và nâng cao sức khỏe tổng quát.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noitiet.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmn25b8987d232447e8bd9517",
-      "name": "Hô hấp",
-      "slug": "ho-hap",
-      "aliases": [
-        "Khoa Hô hấp",
-        "Khoa Phổi",
-        "Hô hấp",
-        "Pulmonology"
-      ],
-      "common_symptoms": [
-        "Khó thở",
-        "Ho",
-        "Đau ngực",
-        "Khò khè",
-        "Đờm",
-        "Mệt mỏi"
-      ],
-      "common_conditions": [
-        "Hen suyễn",
-        "Bệnh phổi tắc nghẽn mạn tính (COPD)",
-        "Viêm phổi",
-        "Ung thư phổi",
-        "Xơ phổi",
-        "Viêm phế quản"
-      ],
-      "keywords": [
-        "hô hấp",
-        "bệnh phổi",
-        "hen suyễn",
-        "COPD",
-        "viêm phổi",
-        "chẩn đoán hô hấp"
-      ],
-      "expertise": [
-        "Nội soi phế quản",
-        "Siêu âm phổi",
-        "X-quang phổi",
-        "Thăm dò chức năng hô hấp",
-        "Điều trị oxy",
-        "Quản lý hen suyễn"
-      ],
-      "description": "Chuyên khoa Hô hấp tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ hô hấp, bao gồm phổi, khí quản, phế quản và các cấu trúc liên quan. Chuyên khoa này đóng vai trò quan trọng trong việc điều trị các bệnh lý nền tảng như hen suyễn, bệnh phổi tắc nghẽn mạn tính (COPD), viêm phổi và ung thư phổi. Các bác sĩ hô hấp sử dụng nhiều phương pháp điều trị, từ thuốc đến các kỹ thuật can thiệp, nhằm cải thiện chất lượng cuộc sống cho bệnh nhân và giảm thiểu các triệu chứng hô hấp.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-hohap.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/tim_mach.png",
+      "is_active": true
     },
     {
       "id": "cmne6870ce72d43457881a7dd",
@@ -308,12 +152,12 @@
         "Chấn thương sọ não"
       ],
       "keywords": [
-        "thần kinh",
-        "đột quỵ",
-        "bệnh Alzheimer",
-        "bệnh Parkinson",
-        "đau đầu",
-        "rối loạn thần kinh"
+        "Thần kinh",
+        "Đột quỵ",
+        "Bệnh Alzheimer",
+        "Bệnh Parkinson",
+        "Đau đầu",
+        "Rối loạn thần kinh"
       ],
       "expertise": [
         "Điều trị đột quỵ",
@@ -324,10 +168,8 @@
         "Phẫu thuật thần kinh"
       ],
       "description": "Chuyên khoa Thần kinh tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ thần kinh, bao gồm não, tủy sống và các dây thần kinh ngoại biên. Chuyên khoa này đóng vai trò quan trọng trong việc phục hồi chức năng cho bệnh nhân mắc các rối loạn thần kinh, từ các bệnh lý cấp tính như đột quỵ đến các bệnh lý mãn tính như bệnh Alzheimer và Parkinson. Thông qua các phương pháp điều trị đa dạng, bao gồm thuốc, vật lý trị liệu và can thiệp phẫu thuật, chuyên khoa Thần kinh hướng tới việc cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-noithankinh.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/than_kinh.png",
+      "is_active": true
     },
     {
       "id": "cmn6f922b051e05454388c512",
@@ -367,101 +209,8 @@
         "Điều trị đau mãn tính"
       ],
       "description": "Chuyên khoa Cơ xương khớp tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ thống cơ, xương và khớp. Chức năng điều trị của chuyên khoa này bao gồm việc phục hồi chức năng vận động, giảm đau và cải thiện chất lượng cuộc sống cho bệnh nhân. Các bệnh lý nền tảng thường gặp trong chuyên khoa này bao gồm viêm khớp, thoái hóa khớp, chấn thương thể thao và các rối loạn cơ xương khớp khác.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-coxuongkhop.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmn9a464d69a3c64f3f856cd8",
-      "name": "Da liễu",
-      "slug": "da-lieu",
-      "aliases": [
-        "Da liễu",
-        "Dermatology"
-      ],
-      "common_symptoms": [
-        "Ngứa",
-        "Đỏ da",
-        "Mụn",
-        "Khô da",
-        "Lột da",
-        "Sưng tấy"
-      ],
-      "common_conditions": [
-        "Mụn trứng cá",
-        "Viêm da cơ địa",
-        "Nấm da",
-        "Psoriasis",
-        "Chàm",
-        "Bệnh vẩy nến"
-      ],
-      "keywords": [
-        "da liễu",
-        "bệnh da",
-        "điều trị da",
-        "thẩm mỹ da",
-        "chăm sóc da"
-      ],
-      "expertise": [
-        "Nội khoa da liễu",
-        "Phẫu thuật da liễu",
-        "Laser da liễu",
-        "Điều trị bệnh da tự miễn",
-        "Thẩm mỹ da"
-      ],
-      "description": "Chuyên khoa Da liễu là lĩnh vực y học chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến da, tóc và móng. Chức năng chính của chuyên khoa này bao gồm việc phát hiện và điều trị các bệnh lý da liễu như viêm da, nấm, mụn trứng cá, và các bệnh tự miễn. Ngoài ra, chuyên khoa còn đóng vai trò quan trọng trong việc tư vấn và điều trị các vấn đề về thẩm mỹ da, giúp cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-dalieu.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmnf8af4550a200441282873b",
-      "name": "Dị ứng - Miễn dịch lâm sàng",
-      "slug": "di-ung-mien-dich-lam-sang",
-      "aliases": [
-        "Dị ứng",
-        "Miễn dịch",
-        "Dị ứng học",
-        "Miễn dịch học"
-      ],
-      "common_symptoms": [
-        "Ngứa",
-        "Hắt hơi",
-        "Chảy nước mũi",
-        "Khó thở",
-        "Phát ban",
-        "Sưng tấy"
-      ],
-      "common_conditions": [
-        "Hen suyễn",
-        "Viêm mũi dị ứng",
-        "Viêm da dị ứng",
-        "Bệnh tự miễn",
-        "Dị ứng thực phẩm",
-        "Dị ứng thuốc"
-      ],
-      "keywords": [
-        "dị ứng",
-        "miễn dịch",
-        "hen suyễn",
-        "viêm mũi dị ứng",
-        "bệnh tự miễn",
-        "điều trị dị ứng"
-      ],
-      "expertise": [
-        "Liệu pháp miễn dịch",
-        "Chẩn đoán dị ứng",
-        "Quản lý bệnh tự miễn",
-        "Thử nghiệm dị ứng",
-        "Điều trị bằng thuốc điều chỉnh miễn dịch"
-      ],
-      "description": "Chuyên khoa Dị ứng - Miễn dịch lâm sàng tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ miễn dịch và phản ứng dị ứng. Chuyên khoa này đóng vai trò quan trọng trong việc phát hiện và điều trị các bệnh lý nền tảng như hen suyễn, viêm mũi dị ứng, và các bệnh tự miễn. Các bác sĩ trong lĩnh vực này sử dụng các phương pháp điều trị hiện đại, bao gồm liệu pháp miễn dịch và thuốc điều chỉnh miễn dịch, nhằm cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://ui-avatars.com/api/?name=D%E1%BB%8B%20%E1%BB%A9ng%20-%20Mi%E1%BB%85n%20d%E1%BB%8Bch%20l%C3%A2m%20s%C3%A0ng&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn.medpro.vn/medpro-production/medpro/subjects/1759222134922-chiropractic.png",
+      "is_active": true
     },
     {
       "id": "cmn0d8db982b8a74ee1808972",
@@ -490,12 +239,12 @@
         "Phì đại tuyến tiền liệt"
       ],
       "keywords": [
-        "tiết niệu",
-        "niệu khoa",
-        "bệnh thận",
-        "viêm đường tiết niệu",
-        "sỏi thận",
-        "ung thư tiết niệu"
+        "Tiết niệu",
+        "Niệu khoa",
+        "Bệnh thận",
+        "Viêm đường tiết niệu",
+        "Sỏi thận",
+        "Ung thư tiết niệu"
       ],
       "expertise": [
         "Nội soi tiết niệu",
@@ -506,280 +255,8 @@
         "Chẩn đoán hình ảnh tiết niệu"
       ],
       "description": "Chuyên khoa Tiết niệu là lĩnh vực y học chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến hệ thống tiết niệu, bao gồm thận, niệu quản, bàng quang và niệu đạo. Chức năng chính của chuyên khoa này là điều trị các rối loạn và bệnh lý ảnh hưởng đến chức năng tiết niệu, từ các bệnh lý cấp tính như viêm đường tiết niệu đến các bệnh lý mạn tính như suy thận, sỏi thận, và ung thư tiết niệu. Chuyên khoa Tiết niệu cũng đóng vai trò quan trọng trong việc phát hiện và quản lý các bệnh lý nền tảng như tiểu đường, tăng huyết áp và các rối loạn nội tiết có thể ảnh hưởng đến sức khỏe của hệ thống tiết niệu.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-tietnieu.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmn35469ec3d62449eca8514b",
-      "name": "Tâm thần",
-      "slug": "tam-than",
-      "aliases": [
-        "Tâm thần học",
-        "Tâm lý học",
-        "TMH"
-      ],
-      "common_symptoms": [
-        "Trầm cảm",
-        "Lo âu",
-        "Mất ngủ",
-        "Thay đổi tâm trạng",
-        "Khó tập trung",
-        "Hành vi tự hại"
-      ],
-      "common_conditions": [
-        "Trầm cảm",
-        "Rối loạn lo âu",
-        "Rối loạn tâm thần phân liệt",
-        "Rối loạn lưỡng cực",
-        "Rối loạn stress sau chấn thương (PTSD)",
-        "Rối loạn ăn uống"
-      ],
-      "keywords": [
-        "tâm thần",
-        "rối loạn tâm lý",
-        "trầm cảm",
-        "lo âu",
-        "chẩn đoán tâm thần",
-        "điều trị tâm lý"
-      ],
-      "expertise": [
-        "Tâm lý trị liệu",
-        "Tâm thần học trẻ em",
-        "Tâm thần học người lớn",
-        "Tâm thần học lão khoa",
-        "Liệu pháp hành vi nhận thức",
-        "Liệu pháp nhóm"
-      ],
-      "description": "Chuyên khoa Tâm thần tập trung vào việc chẩn đoán, điều trị và phòng ngừa các rối loạn tâm lý và hành vi. Chức năng điều trị của chuyên khoa này bao gồm việc sử dụng các phương pháp tâm lý, liệu pháp thuốc và can thiệp xã hội nhằm cải thiện sức khỏe tâm thần của bệnh nhân. Các bệnh lý nền tảng thường gặp trong chuyên khoa Tâm thần bao gồm trầm cảm, lo âu, rối loạn tâm thần phân liệt và rối loạn lưỡng cực.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-tamly.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmn05e2799db9c54691854315",
-      "name": "Ung bướu",
-      "slug": "ung-buou",
-      "aliases": [
-        "Ung thư",
-        "Khoa Ung bướu",
-        "Oncology"
-      ],
-      "common_symptoms": [
-        "Sụt cân không rõ nguyên nhân",
-        "Mệt mỏi kéo dài",
-        "Đau đớn không rõ nguyên nhân",
-        "Thay đổi thói quen đi tiêu hoặc tiểu tiện",
-        "Khó thở",
-        "Ho kéo dài"
-      ],
-      "common_conditions": [
-        "Ung thư vú",
-        "Ung thư phổi",
-        "Ung thư đại trực tràng",
-        "Ung thư dạ dày",
-        "Ung thư tuyến tiền liệt",
-        "Ung thư da"
-      ],
-      "keywords": [
-        "ung thư",
-        "điều trị ung thư",
-        "chẩn đoán ung thư",
-        "hóa trị",
-        "xạ trị",
-        "phẫu thuật ung thư"
-      ],
-      "expertise": [
-        "Hóa trị",
-        "Xạ trị",
-        "Phẫu thuật ung thư",
-        "Chăm sóc giảm nhẹ",
-        "Miễn dịch trị liệu",
-        "Gen trị liệu"
-      ],
-      "description": "Chuyên khoa Ung bướu là lĩnh vực y học chuyên sâu nghiên cứu, chẩn đoán và điều trị các loại ung thư. Chức năng chính của chuyên khoa này bao gồm việc phát hiện sớm, điều trị bằng phẫu thuật, hóa trị, xạ trị và các phương pháp điều trị hỗ trợ nhằm cải thiện chất lượng cuộc sống cho bệnh nhân. Các bệnh lý nền tảng thường gặp trong chuyên khoa này bao gồm ung thư vú, ung thư phổi, ung thư đại trực tràng, và ung thư dạ dày, trong đó việc phát hiện sớm và điều trị kịp thời là rất quan trọng để nâng cao tỷ lệ sống sót cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-ungbuou.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmnce72b05c2816485db33cd8",
-      "name": "Lão khoa",
-      "slug": "lao-khoa",
-      "aliases": [
-        "Lão khoa",
-        "Geriatrics"
-      ],
-      "common_symptoms": [
-        "Mệt mỏi",
-        "Đau nhức cơ xương",
-        "Khó ngủ",
-        "Giảm trí nhớ",
-        "Rối loạn tiêu hóa"
-      ],
-      "common_conditions": [
-        "Bệnh tim mạch",
-        "Tiểu đường",
-        "Bệnh Alzheimer",
-        "Bệnh Parkinson",
-        "Loãng xương"
-      ],
-      "keywords": [
-        "lão khoa",
-        "chăm sóc người cao tuổi",
-        "bệnh lý mãn tính",
-        "quản lý sức khỏe",
-        "phục hồi chức năng"
-      ],
-      "expertise": [
-        "Chăm sóc sức khỏe tâm thần",
-        "Quản lý bệnh mãn tính",
-        "Phục hồi chức năng",
-        "Dinh dưỡng lão khoa",
-        "Chăm sóc cuối đời"
-      ],
-      "description": "Lão khoa là chuyên khoa y tế tập trung vào việc chăm sóc sức khỏe cho người cao tuổi, nhằm cải thiện chất lượng cuộc sống và quản lý các bệnh lý mãn tính thường gặp ở nhóm đối tượng này. Chuyên khoa lão khoa không chỉ điều trị các bệnh lý mà còn chú trọng đến việc phòng ngừa, phục hồi chức năng và hỗ trợ tâm lý cho bệnh nhân. Các bác sĩ lão khoa thường làm việc với các bệnh lý nền tảng như bệnh tim mạch, tiểu đường, bệnh lý thần kinh và các rối loạn tâm thần, nhằm tối ưu hóa sức khỏe và sự độc lập của người cao tuổi.",
-      "icon_url": "https://ui-avatars.com/api/?name=L%C3%A3o%20khoa&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmn0ea0fd6aea9545a89132be",
-      "name": "Dinh dưỡng",
-      "slug": "dinh-duong",
-      "aliases": [
-        "Dinh dưỡng lâm sàng",
-        "Dinh dưỡng y học"
-      ],
-      "common_symptoms": [
-        "mệt mỏi",
-        "giảm cân không rõ nguyên nhân",
-        "thèm ăn không kiểm soát",
-        "đau bụng",
-        "tiêu chảy",
-        "táo bón"
-      ],
-      "common_conditions": [
-        "tiểu đường",
-        "béo phì",
-        "rối loạn lipid máu",
-        "huyết áp cao",
-        "bệnh tim mạch",
-        "rối loạn tiêu hóa"
-      ],
-      "keywords": [
-        "dinh dưỡng",
-        "chế độ ăn uống",
-        "bệnh lý dinh dưỡng",
-        "dinh dưỡng lâm sàng",
-        "tiểu đường",
-        "béo phì"
-      ],
-      "expertise": [
-        "dinh dưỡng lâm sàng",
-        "tư vấn dinh dưỡng",
-        "quản lý cân nặng",
-        "dinh dưỡng cho bệnh nhân tiểu đường",
-        "dinh dưỡng cho bệnh nhân ung thư",
-        "dinh dưỡng cho trẻ em"
-      ],
-      "description": "Chuyên khoa Dinh dưỡng tập trung vào việc nghiên cứu và ứng dụng các nguyên tắc dinh dưỡng nhằm điều trị và phòng ngừa các bệnh lý liên quan đến chế độ ăn uống. Chuyên khoa này đóng vai trò quan trọng trong việc quản lý các bệnh lý nền tảng như tiểu đường, béo phì, rối loạn lipid máu, và các bệnh lý tiêu hóa. Thông qua việc xây dựng chế độ ăn hợp lý và cá nhân hóa, chuyên khoa Dinh dưỡng giúp cải thiện sức khỏe tổng thể và nâng cao chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://ui-avatars.com/api/?name=Dinh%20d%C6%B0%E1%BB%A1ng&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmn388a64a878494c57b1c0f2",
-      "name": "Tai Mũi Họng",
-      "slug": "tai-mui-hong",
-      "aliases": [
-        "TMH",
-        "Tai Mũi Họng"
-      ],
-      "common_symptoms": [
-        "đau họng",
-        "nghẹt mũi",
-        "chảy mũi",
-        "đau tai",
-        "khó thở",
-        "ho",
-        "khó nuốt"
-      ],
-      "common_conditions": [
-        "viêm xoang",
-        "viêm họng",
-        "viêm tai giữa",
-        "dị ứng mũi",
-        "polyp mũi",
-        "u nang họng"
-      ],
-      "keywords": [
-        "Tai Mũi Họng",
-        "điều trị tai mũi họng",
-        "bệnh lý tai mũi họng",
-        "chẩn đoán tai mũi họng",
-        "dị ứng tai mũi họng"
-      ],
-      "expertise": [
-        "nội soi tai mũi họng",
-        "phẫu thuật tai",
-        "phẫu thuật mũi",
-        "điều trị dị ứng",
-        "thính học",
-        "phục hồi chức năng thính giác"
-      ],
-      "description": "Chuyên khoa Tai Mũi Họng (TMH) tập trung vào việc chẩn đoán, điều trị và phòng ngừa các bệnh lý liên quan đến tai, mũi và họng. Chuyên khoa này đóng vai trò quan trọng trong việc cải thiện chất lượng cuộc sống của bệnh nhân thông qua các phương pháp điều trị nội khoa và ngoại khoa, đồng thời cung cấp các dịch vụ chăm sóc sức khỏe toàn diện cho các bệnh lý nền tảng như viêm nhiễm, dị ứng, và các rối loạn về thính giác.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-taimuihong.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmnd3d0cbae4b8e497c960246",
-      "name": "Mắt",
-      "slug": "mat",
-      "aliases": [
-        "Khoa Mắt",
-        "Ophthalmology"
-      ],
-      "common_symptoms": [
-        "Mờ mắt",
-        "Đau mắt",
-        "Ngứa mắt",
-        "Chảy nước mắt",
-        "Khó nhìn ban đêm"
-      ],
-      "common_conditions": [
-        "Đục thủy tinh thể",
-        "Glaucoma",
-        "Bệnh võng mạc tiểu đường",
-        "Bệnh khô mắt",
-        "Viêm kết mạc"
-      ],
-      "keywords": [
-        "chuyên khoa mắt",
-        "điều trị mắt",
-        "bệnh lý mắt",
-        "khám mắt",
-        "thị lực"
-      ],
-      "expertise": [
-        "Phẫu thuật đục thủy tinh thể",
-        "Điều trị glaucoma",
-        "Chẩn đoán và điều trị bệnh võng mạc",
-        "Phẫu thuật lasik",
-        "Điều trị bệnh khô mắt"
-      ],
-      "description": "Chuyên khoa Mắt là lĩnh vực y học chuyên sâu nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến mắt và hệ thống thị giác. Chức năng điều trị của chuyên khoa này không chỉ bao gồm việc phục hồi thị lực mà còn tập trung vào việc quản lý các bệnh lý nền tảng như đục thủy tinh thể, glaucoma, và các bệnh lý võng mạc. Đội ngũ bác sĩ chuyên khoa Mắt sử dụng các kỹ thuật hiện đại để can thiệp và điều trị, nhằm nâng cao chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://ui-avatars.com/api/?name=M%E1%BA%AFt&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/tiet_nieu.png",
+      "is_active": true
     },
     {
       "id": "cmn60eafc3e66444b2a851b8d",
@@ -824,140 +301,136 @@
         "Nha khoa trẻ em"
       ],
       "description": "Chuyên khoa Răng Hàm Mặt là lĩnh vực y học chuyên sâu nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến răng, hàm và mặt. Chức năng điều trị của chuyên khoa này không chỉ bao gồm việc phục hồi chức năng nhai và thẩm mỹ khuôn mặt mà còn liên quan đến việc điều trị các bệnh lý nền tảng như viêm nướu, sâu răng, và các rối loạn khớp thái dương hàm. Bên cạnh đó, chuyên khoa này cũng đóng vai trò quan trọng trong việc phát hiện và điều trị các bệnh lý toàn thân có liên quan đến sức khỏe răng miệng.",
-      "icon_url": "https://ui-avatars.com/api/?name=R%C4%83ng%20H%C3%A0m%20M%E1%BA%B7t&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/rang_ham_mat.png",
+      "is_active": true
     },
     {
-      "id": "cmn4132816e364b4603a2fed9",
-      "name": "Sản phụ khoa",
-      "slug": "san-phu-khoa",
+      "id": "cmn0ea0fd6aea9545a89132be",
+      "name": "Dinh dưỡng",
+      "slug": "dinh-duong",
       "aliases": [
-        "Sản khoa",
-        "Phụ khoa",
-        "SPK"
+        "Dinh dưỡng lâm sàng",
+        "Dinh dưỡng y học"
       ],
       "common_symptoms": [
-        "Đau bụng dưới",
-        "Chảy máu âm đạo",
-        "Buồn nôn",
         "Mệt mỏi",
-        "Rối loạn kinh nguyệt"
+        "Giảm cân không rõ nguyên nhân",
+        "Thèm ăn không kiểm soát",
+        "Đau bụng",
+        "Tiêu chảy",
+        "Táo bón"
       ],
       "common_conditions": [
-        "Thai ngoài tử cung",
-        "Rối loạn kinh nguyệt",
-        "U xơ tử cung",
-        "Viêm nhiễm phụ khoa",
-        "Sảy thai"
+        "Tiểu đường",
+        "Béo phì",
+        "Rối loạn lipid máu",
+        "Huyết áp cao",
+        "Bệnh tim mạch",
+        "Rối loạn tiêu hóa"
       ],
       "keywords": [
-        "sản phụ khoa",
-        "chăm sóc sức khỏe phụ nữ",
-        "mang thai",
-        "sinh nở",
-        "bệnh lý phụ khoa"
+        "Dinh dưỡng",
+        "Chế độ ăn uống",
+        "Bệnh lý dinh dưỡng",
+        "Dinh dưỡng lâm sàng",
+        "Tiểu đường",
+        "Béo phì"
       ],
       "expertise": [
-        "Siêu âm thai",
-        "Phẫu thuật nội soi",
-        "Hỗ trợ sinh sản",
-        "Chăm sóc sau sinh",
-        "Tư vấn sức khỏe sinh sản"
+        "Dinh dưỡng lâm sàng",
+        "Tư vấn dinh dưỡng",
+        "Quản lý cân nặng",
+        "Dinh dưỡng cho bệnh nhân tiểu đường",
+        "Dinh dưỡng cho bệnh nhân ung thư",
+        "Dinh dưỡng cho trẻ em"
       ],
-      "description": "Sản phụ khoa là chuyên khoa y tế tập trung vào việc chăm sóc sức khỏe phụ nữ trong suốt quá trình mang thai, sinh nở và sau sinh, cũng như các vấn đề liên quan đến hệ sinh sản. Chuyên khoa này không chỉ điều trị các bệnh lý liên quan đến thai kỳ mà còn bao gồm các bệnh lý nền tảng như rối loạn nội tiết, bệnh lý phụ khoa và các vấn đề sức khỏe sinh sản khác. Chức năng điều trị của sản phụ khoa bao gồm tư vấn, theo dõi thai kỳ, thực hiện các thủ thuật sinh nở và can thiệp y tế cần thiết nhằm đảm bảo sức khỏe cho mẹ và bé.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-san.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "description": "Chuyên khoa Dinh dưỡng tập trung vào việc nghiên cứu và ứng dụng các nguyên tắc dinh dưỡng nhằm điều trị và phòng ngừa các bệnh lý liên quan đến chế độ ăn uống. Chuyên khoa này đóng vai trò quan trọng trong việc quản lý các bệnh lý nền tảng như tiểu đường, béo phì, rối loạn lipid máu, và các bệnh lý tiêu hóa. Thông qua việc xây dựng chế độ ăn hợp lý và cá nhân hóa, chuyên khoa Dinh dưỡng giúp cải thiện sức khỏe tổng thể và nâng cao chất lượng cuộc sống cho bệnh nhân.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/dinh_duong.png",
+      "is_active": true
     },
     {
-      "id": "cmn8e15f11b477a48e2989d59",
-      "name": "Nam khoa",
-      "slug": "nam-khoa",
+      "id": "cmn388a64a878494c57b1c0f2",
+      "name": "Tai Mũi Họng",
+      "slug": "tai-mui-hong",
       "aliases": [
-        "Nam học",
-        "Nam khoa học",
-        "Urology"
+        "TMH",
+        "Tai Mũi Họng"
       ],
       "common_symptoms": [
-        "Rối loạn cương dương",
-        "Đau khi đi tiểu",
-        "Tiểu nhiều lần",
-        "Xuất tinh sớm",
-        "Đau vùng chậu"
+        "Đau họng",
+        "Nghẹt mũi",
+        "Chảy mũi",
+        "Đau tai",
+        "Khó thở",
+        "Ho",
+        "Khó nuốt"
       ],
       "common_conditions": [
-        "Vô sinh nam",
-        "Viêm tuyến tiền liệt",
-        "Ung thư tuyến tiền liệt",
-        "Rối loạn cương dương",
-        "Nhiễm trùng đường tiết niệu"
+        "Viêm xoang",
+        "Viêm họng",
+        "Viêm tai giữa",
+        "Dị ứng mũi",
+        "Polyp mũi",
+        "U nang họng"
       ],
       "keywords": [
-        "Nam khoa",
-        "Sức khỏe sinh sản nam",
-        "Rối loạn cương dương",
-        "Vô sinh nam",
-        "Ung thư tuyến tiền liệt"
+        "Tai Mũi Họng",
+        "Điều trị tai mũi họng",
+        "Bệnh lý tai mũi họng",
+        "Chẩn đoán tai mũi họng",
+        "Dị ứng tai mũi họng"
       ],
       "expertise": [
-        "Chẩn đoán và điều trị rối loạn cương dương",
-        "Phẫu thuật tiết niệu",
-        "Điều trị vô sinh nam",
-        "Quản lý bệnh lý tuyến tiền liệt",
-        "Nội tiết sinh sản"
+        "Nội soi tai mũi họng",
+        "Phẫu thuật tai",
+        "Phẫu thuật mũi",
+        "Điều trị dị ứng",
+        "Thính học",
+        "Phục hồi chức năng thính giác"
       ],
-      "description": "Nam khoa là chuyên khoa y tế tập trung vào việc chẩn đoán, điều trị và phòng ngừa các bệnh lý liên quan đến hệ thống sinh sản và tiết niệu ở nam giới. Chuyên khoa này không chỉ điều trị các vấn đề về sức khỏe sinh sản như rối loạn cương dương, vô sinh, mà còn quản lý các bệnh lý nền tảng như viêm nhiễm đường tiết niệu, ung thư tuyến tiền liệt và các rối loạn hormone. Nam khoa đóng vai trò quan trọng trong việc cải thiện chất lượng cuộc sống và sức khỏe tổng thể của nam giới.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-namhoc.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "description": "Chuyên khoa Tai Mũi Họng (TMH) tập trung vào việc chẩn đoán, điều trị và phòng ngừa các bệnh lý liên quan đến tai, mũi và họng. Chuyên khoa này đóng vai trò quan trọng trong việc cải thiện chất lượng cuộc sống của bệnh nhân thông qua các phương pháp điều trị nội khoa và ngoại khoa, đồng thời cung cấp các dịch vụ chăm sóc sức khỏe toàn diện cho các bệnh lý nền tảng như viêm nhiễm, dị ứng, và các rối loạn về thính giác.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/tai_mui_hong.png",
+      "is_active": true
     },
     {
-      "id": "cmna97aefc6f8804547a0d5cb",
-      "name": "Hiếm muộn - Hỗ trợ sinh sản",
-      "slug": "hiem-muon-ho-tro-sinh-san",
+      "id": "cmnd3d0cbae4b8e497c960246",
+      "name": "Mắt",
+      "slug": "mat",
       "aliases": [
-        "Hỗ trợ sinh sản",
-        "IVF",
-        "ICSI"
+        "Khoa Mắt",
+        "Ophthalmology"
       ],
       "common_symptoms": [
-        "Khó có thai sau 1 năm quan hệ không bảo vệ",
-        "Kinh nguyệt không đều",
-        "Đau bụng dưới",
-        "Rối loạn nội tiết",
-        "Giảm ham muốn tình dục"
+        "Mờ mắt",
+        "Đau mắt",
+        "Ngứa mắt",
+        "Chảy nước mắt",
+        "Khó nhìn ban đêm"
       ],
       "common_conditions": [
-        "Rối loạn rụng trứng",
-        "Tắc ống dẫn trứng",
-        "Suy giảm chất lượng tinh trùng",
-        "Lạc nội mạc tử cung",
-        "U xơ tử cung"
+        "Đục thủy tinh thể",
+        "Glaucoma",
+        "Bệnh võng mạc tiểu đường",
+        "Bệnh khô mắt",
+        "Viêm kết mạc"
       ],
       "keywords": [
-        "hiếm muộn",
-        "hỗ trợ sinh sản",
-        "thụ tinh trong ống nghiệm",
-        "IVF",
-        "ICSI",
-        "rối loạn sinh sản"
+        "Chuyên khoa mắt",
+        "Điều trị mắt",
+        "Bệnh lý mắt",
+        "Khám mắt",
+        "Thị lực"
       ],
       "expertise": [
-        "Thụ tinh trong ống nghiệm (IVF)",
-        "Tiêm tinh trùng vào bào tương trứng (ICSI)",
-        "Chẩn đoán di truyền trước khi cấy ghép (PGD)",
-        "Hỗ trợ sinh sản bằng hormone",
-        "Phẫu thuật nội soi điều trị hiếm muộn"
+        "Phẫu thuật đục thủy tinh thể",
+        "Điều trị glaucoma",
+        "Chẩn đoán và điều trị bệnh võng mạc",
+        "Phẫu thuật lasik",
+        "Điều trị bệnh khô mắt"
       ],
-      "description": "Chuyên khoa Hiếm muộn - Hỗ trợ sinh sản tập trung vào việc chẩn đoán và điều trị các vấn đề liên quan đến khả năng sinh sản của cả nam và nữ. Chuyên khoa này cung cấp các phương pháp hỗ trợ sinh sản như thụ tinh trong ống nghiệm (IVF), tiêm tinh trùng vào bào tương trứng (ICSI) và các kỹ thuật khác nhằm giúp các cặp vợ chồng gặp khó khăn trong việc có con. Ngoài ra, chuyên khoa cũng chú trọng đến việc xác định và điều trị các bệnh lý nền tảng như rối loạn nội tiết, bệnh lý buồng trứng, và các vấn đề về tinh trùng, từ đó nâng cao hiệu quả điều trị và tỷ lệ thành công.",
-      "icon_url": "https://ui-avatars.com/api/?name=Hi%E1%BA%BFm%20mu%E1%BB%99n%20-%20H%E1%BB%97%20tr%E1%BB%A3%20sinh%20s%E1%BA%A3n&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "description": "Chuyên khoa Mắt là lĩnh vực y học chuyên sâu nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến mắt và hệ thống thị giác. Chức năng điều trị của chuyên khoa này không chỉ bao gồm việc phục hồi thị lực mà còn tập trung vào việc quản lý các bệnh lý nền tảng như đục thủy tinh thể, glaucoma, và các bệnh lý võng mạc. Đội ngũ bác sĩ chuyên khoa Mắt sử dụng các kỹ thuật hiện đại để can thiệp và điều trị, nhằm nâng cao chất lượng cuộc sống cho bệnh nhân.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/mat.png",
+      "is_active": true
     },
     {
       "id": "cmnc6a6270904534d49a4c532",
@@ -1002,10 +475,49 @@
         "Nhi khoa tâm lý"
       ],
       "description": "Nhi khoa là chuyên khoa y tế tập trung vào việc chăm sóc sức khỏe và điều trị các bệnh lý ở trẻ em từ sơ sinh đến tuổi vị thành niên. Chuyên khoa này không chỉ đảm nhận việc chẩn đoán và điều trị các bệnh lý thông thường mà còn quản lý các bệnh lý nền tảng phức tạp, bao gồm các rối loạn di truyền, bệnh lý nội tiết, và các vấn đề tâm lý. Nhi khoa đóng vai trò quan trọng trong việc theo dõi sự phát triển và tăng trưởng của trẻ, đảm bảo trẻ em nhận được sự chăm sóc y tế toàn diện và kịp thời.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-nhi.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn.medpro.vn/medpro-production/medpro/subjects/1759980664918-20251009_102810.png",
+      "is_active": true
+    },
+    {
+      "id": "cmn8e15f11b477a48e2989d59",
+      "name": "Nam khoa",
+      "slug": "nam-khoa",
+      "aliases": [
+        "Nam học",
+        "Nam khoa học",
+        "Urology"
+      ],
+      "common_symptoms": [
+        "Rối loạn cương dương",
+        "Đau khi đi tiểu",
+        "Tiểu nhiều lần",
+        "Xuất tinh sớm",
+        "Đau vùng chậu"
+      ],
+      "common_conditions": [
+        "Vô sinh nam",
+        "Viêm tuyến tiền liệt",
+        "Ung thư tuyến tiền liệt",
+        "Rối loạn cương dương",
+        "Nhiễm trùng đường tiết niệu"
+      ],
+      "keywords": [
+        "Nam khoa",
+        "Sức khỏe sinh sản nam",
+        "Rối loạn cương dương",
+        "Vô sinh nam",
+        "Ung thư tuyến tiền liệt"
+      ],
+      "expertise": [
+        "Chẩn đoán và điều trị rối loạn cương dương",
+        "Phẫu thuật tiết niệu",
+        "Điều trị vô sinh nam",
+        "Quản lý bệnh lý tuyến tiền liệt",
+        "Nội tiết sinh sản"
+      ],
+      "description": "Nam khoa là chuyên khoa y tế tập trung vào việc chẩn đoán, điều trị và phòng ngừa các bệnh lý liên quan đến hệ thống sinh sản và tiết niệu ở nam giới. Chuyên khoa này không chỉ điều trị các vấn đề về sức khỏe sinh sản như rối loạn cương dương, vô sinh, mà còn quản lý các bệnh lý nền tảng như viêm nhiễm đường tiết niệu, ung thư tuyến tiền liệt và các rối loạn hormone. Nam khoa đóng vai trò quan trọng trong việc cải thiện chất lượng cuộc sống và sức khỏe tổng thể của nam giới.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/nam_khoa.png",
+      "is_active": true
     },
     {
       "id": "cmn7a2680d306b64e7ba6d48f",
@@ -1031,11 +543,11 @@
         "Ung thư đường tiêu hóa"
       ],
       "keywords": [
-        "phẫu thuật",
-        "điều trị ngoại khoa",
-        "bệnh lý tiêu hóa",
-        "chấn thương",
-        "can thiệp ngoại khoa"
+        "Phẫu thuật",
+        "Điều trị ngoại khoa",
+        "Bệnh lý tiêu hóa",
+        "Chấn thương",
+        "Can thiệp ngoại khoa"
       ],
       "expertise": [
         "Phẫu thuật nội soi",
@@ -1045,142 +557,8 @@
         "Quản lý đau"
       ],
       "description": "Ngoại tổng quát là chuyên khoa y tế chuyên điều trị các bệnh lý liên quan đến phẫu thuật và can thiệp ngoại khoa. Chuyên khoa này đảm nhận việc chẩn đoán, điều trị và theo dõi các bệnh lý từ nhẹ đến nặng, bao gồm các bệnh lý về tiêu hóa, tiết niệu, nội tiết, và các tổn thương do chấn thương. Ngoại tổng quát không chỉ tập trung vào phẫu thuật mà còn bao gồm các phương pháp điều trị không phẫu thuật, nhằm mang lại sự phục hồi toàn diện cho bệnh nhân.",
-      "icon_url": "https://ui-avatars.com/api/?name=Ngo%E1%BA%A1i%20t%E1%BB%95ng%20qu%C3%A1t&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmn11e42573ffda4079b59e8b",
-      "name": "Chấn thương chỉnh hình",
-      "slug": "chan-thuong-chinh-hinh",
-      "aliases": [
-        "CTCH",
-        "Chấn thương chỉnh hình",
-        "Orthopedics"
-      ],
-      "common_symptoms": [
-        "Đau nhức xương khớp",
-        "Sưng tấy tại vị trí chấn thương",
-        "Giảm khả năng vận động",
-        "Cảm giác tê bì",
-        "Biến dạng chi"
-      ],
-      "common_conditions": [
-        "Gãy xương",
-        "Trật khớp",
-        "Thoái hóa khớp",
-        "Viêm khớp",
-        "Chấn thương thể thao"
-      ],
-      "keywords": [
-        "chấn thương chỉnh hình",
-        "điều trị xương khớp",
-        "phẫu thuật chỉnh hình",
-        "phục hồi chức năng",
-        "gãy xương"
-      ],
-      "expertise": [
-        "Phẫu thuật chỉnh hình",
-        "Nội soi khớp",
-        "Chấn thương thể thao",
-        "Điều trị đau mãn tính",
-        "Phục hồi chức năng"
-      ],
-      "description": "Chấn thương chỉnh hình là chuyên khoa y tế chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến hệ thống cơ xương khớp, bao gồm các chấn thương do tai nạn, bệnh lý bẩm sinh, thoái hóa khớp và các rối loạn khác. Chuyên khoa này không chỉ tập trung vào việc phục hồi chức năng vận động cho bệnh nhân mà còn chú trọng đến việc cải thiện chất lượng cuộc sống thông qua các phương pháp điều trị nội khoa, phẫu thuật và phục hồi chức năng.",
-      "icon_url": "https://ui-avatars.com/api/?name=Ch%E1%BA%A5n%20th%C6%B0%C6%A1ng%20ch%E1%BB%89nh%20h%C3%ACnh&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmncdc7ee40d3cc489da0f185",
-      "name": "Ngoại thần kinh",
-      "slug": "ngoai-than-kinh",
-      "aliases": [
-        "Ngoại thần kinh",
-        "Ngoại khoa thần kinh",
-        "Nội thần kinh"
-      ],
-      "common_symptoms": [
-        "Đau đầu",
-        "Yếu cơ",
-        "Tê bì tay chân",
-        "Rối loạn cảm giác",
-        "Chóng mặt",
-        "Co giật"
-      ],
-      "common_conditions": [
-        "U não",
-        "Chấn thương sọ não",
-        "Thoát vị đĩa đệm",
-        "Đột quỵ",
-        "Bệnh Parkinson",
-        "Bệnh Alzheimer"
-      ],
-      "keywords": [
-        "Ngoại thần kinh",
-        "Phẫu thuật thần kinh",
-        "Chẩn đoán thần kinh",
-        "Điều trị u não",
-        "Chấn thương thần kinh"
-      ],
-      "expertise": [
-        "Phẫu thuật u não",
-        "Phẫu thuật cột sống",
-        "Phẫu thuật thần kinh ngoại biên",
-        "Nội soi thần kinh",
-        "Điều trị đau thần kinh"
-      ],
-      "description": "Ngoại thần kinh là chuyên khoa y tế chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến hệ thần kinh, bao gồm não, tủy sống và các dây thần kinh ngoại biên. Chuyên khoa này tập trung vào việc can thiệp phẫu thuật để điều trị các tình trạng như u não, chấn thương sọ não, thoát vị đĩa đệm, và các bệnh lý khác ảnh hưởng đến chức năng thần kinh. Ngoài ra, ngoại thần kinh còn đóng vai trò quan trọng trong việc phục hồi chức năng cho bệnh nhân sau phẫu thuật và cải thiện chất lượng cuộc sống.",
-      "icon_url": "https://ui-avatars.com/api/?name=Ngo%E1%BA%A1i%20th%E1%BA%A7n%20kinh&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
-    },
-    {
-      "id": "cmn7c81420344b546258ba767",
-      "name": "Lồng ngực - Mạch máu",
-      "slug": "long-nguc-mach-mau",
-      "aliases": [
-        "Khoa Lồng ngực",
-        "Khoa Mạch máu",
-        "TMV",
-        "Tim Mạch - Mạch máu"
-      ],
-      "common_symptoms": [
-        "Đau ngực",
-        "Khó thở",
-        "Ho có đờm",
-        "Mệt mỏi",
-        "Chóng mặt"
-      ],
-      "common_conditions": [
-        "Bệnh động mạch vành",
-        "Bệnh phổi tắc nghẽn mạn tính (COPD)",
-        "Tăng huyết áp",
-        "Bệnh phổi",
-        "Bệnh mạch máu ngoại biên"
-      ],
-      "keywords": [
-        "lồng ngực",
-        "mạch máu",
-        "bệnh tim",
-        "bệnh phổi",
-        "can thiệp tim mạch"
-      ],
-      "expertise": [
-        "Siêu âm tim",
-        "Thông tim",
-        "Phẫu thuật lồng ngực",
-        "Điều trị bệnh lý mạch máu",
-        "Chẩn đoán hình ảnh lồng ngực"
-      ],
-      "description": "Chuyên khoa Lồng ngực - Mạch máu tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ thống lồng ngực và mạch máu. Chuyên khoa này đóng vai trò quan trọng trong việc điều trị các bệnh lý như bệnh tim mạch, bệnh phổi, và các rối loạn mạch máu, nhằm cải thiện chất lượng cuộc sống cho bệnh nhân. Các phương pháp điều trị bao gồm can thiệp phẫu thuật, điều trị nội khoa và các kỹ thuật tiên tiến như thông tim và siêu âm tim.",
-      "icon_url": "https://ui-avatars.com/api/?name=L%E1%BB%93ng%20ng%E1%BB%B1c%20-%20M%E1%BA%A1ch%20m%C3%A1u&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/tong_quat.png",
+      "is_active": true
     },
     {
       "id": "cmnef9abf7a191b4506a6c250",
@@ -1206,11 +584,11 @@
         "Mất mô"
       ],
       "keywords": [
-        "phẫu thuật tạo hình",
-        "phẫu thuật thẩm mỹ",
-        "thẩm mỹ",
-        "điều trị sẹo",
-        "phục hồi chức năng"
+        "Phẫu thuật tạo hình",
+        "Phẫu thuật thẩm mỹ",
+        "Thẩm mỹ",
+        "Điều trị sẹo",
+        "Phục hồi chức năng"
       ],
       "expertise": [
         "Phẫu thuật tái tạo",
@@ -1220,10 +598,203 @@
         "Phẫu thuật tạo hình vùng bụng"
       ],
       "description": "Phẫu thuật tạo hình - Thẩm mỹ là một chuyên khoa y tế chuyên sâu, tập trung vào việc phục hồi và cải thiện hình dáng, chức năng của các bộ phận trên cơ thể thông qua các kỹ thuật phẫu thuật. Chuyên khoa này không chỉ điều trị các vấn đề về thẩm mỹ mà còn phục hồi các tổn thương do chấn thương, bệnh lý bẩm sinh hoặc hậu phẫu. Các bác sĩ phẫu thuật tạo hình - thẩm mỹ thường làm việc với các bệnh lý nền tảng như dị tật bẩm sinh, ung thư, chấn thương, và các vấn đề về da liễu, nhằm mang lại sự tự tin và cải thiện chất lượng cuộc sống cho bệnh nhân.",
-      "icon_url": "https://ui-avatars.com/api/?name=Ph%E1%BA%ABu%20thu%E1%BA%ADt%20t%E1%BA%A1o%20h%C3%ACnh%20-%20Th%E1%BA%A9m%20m%E1%BB%B9&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn.medpro.vn/medpro-production/medpro/subjects/1745302606104-tao_hinh_tham_my.png",
+      "is_active": true
+    },
+    {
+      "id": "cmna8cf9e42b9c14beca968d2",
+      "name": "Tiêu hóa - Gan mật",
+      "slug": "tieu-hoa-gan-mat",
+      "aliases": [
+        "Tiêu hóa",
+        "Gan mật",
+        "Khoa Tiêu hóa - Gan mật"
+      ],
+      "common_symptoms": [
+        "Đau bụng",
+        "Buồn nôn",
+        "Nôn mửa",
+        "Tiêu chảy",
+        "Sụt cân",
+        "Vàng da",
+        "Ngứa da",
+        "Ợ chua",
+        "Đau dạ dày",
+        "Đau tức ngực do trào ngược",
+        "Ợ hơi",
+        "Ợ nóng",
+        "Rát nóng thượng vị"
+      ],
+      "common_conditions": [
+        "Viêm gan virus",
+        "Xơ gan",
+        "Ung thư gan",
+        "Sỏi mật",
+        "Bệnh Crohn",
+        "Viêm loét đại tràng",
+        "Rối loạn tiêu hóa chức năng",
+        "Trào ngược dạ dày thực quản",
+        "Viêm loét dạ dày",
+        "Viêm dạ dày"
+      ],
+      "keywords": [
+        "Tiêu hóa",
+        "Gan mật",
+        "Viêm gan",
+        "Xơ gan",
+        "Ung thư gan",
+        "Bệnh đường mật",
+        "Rối loạn tiêu hóa",
+        "Dạ dày",
+        "Trào ngược",
+        "Ợ chua",
+        "GERD",
+        "Thực quản",
+        "Đau dạ dày",
+        "Trào ngược dạ dày"
+      ],
+      "expertise": [
+        "Nội soi tiêu hóa",
+        "Siêu âm gan mật",
+        "Chẩn đoán hình ảnh",
+        "Điều trị nội khoa",
+        "Phẫu thuật gan mật",
+        "Hóa trị liệu",
+        "Chăm sóc dinh dưỡng"
+      ],
+      "description": "Chuyên khoa Tiêu hóa - Gan mật tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ tiêu hóa, gan và mật. Chuyên khoa này đóng vai trò quan trọng trong việc phát hiện sớm và điều trị các bệnh lý như viêm gan, xơ gan, ung thư gan, bệnh lý đường mật và các rối loạn tiêu hóa. Đội ngũ bác sĩ chuyên khoa sử dụng các phương pháp chẩn đoán hiện đại và các liệu pháp điều trị tiên tiến nhằm cải thiện chất lượng cuộc sống cho bệnh nhân.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/umc/subjects/1655710722460-TIEU_HOA_GAN_MAT.png",
+      "is_active": true
+    },
+    {
+      "id": "cmnce72b05c2816485db33cd8",
+      "name": "Lão khoa",
+      "slug": "lao-khoa",
+      "aliases": [
+        "Lão khoa",
+        "Geriatrics"
+      ],
+      "common_symptoms": [
+        "Mệt mỏi",
+        "Đau nhức cơ xương",
+        "Khó ngủ",
+        "Giảm trí nhớ",
+        "Rối loạn tiêu hóa"
+      ],
+      "common_conditions": [
+        "Bệnh tim mạch",
+        "Tiểu đường",
+        "Bệnh Alzheimer",
+        "Bệnh Parkinson",
+        "Loãng xương"
+      ],
+      "keywords": [
+        "Lão khoa",
+        "Chăm sóc người cao tuổi",
+        "Bệnh lý mãn tính",
+        "Quản lý sức khỏe",
+        "Phục hồi chức năng"
+      ],
+      "expertise": [
+        "Chăm sóc sức khỏe tâm thần",
+        "Quản lý bệnh mãn tính",
+        "Phục hồi chức năng",
+        "Dinh dưỡng lão khoa",
+        "Chăm sóc cuối đời"
+      ],
+      "description": "Lão khoa là chuyên khoa y tế tập trung vào việc chăm sóc sức khỏe cho người cao tuổi, nhằm cải thiện chất lượng cuộc sống và quản lý các bệnh lý mãn tính thường gặp ở nhóm đối tượng này. Chuyên khoa lão khoa không chỉ điều trị các bệnh lý mà còn chú trọng đến việc phòng ngừa, phục hồi chức năng và hỗ trợ tâm lý cho bệnh nhân. Các bác sĩ lão khoa thường làm việc với các bệnh lý nền tảng như bệnh tim mạch, tiểu đường, bệnh lý thần kinh và các rối loạn tâm thần, nhằm tối ưu hóa sức khỏe và sự độc lập của người cao tuổi.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/umc/subjects/PW/1651820749478-LAO_KHOA.png",
+      "is_active": true
+    },
+    {
+      "id": "cmn35469ec3d62449eca8514b",
+      "name": "Tâm thần",
+      "slug": "tam-than",
+      "aliases": [
+        "Tâm thần học",
+        "Tâm lý học",
+        "TMH"
+      ],
+      "common_symptoms": [
+        "Trầm cảm",
+        "Lo âu",
+        "Mất ngủ",
+        "Thay đổi tâm trạng",
+        "Khó tập trung",
+        "Hành vi tự hại"
+      ],
+      "common_conditions": [
+        "Trầm cảm",
+        "Rối loạn lo âu",
+        "Rối loạn tâm thần phân liệt",
+        "Rối loạn lưỡng cực",
+        "Rối loạn stress sau chấn thương (PTSD)",
+        "Rối loạn ăn uống"
+      ],
+      "keywords": [
+        "Tâm thần",
+        "Rối loạn tâm lý",
+        "Trầm cảm",
+        "Lo âu",
+        "Chẩn đoán tâm thần",
+        "Điều trị tâm lý"
+      ],
+      "expertise": [
+        "Tâm lý trị liệu",
+        "Tâm thần học trẻ em",
+        "Tâm thần học người lớn",
+        "Tâm thần học lão khoa",
+        "Liệu pháp hành vi nhận thức",
+        "Liệu pháp nhóm"
+      ],
+      "description": "Chuyên khoa Tâm thần tập trung vào việc chẩn đoán, điều trị và phòng ngừa các rối loạn tâm lý và hành vi. Chức năng điều trị của chuyên khoa này bao gồm việc sử dụng các phương pháp tâm lý, liệu pháp thuốc và can thiệp xã hội nhằm cải thiện sức khỏe tâm thần của bệnh nhân. Các bệnh lý nền tảng thường gặp trong chuyên khoa Tâm thần bao gồm trầm cảm, lo âu, rối loạn tâm thần phân liệt và rối loạn lưỡng cực.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/tam_than_kinh.png",
+      "is_active": true
+    },
+    {
+      "id": "cmnf8af4550a200441282873b",
+      "name": "Dị ứng - Miễn dịch lâm sàng",
+      "slug": "di-ung-mien-dich-lam-sang",
+      "aliases": [
+        "Dị ứng",
+        "Miễn dịch",
+        "Dị ứng học",
+        "Miễn dịch học"
+      ],
+      "common_symptoms": [
+        "Ngứa",
+        "Hắt hơi",
+        "Chảy nước mũi",
+        "Khó thở",
+        "Phát ban",
+        "Sưng tấy"
+      ],
+      "common_conditions": [
+        "Hen suyễn",
+        "Viêm mũi dị ứng",
+        "Viêm da dị ứng",
+        "Bệnh tự miễn",
+        "Dị ứng thực phẩm",
+        "Dị ứng thuốc"
+      ],
+      "keywords": [
+        "Dị ứng",
+        "Miễn dịch",
+        "Hen suyễn",
+        "Viêm mũi dị ứng",
+        "Bệnh tự miễn",
+        "Điều trị dị ứng"
+      ],
+      "expertise": [
+        "Liệu pháp miễn dịch",
+        "Chẩn đoán dị ứng",
+        "Quản lý bệnh tự miễn",
+        "Thử nghiệm dị ứng",
+        "Điều trị bằng thuốc điều chỉnh miễn dịch"
+      ],
+      "description": "Chuyên khoa Dị ứng - Miễn dịch lâm sàng tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ miễn dịch và phản ứng dị ứng. Chuyên khoa này đóng vai trò quan trọng trong việc phát hiện và điều trị các bệnh lý nền tảng như hen suyễn, viêm mũi dị ứng, và các bệnh tự miễn. Các bác sĩ trong lĩnh vực này sử dụng các phương pháp điều trị hiện đại, bao gồm liệu pháp miễn dịch và thuốc điều chỉnh miễn dịch, nhằm cải thiện chất lượng cuộc sống cho bệnh nhân.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/di_ung_mien_dich_lam_sang.png",
+      "is_active": true
     },
     {
       "id": "cmn258c9a1889e048699dcfda",
@@ -1249,11 +820,11 @@
         "Bệnh lý hô hấp"
       ],
       "keywords": [
-        "phục hồi chức năng",
-        "vật lý trị liệu",
-        "liệu pháp nghề nghiệp",
-        "chấn thương",
-        "đột quỵ"
+        "Phục hồi chức năng",
+        "Vật lý trị liệu",
+        "Liệu pháp nghề nghiệp",
+        "Chấn thương",
+        "Đột quỵ"
       ],
       "expertise": [
         "Vật lý trị liệu",
@@ -1263,57 +834,90 @@
         "Phục hồi chức năng tim mạch"
       ],
       "description": "Phục hồi chức năng là một chuyên khoa y tế tập trung vào việc cải thiện và phục hồi khả năng vận động, chức năng sinh hoạt và chất lượng cuộc sống cho bệnh nhân bị suy giảm chức năng do chấn thương, bệnh lý hoặc các yếu tố khác. Chuyên khoa này áp dụng các phương pháp điều trị đa dạng như vật lý trị liệu, liệu pháp nghề nghiệp, và các kỹ thuật can thiệp khác nhằm giúp bệnh nhân phục hồi tối đa khả năng hoạt động và tái hòa nhập cộng đồng.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-phuchoichucnang.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/umc/subjects/1655708507374-PHUC_HOI_CHUC_NANG.png",
+      "is_active": true
     },
     {
-      "id": "cmn25ed0d1f539e45319d5092",
-      "name": "Y học cổ truyền",
-      "slug": "y-hoc-co-truyen",
+      "id": "cmn11e42573ffda4079b59e8b",
+      "name": "Chấn thương chỉnh hình",
+      "slug": "chan-thuong-chinh-hinh",
       "aliases": [
-        "YHCT",
-        "Y học cổ truyền",
-        "Y học dân gian"
+        "CTCH",
+        "Chấn thương chỉnh hình",
+        "Orthopedics"
       ],
       "common_symptoms": [
-        "Đau nhức cơ thể",
-        "Mệt mỏi",
-        "Rối loạn tiêu hóa",
-        "Mất ngủ",
-        "Cảm cúm",
-        "Đau đầu"
+        "Đau nhức xương khớp",
+        "Sưng tấy tại vị trí chấn thương",
+        "Giảm khả năng vận động",
+        "Cảm giác tê bì",
+        "Biến dạng chi"
       ],
       "common_conditions": [
-        "Đau lưng",
+        "Gãy xương",
+        "Trật khớp",
+        "Thoái hóa khớp",
         "Viêm khớp",
-        "Huyết áp cao",
-        "Tiểu đường",
-        "Rối loạn lo âu",
-        "Bệnh dạ dày"
+        "Chấn thương thể thao"
       ],
       "keywords": [
-        "Y học cổ truyền",
-        "Châm cứu",
-        "Bấm huyệt",
-        "Thảo dược",
-        "Điều trị tự nhiên",
-        "Cân bằng năng lượng"
+        "Chấn thương chỉnh hình",
+        "Điều trị xương khớp",
+        "Phẫu thuật chỉnh hình",
+        "Phục hồi chức năng",
+        "Gãy xương"
       ],
       "expertise": [
-        "Châm cứu",
-        "Bấm huyệt",
-        "Thảo dược",
-        "Dinh dưỡng y học",
-        "Xoa bóp",
-        "Chẩn đoán theo Đông y"
+        "Phẫu thuật chỉnh hình",
+        "Nội soi khớp",
+        "Chấn thương thể thao",
+        "Điều trị đau mãn tính",
+        "Phục hồi chức năng"
       ],
-      "description": "Y học cổ truyền là một lĩnh vực y học có nguồn gốc từ các phương pháp điều trị truyền thống, tập trung vào việc cân bằng năng lượng trong cơ thể và phục hồi sức khỏe thông qua các liệu pháp tự nhiên như châm cứu, bấm huyệt, thảo dược và dinh dưỡng. Chuyên khoa này chủ yếu điều trị các bệnh lý mãn tính, rối loạn chức năng và các triệu chứng không rõ nguyên nhân, đồng thời hỗ trợ điều trị các bệnh lý nền tảng như đau nhức xương khớp, rối loạn tiêu hóa, stress và các vấn đề về hô hấp.",
-      "icon_url": "https://ui-avatars.com/api/?name=Y%20h%E1%BB%8Dc%20c%E1%BB%95%20truy%E1%BB%81n&background=random&color=fff&rounded=true&size=200",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "description": "Chấn thương chỉnh hình là chuyên khoa y tế chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến hệ thống cơ xương khớp, bao gồm các chấn thương do tai nạn, bệnh lý bẩm sinh, thoái hóa khớp và các rối loạn khác. Chuyên khoa này không chỉ tập trung vào việc phục hồi chức năng vận động cho bệnh nhân mà còn chú trọng đến việc cải thiện chất lượng cuộc sống thông qua các phương pháp điều trị nội khoa, phẫu thuật và phục hồi chức năng.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/chan_thuong_chinh_hinh.png",
+      "is_active": true
+    },
+    {
+      "id": "cmn4132816e364b4603a2fed9",
+      "name": "Sản phụ khoa",
+      "slug": "san-phu-khoa",
+      "aliases": [
+        "Sản khoa",
+        "Phụ khoa",
+        "SPK"
+      ],
+      "common_symptoms": [
+        "Đau bụng dưới",
+        "Chảy máu âm đạo",
+        "Buồn nôn",
+        "Mệt mỏi",
+        "Rối loạn kinh nguyệt"
+      ],
+      "common_conditions": [
+        "Thai ngoài tử cung",
+        "Rối loạn kinh nguyệt",
+        "U xơ tử cung",
+        "Viêm nhiễm phụ khoa",
+        "Sảy thai"
+      ],
+      "keywords": [
+        "Sản phụ khoa",
+        "Chăm sóc sức khỏe phụ nữ",
+        "Mang thai",
+        "Sinh nở",
+        "Bệnh lý phụ khoa"
+      ],
+      "expertise": [
+        "Siêu âm thai",
+        "Phẫu thuật nội soi",
+        "Hỗ trợ sinh sản",
+        "Chăm sóc sau sinh",
+        "Tư vấn sức khỏe sinh sản"
+      ],
+      "description": "Sản phụ khoa là chuyên khoa y tế tập trung vào việc chăm sóc sức khỏe phụ nữ trong suốt quá trình mang thai, sinh nở và sau sinh, cũng như các vấn đề liên quan đến hệ sinh sản. Chuyên khoa này không chỉ điều trị các bệnh lý liên quan đến thai kỳ mà còn bao gồm các bệnh lý nền tảng như rối loạn nội tiết, bệnh lý phụ khoa và các vấn đề sức khỏe sinh sản khác. Chức năng điều trị của sản phụ khoa bao gồm tư vấn, theo dõi thai kỳ, thực hiện các thủ thuật sinh nở và can thiệp y tế cần thiết nhằm đảm bảo sức khỏe cho mẹ và bé.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/san_phu_khoa.png",
+      "is_active": true
     },
     {
       "id": "cmn019fb1522ff64f74b7b7c3",
@@ -1360,10 +964,359 @@
         "Sinh thiết"
       ],
       "description": "Chuyên khoa Chẩn đoán hình ảnh & Điện quang can thiệp là lĩnh vực y học chuyên sâu, tập trung vào việc sử dụng các kỹ thuật hình ảnh để chẩn đoán và điều trị các bệnh lý. Chuyên khoa này không chỉ giúp phát hiện sớm các bệnh lý mà còn hỗ trợ trong việc thực hiện các can thiệp điều trị như sinh thiết, đặt ống dẫn lưu, và điều trị các bệnh lý mạch máu. Các kỹ thuật như MRI, CT, siêu âm và X-quang đóng vai trò quan trọng trong việc xác định chính xác tình trạng bệnh lý, từ đó đưa ra phương pháp điều trị hiệu quả nhất cho bệnh nhân.",
-      "icon_url": "https://tamanhhospital.vn/wp-content/uploads/2020/12/khoa-chandoanhinhanh.png",
-      "is_active": true,
-      "created_at": "2026-03-26T08:26:53.495Z",
-      "updated_at": "2026-03-26T08:26:53.495Z"
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/chan_thuong_chinh_hinh.png",
+      "is_active": true
+    },
+    {
+      "id": "cmn25b8987d232447e8bd9517",
+      "name": "Hô hấp",
+      "slug": "ho-hap",
+      "aliases": [
+        "Khoa Hô hấp",
+        "Khoa Phổi",
+        "Hô hấp",
+        "Pulmonology"
+      ],
+      "common_symptoms": [
+        "Khó thở",
+        "Ho",
+        "Đau ngực",
+        "Khò khè",
+        "Đờm",
+        "Mệt mỏi"
+      ],
+      "common_conditions": [
+        "Hen suyễn",
+        "Bệnh phổi tắc nghẽn mạn tính (COPD)",
+        "Viêm phổi",
+        "Ung thư phổi",
+        "Xơ phổi",
+        "Viêm phế quản"
+      ],
+      "keywords": [
+        "Hô hấp",
+        "Bệnh phổi",
+        "Hen suyễn",
+        "COPD",
+        "Viêm phổi",
+        "Chẩn đoán hô hấp"
+      ],
+      "expertise": [
+        "Nội soi phế quản",
+        "Siêu âm phổi",
+        "X-quang phổi",
+        "Thăm dò chức năng hô hấp",
+        "Điều trị oxy",
+        "Quản lý hen suyễn"
+      ],
+      "description": "Chuyên khoa Hô hấp tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ hô hấp, bao gồm phổi, khí quản, phế quản và các cấu trúc liên quan. Chuyên khoa này đóng vai trò quan trọng trong việc điều trị các bệnh lý nền tảng như hen suyễn, bệnh phổi tắc nghẽn mạn tính (COPD), viêm phổi và ung thư phổi. Các bác sĩ hô hấp sử dụng nhiều phương pháp điều trị, từ thuốc đến các kỹ thuật can thiệp, nhằm cải thiện chất lượng cuộc sống cho bệnh nhân và giảm thiểu các triệu chứng hô hấp.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/ho_hap.png",
+      "is_active": true
+    },
+    {
+      "id": "cmn05e2799db9c54691854315",
+      "name": "Ung bướu",
+      "slug": "ung-buou",
+      "aliases": [
+        "Ung thư",
+        "Khoa Ung bướu",
+        "Oncology"
+      ],
+      "common_symptoms": [
+        "Sụt cân không rõ nguyên nhân",
+        "Mệt mỏi kéo dài",
+        "Đau đớn không rõ nguyên nhân",
+        "Thay đổi thói quen đi tiêu hoặc tiểu tiện",
+        "Khó thở",
+        "Ho kéo dài"
+      ],
+      "common_conditions": [
+        "Ung thư vú",
+        "Ung thư phổi",
+        "Ung thư đại trực tràng",
+        "Ung thư dạ dày",
+        "Ung thư tuyến tiền liệt",
+        "Ung thư da"
+      ],
+      "keywords": [
+        "Ung thư",
+        "Điều trị ung thư",
+        "Chẩn đoán ung thư",
+        "Hóa trị",
+        "Xạ trị",
+        "Phẫu thuật ung thư"
+      ],
+      "expertise": [
+        "Hóa trị",
+        "Xạ trị",
+        "Phẫu thuật ung thư",
+        "Chăm sóc giảm nhẹ",
+        "Miễn dịch trị liệu",
+        "Gen trị liệu"
+      ],
+      "description": "Chuyên khoa Ung bướu là lĩnh vực y học chuyên sâu nghiên cứu, chẩn đoán và điều trị các loại ung thư. Chức năng chính của chuyên khoa này bao gồm việc phát hiện sớm, điều trị bằng phẫu thuật, hóa trị, xạ trị và các phương pháp điều trị hỗ trợ nhằm cải thiện chất lượng cuộc sống cho bệnh nhân. Các bệnh lý nền tảng thường gặp trong chuyên khoa này bao gồm ung thư vú, ung thư phổi, ung thư đại trực tràng, và ung thư dạ dày, trong đó việc phát hiện sớm và điều trị kịp thời là rất quan trọng để nâng cao tỷ lệ sống sót cho bệnh nhân.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/ung_buou.png",
+      "is_active": true
+    },
+    {
+      "id": "cmn9a464d69a3c64f3f856cd8",
+      "name": "Da liễu",
+      "slug": "da-lieu",
+      "aliases": [
+        "Da liễu",
+        "Dermatology"
+      ],
+      "common_symptoms": [
+        "Ngứa",
+        "Đỏ da",
+        "Mụn",
+        "Khô da",
+        "Lột da",
+        "Sưng tấy"
+      ],
+      "common_conditions": [
+        "Mụn trứng cá",
+        "Viêm da cơ địa",
+        "Nấm da",
+        "Psoriasis",
+        "Chàm",
+        "Bệnh vẩy nến"
+      ],
+      "keywords": [
+        "Da liễu",
+        "Bệnh da",
+        "Điều trị da",
+        "Thẩm mỹ da",
+        "Chăm sóc da"
+      ],
+      "expertise": [
+        "Nội khoa da liễu",
+        "Phẫu thuật da liễu",
+        "Laser da liễu",
+        "Điều trị bệnh da tự miễn",
+        "Thẩm mỹ da"
+      ],
+      "description": "Chuyên khoa Da liễu là lĩnh vực y học chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến da, tóc và móng. Chức năng chính của chuyên khoa này bao gồm việc phát hiện và điều trị các bệnh lý da liễu như viêm da, nấm, mụn trứng cá, và các bệnh tự miễn. Ngoài ra, chuyên khoa còn đóng vai trò quan trọng trong việc tư vấn và điều trị các vấn đề về thẩm mỹ da, giúp cải thiện chất lượng cuộc sống cho bệnh nhân.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/da_lieu.png",
+      "is_active": true
+    },
+    {
+      "id": "cmncdc7ee40d3cc489da0f185",
+      "name": "Ngoại thần kinh",
+      "slug": "ngoai-than-kinh",
+      "aliases": [
+        "Ngoại thần kinh",
+        "Ngoại khoa thần kinh"
+      ],
+      "common_symptoms": [
+        "Đau đầu",
+        "Yếu cơ",
+        "Tê bì tay chân",
+        "Rối loạn cảm giác",
+        "Chóng mặt",
+        "Co giật"
+      ],
+      "common_conditions": [
+        "Phẫu thuật u não",
+        "Phẫu thuật chấn thương sọ não",
+        "Phẫu thuật thoát vị đĩa đệm",
+        "Can thiệp ngoại khoa thần kinh",
+        "Mổ chấn thương sọ não"
+      ],
+      "keywords": [
+        "Ngoại thần kinh",
+        "Phẫu thuật thần kinh",
+        "Phẫu thuật u não",
+        "Mổ chấn thương sọ não",
+        "Can thiệp ngoại khoa"
+      ],
+      "expertise": [
+        "Phẫu thuật u não",
+        "Phẫu thuật cột sống",
+        "Phẫu thuật thần kinh ngoại biên",
+        "Nội soi thần kinh",
+        "Điều trị đau thần kinh"
+      ],
+      "description": "Ngoại thần kinh là chuyên khoa y tế chuyên nghiên cứu, chẩn đoán và điều trị các bệnh lý liên quan đến hệ thần kinh, bao gồm não, tủy sống và các dây thần kinh ngoại biên. Chuyên khoa này tập trung vào việc can thiệp phẫu thuật để điều trị các tình trạng như u não, chấn thương sọ não, thoát vị đĩa đệm, và các bệnh lý khác ảnh hưởng đến chức năng thần kinh. Ngoài ra, ngoại thần kinh còn đóng vai trò quan trọng trong việc phục hồi chức năng cho bệnh nhân sau phẫu thuật và cải thiện chất lượng cuộc sống.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/ngoai_than_kinh.png",
+      "is_active": true
+    },
+    {
+      "id": "cmn7c81420344b546258ba767",
+      "name": "Lồng ngực - Mạch máu",
+      "slug": "long-nguc-mach-mau",
+      "aliases": [
+        "Khoa Lồng ngực",
+        "Khoa Mạch máu",
+        "TMV",
+        "Tim Mạch - Mạch máu"
+      ],
+      "common_symptoms": [
+        "Đau ngực",
+        "Khó thở",
+        "Ho có đờm",
+        "Mệt mỏi",
+        "Chóng mặt"
+      ],
+      "common_conditions": [
+        "Bệnh động mạch vành",
+        "Bệnh phổi tắc nghẽn mạn tính (COPD)",
+        "Tăng huyết áp",
+        "Bệnh phổi",
+        "Bệnh mạch máu ngoại biên"
+      ],
+      "keywords": [
+        "Lồng ngực",
+        "Mạch máu",
+        "Bệnh tim",
+        "Bệnh phổi",
+        "Can thiệp tim mạch"
+      ],
+      "expertise": [
+        "Siêu âm tim",
+        "Thông tim",
+        "Phẫu thuật lồng ngực",
+        "Điều trị bệnh lý mạch máu",
+        "Chẩn đoán hình ảnh lồng ngực"
+      ],
+      "description": "Chuyên khoa Lồng ngực - Mạch máu tập trung vào việc chẩn đoán, điều trị và quản lý các bệnh lý liên quan đến hệ thống lồng ngực và mạch máu. Chuyên khoa này đóng vai trò quan trọng trong việc điều trị các bệnh lý như bệnh tim mạch, bệnh phổi, và các rối loạn mạch máu, nhằm cải thiện chất lượng cuộc sống cho bệnh nhân. Các phương pháp điều trị bao gồm can thiệp phẫu thuật, điều trị nội khoa và các kỹ thuật tiên tiến như thông tim và siêu âm tim.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/long_nguc_mach_mau.png",
+      "is_active": true
+    },
+    {
+      "id": "cmn25ed0d1f539e45319d5092",
+      "name": "Y học cổ truyền",
+      "slug": "y-hoc-co-truyen",
+      "aliases": [
+        "YHCT",
+        "Y học cổ truyền",
+        "Y học dân gian"
+      ],
+      "common_symptoms": [
+        "Đau nhức cơ thể",
+        "Mệt mỏi",
+        "Rối loạn tiêu hóa",
+        "Mất ngủ",
+        "Cảm cúm",
+        "Đau đầu"
+      ],
+      "common_conditions": [
+        "Đau lưng",
+        "Viêm khớp",
+        "Huyết áp cao",
+        "Tiểu đường",
+        "Rối loạn lo âu",
+        "Bệnh dạ dày"
+      ],
+      "keywords": [
+        "Y học cổ truyền",
+        "Châm cứu",
+        "Bấm huyệt",
+        "Thảo dược",
+        "Điều trị tự nhiên",
+        "Cân bằng năng lượng"
+      ],
+      "expertise": [
+        "Châm cứu",
+        "Bấm huyệt",
+        "Thảo dược",
+        "Dinh dưỡng y học",
+        "Xoa bóp",
+        "Chẩn đoán theo Đông y"
+      ],
+      "description": "Y học cổ truyền là một lĩnh vực y học có nguồn gốc từ các phương pháp điều trị truyền thống, tập trung vào việc cân bằng năng lượng trong cơ thể và phục hồi sức khỏe thông qua các liệu pháp tự nhiên như châm cứu, bấm huyệt, thảo dược và dinh dưỡng. Chuyên khoa này chủ yếu điều trị các bệnh lý mãn tính, rối loạn chức năng và các triệu chứng không rõ nguyên nhân, đồng thời hỗ trợ điều trị các bệnh lý nền tảng như đau nhức xương khớp, rối loạn tiêu hóa, stress và các vấn đề về hô hấp.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/ChuyenKhoa.png",
+      "is_active": true
+    },
+    {
+      "id": "cmna97aefc6f8804547a0d5cb",
+      "name": "Hiếm muộn - Hỗ trợ sinh sản",
+      "slug": "hiem-muon-ho-tro-sinh-san",
+      "aliases": [
+        "Hỗ trợ sinh sản",
+        "IVF",
+        "ICSI"
+      ],
+      "common_symptoms": [
+        "Khó có thai sau 1 năm quan hệ không bảo vệ",
+        "Kinh nguyệt không đều",
+        "Đau bụng dưới",
+        "Rối loạn nội tiết",
+        "Giảm ham muốn tình dục"
+      ],
+      "common_conditions": [
+        "Rối loạn rụng trứng",
+        "Tắc ống dẫn trứng",
+        "Suy giảm chất lượng tinh trùng",
+        "Lạc nội mạc tử cung",
+        "U xơ tử cung"
+      ],
+      "keywords": [
+        "Hiếm muộn",
+        "Hỗ trợ sinh sản",
+        "Thụ tinh trong ống nghiệm",
+        "IVF",
+        "ICSI",
+        "Rối loạn sinh sản"
+      ],
+      "expertise": [
+        "Thụ tinh trong ống nghiệm (IVF)",
+        "Tiêm tinh trùng vào bào tương trứng (ICSI)",
+        "Chẩn đoán di truyền trước khi cấy ghép (PGD)",
+        "Hỗ trợ sinh sản bằng hormone",
+        "Phẫu thuật nội soi điều trị hiếm muộn"
+      ],
+      "description": "Chuyên khoa Hiếm muộn - Hỗ trợ sinh sản tập trung vào việc chẩn đoán và điều trị các vấn đề liên quan đến khả năng sinh sản của cả nam và nữ. Chuyên khoa này cung cấp các phương pháp hỗ trợ sinh sản như thụ tinh trong ống nghiệm (IVF), tiêm tinh trùng vào bào tương trứng (ICSI) và các kỹ thuật khác nhằm giúp các cặp vợ chồng gặp khó khăn trong việc có con. Ngoài ra, chuyên khoa cũng chú trọng đến việc xác định và điều trị các bệnh lý nền tảng như rối loạn nội tiết, bệnh lý buồng trứng, và các vấn đề về tinh trùng, từ đó nâng cao hiệu quả điều trị và tỷ lệ thành công.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/umc/subjects/KBTS/1651820887681-SAN_KHOA_CHAN_DOAN_TRUOC_SINH.png",
+      "is_active": true
+    },
+    {
+      "id": "cmn347714c1937b4ebd858bd6",
+      "name": "Nội tiết",
+      "slug": "noi-tiet",
+      "aliases": [
+        "Nội tiết học",
+        "Nội tiết",
+        "Endocrinology"
+      ],
+      "common_symptoms": [
+        "Khát nước nhiều",
+        "Mệt mỏi",
+        "Giảm cân không rõ nguyên nhân",
+        "Tăng cân bất thường",
+        "Rối loạn kinh nguyệt",
+        "Thay đổi tâm trạng",
+        "Da khô hoặc nhờn"
+      ],
+      "common_conditions": [
+        "Tiểu đường type 1 và type 2",
+        "Bệnh tuyến giáp (cường giáp, suy giáp)",
+        "Hội chứng Cushing",
+        "Hội chứng buồng trứng đa nang (PCOS)",
+        "Rối loạn tăng trưởng",
+        "Bệnh Addison",
+        "Rối loạn chuyển hóa"
+      ],
+      "keywords": [
+        "Nội tiết",
+        "Tiểu đường",
+        "Tuyến giáp",
+        "Hormone",
+        "Rối loạn nội tiết",
+        "Chẩn đoán nội tiết",
+        "Điều trị nội tiết"
+      ],
+      "expertise": [
+        "Chẩn đoán và điều trị tiểu đường",
+        "Quản lý rối loạn tuyến giáp",
+        "Điều trị hội chứng Cushing",
+        "Chẩn đoán và điều trị PCOS",
+        "Quản lý rối loạn chuyển hóa",
+        "Thăm khám và điều trị rối loạn tăng trưởng"
+      ],
+      "description": "Chuyên khoa Nội tiết tập trung vào việc chẩn đoán, điều trị và quản lý các rối loạn liên quan đến hormone và tuyến nội tiết. Các bác sĩ nội tiết học nghiên cứu và điều trị các bệnh lý như tiểu đường, rối loạn tuyến giáp, hội chứng Cushing, và các rối loạn khác liên quan đến hormone. Chuyên khoa này đóng vai trò quan trọng trong việc cải thiện chất lượng cuộc sống cho bệnh nhân thông qua việc kiểm soát và điều trị các bệnh lý nền tảng, từ đó giảm thiểu các biến chứng và nâng cao sức khỏe tổng quát.",
+      "icon_url": "https://cdn-pkh.longvan.net/medpro-production/default/avatar/subjects/noi_tiet.png",
+      "is_active": true
     }
   ]
 }
