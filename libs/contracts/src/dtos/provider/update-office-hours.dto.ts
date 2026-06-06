@@ -1,4 +1,4 @@
-import { IsCuid } from '@app/contracts/decorators';
+import { IsCuid, IsNoOverlap } from '@app/contracts/decorators';
 import {
   IsOptional,
   IsInt,
@@ -25,6 +25,7 @@ export class UpdateOfficeHoursDto {
 
   @IsOptional()
   @IsString({ message: 'startTime must be a time string' })
+  @IsNoOverlap('endTime')
   startTime?: string;
 
   @IsOptional()

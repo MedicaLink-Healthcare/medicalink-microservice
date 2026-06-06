@@ -1,5 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 import { Injectable, Inject, Logger } from '@nestjs/common';
+import { RedisService } from '@app/redis';
+import { HoldService } from './hold.service';
 import { ClientProxy } from '@nestjs/microservices';
 import { PrismaService } from '../../prisma/prisma.service';
 import { AppointmentsRepository } from './appointments.repository';
@@ -46,6 +48,9 @@ import {
 } from '@app/contracts/dtos/notification';
 import { AppointmentNotificationTriggerDto } from '@app/contracts/dtos/orchestrator';
 
+const IDEMPOTENCY_KEY_PREFIX = 'idempotency:appt';
+const IDEMPOTENCY_TTL_SECONDS = 86400; // 24h
+
 @Injectable()
 export class AppointmentsService {
   private readonly logger = new Logger(AppointmentsService.name);
@@ -54,6 +59,8 @@ export class AppointmentsService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly appointmentsRepo: AppointmentsRepository,
+    private readonly redis: RedisService,
+    private readonly holdService: HoldService,
     @Inject('ORCHESTRATOR_SERVICE')
     private readonly orchestratorClient: ClientProxy,
     @Inject('PROVIDER_DIRECTORY_SERVICE')
@@ -69,37 +76,34 @@ export class AppointmentsService {
       timeEnd: dto.timeEnd,
       allowPast: true,
     });
-    const serviceDate = toUtcDate(dto.serviceDate);
-    const timeStart = combineDateWithTimeUtc(dto.serviceDate, dto.timeStart);
-    const timeEnd = combineDateWithTimeUtc(dto.serviceDate, dto.timeEnd);
 
     const doctorAccountId = await this.resolveDoctorAccountId(dto.doctorId);
     const appointment = await this.prisma.$transaction(async (tx) => {
-      // 1. Create Event first
+      // 1. Create Event (staff path retains event for backward compat)
       const event = await tx.event.create({
         data: {
           doctorId: dto.doctorId,
           doctorAccountId,
           locationId: dto.locationId,
-          serviceDate,
-          timeStart,
-          timeEnd,
+          serviceDate: toUtcDate(dto.serviceDate),
+          timeStart: combineDateWithTimeUtc(dto.serviceDate, dto.timeStart),
+          timeEnd: combineDateWithTimeUtc(dto.serviceDate, dto.timeEnd),
           eventType: 'APPOINTMENT',
-          metadata: {
-            bookingChannel: 'STAFF',
-            patientId: dto.patientId,
-          },
+          metadata: { bookingChannel: 'STAFF', patientId: dto.patientId },
         },
       });
 
-      // 2. Create Appointment referencing eventId
-      const appointment = await tx.appointment.create({
+      // 2. Create Appointment with slot fields directly (Appointment-centric)
+      const appt = await tx.appointment.create({
         data: {
           eventId: event.id,
           patientId: dto.patientId,
           doctorId: dto.doctorId,
           locationId: dto.locationId,
           specialtyId: (dto as any).specialtyId,
+          serviceDate: toUtcDate(dto.serviceDate),
+          timeStart: dto.timeStart,
+          timeEnd: dto.timeEnd,
           reason: dto.reason ?? undefined,
           notes: dto.notes ?? undefined,
           priceAmount: dto.priceAmount ?? 0,
@@ -109,9 +113,27 @@ export class AppointmentsService {
         },
       });
 
-      return appointment;
+      // 3. Create OutboxEvent atomically (Transactional Outbox Pattern)
+      await tx.outboxEvent.create({
+        data: {
+          type: 'APPOINTMENT_BOOKED',
+          payload: {
+            appointmentId: appt.id,
+            doctorId: appt.doctorId,
+            locationId: appt.locationId,
+            specialtyId: appt.specialtyId,
+            serviceDate: dto.serviceDate,
+            timeStart: dto.timeStart,
+            timeEnd: dto.timeEnd,
+            patientId: appt.patientId,
+            status: appt.status,
+          },
+        },
+      });
+
+      return appt;
     });
-    void this.emitAppointmentBookedEvent(appointment.id, 'STAFF');
+
     return appointment;
   }
 
@@ -124,33 +146,56 @@ export class AppointmentsService {
     isTempHold?: boolean;
     expiresAt?: Date;
   }): Promise<Event> {
-    await this.ensureAvailableSlot({
-      doctorId: body.doctorId,
-      locationId: body.locationId,
-      serviceDate: body.serviceDate,
-      timeStart: body.timeStart,
-      timeEnd: body.timeEnd,
-      allowPast: false,
-    });
+    const holdAcquired = await this.holdService.holdSlot(
+      body.doctorId,
+      body.serviceDate,
+      body.timeStart,
+      Date.now().toString(),
+    );
+    if (!holdAcquired) {
+      throw new BadRequestError('Selected time is not available');
+    }
 
-    const serviceDate = toUtcDate(body.serviceDate);
-    const timeStart = combineDateWithTimeUtc(body.serviceDate, body.timeStart);
-    const timeEnd = combineDateWithTimeUtc(body.serviceDate, body.timeEnd);
-    const doctorAccountId = await this.resolveDoctorAccountId(body.doctorId);
-    return this.prisma.event.create({
-      data: {
+    try {
+      await this.ensureAvailableSlot({
         doctorId: body.doctorId,
-        doctorAccountId,
         locationId: body.locationId,
-        serviceDate,
-        timeStart,
-        timeEnd,
-        eventType: 'APPOINTMENT',
-        isTempHold: !!body.isTempHold,
-        expiresAt: body.expiresAt,
-        nonBlocking: false,
-      },
-    });
+        serviceDate: body.serviceDate,
+        timeStart: body.timeStart,
+        timeEnd: body.timeEnd,
+        allowPast: false,
+      });
+
+      const serviceDate = toUtcDate(body.serviceDate);
+      const timeStart = combineDateWithTimeUtc(
+        body.serviceDate,
+        body.timeStart,
+      );
+      const timeEnd = combineDateWithTimeUtc(body.serviceDate, body.timeEnd);
+      const doctorAccountId = await this.resolveDoctorAccountId(body.doctorId);
+      return await this.prisma.event.create({
+        data: {
+          doctorId: body.doctorId,
+          doctorAccountId,
+          locationId: body.locationId,
+          serviceDate,
+          timeStart,
+          timeEnd,
+          eventType: 'APPOINTMENT',
+          isTempHold: !!body.isTempHold,
+          expiresAt: body.expiresAt,
+          nonBlocking: false,
+        },
+      });
+    } catch (error) {
+      // Release lock if DB save or validation fails
+      await this.holdService.releaseHold(
+        body.doctorId,
+        body.serviceDate,
+        body.timeStart,
+      );
+      throw error;
+    }
   }
 
   async checkCompleted(email: string, doctorId: string): Promise<boolean> {
@@ -177,13 +222,30 @@ export class AppointmentsService {
     return count > 0;
   }
 
-  async createAppointmentFromEvent(dto: {
-    eventId: string;
-    patientId: string;
-    reason?: string;
-    specialtyId: string;
-    aiTriageData?: Record<string, any>;
-  }): Promise<Appointment> {
+  async createAppointmentFromEvent(
+    dto: {
+      eventId: string;
+      patientId: string;
+      reason?: string;
+      specialtyId: string;
+      aiTriageData?: Record<string, any>;
+      idempotencyKey?: string;
+    },
+    correlationId?: string,
+  ): Promise<Appointment> {
+    // Idempotency: return cached result if same key used before
+    if (dto.idempotencyKey) {
+      const cached = await this.redis.getJson<{ id: string }>(
+        `${IDEMPOTENCY_KEY_PREFIX}:${dto.idempotencyKey}`,
+      );
+      if (cached) {
+        this.logger.debug(`Idempotency hit for key ${dto.idempotencyKey}`);
+        return this.appointmentsRepo.findById(
+          cached.id,
+        ) as Promise<Appointment>;
+      }
+    }
+
     const now = new Date();
     const appointment = await this.prisma.$transaction(async (tx) => {
       const ev = await tx.event.findUnique({ where: { id: dto.eventId } });
@@ -220,21 +282,79 @@ export class AppointmentsService {
         },
       });
 
-      const appointment = await tx.appointment.create({
+      // EC-1: Use dayjs UTC formatting to avoid timezone date shift
+      const serviceDateStr = ev.serviceDate
+        ? dayjs.utc(ev.serviceDate).format('YYYY-MM-DD')
+        : null;
+      const timeStartStr = ev.timeStart
+        ? dayjs.utc(ev.timeStart).format('HH:mm')
+        : null;
+      const timeEndStr = ev.timeEnd
+        ? dayjs.utc(ev.timeEnd).format('HH:mm')
+        : null;
+
+      const appt = await tx.appointment.create({
         data: {
           eventId: ev.id,
           patientId: dto.patientId,
           doctorId: ev.doctorId as string,
           locationId: ev.locationId as string,
           specialtyId: dto.specialtyId,
+          serviceDate: ev.serviceDate,
+          timeStart: timeStartStr ?? undefined,
+          timeEnd: timeEndStr ?? undefined,
           reason: dto.reason ? dto.reason.trim().substring(0, 255) : undefined,
           status: AppointmentStatus.BOOKED,
           aiTriageData: dto.aiTriageData ?? undefined,
         },
       });
 
-      return appointment;
+      // Outbox: guarantee notification delivery even if RabbitMQ is temporarily down
+      await tx.outboxEvent.create({
+        data: {
+          type: 'APPOINTMENT_BOOKED',
+          correlationId: correlationId ?? undefined,
+          payload: {
+            appointmentId: appt.id,
+            doctorId: appt.doctorId,
+            locationId: appt.locationId,
+            specialtyId: appt.specialtyId,
+            serviceDate: serviceDateStr,
+            timeStart: timeStartStr,
+            timeEnd: timeEndStr,
+            patientId: appt.patientId,
+            status: appt.status,
+            bookingChannel: 'PUBLIC',
+          },
+        },
+      });
+
+      return appt;
     });
+
+    // Release Redis hold after successful booking
+    if (
+      appointment.doctorId &&
+      appointment.serviceDate &&
+      appointment.timeStart
+    ) {
+      const dateStr = dayjs.utc(appointment.serviceDate).format('YYYY-MM-DD');
+      await this.holdService.releaseHold(
+        appointment.doctorId,
+        dateStr,
+        appointment.timeStart,
+      );
+    }
+
+    // Cache idempotency result
+    if (dto.idempotencyKey) {
+      await this.redis.setJson(
+        `${IDEMPOTENCY_KEY_PREFIX}:${dto.idempotencyKey}`,
+        { id: appointment.id },
+        IDEMPOTENCY_TTL_SECONDS,
+      );
+    }
+
     void this.emitAppointmentBookedEvent(appointment.id, 'PUBLIC');
     return appointment;
   }
@@ -320,6 +440,7 @@ export class AppointmentsService {
     const rangeStartDate = startOfRange.toDate();
     const rangeEndDate = endOfCurrentMonth.clone().endOf('month').toDate();
 
+    // EC-1 safe: query appointment.service_date directly — no events join needed
     const rows = await this.prisma.$queryRaw<
       {
         month: Date | null;
@@ -328,13 +449,12 @@ export class AppointmentsService {
       }[]
     >`
       SELECT
-        date_trunc('month', e."service_date") AS month,
+        date_trunc('month', a."service_date") AS month,
         UPPER(COALESCE(a."currency", 'UNKNOWN')) AS currency,
         COALESCE(SUM(COALESCE(a."price_amount", 0)), 0) AS total
       FROM "appointments" a
-      INNER JOIN "events" e ON e."id" = a."event_id"
       WHERE a."status"::text = ${AppointmentStatus.COMPLETED}
-        AND e."service_date" BETWEEN ${rangeStartDate} AND ${rangeEndDate}
+        AND a."service_date" BETWEEN ${rangeStartDate} AND ${rangeEndDate}
       GROUP BY 1, 2
       ORDER BY 1 ASC, 2 ASC;
     `;
@@ -390,6 +510,7 @@ export class AppointmentsService {
     const rangeStartDate = startOfRange.toDate();
     const rangeEndDate = endOfCurrentMonth.clone().endOf('month').toDate();
 
+    // EC-1 safe: use appointment.service_date directly — no events join
     const rows = await this.prisma.$queryRaw<
       {
         doctorId: string | null;
@@ -404,9 +525,8 @@ export class AppointmentsService {
           UPPER(COALESCE(a."currency", 'UNKNOWN')) AS currency,
           COALESCE(SUM(COALESCE(a."price_amount", 0)), 0) AS total
         FROM "appointments" a
-        INNER JOIN "events" e ON e."id" = a."event_id"
         WHERE a."status"::text = ${AppointmentStatus.COMPLETED}
-          AND e."service_date" BETWEEN ${rangeStartDate} AND ${rangeEndDate}
+          AND a."service_date" BETWEEN ${rangeStartDate} AND ${rangeEndDate}
         GROUP BY 1, 2
       ),
       ranked_doctors AS (
@@ -477,6 +597,7 @@ export class AppointmentsService {
       .toDate();
     const previousEnd = dayjs().subtract(1, 'month').endOf('month').toDate();
 
+    // EC-1 safe: filter on appointment.service_date directly
     const [
       totalAppointments,
       currentMonthAppointments,
@@ -484,29 +605,11 @@ export class AppointmentsService {
     ] = await Promise.all([
       this.prisma.appointment.count(),
       this.prisma.appointment.count({
-        where: {
-          event: {
-            is: {
-              serviceDate: {
-                gte: currentStart,
-                lte: currentEnd,
-              },
-            },
-          },
-        },
-      }) as any,
+        where: { serviceDate: { gte: currentStart, lte: currentEnd } },
+      }),
       this.prisma.appointment.count({
-        where: {
-          event: {
-            is: {
-              serviceDate: {
-                gte: previousStart,
-                lte: previousEnd,
-              },
-            },
-          },
-        },
-      }) as any,
+        where: { serviceDate: { gte: previousStart, lte: previousEnd } },
+      }),
     ]);
 
     return {
@@ -640,18 +743,42 @@ export class AppointmentsService {
       <p><b>Reason: </b>${dto.reason || 'No reason provided'}</p>
     `;
 
-    const updated = await this.appointmentsRepo.updateAppointmentEntity(
-      dto.id,
-      {
-        status,
-        notes: appointment.notes ? appointment.notes + cancelNote : cancelNote,
-        cancelledAt: nowUtc(),
-      },
-    );
+    const updated = await this.prisma.$transaction(async (tx) => {
+      const upd = await tx.appointment.update({
+        where: { id: dto.id },
+        data: {
+          status,
+          notes: appointment.notes
+            ? appointment.notes + cancelNote
+            : cancelNote,
+          cancelledAt: nowUtc(),
+        },
+      });
 
-    await this.prisma.event.update({
-      where: { id: appointment.eventId },
-      data: { nonBlocking: true },
+      if (upd.eventId) {
+        await tx.event.update({
+          where: { id: upd.eventId },
+          data: { nonBlocking: true },
+        });
+      }
+
+      // Outbox: notify provider-directory to remove BookedSlot
+      const serviceDateStr = upd.serviceDate
+        ? dayjs.utc(upd.serviceDate).format('YYYY-MM-DD')
+        : null;
+      await tx.outboxEvent.create({
+        data: {
+          type: 'APPOINTMENT_CANCELLED',
+          payload: {
+            appointmentId: upd.id,
+            doctorId: upd.doctorId,
+            serviceDate: serviceDateStr,
+            timeStart: upd.timeStart,
+          },
+        },
+      });
+
+      return upd;
     });
 
     void this.emitAppointmentStatusChangedEvent(
@@ -706,10 +833,12 @@ export class AppointmentsService {
     });
 
     // set event as non-blocking
-    await this.prisma.event.update({
-      where: { id: appointment.eventId },
-      data: { nonBlocking: true },
-    });
+    if (appointment.eventId) {
+      await this.prisma.event.update({
+        where: { id: appointment.eventId },
+        data: { nonBlocking: true },
+      });
+    }
     void this.emitAppointmentStatusChangedEvent(
       updated.id,
       appointment.status,
@@ -732,13 +861,15 @@ export class AppointmentsService {
       if (dto.serviceDate || dto.timeStart || dto.timeEnd) {
         const serviceDateString =
           dto.serviceDate ||
-          (appt.event.serviceDate ? ymdUtc(appt.event.serviceDate) : null);
+          (appt.event?.serviceDate ? ymdUtc(appt.event.serviceDate) : null);
         const timeStartString =
           dto.timeStart ||
-          (appt.event.timeStart ? extractTimeHHmm(appt.event.timeStart) : null);
+          (appt.event?.timeStart
+            ? extractTimeHHmm(appt.event.timeStart)
+            : null);
         const timeEndString =
           dto.timeEnd ||
-          (appt.event.timeEnd ? extractTimeHHmm(appt.event.timeEnd) : null);
+          (appt.event?.timeEnd ? extractTimeHHmm(appt.event.timeEnd) : null);
 
         if (!serviceDateString || !timeStartString || !timeEndString) {
           throw new BadRequestError(
@@ -765,14 +896,16 @@ export class AppointmentsService {
           timeEndString,
         );
 
-        await tx.event.update({
-          where: { id: appt.eventId },
-          data: {
-            serviceDate: serviceDateUtc,
-            timeStart: formattedTimeStart,
-            timeEnd: formattedTimeEnd,
-          },
-        });
+        if (appt.eventId) {
+          await tx.event.update({
+            where: { id: appt.eventId },
+            data: {
+              serviceDate: serviceDateUtc,
+              timeStart: formattedTimeStart,
+              timeEnd: formattedTimeEnd,
+            },
+          });
+        }
       }
 
       const updateAppointment: any = {

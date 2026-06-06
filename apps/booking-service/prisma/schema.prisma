@@ -18,8 +18,27 @@ enum AppointmentStatus {
   COMPLETED
 }
 
+enum OutboxStatus {
+  PENDING
+  PROCESSED
+  FAILED
+}
+
 enum EventType {
   APPOINTMENT
+}
+
+model OutboxEvent {
+  id            String      @id @default(cuid())
+  type          String      @db.VarChar(100)
+  payload       Json
+  status        OutboxStatus @default(PENDING)
+  correlationId String?     @map("correlation_id") @db.VarChar(36)
+  processedAt   DateTime?   @map("processed_at") @db.Timestamptz(6)
+  createdAt     DateTime    @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([status, createdAt])
+  @@map("outbox_events")
 }
 
 model Patient {
@@ -44,28 +63,36 @@ model Patient {
 }
 
 model Appointment {
-  id          String            @id @default(cuid())
-  patientId   String            @map("patient_id") @db.VarChar(27)
-  doctorId    String            @map("doctor_id") @db.VarChar(27)
-  locationId  String            @map("location_id") @db.VarChar(27)
-  eventId     String            @map("event_id") @db.VarChar(27)
-  specialtyId String            @map("specialty_id") @db.VarChar(27)
-  status      AppointmentStatus @default(BOOKED)
-  reason      String?           @db.VarChar(255)
-  notes       String?           @db.Text
-  priceAmount Decimal?          @map("price_amount") @db.Decimal(12, 2)
-  currency    String            @default("VND") @db.VarChar(3)
-  createdAt   DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
-  updatedAt   DateTime          @updatedAt @map("updated_at") @db.Timestamptz(6)
-  cancelledAt DateTime?         @map("cancelled_at") @db.Timestamptz(6)
-  completedAt DateTime?         @map("completed_at") @db.Timestamptz(6)
-  aiTriageData Json?            @map("ai_triage_data")
+  id           String            @id @default(cuid())
+  patientId    String            @map("patient_id") @db.VarChar(27)
+  doctorId     String            @map("doctor_id") @db.VarChar(27)
+  locationId   String            @map("location_id") @db.VarChar(27)
+  eventId      String?           @map("event_id") @db.VarChar(27)
+  specialtyId  String            @map("specialty_id") @db.VarChar(27)
+  // Slot fields — source of truth for time (Appointment-centric)
+  serviceDate  DateTime?         @map("service_date") @db.Date
+  timeStart    String?           @map("time_start") @db.VarChar(5)
+  timeEnd      String?           @map("time_end") @db.VarChar(5)
+  status       AppointmentStatus @default(BOOKED)
+  reason       String?           @db.VarChar(255)
+  notes        String?           @db.Text
+  priceAmount  Decimal?          @map("price_amount") @db.Decimal(12, 2)
+  currency     String            @default("VND") @db.VarChar(3)
+  createdAt    DateTime          @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt    DateTime          @updatedAt @map("updated_at") @db.Timestamptz(6)
+  cancelledAt  DateTime?         @map("cancelled_at") @db.Timestamptz(6)
+  completedAt  DateTime?         @map("completed_at") @db.Timestamptz(6)
+  aiTriageData Json?             @map("ai_triage_data")
 
-  // Relation
-  patient     Patient           @relation(fields: [patientId], references: [id], onDelete: Restrict)
-  event       Event             @relation(fields: [eventId], references: [id], onDelete: Restrict)
+  // Relations
+  patient      Patient           @relation(fields: [patientId], references: [id], onDelete: Restrict)
+  event        Event?            @relation(fields: [eventId], references: [id], onDelete: Restrict)
 
+  // Zero-collision constraint: one doctor can only have one booking per slot
+  @@unique([doctorId, serviceDate, timeStart], map: "uq_appointments_doctor_slot")
   @@index([doctorId, locationId, specialtyId], map: "idx_appointments_doctor_location_specialty")
+  @@index([serviceDate], map: "idx_appointments_service_date")
+  @@index([doctorId, serviceDate], map: "idx_appointments_doctor_date")
   @@map("appointments")
 }
 

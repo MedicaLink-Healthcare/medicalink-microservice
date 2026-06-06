@@ -11,6 +11,9 @@ import { Controller, Logger } from '@nestjs/common';
 import { EventPattern, Payload } from '@nestjs/microservices';
 import { EmailService } from './services/email.service';
 import { EmailConfigService } from './services/email-config.service';
+import { RedisService } from '@app/redis';
+
+const IDEMPOTENCY_TTL_SECONDS = 86400 * 7; // 7 days
 
 @Controller()
 export class EmailController {
@@ -19,6 +22,7 @@ export class EmailController {
   constructor(
     private readonly emailService: EmailService,
     private readonly emailConfigService: EmailConfigService,
+    private readonly redis: RedisService,
   ) {}
 
   @EventPattern('notification.email.send')
@@ -70,6 +74,17 @@ export class EmailController {
       );
       return;
     }
+
+    // Idempotency check: prevent sending "booked" email twice for same appointment
+    const idempotencyKey = `notification:email:${event.appointmentId}:BOOKED`;
+    const acquired = await this.acquireIdempotencyLock(idempotencyKey);
+    if (!acquired) {
+      this.logger.warn(
+        `Idempotency check failed. Email already sent for ${idempotencyKey}`,
+      );
+      return;
+    }
+
     const subject = this.getBookedSubject(event.bookingChannel);
     await this.sendEmailWithTracing('appointment-confirmation', {
       templateKey: 'appointment-confirmation',
@@ -113,6 +128,17 @@ export class EmailController {
       );
       return;
     }
+
+    // Idempotency check: prevent sending status update twice for same status
+    const idempotencyKey = `notification:email:${event.appointmentId}:${event.newStatus}`;
+    const acquired = await this.acquireIdempotencyLock(idempotencyKey);
+    if (!acquired) {
+      this.logger.warn(
+        `Idempotency check failed. Email already sent for ${idempotencyKey}`,
+      );
+      return;
+    }
+
     const subject = this.getStatusSubject(event.newStatus);
     await this.sendEmailWithTracing('appointment-status-update', {
       templateKey: 'appointment-status-update',
@@ -250,5 +276,13 @@ export class EmailController {
       );
       throw error;
     }
+  }
+
+  private async acquireIdempotencyLock(key: string): Promise<boolean> {
+    const result = await this.redis
+      .pipeline()
+      .set(key, '1', 'EX', IDEMPOTENCY_TTL_SECONDS, 'NX')
+      .exec();
+    return result?.[0]?.[1] === 'OK';
   }
 }

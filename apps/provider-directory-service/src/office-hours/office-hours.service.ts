@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { OfficeHoursRepository } from './office-hours.repository';
 import { OfficeHours } from '../../prisma/generated/client';
+import { PrismaService } from '../../prisma/prisma.service';
 import {
   CreateOfficeHoursDto,
   OfficeHoursQueryDto,
@@ -15,6 +16,7 @@ export class OfficeHoursService {
   constructor(
     private readonly repo: OfficeHoursRepository,
     private readonly doctorRepo: DoctorRepository,
+    private readonly prisma: PrismaService,
   ) {}
 
   async findAll(query: OfficeHoursQueryDto) {
@@ -52,6 +54,13 @@ export class OfficeHoursService {
   }
 
   async create(dto: CreateOfficeHoursDto) {
+    await this.validateNoOverlap(
+      dto.doctorId || null,
+      dto.workLocationId || null,
+      dto.dayOfWeek,
+      dto.startTime,
+      dto.endTime,
+    );
     const oh = await this.repo.create(dto);
     return this.toResponseDto(oh);
   }
@@ -59,6 +68,52 @@ export class OfficeHoursService {
   async update(id: string, dto: UpdateOfficeHoursDto) {
     const existing = await this.repo.findById(id);
     if (!existing) throw new NotFoundError('Office hours not found');
+
+    const oldDto = this.toResponseDto(existing);
+
+    const newStart = dto.startTime ?? oldDto.startTime;
+    const newEnd = dto.endTime ?? oldDto.endTime;
+    const newDay = dto.dayOfWeek ?? oldDto.dayOfWeek;
+    const newDocId =
+      dto.doctorId !== undefined ? dto.doctorId : oldDto.doctorId;
+    const newLocId =
+      dto.workLocationId !== undefined
+        ? dto.workLocationId
+        : oldDto.workLocationId;
+
+    if (
+      newStart !== oldDto.startTime ||
+      newEnd !== oldDto.endTime ||
+      newDay !== oldDto.dayOfWeek
+    ) {
+      await this.validateNoOverlap(
+        newDocId || null,
+        newLocId || null,
+        newDay,
+        newStart,
+        newEnd,
+        id,
+      );
+
+      if (newDay === oldDto.dayOfWeek) {
+        await this.validateShrinkingWindow(
+          oldDto.doctorId || null,
+          oldDto.dayOfWeek,
+          oldDto.startTime,
+          oldDto.endTime,
+          newStart,
+          newEnd,
+        );
+      } else {
+        await this.validateShrinkingWindow(
+          oldDto.doctorId || null,
+          oldDto.dayOfWeek,
+          oldDto.startTime,
+          oldDto.endTime,
+        );
+      }
+    }
+
     const oh = await this.repo.update(id, dto);
     return this.toResponseDto(oh);
   }
@@ -66,6 +121,15 @@ export class OfficeHoursService {
   async remove(id: string) {
     const existing = await this.repo.findById(id);
     if (!existing) throw new NotFoundError('Office hours not found');
+
+    const oldDto = this.toResponseDto(existing);
+    await this.validateShrinkingWindow(
+      oldDto.doctorId || null,
+      oldDto.dayOfWeek,
+      oldDto.startTime,
+      oldDto.endTime,
+    );
+
     const oh = await this.repo.delete(id);
     return this.toResponseDto(oh);
   }
@@ -165,5 +229,72 @@ export class OfficeHoursService {
       createdAt: entity.createdAt,
       updatedAt: entity.updatedAt,
     };
+  }
+
+  private async validateNoOverlap(
+    doctorId: string | null,
+    workLocationId: string | null,
+    dayOfWeek: number,
+    startTimeStr: string,
+    endTimeStr: string,
+    excludeId?: string,
+  ) {
+    if (!doctorId) return;
+
+    const existing = await this.repo.findMany({ doctorId });
+    const forDay = existing.filter(
+      (oh) => oh.dayOfWeek === dayOfWeek && oh.id !== excludeId,
+    );
+
+    for (const oh of forDay) {
+      const existingStart = this.toResponseDto(oh).startTime;
+      const existingEnd = this.toResponseDto(oh).endTime;
+
+      if (startTimeStr < existingEnd && endTimeStr > existingStart) {
+        throw new BadRequestError(
+          'Office hours overlap with an existing schedule for this doctor',
+        );
+      }
+    }
+  }
+
+  private async validateShrinkingWindow(
+    doctorId: string | null,
+    dayOfWeek: number,
+    oldStart: string,
+    oldEnd: string,
+    newStart?: string,
+    newEnd?: string,
+  ) {
+    if (!doctorId) return;
+
+    const today = new Date();
+    today.setUTCHours(0, 0, 0, 0);
+
+    const futureSlots = await this.prisma.bookedSlot.findMany({
+      where: {
+        doctorId,
+        isCancelled: false,
+        slotDate: { gte: today },
+      },
+    });
+
+    for (const slot of futureSlots) {
+      if (slot.slotDate.getUTCDay() === dayOfWeek) {
+        const slotTime = slot.timeStart;
+        if (slotTime >= oldStart && slotTime < oldEnd) {
+          if (!newStart || !newEnd) {
+            throw new BadRequestError(
+              `Cannot delete office hours. Future appointment exists at ${slotTime}`,
+            );
+          }
+          if (slotTime < newStart || slotTime >= newEnd) {
+            throw new BadRequestError(
+              `Cannot shrink office hours. Future appointment exists at ${slotTime} which would be orphaned.`,
+            );
+          }
+        }
+      }
+    }
   }
 }

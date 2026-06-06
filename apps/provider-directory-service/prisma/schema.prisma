@@ -54,6 +54,7 @@ model WorkLocation {
   doctorWorkLocations DoctorWorkLocation[]
   officeHours         OfficeHours[]
   schedules           Schedule[]
+  specialShifts       SpecialShift[]
 
   @@index([name], map: "idx_work_locations_name")
   @@map("work_locations")
@@ -88,6 +89,7 @@ model Doctor {
   doctorWorkLocations DoctorWorkLocation[]
   officeHours         OfficeHours[]
   schedules           Schedule[]
+  specialShifts       SpecialShift[]
 
   @@map("doctors")
 }
@@ -154,4 +156,70 @@ model OfficeHours {
   @@index([workLocationId, dayOfWeek], map: "idx_office_hours_location_day")
   @@index([doctorId, workLocationId, dayOfWeek], map: "idx_office_hours_doctor_location_day")
   @@map("office_hours")
+}
+
+// Async-replicated snapshot from booking-service via RabbitMQ events
+// Used by slot engine to avoid cross-service HTTP calls at query time
+model BookedSlot {
+  id            String   @id @default(cuid())
+  appointmentId String   @unique @map("appointment_id")
+  doctorId      String   @map("doctor_id") @db.VarChar(27)
+  slotDate      DateTime @map("slot_date") @db.Date
+  timeStart     String   @map("time_start") @db.VarChar(5)
+  // Tombstone flag: true means cancelled-event arrived before booked-event (EC-3)
+  isCancelled   Boolean  @default(false) @map("is_cancelled")
+  createdAt     DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([doctorId, slotDate], map: "idx_booked_slots_doctor_date")
+  @@map("booked_slots")
+}
+
+// Doctor-level exceptions: days off, holidays, personal blocks
+model DoctorException {
+  id        String   @id @default(cuid())
+  doctorId  String   @map("doctor_id") @db.VarChar(27)
+  date      DateTime @db.Date
+  startTime String?  @map("start_time") @db.VarChar(5)
+  endTime   String?  @map("end_time") @db.VarChar(5)
+  isFullDay Boolean  @default(false) @map("is_full_day")
+  reason    String?
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([doctorId, date], map: "idx_doctor_exceptions_doctor_date")
+  @@map("doctor_exceptions")
+}
+
+// Clinic-level exceptions: global holidays, system-wide closures
+model ClinicException {
+  id             String        @id @default(cuid())
+  workLocationId String?       @map("work_location_id") @db.VarChar(27) // null = Global Holiday
+  date           DateTime      @db.Date
+  startTime      String?       @map("start_time") @db.VarChar(5)
+  endTime        String?       @map("end_time") @db.VarChar(5)
+  isFullDay      Boolean       @default(true) @map("is_full_day")
+  reason         String?
+  createdAt      DateTime      @default(now()) @map("created_at") @db.Timestamptz(6)
+
+  @@index([workLocationId, date], map: "idx_clinic_exceptions_location_date")
+  @@map("clinic_exceptions")
+}
+
+// Special Shifts (Overrides): On-call shifts, Emergency duties, Holiday shifts
+model SpecialShift {
+  id             String        @id @default(cuid())
+  doctorId       String        @map("doctor_id") @db.VarChar(27)
+  workLocationId String?       @map("work_location_id") @db.VarChar(27)
+  date           DateTime      @db.Date
+  startTime      DateTime      @map("start_time") @db.Time(6)
+  endTime        DateTime      @map("end_time") @db.Time(6)
+  reason         String?
+  createdAt      DateTime      @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt      DateTime      @updatedAt @map("updated_at") @db.Timestamptz(6)
+  
+  doctor         Doctor        @relation(fields: [doctorId], references: [id])
+  workLocation   WorkLocation? @relation(fields: [workLocationId], references: [id])
+
+  @@index([doctorId, date], map: "idx_special_shifts_doctor_date")
+  @@index([workLocationId, date], map: "idx_special_shifts_location_date")
+  @@map("special_shifts")
 }

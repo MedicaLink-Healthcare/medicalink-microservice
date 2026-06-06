@@ -1,0 +1,11 @@
+import { Module } from '@nestjs/common';
+import { SpecialShiftsService } from './special-shifts.service';
+import { SpecialShiftsController } from './special-shifts.controller';
+import { PrismaService } from '../../prisma/prisma.service';
+
+@Module({
+  controllers: [SpecialShiftsController],
+  providers: [SpecialShiftsService, PrismaService],
+  exports: [SpecialShiftsService],
+})
+export class SpecialShiftsModule {}

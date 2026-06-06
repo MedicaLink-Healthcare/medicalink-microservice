@@ -8,9 +8,10 @@ import { EmailService } from './services/email.service';
 import { NodemailerProvider } from './services/nodemailer.provider';
 import { TemplateLoader } from './services/template-loader.service';
 import { TemplateRenderer } from './services/template-renderer.service';
+import { RedisModule } from '@app/redis';
 
 @Module({
-  imports: [ConfigModule, PrismaModule],
+  imports: [ConfigModule, PrismaModule, RedisModule],
   providers: [
     EmailConfigService,
     NodemailerProvider,

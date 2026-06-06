@@ -21,6 +21,8 @@ export * from './update-specialty-info-section.dto';
 export * from './update-specialty.dto';
 export * from './update-work-location.dto';
 export * from './work-location-paginated-response.dto';
+export * from './clinic-exception.dto';
+export * from './special-shift.dto';
 export * from './work-location-public-query.dto';
 export * from './work-location-query.dto';
 export * from './work-location-response.dto';

@@ -46,6 +46,8 @@ import {
   StatsController,
   FaqsController,
   TestimonialsController,
+  SpecialShiftsController,
+  ClinicExceptionsController,
 } from './controllers';
 import { HealthController } from './health/health.controller';
 
@@ -89,6 +91,8 @@ import { HealthController } from './health/health.controller';
     StatsController,
     FaqsController,
     TestimonialsController,
+    SpecialShiftsController,
+    ClinicExceptionsController,
   ],
   providers: [
     HealthService,

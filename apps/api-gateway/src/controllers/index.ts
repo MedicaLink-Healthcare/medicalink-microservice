@@ -14,6 +14,8 @@ export * from './questions.controller';
 export * from './reviews.controller';
 export * from './appointments.controller';
 export * from './office-hours.controller';
+export * from './special-shifts.controller';
+export * from './clinic-exceptions.controller';
 export * from './stats.controller';
 export * from './faqs.controller';
 export * from './testimonials.controller';

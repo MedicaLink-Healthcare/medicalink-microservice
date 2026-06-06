@@ -1,4 +1,4 @@
-import { IsCuid } from '@app/contracts/decorators';
+import { IsCuid, IsNoOverlap } from '@app/contracts/decorators';
 import {
   IsOptional,
   IsBoolean,
@@ -23,6 +23,7 @@ export class CreateOfficeHoursDto {
   dayOfWeek: number;
 
   @IsString({ message: 'startTime must be a time string' })
+  @IsNoOverlap('endTime')
   startTime: string;
 
   @IsString({ message: 'endTime must be a time string' })

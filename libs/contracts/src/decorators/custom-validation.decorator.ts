@@ -24,3 +24,39 @@ export function IsCuid(validationOptions?: ValidationOptions) {
     });
   };
 }
+
+/**
+ * Class-validator decorator to ensure startTime is strictly before endTime.
+ */
+export function IsNoOverlap(
+  property: string,
+  validationOptions?: ValidationOptions,
+) {
+  return function (object: object, propertyName: string) {
+    registerDecorator({
+      name: 'IsNoOverlap',
+      target: object.constructor,
+      propertyName,
+      constraints: [property],
+      options: validationOptions,
+      validator: {
+        validate(value: unknown, args: any): boolean {
+          const [relatedPropertyName] = args.constraints;
+          const relatedValue = args.object[relatedPropertyName];
+          // Skip validation if related value is not provided (e.g. partial updates)
+          if (relatedValue === undefined || relatedValue === null) {
+            return true;
+          }
+          if (typeof value === 'string' && typeof relatedValue === 'string') {
+            return value < relatedValue; // simple string comparison for "HH:mm" works perfectly
+          }
+          return false;
+        },
+        defaultMessage(args: any): string {
+          const [relatedPropertyName] = args.constraints;
+          return `${propertyName} must be strictly before ${relatedPropertyName}`;
+        },
+      },
+    });
+  };
+}
