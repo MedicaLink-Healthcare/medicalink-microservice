@@ -5,7 +5,7 @@ import {
   UpdateClinicExceptionDto,
   ClinicExceptionQueryDto,
 } from '@app/contracts';
-import { dayjs, toUtcDate } from '@app/commons/utils';
+import { toUtcDate } from '@app/commons/utils';
 
 @Injectable()
 export class ClinicExceptionsService {
@@ -48,7 +48,7 @@ export class ClinicExceptionsService {
   }
 
   async update(id: string, data: UpdateClinicExceptionDto) {
-    const exception = await this.findOne(id);
+    await this.findOne(id);
 
     const updateData: any = {};
     if (data.workLocationId !== undefined)
