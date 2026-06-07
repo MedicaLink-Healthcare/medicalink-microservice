@@ -19,36 +19,34 @@ fi
 echo "✅ Đã tìm thấy các file dump."
 
 echo "------------------------------------------------------------"
-echo "🛠️ 1. Xóa Database cũ và tạo lại..."
+echo "🛠️ 1 & 2 & 3. Xóa, Copy và Restore Database (Từng Service)..."
 echo "------------------------------------------------------------"
-# Remove -it flag as this is a non-interactive script
-docker exec medicalink-postgres psql -U postgres -c "REVOKE CONNECT ON DATABASE medicalink_db FROM public;" || true
-docker exec medicalink-postgres psql -U postgres -c "SELECT pg_terminate_backend(pg_stat_activity.pid) FROM pg_stat_activity WHERE pg_stat_activity.datname = 'medicalink_db' AND pid <> pg_backend_pid();" || true
-
-docker exec medicalink-postgres psql -U postgres -c "DROP DATABASE IF EXISTS medicalink_db;"
-docker exec medicalink-postgres psql -U postgres -c "CREATE DATABASE medicalink_db;"
-
-echo "------------------------------------------------------------"
-echo "📦 2. Copy file dump vào Container PostgreSQL Server..."
-echo "------------------------------------------------------------"
-for dump_file in medicalink_*.dump; do
-    echo "   - Copying $dump_file..."
-    docker cp "$dump_file" "medicalink-postgres:/$dump_file"
-done
-
-echo "------------------------------------------------------------"
-echo "♻️ 3. Thực hiện Restore dữ liệu (Có thể mất vài phút)..."
-echo "------------------------------------------------------------"
-# Restore theo thứ tự ưu tiên (nếu có)
 declare -a services=("accounts" "booking" "content" "notification" "provider")
 
 for service in "${services[@]}"; do
-    dump_name="medicalink_${service}.dump"
+    db_name="medicalink_${service}"
+    dump_name="${db_name}.dump"
+    
     if [ -f "$dump_name" ]; then
+        echo "   ========================================="
+        echo "   🟢 Đang xử lý database: $db_name"
+        echo "   ========================================="
+        
+        # Ngắt kết nối và xóa DB cũ
+        docker exec medicalink-postgres psql -U postgres -c "REVOKE CONNECT ON DATABASE $db_name FROM public;" || true
+        docker exec medicalink-postgres psql -U postgres -c "SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = '$db_name' AND pid <> pg_backend_pid();" || true
+        docker exec medicalink-postgres psql -U postgres -c "DROP DATABASE IF EXISTS $db_name;"
+        docker exec medicalink-postgres psql -U postgres -c "CREATE DATABASE $db_name;"
+        
+        # Copy file dump vào container
+        echo "   - Copying $dump_name vào container Postgres..."
+        docker cp "$dump_name" "medicalink-postgres:/$dump_name"
+        
+        # Restore dữ liệu
         echo "   - Restoring $dump_name..."
-        docker exec -t medicalink-postgres pg_restore -U postgres -d medicalink_db "/$dump_name" || true
+        docker exec -t medicalink-postgres pg_restore -U postgres -d "$db_name" "/$dump_name" || true
     else
-        echo "   ⚠️ Bỏ qua $dump_name vì không tìm thấy file"
+        echo "   ⚠️ Bỏ qua $db_name vì không tìm thấy file $dump_name"
     fi
 done
 
