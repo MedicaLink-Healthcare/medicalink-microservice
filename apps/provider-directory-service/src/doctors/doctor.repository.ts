@@ -117,7 +117,6 @@ export class DoctorRepository {
         appointmentDuration: true,
         avatarUrl: true,
         isActive: true,
-        degree: true,
         position: true,
         createdAt: true,
         updatedAt: true,

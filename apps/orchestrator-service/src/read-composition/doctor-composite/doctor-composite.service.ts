@@ -327,7 +327,6 @@ export class DoctorCompositeService extends BaseCompositeService<
       // Profile data
       profileId: profile.id,
       isActive: profile.isActive,
-      degree: profile.degree,
       position: profile.position,
       introduction: profile.introduction,
       education: profile.education,

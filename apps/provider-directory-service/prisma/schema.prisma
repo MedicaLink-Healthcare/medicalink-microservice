@@ -64,7 +64,6 @@ model Doctor {
   id                  String               @id @default(cuid())
   staffAccountId      String               @unique @map("staff_account_id")
   isActive            Boolean              @default(true) @map("is_active")
-  degree              String?              @db.VarChar(100)
   position            String[]
   introduction        String?
   education           String[]

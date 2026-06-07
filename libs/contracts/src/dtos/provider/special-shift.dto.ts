@@ -17,7 +17,7 @@ export class CreateSpecialShiftDto {
 
   @IsNotEmpty()
   @IsDateString()
-  date: string;
+  effectiveDate: string;
 
   @IsNotEmpty()
   @IsString()
@@ -45,7 +45,7 @@ export class UpdateSpecialShiftDto {
 
   @IsOptional()
   @IsDateString()
-  date?: string;
+  effectiveDate?: string;
 
   @IsOptional()
   @IsString()
@@ -77,14 +77,14 @@ export class SpecialShiftQueryDto {
 
   @IsOptional()
   @IsDateString()
-  date?: string;
+  effectiveDate?: string;
 }
 
 export class SpecialShiftResponseDto {
   id: string;
   doctorId: string;
   workLocationId: string | null;
-  date: Date;
+  effectiveDate: Date;
   startTime: string;
   endTime: string;
   reason: string | null;

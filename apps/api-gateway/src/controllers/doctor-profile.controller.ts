@@ -43,7 +43,6 @@ type DoctorPublicListItem = Pick<
   | 'email'
   | 'phone'
   | 'isMale'
-  | 'degree'
   | 'position'
   | 'introduction'
   | 'avatarUrl'
@@ -282,7 +281,6 @@ export class DoctorProfileController {
       email: doctor.email,
       phone: doctor.phone,
       isMale: doctor.isMale,
-      degree: doctor.degree,
       position: doctor.position,
       introduction: doctor.introduction,
       avatarUrl: doctor.avatarUrl,

@@ -200,7 +200,6 @@ async function seedDoctors() {
       where: { staffAccountId: account.id },
       update: {
         fullName: item.full_name || item.name,
-        degree: item.degree || item.title,
         position: item.position ? [item.position] : [],
         introduction: item.introduction || item.biography || item.description,
         experience: item.experience || item.workExperience || [],
@@ -220,7 +219,6 @@ async function seedDoctors() {
         id: item.id, // reuse id from file
         staffAccountId: account.id,
         fullName: item.full_name || item.name,
-        degree: item.degree || item.title,
         position: item.position ? [item.position] : [],
         introduction: item.introduction || item.biography || item.description,
         experience: item.experience || item.workExperience || [],

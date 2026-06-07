@@ -28,7 +28,12 @@ export class ClinicExceptionsService {
 
   async findAll(query: ClinicExceptionQueryDto) {
     const where: any = {};
-    if (query.workLocationId) where.workLocationId = query.workLocationId;
+    if (query.workLocationId) {
+      where.OR = [
+        { workLocationId: query.workLocationId },
+        { workLocationId: null },
+      ];
+    }
     if (query.date) where.date = toUtcDate(query.date);
 
     return this.prisma.clinicException.findMany({ where });

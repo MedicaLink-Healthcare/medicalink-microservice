@@ -7,7 +7,6 @@ export interface DoctorProfileData {
   id: string;
   staffAccountId: string;
   isActive: boolean;
-  degree?: string;
   position: string[];
   introduction?: string;
   memberships: string[];
@@ -48,7 +47,6 @@ export interface DoctorCompositeData {
   // Profile data
   profileId: string; // Doctor.id from provider service
   isActive: boolean;
-  degree?: string;
   position: string[];
   introduction?: string;
   memberships: string[];

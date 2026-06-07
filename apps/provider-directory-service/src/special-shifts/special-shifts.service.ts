@@ -9,14 +9,14 @@ import {
   UpdateSpecialShiftDto,
   SpecialShiftQueryDto,
 } from '@app/contracts';
-import { dayjs, toUtcDate } from '@app/commons/utils';
+import { toUtcDate } from '@app/commons/utils';
 
 @Injectable()
 export class SpecialShiftsService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(data: CreateSpecialShiftDto) {
-    const targetDate = toUtcDate(data.date);
+    const targetDate = toUtcDate(data.effectiveDate);
     const reqStart = new Date(`1970-01-01T${data.startTime}:00Z`);
     const reqEnd = new Date(`1970-01-01T${data.endTime}:00Z`);
 
@@ -40,7 +40,7 @@ export class SpecialShiftsService {
       );
     }
 
-    return this.prisma.specialShift.create({
+    const created = await this.prisma.specialShift.create({
       data: {
         doctorId: data.doctorId,
         workLocationId: data.workLocationId,
@@ -50,38 +50,42 @@ export class SpecialShiftsService {
         reason: data.reason,
       },
     });
+    return this.mapToResponse(created);
   }
 
   async findAll(query: SpecialShiftQueryDto) {
     const where: any = {};
     if (query.doctorId) where.doctorId = query.doctorId;
     if (query.workLocationId) where.workLocationId = query.workLocationId;
-    if (query.date) where.date = toUtcDate(query.date);
+    if (query.effectiveDate) where.date = toUtcDate(query.effectiveDate);
 
-    return this.prisma.specialShift.findMany({ where });
+    const shifts = await this.prisma.specialShift.findMany({ where });
+    return shifts.map((s) => this.mapToResponse(s));
   }
 
   async findOne(id: string) {
     const shift = await this.prisma.specialShift.findUnique({ where: { id } });
     if (!shift) throw new NotFoundException('Special shift not found');
-    return shift;
+    return this.mapToResponse(shift);
   }
 
   async update(id: string, data: UpdateSpecialShiftDto) {
-    const shift = await this.findOne(id);
+    const shift = await this.prisma.specialShift.findUnique({ where: { id } });
+    if (!shift) throw new NotFoundException('Special shift not found');
 
     // Check shrinking window
-    if (data.startTime || data.endTime || data.date) {
+    if (data.startTime || data.endTime || data.effectiveDate) {
       await this.validateShrinkingWindow(
         shift.doctorId,
-        toUtcDate(data.date || String(shift.date)),
+        toUtcDate(data.effectiveDate || String(shift.date)),
       );
     }
 
     const updateData: any = {};
     if (data.workLocationId !== undefined)
       updateData.workLocationId = data.workLocationId;
-    if (data.date !== undefined) updateData.date = toUtcDate(data.date);
+    if (data.effectiveDate !== undefined)
+      updateData.date = toUtcDate(data.effectiveDate);
     if (data.startTime !== undefined)
       updateData.startTime = new Date(`1970-01-01T${data.startTime}:00Z`);
     if (data.endTime !== undefined)
@@ -115,16 +119,26 @@ export class SpecialShiftsService {
       }
     }
 
-    return this.prisma.specialShift.update({
+    const updated = await this.prisma.specialShift.update({
       where: { id },
       data: updateData,
     });
+    return this.mapToResponse(updated);
   }
 
   async remove(id: string) {
-    const shift = await this.findOne(id);
+    const shift = await this.prisma.specialShift.findUnique({ where: { id } });
+    if (!shift) throw new NotFoundException('Special shift not found');
     await this.validateShrinkingWindow(shift.doctorId, shift.date);
-    return this.prisma.specialShift.delete({ where: { id } });
+    const deleted = await this.prisma.specialShift.delete({ where: { id } });
+    return this.mapToResponse(deleted);
+  }
+
+  private mapToResponse(shift: any) {
+    return {
+      ...shift,
+      effectiveDate: shift.date,
+    };
   }
 
   private async validateShrinkingWindow(doctorId: string, date: Date) {
@@ -139,9 +153,11 @@ export class SpecialShiftsService {
     });
 
     if (booked) {
-      throw new BadRequestException(
-        'Cannot modify special shift: there are already booked appointments on this date. Please cancel them first.',
-      );
+      throw new BadRequestException({
+        message:
+          'Cannot modify special shift: there are already booked appointments on this date. Please cancel them first.',
+        code: 'SHRINKING_WINDOW',
+      });
     }
   }
 }

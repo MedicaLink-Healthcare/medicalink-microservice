@@ -94,7 +94,6 @@ export class AppointmentsContextService {
       staffAccountId: doctor.staffAccountId,
       displayName,
       avatarUrl: doctor.avatarUrl,
-      degree: doctor.degree,
       position: doctor.position,
       specialties: doctor.specialties,
     };

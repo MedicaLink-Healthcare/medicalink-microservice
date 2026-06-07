@@ -21,30 +21,31 @@ export class OfficeHoursService {
 
   async findAll(query: OfficeHoursQueryDto) {
     const { doctorId, workLocationId } = query;
-    const result = {
-      global: [] as OfficeHoursResponseDto[],
-      workLocation: [] as OfficeHoursResponseDto[],
-      doctor: [] as OfficeHoursResponseDto[],
-      doctorInLocation: [] as OfficeHoursResponseDto[],
-    };
 
-    if (doctorId && workLocationId) {
-      result.doctorInLocation = await this.findWithDoctorAndLocation({
-        doctorId,
-        workLocationId,
-      });
-    }
+    let globalHours: OfficeHoursResponseDto[] = [];
+    let doctorSpecific: OfficeHoursResponseDto[] = [];
+
+    const globalEntities = await this.repo.findMany({ isGlobal: true });
+    globalHours = globalEntities
+      .filter(
+        (oh) =>
+          !workLocationId ||
+          !oh.workLocationId ||
+          oh.workLocationId === workLocationId,
+      )
+      .map((oh) => this.toResponseDto(oh));
 
     if (doctorId) {
-      result.doctor = await this.findWithDoctor(doctorId);
+      const docEntities = await this.repo.findMany({ doctorId });
+      doctorSpecific = docEntities
+        .filter((oh) => !workLocationId || oh.workLocationId === workLocationId)
+        .map((oh) => this.toResponseDto(oh));
     }
 
-    if (workLocationId) {
-      result.workLocation = await this.findWithLocation(workLocationId);
-    }
-
-    result.global = await this.findGlobal();
-    return result;
+    return {
+      global: globalHours,
+      doctorSpecific: doctorSpecific,
+    };
   }
 
   async findOne(id: string) {
@@ -286,11 +287,13 @@ export class OfficeHoursService {
           if (!newStart || !newEnd) {
             throw new BadRequestError(
               `Cannot delete office hours. Future appointment exists at ${slotTime}`,
+              { details: { code: 'SHRINKING_WINDOW' } },
             );
           }
           if (slotTime < newStart || slotTime >= newEnd) {
             throw new BadRequestError(
               `Cannot shrink office hours. Future appointment exists at ${slotTime} which would be orphaned.`,
+              { details: { code: 'SHRINKING_WINDOW' } },
             );
           }
         }
