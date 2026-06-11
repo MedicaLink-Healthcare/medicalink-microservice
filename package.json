@@ -120,8 +120,8 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "eslint --fix",
-      "prettier --write"
+      "pnpm eslint --fix",
+      "pnpm prettier --write"
     ]
   },
   "jest": {

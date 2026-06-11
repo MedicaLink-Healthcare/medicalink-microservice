@@ -112,12 +112,19 @@ export class DoctorCompositeService extends BaseCompositeService<
     );
 
     // 2. Fetch account using staffAccountId from profile
-    const account = await this.clientHelper.send<IStaffAccount>(
-      this.accountsClient,
-      DOCTOR_ACCOUNTS_PATTERNS.FIND_ONE,
-      profile.staffAccountId,
-      { timeoutMs: 8000 },
-    );
+    let account: IStaffAccount | null = null;
+    try {
+      account = await this.clientHelper.send<IStaffAccount>(
+        this.accountsClient,
+        DOCTOR_ACCOUNTS_PATTERNS.FIND_ONE,
+        profile.staffAccountId,
+        { timeoutMs: 8000 },
+      );
+    } catch (err) {
+      this.logger.warn(
+        `Staff account ${profile.staffAccountId} not found for doctor ${doctorId}. Proceeding with profile data only.`,
+      );
+    }
 
     const compositeData = this.mergeData(account, profile);
 
@@ -264,7 +271,6 @@ export class DoctorCompositeService extends BaseCompositeService<
       },
       (profile: DoctorProfileData, accounts: IStaffAccount[]) => {
         const account = accounts.find((a) => a.id === profile.staffAccountId);
-        if (!account) return null;
         return this.sanitizePublicComposite(this.mergeData(account, profile));
       },
     );
@@ -311,17 +317,17 @@ export class DoctorCompositeService extends BaseCompositeService<
    * Merge account and profile data into composite
    */
   private mergeData(
-    account: IStaffAccount,
+    account: IStaffAccount | null | undefined,
     profile: DoctorProfileData,
   ): DoctorCompositeData {
     return {
-      // Account data
-      id: account.id,
-      fullName: account.fullName,
-      email: account.email,
-      phone: account.phone as string | null,
-      isMale: account.isMale,
-      dateOfBirth: account.dateOfBirth ? new Date(account.dateOfBirth) : null,
+      // Account data (with fallbacks if account is missing)
+      id: account?.id || profile.staffAccountId,
+      fullName: account?.fullName || profile.fullName || '',
+      email: account?.email || '',
+      phone: (account?.phone as string | null) || '',
+      isMale: account?.isMale ?? profile.isMale ?? true,
+      dateOfBirth: account?.dateOfBirth ? new Date(account.dateOfBirth) : null,
       role: 'DOCTOR',
 
       // Profile data
@@ -331,7 +337,7 @@ export class DoctorCompositeService extends BaseCompositeService<
       introduction: profile.introduction,
       education: profile.education,
       experience: profile.experience,
-      avatarUrl: profile.avatarUrl,
+      avatarUrl: profile.avatarUrl || account?.avatarUrl,
       portrait: profile.portrait,
       ratings: profile.ratings,
       serviceCost: profile.serviceCost,
@@ -348,8 +354,8 @@ export class DoctorCompositeService extends BaseCompositeService<
       workLocations: profile.workLocations,
 
       // Timestamps
-      createdAt: account.createdAt,
-      updatedAt: account.updatedAt,
+      createdAt: account?.createdAt || profile.createdAt,
+      updatedAt: account?.updatedAt || profile.updatedAt,
       profileCreatedAt: profile.createdAt,
       profileUpdatedAt: profile.updatedAt,
     };
