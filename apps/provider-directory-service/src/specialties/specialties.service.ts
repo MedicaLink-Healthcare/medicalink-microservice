@@ -250,6 +250,11 @@ export class SpecialtiesService {
       slug: specialty.slug,
       description: specialty.description,
       iconUrl: specialty.iconUrl,
+      aliases: specialty.aliases || [],
+      commonSymptoms: specialty.commonSymptoms || [],
+      commonConditions: specialty.commonConditions || [],
+      keywords: specialty.keywords || [],
+      expertise: specialty.expertise || [],
     };
   }
 
