@@ -5,6 +5,8 @@ with NestJS, Prisma, PostgreSQL, RabbitMQ, and Redis.
 
 ## Architecture Overview
 
+> 🎓 **Tài liệu phục vụ Đồ án tốt nghiệp / Báo cáo**: Vui lòng tham khảo file [THESIS_REPORT_MICROSERVICES.md](./docs/THESIS_REPORT_MICROSERVICES.md) để đọc chi tiết về các quyết định thiết kế, Saga Pattern, và Database Schema Separation dưới góc độ học thuật.
+
 MedicaLink implements a distributed microservices architecture with 7
 independent services communicating via RabbitMQ message broker. The system uses
 a single PostgreSQL database with schema separation to reduce operational costs

@@ -105,11 +105,15 @@ năng cụ thể:
 **Endpoints chính:**
 
 - `/api/auth/*` - Xác thực và quản lý phiên
-- `/api/doctors/*` - Thông tin bác sĩ
-- `/api/appointments/*` - Đặt lịch và quản lý cuộc hẹn
-- `/api/patients/*` - Quản lý bệnh nhân
-- `/api/blogs/*`, `/api/questions/*` - Nội dung y tế
-- `/api/specialties/*`, `/api/work-locations/*` - Danh mục
+- `/api/doctors/*`, `/api/doctor-profiles/*` - Quản lý thông tin và hồ sơ bác sĩ
+- `/api/appointments/*`, `/api/patients/*` - Đặt lịch, quản lý cuộc hẹn và bệnh nhân
+- `/api/office-hours/*`, `/api/special-shifts/*`, `/api/clinic-exceptions/*` - Quản lý lịch làm việc, ca khám đặc biệt và ngày nghỉ
+- `/api/blogs/*`, `/api/questions/*`, `/api/faqs/*`, `/api/reviews/*`, `/api/testimonials/*` - Quản lý nội dung y tế và tương tác
+- `/api/specialties/*`, `/api/work-locations/*` - Quản lý danh mục cơ sở vật chất và chuyên môn
+- `/api/staffs/*`, `/api/permissions/*` - Quản lý nhân viên nội bộ và phân quyền (RBAC)
+- `/api/stats/*` - Báo cáo, thống kê Dashboard
+- `/api/ai/*`, `/api/doctor-recommendations/*` - Tích hợp AI (RAG) phân tích triệu chứng và gợi ý bác sĩ
+- `/api/utilities/*` - Các tiện ích hệ thống (Upload tài nguyên,...)
 
 ### 2.2. Accounts Service
 
@@ -174,13 +178,9 @@ năng cụ thể:
   - Gán bác sĩ vào các địa điểm (many-to-many)
 
 - **Schedule Management:**
-  - **Office Hours:** Lịch làm việc cố định theo tuần
-    - Thiết lập giờ làm việc cho từng ngày (dayOfWeek, startTime, endTime)
-    - Global office hours cho tất cả bác sĩ tại location
-    - Override office hours cho bác sĩ cụ thể
-  - **Schedules:** Lịch làm việc cụ thể (theo ngày)
-    - Generate time slots available cho booking
-    - Xử lý exceptions và special schedules
+  - **Office Hours:** Lịch làm việc cố định theo tuần (global hoặc override riêng cho từng bác sĩ).
+  - **Special Shifts:** Ca khám tăng cường, lịch làm thêm ngoài giờ hành chính.
+  - **Clinic Exceptions:** Quản lý ngày nghỉ lễ, bác sĩ bận đột xuất, đóng/khóa các slot khám tương ứng.
 
 **Database Schema:**
 
@@ -191,8 +191,8 @@ năng cụ thể:
 - `doctor_specialties` - Liên kết bác sĩ - chuyên khoa
 - `doctor_work_locations` - Liên kết bác sĩ - địa điểm
 - `office_hours` - Lịch làm việc cố định
-- `schedules` - Lịch làm việc cụ thể (chưa thấy trong schema, có thể được quản
-  lý khác)
+- `special_shifts` - Ca làm việc đặc biệt
+- `clinic_exceptions` - Ngày nghỉ/Ngoại lệ
 
 ### 2.4. Booking Service
 
@@ -260,13 +260,13 @@ năng cụ thể:
   - View count tracking
   - Liên kết với specialty
 
-- **Review System:**
-  - Bệnh nhân đánh giá bác sĩ
-  - Rating (1-5 stars)
-  - Review title và body
-  - Anonymous hoặc có tên
-  - Public/private toggle
-  - Tracking theo doctorId
+- **Review & Testimonial System:**
+  - **Reviews**: Bệnh nhân đánh giá bác sĩ sau khám (Rating 1-5 sao, nội dung). Cho phép ẩn danh, quản lý public/private toggle.
+  - **Testimonials**: Những đánh giá, lời chứng thực nổi bật được Admin chọn lọc để hiển thị trên Landing Page.
+
+- **FAQ System:**
+  - Quản lý các câu hỏi thường gặp (FAQs) cho người dùng mới.
+  - Phân loại FAQs theo danh mục y tế.
 
 - **Asset Management:**
   - Lưu trữ metadata của assets (images, files)
@@ -280,6 +280,8 @@ năng cụ thể:
 - `questions` - Câu hỏi
 - `answers` - Câu trả lời
 - `reviews` - Đánh giá bác sĩ
+- `testimonials` - Lời chứng thực khách hàng
+- `faqs` - Câu hỏi thường gặp
 - `assets` - Tài nguyên đa phương tiện
 
 ### 2.6. Notification Service
@@ -344,6 +346,15 @@ năng cụ thể:
     specialty info
   - **Schedule Slots Composite:** Office hours + existing appointments →
     available slots
+
+- **AI RAG Integration & Recommendation:**
+  - Tiếp nhận truy vấn tìm kiếm bằng ngôn ngữ tự nhiên từ người dùng.
+  - Phân phối yêu cầu cho AI Worker để thực hiện CQU (Clinical Query Understanding) và truy xuất Vector trên Qdrant.
+  - Tính toán Multi-Factor Reranking (Điểm AI + Kinh nghiệm + Đánh giá) để trả về danh sách bác sĩ tối ưu.
+
+- **Dashboard Statistics (Stats):**
+  - Cung cấp API tổng hợp báo cáo và thống kê (tổng lịch hẹn, doanh thu, review...).
+  - Aggregation dữ liệu từ nhiều Microservices khác nhau về chung 1 màn hình Dashboard.
 
 - **Event Handling:**
   - Lắng nghe domain events từ các services
@@ -906,8 +917,7 @@ và lịch làm việc.
   sections, gán bác sĩ vào chuyên khoa
 - **Work Location Management:** CRUD địa điểm khám, thông tin địa chỉ, timezone,
   Google Maps URL
-- **Schedule Management:** Office hours theo tuần (global/override), tạo time
-  slots khả dụng cho booking
+- **Schedule Management:** Quản lý Office Hours, Special Shifts (Lịch tăng cường), và Clinic Exceptions (Ngoại lệ/Ngày nghỉ). Cung cấp API tạo time slots khả dụng cho booking.
 
 **Booking Service** - Quản lý cuộc hẹn và thông tin bệnh nhân.
 
@@ -924,9 +934,16 @@ và lịch làm việc.
   ARCHIVED), view count
 - **Q&A System:** Bệnh nhân đặt câu hỏi, bác sĩ trả lời, trạng thái (PENDING →
   ANSWERED → CLOSED)
-- **Review System:** Đánh giá bác sĩ với rating 1-5 sao, anonymous/public toggle
+- **Review & Testimonials:** Đánh giá bác sĩ với rating 1-5 sao và hiển thị những lời chứng thực nổi bật.
+- **FAQs:** Quản lý danh sách câu hỏi thường gặp.
 - **Asset Management:** Lưu trữ metadata assets (ảnh, file), polymorphic
   association với Cloudinary
+
+**Orchestrator Service** - Điều phối giao dịch và tổng hợp dữ liệu.
+- **Saga Pattern:** Điều khiển các phân tán transaction (tạo bác sĩ, đặt khám) với cơ chế Rollback an toàn.
+- **CQRS & Composition:** Kết nối dữ liệu đa dịch vụ thành một response (Doctor Composite, Appointment Composite).
+- **AI Recommendation:** Chuyển tiếp truy vấn và phối hợp cùng AI Worker (RAG) để gợi ý bác sĩ, tái xếp hạng kết quả.
+- **Stats & Dashboard:** Tổng hợp báo cáo thống kê đa chiều từ các services khác.
 
 ### 3.5. Bảo mật và Xác thực
 
