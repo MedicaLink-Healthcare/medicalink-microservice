@@ -337,7 +337,7 @@ export class DoctorCompositeService extends BaseCompositeService<
       introduction: profile.introduction,
       education: profile.education,
       experience: profile.experience,
-      avatarUrl: profile.avatarUrl || account?.avatarUrl,
+      avatarUrl: profile.avatarUrl,
       portrait: profile.portrait,
       ratings: profile.ratings,
       serviceCost: profile.serviceCost,
