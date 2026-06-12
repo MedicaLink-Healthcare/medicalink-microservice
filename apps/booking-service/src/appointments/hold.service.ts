@@ -100,8 +100,9 @@ export class HoldService {
       const [nextCursor, keys] = await this.redis.scan(cursor, pattern, 100);
       for (const key of keys) {
         // Key format: hold:{doctorId}:{date}:{timeStart}
+        // Since timeStart has a colon (e.g. 09:30), it splits into two parts
         const parts = key.split(':');
-        const timeStart = parts[parts.length - 1];
+        const timeStart = `${parts[parts.length - 2]}:${parts[parts.length - 1]}`;
         if (timeStart) heldTimeStarts.push(timeStart);
       }
       cursor = nextCursor;

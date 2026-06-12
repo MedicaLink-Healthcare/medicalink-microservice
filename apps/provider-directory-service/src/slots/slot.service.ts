@@ -98,9 +98,12 @@ export class SlotService {
   ): Promise<TimeSlot[]> {
     const targetDate = dayjs.utc(dateStr).startOf('day');
     const dayOfWeek = targetDate.day(); // 0 (Sun) to 6 (Sat)
-    const nowUtc = dayjs.utc();
+    const localNow = dayjs().tz('Asia/Ho_Chi_Minh');
 
-    if (!allowPast && targetDate.isBefore(nowUtc.startOf('day'))) {
+    if (
+      !allowPast &&
+      targetDate.format('YYYY-MM-DD') < localNow.format('YYYY-MM-DD')
+    ) {
       return [];
     }
 
@@ -230,8 +233,9 @@ export class SlotService {
     );
 
     // Current time in minutes for past filtering
-    const isToday = targetDate.isSame(nowUtc.startOf('day'));
-    const currentMin = nowUtc.hour() * 60 + nowUtc.minute();
+    const isToday =
+      targetDate.format('YYYY-MM-DD') === localNow.format('YYYY-MM-DD');
+    const currentMin = localNow.hour() * 60 + localNow.minute();
 
     // 3. Extract Valid Slots
     const availableSlots: TimeSlot[] = [];
@@ -288,7 +292,9 @@ export class SlotService {
       const val = heldValues[i];
       if (val) {
         const parts = key.split(':');
-        const timeStart = parts[parts.length - 1];
+        // Key format: hold:{doctorId}:{date}:{timeStart}
+        // Since timeStart has a colon (e.g. 09:30), it splits into two parts
+        const timeStart = `${parts[parts.length - 2]}:${parts[parts.length - 1]}`;
         heldMap.set(timeStart, val);
       }
     }
