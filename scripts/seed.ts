@@ -7,11 +7,11 @@ import * as bcrypt from 'bcrypt';
 import { PostStatus } from '../apps/content-service/prisma/generated/client';
 
 const ACCOUNTS_DB_URL =
-  'postgresql://postgres:postgres@localhost:5432/medicalink_accounts?connection_limit=5&pool_timeout=20';
+  'postgresql://postgres:postgres@127.0.0.1:5432/medicalink_accounts?connection_limit=5&pool_timeout=20';
 const PROVIDER_DB_URL =
-  'postgresql://postgres:postgres@localhost:5432/medicalink_provider?connection_limit=5&pool_timeout=20';
+  'postgresql://postgres:postgres@127.0.0.1:5432/medicalink_provider?connection_limit=5&pool_timeout=20';
 const CONTENT_DB_URL =
-  'postgresql://postgres:postgres@localhost:5432/medicalink_content?connection_limit=5&pool_timeout=20';
+  'postgresql://postgres:postgres@127.0.0.1:5432/medicalink_content?connection_limit=5&pool_timeout=20';
 
 const accountsPrisma = new AccountsClient({
   datasources: { db: { url: ACCOUNTS_DB_URL } },
@@ -151,6 +151,11 @@ async function seedDoctors() {
 
   // Cleanup old doctor accounts
   console.log('[SEED] Cleaning up old doctor accounts...');
+
+  // Clear old reviews and analyses to avoid 404s on UI
+  await contentPrisma.reviewAnalysis.deleteMany({});
+  await contentPrisma.review.deleteMany({});
+
   await providerPrisma.officeHours.deleteMany({});
   await providerPrisma.doctorWorkLocation.deleteMany({});
   await providerPrisma.doctor.deleteMany({});
@@ -164,6 +169,22 @@ async function seedDoctors() {
     console.warn(
       '[WARN] No WorkLocation found in db. Skipping WorkLocation and OfficeHours seeding.',
     );
+  } else {
+    // Seed Global Office Hours for this location (08:00 - 17:00, Mon-Fri)
+    console.log('[SEED] Seeding Global Office Hours...');
+    for (let day = 1; day <= 5; day++) {
+      const startTime = new Date('1970-01-01T08:00:00.000Z');
+      const endTime = new Date('1970-01-01T17:00:00.000Z');
+      await providerPrisma.officeHours.create({
+        data: {
+          isGlobal: true,
+          workLocationId: workLocation.id,
+          dayOfWeek: day,
+          startTime,
+          endTime,
+        },
+      });
+    }
   }
 
   for (const item of data as any[]) {
