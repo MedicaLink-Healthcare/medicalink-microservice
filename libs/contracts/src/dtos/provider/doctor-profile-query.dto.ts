@@ -24,6 +24,14 @@ export class DoctorProfileQueryDto extends PaginationDto {
   @IsBoolean({ message: 'isActive must be a boolean' })
   @Type(() => Boolean)
   isActive?: boolean;
+
+  @IsOptional()
+  @IsString({ message: 'Full name must be a string' })
+  fullName?: string;
+
+  @IsOptional()
+  @IsString({ message: 'Name must be a string' })
+  name?: string;
 }
 
 export class GetDoctorsByAccountIdsDto {
