@@ -143,59 +143,36 @@ export class AppointmentsService {
     serviceDate: string;
     timeStart: string;
     timeEnd: string;
+    sessionId?: string;
     isTempHold?: boolean;
     expiresAt?: Date;
-  }): Promise<Event> {
+  }): Promise<any> {
     const holdAcquired = await this.holdService.holdSlot(
       body.doctorId,
       body.serviceDate,
       body.timeStart,
-      Date.now().toString(),
+      body.sessionId || 'anonymous',
     );
     if (!holdAcquired) {
       throw new BadRequestError('Selected time is not available');
     }
 
-    try {
-      await this.ensureAvailableSlot({
-        doctorId: body.doctorId,
-        locationId: body.locationId,
-        serviceDate: body.serviceDate,
-        timeStart: body.timeStart,
-        timeEnd: body.timeEnd,
-        allowPast: false,
-      });
+    return { success: true };
+  }
 
-      const serviceDate = toUtcDate(body.serviceDate);
-      const timeStart = combineDateWithTimeUtc(
-        body.serviceDate,
-        body.timeStart,
-      );
-      const timeEnd = combineDateWithTimeUtc(body.serviceDate, body.timeEnd);
-      const doctorAccountId = await this.resolveDoctorAccountId(body.doctorId);
-      return await this.prisma.event.create({
-        data: {
-          doctorId: body.doctorId,
-          doctorAccountId,
-          locationId: body.locationId,
-          serviceDate,
-          timeStart,
-          timeEnd,
-          eventType: 'APPOINTMENT',
-          isTempHold: !!body.isTempHold,
-          expiresAt: body.expiresAt,
-          nonBlocking: false,
-        },
-      });
-    } catch (error) {
-      // Release lock if DB save or validation fails
-      await this.holdService.releaseHold(
-        body.doctorId,
-        body.serviceDate,
-        body.timeStart,
-      );
-      throw error;
-    }
+  async releaseTempEvent(body: {
+    doctorId: string;
+    serviceDate: string;
+    timeStart: string;
+    sessionId?: string;
+  }) {
+    await this.holdService.releaseHold(
+      body.doctorId,
+      body.serviceDate,
+      body.timeStart,
+      body.sessionId,
+    );
+    return { success: true };
   }
 
   async checkCompleted(email: string, doctorId: string): Promise<boolean> {
@@ -224,7 +201,12 @@ export class AppointmentsService {
 
   async createAppointmentFromEvent(
     dto: {
-      eventId: string;
+      doctorId: string;
+      locationId: string;
+      serviceDate: string;
+      timeStart: string;
+      timeEnd: string;
+      sessionId?: string;
       patientId: string;
       reason?: string;
       specialtyId: string;
@@ -246,52 +228,44 @@ export class AppointmentsService {
       }
     }
 
+    // Validate slot availability (DB level)
+    await this.ensureAvailableSlot({
+      doctorId: dto.doctorId,
+      locationId: dto.locationId,
+      serviceDate: dto.serviceDate,
+      timeStart: dto.timeStart,
+      timeEnd: dto.timeEnd,
+      allowPast: false,
+    });
+
     const now = new Date();
+    const serviceDateUtc = toUtcDate(dto.serviceDate);
+    const timeStartUtc = combineDateWithTimeUtc(dto.serviceDate, dto.timeStart);
+    const timeEndUtc = combineDateWithTimeUtc(dto.serviceDate, dto.timeEnd);
+    const doctorAccountId = await this.resolveDoctorAccountId(dto.doctorId);
+
     const appointment = await this.prisma.$transaction(async (tx) => {
-      const ev = await tx.event.findUnique({ where: { id: dto.eventId } });
-      if (!ev)
-        throw new BadRequestError(
-          'The reserved time slot has expired or is no longer available. Please select a new slot.',
-        );
-      if (!ev.serviceDate || !ev.timeStart || !ev.timeEnd)
-        throw new BadRequestError('Event missing time info');
-      if (!ev.isTempHold) throw new BadRequestError('Event is not a temp hold');
-      if (ev.expiresAt && ev.expiresAt <= now)
-        throw new BadRequestError(
-          'The reserved time slot has expired or is no longer available. Please select a new slot.',
-        );
-
-      const doctorAccountId =
-        ev.doctorAccountId ??
-        (ev.doctorId ? await this.resolveDoctorAccountId(ev.doctorId) : null);
-
-      await tx.event.update({
-        where: { id: ev.id },
+      const ev = await tx.event.create({
         data: {
-          isTempHold: false,
-          expiresAt: null,
-          nonBlocking: false,
+          doctorId: dto.doctorId,
           doctorAccountId,
+          locationId: dto.locationId,
+          serviceDate: serviceDateUtc,
+          timeStart: timeStartUtc,
+          timeEnd: timeEndUtc,
+          eventType: 'APPOINTMENT',
+          isTempHold: false,
+          nonBlocking: false,
           metadata: {
-            ...(ev.metadata && typeof ev.metadata === 'object'
-              ? (ev.metadata as Record<string, any>)
-              : {}),
             bookingChannel: 'PUBLIC',
             patientId: dto.patientId,
           },
         },
       });
 
-      // EC-1: Use dayjs UTC formatting to avoid timezone date shift
-      const serviceDateStr = ev.serviceDate
-        ? dayjs.utc(ev.serviceDate).format('YYYY-MM-DD')
-        : null;
-      const timeStartStr = ev.timeStart
-        ? dayjs.utc(ev.timeStart).format('HH:mm')
-        : null;
-      const timeEndStr = ev.timeEnd
-        ? dayjs.utc(ev.timeEnd).format('HH:mm')
-        : null;
+      const serviceDateStr = dayjs.utc(ev.serviceDate).format('YYYY-MM-DD');
+      const timeStartStr = dayjs.utc(ev.timeStart).format('HH:mm');
+      const timeEndStr = dayjs.utc(ev.timeEnd).format('HH:mm');
 
       const appt = await tx.appointment.create({
         data: {
@@ -333,18 +307,12 @@ export class AppointmentsService {
     });
 
     // Release Redis hold after successful booking
-    if (
-      appointment.doctorId &&
-      appointment.serviceDate &&
-      appointment.timeStart
-    ) {
-      const dateStr = dayjs.utc(appointment.serviceDate).format('YYYY-MM-DD');
-      await this.holdService.releaseHold(
-        appointment.doctorId,
-        dateStr,
-        appointment.timeStart,
-      );
-    }
+    await this.holdService.releaseHold(
+      dto.doctorId,
+      dto.serviceDate,
+      dto.timeStart,
+      dto.sessionId,
+    );
 
     // Cache idempotency result
     if (dto.idempotencyKey) {

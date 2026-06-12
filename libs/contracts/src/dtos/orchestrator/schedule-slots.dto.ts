@@ -5,9 +5,11 @@ export class ScheduleSlotsQueryDto {
   durationMinutes?: number;
   allowPast?: boolean;
   strict?: boolean;
+  sessionId?: string;
 }
 
 export class ScheduleSlotDto {
   timeStart: string;
   timeEnd: string;
+  status?: string;
 }

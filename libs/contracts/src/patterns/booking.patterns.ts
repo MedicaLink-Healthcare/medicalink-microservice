@@ -25,6 +25,7 @@ export const BOOKING_PATTERNS = {
   LIST_SLOTS_BY_FILTER: 'booking.slot.listByFilter',
   LIST_EVENTS_BY_FILTER: 'booking.event.listByFilter',
   CREATE_EVENT_TEMP: 'booking.event.createTemp',
+  RELEASE_EVENT_TEMP: 'booking.event.releaseTemp',
   CREATE_APPOINTMENT_FROM_EVENT: 'booking.appointment.createFromEvent',
   // Stats
   REVENUE_STATS: 'booking.stats.revenue',

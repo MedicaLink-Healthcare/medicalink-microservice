@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty } from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional } from 'class-validator';
 
 export class EventTempDto {
   @IsString()
@@ -20,4 +20,8 @@ export class EventTempDto {
   @IsString()
   @IsNotEmpty()
   timeEnd: string;
+
+  @IsString()
+  @IsOptional()
+  sessionId?: string;
 }

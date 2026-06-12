@@ -25,7 +25,7 @@ export class ScheduleCompositeService {
    * Defers to provider-directory-service for slot orchestration.
    */
   async listSlots(query: ScheduleSlotsQueryDto): Promise<ScheduleSlotDto[]> {
-    const { doctorId, serviceDate, locationId, allowPast } = query;
+    const { doctorId, serviceDate, locationId, allowPast, sessionId } = query;
 
     if (!doctorId || !serviceDate) {
       throw new BadRequestError('doctorId and serviceDate are required');
@@ -34,7 +34,7 @@ export class ScheduleCompositeService {
     const slots = await this.clientHelper.send<ScheduleSlotDto[]>(
       this.providerClient,
       'provider.slots.list', // using literal string equivalent to PROVIDER_PATTERNS.SLOTS_LIST to avoid circular dependency
-      { doctorId, serviceDate, locationId, allowPast },
+      { doctorId, serviceDate, locationId, allowPast, sessionId },
       { timeoutMs: TIMEOUTS.SERVICE_CALL },
     );
 

@@ -130,6 +130,18 @@ export class AppointmentsController {
     );
   }
 
+  @Public()
+  @Delete('hold')
+  @SuccessMessage('Schedule slot released successfully')
+  async releaseHold(@Body() dto: EventTempDto) {
+    return this.microserviceService.sendWithTimeout(
+      this.bookingClient,
+      BOOKING_PATTERNS.RELEASE_EVENT_TEMP,
+      dto,
+      { timeoutMs: 8000 },
+    );
+  }
+
   @RequireUpdatePermission('appointments')
   @Patch(':id')
   @SuccessMessage('Appointment updated successfully')

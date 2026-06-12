@@ -14,6 +14,7 @@ const HOLD_KEY_PREFIX = 'hold';
 export interface TimeSlot {
   timeStart: string;
   timeEnd: string;
+  status?: 'AVAILABLE' | 'HELD' | 'HELD_BY_ME';
 }
 
 export interface MonthAvailabilityResponseDto {
@@ -42,13 +43,14 @@ export class SlotService {
     locationId: string,
     dateStr: string, // format YYYY-MM-DD
     allowPast = false,
+    sessionId?: string,
   ): Promise<TimeSlot[]> {
     const cacheKey = `${SLOT_MATRIX_KEY_PREFIX}:${doctorId}:${dateStr}`;
 
     // 1. Try Cache
     const cached = await this.redis.getJson<TimeSlot[]>(cacheKey);
     if (cached) {
-      return this.filterOutHeldSlots(doctorId, dateStr, cached);
+      return this.filterOutHeldSlots(doctorId, dateStr, cached, sessionId);
     }
 
     // 2. Cache Miss: Acquire Mutex
@@ -60,7 +62,12 @@ export class SlotService {
       await new Promise((resolve) => setTimeout(resolve, 500));
       const retryCache = await this.redis.getJson<TimeSlot[]>(cacheKey);
       if (retryCache)
-        return this.filterOutHeldSlots(doctorId, dateStr, retryCache);
+        return this.filterOutHeldSlots(
+          doctorId,
+          dateStr,
+          retryCache,
+          sessionId,
+        );
     }
 
     try {
@@ -75,7 +82,7 @@ export class SlotService {
       // 4. Save to Cache
       await this.redis.setJson(cacheKey, rawSlots, SLOT_MATRIX_TTL_SECONDS);
 
-      return this.filterOutHeldSlots(doctorId, dateStr, rawSlots);
+      return this.filterOutHeldSlots(doctorId, dateStr, rawSlots, sessionId);
     } finally {
       if (acquired) {
         await this.redis.del(mutexKey);
@@ -249,28 +256,51 @@ export class SlotService {
   }
 
   /**
-   * EC-2 safe: Use SCAN with COUNT instead of KEYS
+   * Evaluates slot status considering holds and the requesting sessionId.
    */
   private async filterOutHeldSlots(
     doctorId: string,
     dateStr: string,
     slots: TimeSlot[],
+    sessionId?: string,
   ): Promise<TimeSlot[]> {
     const pattern = `${HOLD_KEY_PREFIX}:${doctorId}:${dateStr}:*`;
-    const heldTimeStarts = new Set<string>();
     let cursor = '0';
+    const heldKeys: string[] = [];
 
     do {
       const [nextCursor, keys] = await this.redis.scan(cursor, pattern, 100);
-      for (const key of keys) {
-        const parts = key.split(':');
-        const timeStart = parts[parts.length - 1];
-        if (timeStart) heldTimeStarts.add(timeStart);
-      }
+      heldKeys.push(...keys);
       cursor = nextCursor;
     } while (cursor !== '0');
 
-    return slots.filter((slot) => !heldTimeStarts.has(slot.timeStart));
+    if (heldKeys.length === 0) {
+      return slots.map((slot) => ({ ...slot, status: 'AVAILABLE' }));
+    }
+
+    const heldValues = await Promise.all(
+      heldKeys.map((k) => this.redis.get(k)),
+    );
+    const heldMap = new Map<string, string>(); // timeStart -> userId
+
+    for (let i = 0; i < heldKeys.length; i++) {
+      const key = heldKeys[i];
+      const val = heldValues[i];
+      if (val) {
+        const parts = key.split(':');
+        const timeStart = parts[parts.length - 1];
+        heldMap.set(timeStart, val);
+      }
+    }
+
+    return slots.map((slot) => {
+      const heldBy = heldMap.get(slot.timeStart);
+      let status: 'AVAILABLE' | 'HELD' | 'HELD_BY_ME' = 'AVAILABLE';
+      if (heldBy) {
+        status = sessionId && heldBy === sessionId ? 'HELD_BY_ME' : 'HELD';
+      }
+      return { ...slot, status };
+    });
   }
 
   async listMonthAvailability(

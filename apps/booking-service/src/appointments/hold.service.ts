@@ -1,8 +1,9 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { RedisService } from '@app/redis';
 
-const HOLD_TTL_SECONDS = 300; // 5 minutes
+const HOLD_TTL_SECONDS = 600; // 10 minutes
 const HOLD_KEY_PREFIX = 'hold';
+const HOLD_USER_PREFIX = 'hold_user';
 
 @Injectable()
 export class HoldService {
@@ -13,6 +14,7 @@ export class HoldService {
   /**
    * Acquire a temporary slot hold using Redis NX (set if not exists).
    * Returns true if hold was acquired, false if already held by another user.
+   * Auto-releases any previous hold by the same user.
    */
   async holdSlot(
     doctorId: string,
@@ -21,7 +23,15 @@ export class HoldService {
     userId: string,
   ): Promise<boolean> {
     const key = this.buildKey(doctorId, date, timeStart);
-    // NX = only set if key does not exist (atomic lock)
+    const userKey = `${HOLD_USER_PREFIX}:${userId}`;
+
+    // Auto-release previous hold if different from the requested one
+    const previousHoldKey = await this.redis.get(userKey);
+    if (previousHoldKey && previousHoldKey !== key) {
+      await this.redis.del(previousHoldKey);
+    }
+
+    // Use raw ioredis pipeline to achieve SET NX EX
     const result = await this.redis
       .pipeline()
       .set(key, userId, 'EX', HOLD_TTL_SECONDS, 'NX')
@@ -29,10 +39,22 @@ export class HoldService {
 
     const setResult = result?.[0]?.[1];
     const acquired = setResult === 'OK';
-    if (!acquired) {
-      this.logger.debug(`Slot already held: ${key}`);
+
+    if (acquired) {
+      await this.redis.set(userKey, key, HOLD_TTL_SECONDS);
+      return true;
     }
-    return acquired;
+
+    // Check if the user is already holding THIS key (re-acquiring)
+    const currentHolder = await this.redis.get(key);
+    if (currentHolder === userId) {
+      await this.redis.expire(key, HOLD_TTL_SECONDS);
+      await this.redis.set(userKey, key, HOLD_TTL_SECONDS);
+      return true;
+    }
+
+    this.logger.debug(`Slot already held: ${key}`);
+    return false;
   }
 
   /**
@@ -42,9 +64,14 @@ export class HoldService {
     doctorId: string,
     date: string,
     timeStart: string,
+    userId?: string,
   ): Promise<void> {
     const key = this.buildKey(doctorId, date, timeStart);
     await this.redis.del(key);
+
+    if (userId) {
+      await this.redis.del(`${HOLD_USER_PREFIX}:${userId}`);
+    }
   }
 
   /**

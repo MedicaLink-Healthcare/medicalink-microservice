@@ -19,6 +19,7 @@ export class SlotsController {
       locationId: string;
       serviceDate: string;
       allowPast?: boolean;
+      sessionId?: string;
     },
   ): Promise<TimeSlot[]> {
     return this.slotService.getAvailableSlots(
@@ -26,6 +27,7 @@ export class SlotsController {
       dto.locationId,
       dto.serviceDate,
       dto.allowPast,
+      dto.sessionId,
     );
   }
 

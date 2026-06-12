@@ -26,4 +26,8 @@ export class ScheduleSlotsPublicQueryDto {
     else return false;
   })
   allowPast?: boolean;
+
+  @IsOptional()
+  @IsString({ message: 'sessionId must be a string' })
+  sessionId?: string;
 }

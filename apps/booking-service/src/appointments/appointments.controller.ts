@@ -116,12 +116,12 @@ export class AppointmentsController {
 
   @MessagePattern(BOOKING_PATTERNS.CREATE_EVENT_TEMP)
   async createTempEvent(@Payload() body: EventTempDto) {
-    const expiresAt = new Date(Date.now() + 10 * 60 * 1000);
-    return this.appointmentsService.createTempEvent({
-      ...body,
-      isTempHold: true,
-      expiresAt,
-    });
+    return this.appointmentsService.createTempEvent(body);
+  }
+
+  @MessagePattern(BOOKING_PATTERNS.RELEASE_EVENT_TEMP)
+  async releaseTempEvent(@Payload() body: EventTempDto) {
+    return this.appointmentsService.releaseTempEvent(body);
   }
 
   @MessagePattern(BOOKING_PATTERNS.REVENUE_STATS)

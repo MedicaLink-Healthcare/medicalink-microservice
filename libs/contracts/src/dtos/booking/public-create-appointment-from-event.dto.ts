@@ -3,7 +3,27 @@ import { IsNotEmpty, IsString, IsOptional } from 'class-validator';
 export class PublicCreateAppointmentFromEventDto {
   @IsString()
   @IsNotEmpty()
-  eventId: string;
+  doctorId: string;
+
+  @IsString()
+  @IsNotEmpty()
+  locationId: string;
+
+  @IsString()
+  @IsNotEmpty()
+  serviceDate: string;
+
+  @IsString()
+  @IsNotEmpty()
+  timeStart: string;
+
+  @IsString()
+  @IsNotEmpty()
+  timeEnd: string;
+
+  @IsString()
+  @IsOptional()
+  sessionId?: string;
 
   @IsString()
   @IsNotEmpty()
