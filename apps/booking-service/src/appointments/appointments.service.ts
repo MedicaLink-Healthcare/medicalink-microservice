@@ -238,7 +238,6 @@ export class AppointmentsService {
       allowPast: false,
     });
 
-    const now = new Date();
     const serviceDateUtc = toUtcDate(dto.serviceDate);
     const timeStartUtc = combineDateWithTimeUtc(dto.serviceDate, dto.timeStart);
     const timeEndUtc = combineDateWithTimeUtc(dto.serviceDate, dto.timeEnd);
