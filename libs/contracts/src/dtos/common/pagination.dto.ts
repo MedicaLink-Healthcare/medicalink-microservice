@@ -18,7 +18,7 @@ export class PaginationDto {
   @IsOptional()
   @IsNumber({}, { message: 'Limit must be a number' })
   @Min(1, { message: 'Limit must be greater than 0' })
-  @Max(100, { message: 'Limit must not exceed 100' })
+  @Max(1000, { message: 'Limit must not exceed 1000' })
   @Transform(({ value }) => parseInt(String(value), 10))
   limit?: number = 10;
 
