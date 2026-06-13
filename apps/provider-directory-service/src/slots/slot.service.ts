@@ -97,7 +97,8 @@ export class SlotService {
     allowPast: boolean,
   ): Promise<TimeSlot[]> {
     const targetDate = dayjs.utc(dateStr).startOf('day');
-    const dayOfWeek = targetDate.day(); // 0 (Sun) to 6 (Sat)
+    const jsDay = targetDate.day(); // 0 (Sun) to 6 (Sat)
+    const dayOfWeek = jsDay === 0 ? 7 : jsDay;
     const localNow = dayjs().tz('Asia/Ho_Chi_Minh');
 
     if (
@@ -143,25 +144,33 @@ export class SlotService {
     }
 
     // 2. Fetch Data from 4 Layers
-    const [regularHours, clinicHolidays, doctorExceptions, specialShifts] =
-      await Promise.all([
-        this.prisma.officeHours.findMany({
-          where: { doctorId, workLocationId: locationId, dayOfWeek },
-        }),
-        this.prisma.clinicException.findMany({
-          where: { date: toUtcDate(dateStr) },
-        }),
-        this.prisma.doctorException.findMany({
-          where: { doctorId, date: toUtcDate(dateStr) },
-        }),
-        this.prisma.specialShift.findMany({
-          where: {
-            doctorId,
-            workLocationId: locationId,
-            date: toUtcDate(dateStr),
-          },
-        }),
-      ]);
+    const [
+      globalHours,
+      doctorHours,
+      clinicHolidays,
+      doctorExceptions,
+      specialShifts,
+    ] = await Promise.all([
+      this.prisma.officeHours.findMany({
+        where: { isGlobal: true, dayOfWeek },
+      }),
+      this.prisma.officeHours.findMany({
+        where: { doctorId, workLocationId: locationId, dayOfWeek },
+      }),
+      this.prisma.clinicException.findMany({
+        where: { date: toUtcDate(dateStr) },
+      }),
+      this.prisma.doctorException.findMany({
+        where: { doctorId, date: toUtcDate(dateStr) },
+      }),
+      this.prisma.specialShift.findMany({
+        where: {
+          doctorId,
+          workLocationId: locationId,
+          date: toUtcDate(dateStr),
+        },
+      }),
+    ]);
 
     // Helper function to apply layer
     const applyLayer = (
@@ -181,6 +190,11 @@ export class SlotService {
     };
 
     // Layer 1: Regular Hours (Priority 10 - ENABLE)
+    const globalFiltered = globalHours.filter(
+      (h) => !h.workLocationId || h.workLocationId === locationId,
+    );
+    const regularHours = doctorHours.length > 0 ? doctorHours : globalFiltered;
+
     for (const shift of regularHours) {
       applyLayer(
         dayjs.utc(shift.startTime).format('HH:mm'),

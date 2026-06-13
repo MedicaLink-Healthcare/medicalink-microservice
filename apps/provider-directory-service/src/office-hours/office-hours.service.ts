@@ -167,26 +167,55 @@ export class OfficeHoursService {
       }
     }
 
-    if (doctorId && workLocationId) {
-      const tier1 = await this.findWithDoctorAndLocation({
-        doctorId,
-        workLocationId,
-      });
-      if (tier1.length > 0) return tier1;
+    const globalHours = await this.findGlobal();
+    const locationHours = workLocationId
+      ? await this.findWithLocation(workLocationId)
+      : [];
+    const doctorHours = doctorId ? await this.findWithDoctor(doctorId) : [];
+    const doctorLocationHours =
+      doctorId && workLocationId
+        ? await this.findWithDoctorAndLocation({ doctorId, workLocationId })
+        : [];
+
+    const result: OfficeHoursResponseDto[] = [];
+
+    // Resolve schedule for each day of the week (1 to 7)
+    for (let day = 1; day <= 7; day++) {
+      // Tier 1: Doctor + Location specific
+      const tier1 = doctorLocationHours.filter((h) => h.dayOfWeek === day);
+      if (tier1.length > 0) {
+        result.push(...tier1);
+        continue;
+      }
+
+      // Tier 2: Doctor specific (no specific location bound)
+      const tier2 = doctorHours.filter(
+        (h) => h.dayOfWeek === day && !h.workLocationId,
+      );
+      if (tier2.length > 0) {
+        result.push(...tier2);
+        continue;
+      }
+
+      // Tier 3: Location specific (no specific doctor bound)
+      const tier3 = locationHours.filter(
+        (h) => h.dayOfWeek === day && !h.doctorId,
+      );
+      if (tier3.length > 0) {
+        result.push(...tier3);
+        continue;
+      }
+
+      // Tier 4: Global
+      const tier4 = globalHours.filter(
+        (h) => h.dayOfWeek === day && !h.workLocationId && !h.doctorId,
+      );
+      if (tier4.length > 0) {
+        result.push(...tier4);
+      }
     }
 
-    if (doctorId) {
-      const tier2 = await this.findWithDoctor(doctorId);
-      if (tier2.length > 0) return tier2;
-    }
-
-    if (workLocationId) {
-      const tier3 = await this.findWithLocation(workLocationId);
-      if (tier3.length > 0) return tier3;
-    }
-
-    const tier4 = await this.findGlobal();
-    return tier4;
+    return result;
   }
 
   private async findWithDoctorAndLocation({
