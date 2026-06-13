@@ -65,7 +65,12 @@ export class SpecialShiftsService {
     if (query.doctorId) {
       where.doctorId = await this.doctorRepo.resolveDoctorId(query.doctorId);
     }
-    if (query.workLocationId) where.workLocationId = query.workLocationId;
+    if (query.workLocationId) {
+      where.OR = [
+        { workLocationId: query.workLocationId },
+        { workLocationId: null },
+      ];
+    }
     if (query.effectiveDate) where.date = toUtcDate(query.effectiveDate);
 
     const shifts = await this.prisma.specialShift.findMany({ where });
