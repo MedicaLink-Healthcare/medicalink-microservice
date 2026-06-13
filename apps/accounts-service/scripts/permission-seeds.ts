@@ -457,6 +457,7 @@ const ROLE_PERMISSION_MAPPING = {
       'appointments:update',
       'doctors:read',
       'office-hours:read',
+      'holidays:read',
       'schedules:read',
       'schedules:update',
       'reviews:read',
