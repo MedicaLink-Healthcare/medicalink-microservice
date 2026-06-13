@@ -20,7 +20,11 @@ export class OfficeHoursService {
   ) {}
 
   async findAll(query: OfficeHoursQueryDto) {
-    const { doctorId, workLocationId } = query;
+    let { doctorId } = query;
+    const { workLocationId } = query;
+    if (doctorId) {
+      doctorId = await this.doctorRepo.resolveDoctorId(doctorId);
+    }
 
     let globalHours: OfficeHoursResponseDto[] = [];
     let doctorSpecific: OfficeHoursResponseDto[] = [];
@@ -55,6 +59,10 @@ export class OfficeHoursService {
   }
 
   async create(dto: CreateOfficeHoursDto) {
+    if (dto.doctorId) {
+      dto.doctorId = await this.doctorRepo.resolveDoctorId(dto.doctorId);
+    }
+
     await this.validateNoOverlap(
       dto.doctorId || null,
       dto.workLocationId || null,
@@ -75,8 +83,13 @@ export class OfficeHoursService {
     const newStart = dto.startTime ?? oldDto.startTime;
     const newEnd = dto.endTime ?? oldDto.endTime;
     const newDay = dto.dayOfWeek ?? oldDto.dayOfWeek;
-    const newDocId =
-      dto.doctorId !== undefined ? dto.doctorId : oldDto.doctorId;
+    let newDocId = dto.doctorId !== undefined ? dto.doctorId : oldDto.doctorId;
+
+    if (newDocId) {
+      newDocId = await this.doctorRepo.resolveDoctorId(newDocId);
+      if (dto.doctorId !== undefined) dto.doctorId = newDocId;
+    }
+
     const newLocId =
       dto.workLocationId !== undefined
         ? dto.workLocationId
@@ -136,7 +149,11 @@ export class OfficeHoursService {
   }
 
   async findPriority(query: OfficeHoursQueryDto) {
-    const { doctorId, workLocationId, strict } = query;
+    let { doctorId } = query;
+    const { workLocationId, strict } = query;
+    if (doctorId) {
+      doctorId = await this.doctorRepo.resolveDoctorId(doctorId);
+    }
 
     if (strict && doctorId && workLocationId) {
       const isLinked = await this.doctorRepo.hasWorkLocation(

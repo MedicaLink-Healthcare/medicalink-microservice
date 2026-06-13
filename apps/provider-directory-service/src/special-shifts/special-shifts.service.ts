@@ -4,6 +4,7 @@ import {
   BadRequestException,
 } from '@nestjs/common';
 import { PrismaService } from '../../prisma/prisma.service';
+import { DoctorRepository } from '../doctors/doctor.repository';
 import {
   CreateSpecialShiftDto,
   UpdateSpecialShiftDto,
@@ -13,9 +14,15 @@ import { toUtcDate } from '@app/commons/utils';
 
 @Injectable()
 export class SpecialShiftsService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly doctorRepo: DoctorRepository,
+  ) {}
 
   async create(data: CreateSpecialShiftDto) {
+    if (data.doctorId) {
+      data.doctorId = await this.doctorRepo.resolveDoctorId(data.doctorId);
+    }
     const targetDate = toUtcDate(data.effectiveDate);
     const reqStart = new Date(`1970-01-01T${data.startTime}:00Z`);
     const reqEnd = new Date(`1970-01-01T${data.endTime}:00Z`);
@@ -55,7 +62,9 @@ export class SpecialShiftsService {
 
   async findAll(query: SpecialShiftQueryDto) {
     const where: any = {};
-    if (query.doctorId) where.doctorId = query.doctorId;
+    if (query.doctorId) {
+      where.doctorId = await this.doctorRepo.resolveDoctorId(query.doctorId);
+    }
     if (query.workLocationId) where.workLocationId = query.workLocationId;
     if (query.effectiveDate) where.date = toUtcDate(query.effectiveDate);
 

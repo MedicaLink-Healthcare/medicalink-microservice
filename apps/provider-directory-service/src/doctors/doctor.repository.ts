@@ -180,6 +180,29 @@ export class DoctorRepository {
     };
   }
 
+  async findById(id: string): Promise<any | null> {
+    return this.prisma.doctor.findUnique({
+      where: { id },
+    });
+  }
+
+  /**
+   * Resolves a given ID string to the internal Doctor.id.
+   * Useful because the frontend or other services might send a staffAccountId instead of the Doctor.id.
+   */
+  async resolveDoctorId(idOrStaffId: string): Promise<string> {
+    if (!idOrStaffId) return idOrStaffId;
+
+    const doctor = await this.prisma.doctor.findFirst({
+      where: {
+        OR: [{ id: idOrStaffId }, { staffAccountId: idOrStaffId }],
+      },
+      select: { id: true },
+    });
+
+    return doctor ? doctor.id : idOrStaffId;
+  }
+
   async hasWorkLocation(
     doctorId: string,
     locationId: string,

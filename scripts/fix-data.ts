@@ -26,21 +26,34 @@ async function main() {
           'Creating global office hours for location:',
           workLocation.id,
         );
-        for (let day = 1; day <= 5; day++) {
-          const startTime = new Date('1970-01-01T08:00:00.000Z');
-          const endTime = new Date('1970-01-01T17:00:00.000Z');
+        for (let day = 1; day <= 7; day++) {
+          const morningStart = new Date('1970-01-01T08:00:00.000Z');
+          const morningEnd = new Date('1970-01-01T12:00:00.000Z');
+          const afternoonStart = new Date('1970-01-01T13:00:00.000Z');
+          const afternoonEnd = new Date('1970-01-01T17:00:00.000Z');
 
-          await providerPrisma.officeHours.create({
-            data: {
-              isGlobal: true,
-              workLocationId: workLocation.id,
-              dayOfWeek: day,
-              startTime,
-              endTime,
-            },
+          await providerPrisma.officeHours.createMany({
+            data: [
+              {
+                isGlobal: true,
+                workLocationId: workLocation.id,
+                dayOfWeek: day,
+                startTime: morningStart,
+                endTime: morningEnd,
+              },
+              {
+                isGlobal: true,
+                workLocationId: workLocation.id,
+                dayOfWeek: day,
+                startTime: afternoonStart,
+                endTime: afternoonEnd,
+              },
+            ],
           });
         }
-        console.log('Global office hours created.');
+        console.log(
+          'Global office hours created for all 7 days (morning & afternoon).',
+        );
       } else {
         console.log('Global office hours already exist.');
       }
