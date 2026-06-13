@@ -4,6 +4,7 @@ import { defaultIfEmpty, firstValueFrom, timeout } from 'rxjs';
 
 export interface MicroserviceCallOptions {
   timeoutMs?: number;
+  suppressErrorLog?: boolean;
 }
 
 @Injectable()
@@ -30,9 +31,11 @@ export class MicroserviceService {
           .pipe(timeout(timeoutMs), defaultIfEmpty(null as T)),
       );
     } catch (error) {
-      const msg = error?.message || error?.name || JSON.stringify(error);
-      this.logger.error(`Error sending message to ${serviceName}: ${msg}`);
-      this.logger.debug(error);
+      if (!options.suppressErrorLog) {
+        const msg = error?.message || error?.name || JSON.stringify(error);
+        this.logger.error(`Error sending message to ${serviceName}: ${msg}`);
+        this.logger.debug(error);
+      }
       throw error;
     }
   }

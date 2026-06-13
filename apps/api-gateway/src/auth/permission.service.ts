@@ -367,6 +367,10 @@ export class PermissionService {
     }
 
     try {
+      if (doctorId === userId) {
+        return true;
+      }
+
       const cachedOwner = await this.getCachedOwnerId('doctors', doctorId);
       let ownerId: string | undefined = cachedOwner || undefined;
 
@@ -377,7 +381,7 @@ export class PermissionService {
           this.providerDirectoryClient,
           DOCTOR_PROFILES_PATTERNS.FIND_ONE,
           doctorId,
-          { timeoutMs: 5000 },
+          { timeoutMs: 5000, suppressErrorLog: true },
         );
         ownerId = doctor?.staffAccountId;
         if (ownerId) {
@@ -411,7 +415,7 @@ export class PermissionService {
           this.contentClient,
           BLOGS_PATTERNS.GET_BY_ID,
           { id: blogId },
-          { timeoutMs: 5000 },
+          { timeoutMs: 5000, suppressErrorLog: true },
         );
         ownerId = blog?.authorId;
         if (ownerId) {
@@ -450,7 +454,7 @@ export class PermissionService {
           this.contentClient,
           ANSWERS_PATTERNS.GET_BY_ID,
           { id: answerId },
-          { timeoutMs: 5000 },
+          { timeoutMs: 5000, suppressErrorLog: true },
         );
         ownerId = answer?.authorId;
         if (ownerId) {
