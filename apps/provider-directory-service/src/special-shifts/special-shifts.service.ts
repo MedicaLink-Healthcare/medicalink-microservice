@@ -187,8 +187,8 @@ export class SpecialShiftsService {
     return {
       ...shift,
       effectiveDate: shift.date,
-      startTime: fmt(shift.startTime),
-      endTime: fmt(shift.endTime),
+      startTime: fmt(shift.startTime as Date),
+      endTime: fmt(shift.endTime as Date),
     };
   }
 
