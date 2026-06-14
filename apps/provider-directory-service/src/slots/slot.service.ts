@@ -166,7 +166,7 @@ export class SlotService {
       this.prisma.specialShift.findMany({
         where: {
           doctorId,
-          workLocationId: locationId,
+          OR: [{ workLocationId: locationId }, { workLocationId: null }],
           date: toUtcDate(dateStr),
         },
       }),

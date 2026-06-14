@@ -11,12 +11,14 @@ import {
   SpecialShiftQueryDto,
 } from '@app/contracts';
 import { toUtcDate } from '@app/commons/utils';
+import { DoctorCacheInvalidationService } from '../cache/doctor-cache-invalidation.service';
 
 @Injectable()
 export class SpecialShiftsService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly doctorRepo: DoctorRepository,
+    private readonly cacheInvalidationService: DoctorCacheInvalidationService,
   ) {}
 
   async create(data: CreateSpecialShiftDto) {
@@ -57,6 +59,10 @@ export class SpecialShiftsService {
         reason: data.reason,
       },
     });
+    await this.cacheInvalidationService.invalidateSlotMatrix(
+      data.doctorId,
+      data.effectiveDate,
+    );
     return this.mapToResponse(created);
   }
 
@@ -73,7 +79,13 @@ export class SpecialShiftsService {
     }
     if (query.effectiveDate) where.date = toUtcDate(query.effectiveDate);
 
-    const shifts = await this.prisma.specialShift.findMany({ where });
+    const shifts = await this.prisma.specialShift.findMany({
+      where,
+      include: {
+        doctor: true,
+        workLocation: true,
+      },
+    });
     return shifts.map((s) => this.mapToResponse(s));
   }
 
@@ -137,21 +149,46 @@ export class SpecialShiftsService {
       where: { id },
       data: updateData,
     });
+
+    const dateStr = data.effectiveDate || String(shift.date);
+    await this.cacheInvalidationService.invalidateSlotMatrix(
+      shift.doctorId,
+      dateStr,
+    );
+
     return this.mapToResponse(updated);
   }
 
   async remove(id: string) {
     const shift = await this.prisma.specialShift.findUnique({ where: { id } });
     if (!shift) throw new NotFoundException('Special shift not found');
+
     await this.validateShrinkingWindow(shift.doctorId, shift.date);
     const deleted = await this.prisma.specialShift.delete({ where: { id } });
+
+    // Extract date string from Prisma DateTime object (assuming YYYY-MM-DD format)
+    const dateStr = shift.date.toISOString().split('T')[0];
+    await this.cacheInvalidationService.invalidateSlotMatrix(
+      shift.doctorId,
+      dateStr,
+    );
+
     return this.mapToResponse(deleted);
   }
 
   private mapToResponse(shift: any) {
+    const fmt = (d: Date | string): string => {
+      if (!d) return '';
+      const date = typeof d === 'string' ? new Date(d) : d;
+      const iso = date.toISOString();
+      return iso.substring(11, 16); // HH:mm
+    };
+
     return {
       ...shift,
       effectiveDate: shift.date,
+      startTime: fmt(shift.startTime),
+      endTime: fmt(shift.endTime),
     };
   }
 

@@ -73,9 +73,8 @@ export class BookedSlotsConsumer {
       });
 
       // Invalidate slot matrix cache
-      await this.redis.del(
-        `${SLOT_MATRIX_KEY_PREFIX}:${doctorId}:${serviceDate}`,
-      );
+      const dateStr = serviceDate.split('T')[0];
+      await this.redis.del(`${SLOT_MATRIX_KEY_PREFIX}:${doctorId}:${dateStr}`);
       this.logger.debug(`BookedSlot created for appt ${appointmentId}`);
     } catch (err: any) {
       this.logger.error(`Failed to handle APPOINTMENT_BOOKED: ${err?.message}`);
@@ -113,9 +112,8 @@ export class BookedSlotsConsumer {
       }
 
       // Invalidate slot matrix cache
-      await this.redis.del(
-        `${SLOT_MATRIX_KEY_PREFIX}:${doctorId}:${serviceDate}`,
-      );
+      const dateStr = serviceDate.split('T')[0];
+      await this.redis.del(`${SLOT_MATRIX_KEY_PREFIX}:${doctorId}:${dateStr}`);
       this.logger.debug(`BookedSlot removed for appt ${appointmentId}`);
     } catch (err: any) {
       this.logger.error(

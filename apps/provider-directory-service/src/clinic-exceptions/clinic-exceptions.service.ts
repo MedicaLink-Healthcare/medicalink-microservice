@@ -6,15 +6,19 @@ import {
   ClinicExceptionQueryDto,
 } from '@app/contracts';
 import { toUtcDate } from '@app/commons/utils';
+import { DoctorCacheInvalidationService } from '../cache/doctor-cache-invalidation.service';
 
 @Injectable()
 export class ClinicExceptionsService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly cacheInvalidationService: DoctorCacheInvalidationService,
+  ) {}
 
   async create(data: CreateClinicExceptionDto) {
     const targetDate = toUtcDate(data.date);
 
-    return this.prisma.clinicException.create({
+    const created = await this.prisma.clinicException.create({
       data: {
         workLocationId: data.workLocationId,
         date: targetDate,
@@ -24,6 +28,12 @@ export class ClinicExceptionsService {
         reason: data.reason,
       },
     });
+
+    await this.cacheInvalidationService.invalidateSlotMatrix(
+      undefined,
+      data.date,
+    );
+    return created;
   }
 
   async findAll(query: ClinicExceptionQueryDto) {
@@ -36,7 +46,9 @@ export class ClinicExceptionsService {
     }
     if (query.date) where.date = toUtcDate(query.date);
 
-    return this.prisma.clinicException.findMany({ where });
+    return this.prisma.clinicException.findMany({
+      where,
+    });
   }
 
   async findOne(id: string) {
@@ -59,14 +71,30 @@ export class ClinicExceptionsService {
     if (data.endTime !== undefined) updateData.endTime = data.endTime;
     if (data.reason !== undefined) updateData.reason = data.reason;
 
-    return this.prisma.clinicException.update({
+    const updated = await this.prisma.clinicException.update({
       where: { id },
       data: updateData,
     });
+
+    const dateStr = data.date || String(updated.date);
+    await this.cacheInvalidationService.invalidateSlotMatrix(
+      undefined,
+      dateStr,
+    );
+
+    return updated;
   }
 
   async remove(id: string) {
-    await this.findOne(id);
-    return this.prisma.clinicException.delete({ where: { id } });
+    const exception = await this.findOne(id);
+    const deleted = await this.prisma.clinicException.delete({ where: { id } });
+
+    const dateStr = exception.date.toISOString().split('T')[0];
+    await this.cacheInvalidationService.invalidateSlotMatrix(
+      undefined,
+      dateStr,
+    );
+
+    return deleted;
   }
 }

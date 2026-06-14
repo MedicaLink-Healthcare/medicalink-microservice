@@ -5,6 +5,7 @@ import { AppointmentsModule } from './appointments/appointments.module';
 import { PatientsModule } from './patients/patients.module';
 import { PrismaModule } from '../prisma/prisma.module';
 import { HealthController } from './health/health.controller';
+import { OutboxModule } from './outbox/outbox.module';
 
 @Module({
   imports: [
@@ -15,6 +16,7 @@ import { HealthController } from './health/health.controller';
     PrismaModule,
     AppointmentsModule,
     PatientsModule,
+    OutboxModule,
   ],
   controllers: [HealthController],
 })

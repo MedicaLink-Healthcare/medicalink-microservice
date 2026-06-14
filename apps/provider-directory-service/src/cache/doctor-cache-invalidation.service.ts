@@ -35,6 +35,18 @@ export class DoctorCacheInvalidationService {
     await this.invalidatePattern(`${this.doctorSearchPrefix}*`);
   }
 
+  async invalidateSlotMatrix(
+    doctorId?: string,
+    dateStr?: string,
+  ): Promise<void> {
+    if (!doctorId) {
+      // If no doctorId is provided (e.g. global clinic holiday), clear all slot matrices for that date
+      await this.invalidatePattern(`slot_matrix:*:${dateStr || '*'}`);
+    } else {
+      await this.invalidatePattern(`slot_matrix:${doctorId}:${dateStr || '*'}`);
+    }
+  }
+
   private async invalidatePattern(fullPattern: string): Promise<number> {
     const clientPrefix = this.redisService.getKeyPrefix();
     const directPattern = clientPrefix
