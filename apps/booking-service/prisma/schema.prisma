@@ -88,8 +88,8 @@ model Appointment {
   patient      Patient           @relation(fields: [patientId], references: [id], onDelete: Restrict)
   event        Event?            @relation(fields: [eventId], references: [id], onDelete: Restrict)
 
-  // Zero-collision constraint: one doctor can only have one booking per slot
-  @@unique([doctorId, serviceDate, timeStart], map: "uq_appointments_doctor_slot")
+  // Removed zero-collision constraint at DB level to allow re-booking cancelled slots
+  // Uniqueness is enforced at application layer via ensureAvailableSlot()
   @@index([doctorId, locationId, specialtyId], map: "idx_appointments_doctor_location_specialty")
   @@index([serviceDate], map: "idx_appointments_service_date")
   @@index([doctorId, serviceDate], map: "idx_appointments_doctor_date")
