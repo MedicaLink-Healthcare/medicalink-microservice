@@ -46,7 +46,7 @@ export class EmailConfigService {
   getAppointmentLookupUrl(): string {
     return this.config.get<string>(
       'CLIENT_APPOINTMENT_LOOKUP',
-      'https://client.medicalink.online/patient-lookup',
+      'https://client.medicalink.online/patient_lookup',
     );
   }
 
