@@ -18,20 +18,21 @@ export class ReviewOrchestratorService {
 
   async createReview(dto: CreateReviewDto) {
     this.logger.log(`Received create review request: ${JSON.stringify(dto)}`);
-    const { authorEmail, doctorProfileId, ...rest } = dto;
+    const { authorEmail, doctorProfileId, doctorId, ...rest } = dto;
+    const finalDoctorId = doctorId || doctorProfileId;
     let isPublic = false;
 
     // Step 1: Check if patient has completed appointment
-    if (authorEmail && doctorProfileId) {
+    if (authorEmail && finalDoctorId) {
       this.logger.log(
-        `Checking completion for ${authorEmail} and ${doctorProfileId}`,
+        `Checking completion for ${authorEmail} and ${finalDoctorId}`,
       );
       try {
         isPublic = await firstValueFrom(
           this.bookingClient
             .send<boolean>(BOOKING_PATTERNS.CHECK_COMPLETED, {
               email: authorEmail,
-              doctorId: doctorProfileId,
+              doctorId: finalDoctorId,
             })
             .pipe(
               timeout(5000),
@@ -58,9 +59,6 @@ export class ReviewOrchestratorService {
     this.logger.log(`Calling content service with isPublic=${isPublic}`);
 
     // Step 2: Call content service to create review with isPublic flag
-    // Ensure doctorId is present for content service from doctorProfileId if needed
-    const { doctorId } = dto;
-    const finalDoctorId = doctorId || doctorProfileId;
 
     const payload = {
       ...rest,
