@@ -58,7 +58,7 @@ export class ReviewsController {
         );
       }
       return profile.id;
-    } catch (error) {
+    } catch (_error) {
       throw new UnauthorizedException(
         'Doctor profile not found for this account',
       );
