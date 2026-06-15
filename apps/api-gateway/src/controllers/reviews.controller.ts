@@ -65,6 +65,26 @@ export class ReviewsController {
     }
   }
 
+  private async resolveDoctorId(id: string): Promise<string> {
+    if (id === 'me') return id;
+
+    try {
+      const profile = await firstValueFrom(
+        this.providerDirectoryClient
+          .send(DOCTOR_PROFILES_PATTERNS.GET_BY_ACCOUNT_ID, {
+            staffAccountId: id,
+          })
+          .pipe(timeout(2000)),
+      );
+      if (profile && profile.id) {
+        return profile.id;
+      }
+    } catch (_error) {
+      // If it fails (e.g., id is already a profile ID), fallback to original id
+    }
+    return id;
+  }
+
   // List all reviews (admin/staff)
   @RequireReadPermission('reviews')
   @Get()
@@ -95,10 +115,11 @@ export class ReviewsController {
     @Param('doctorId') doctorId: string,
     @Query() query: GetReviewsQueryDto,
   ) {
+    const resolvedId = await this.resolveDoctorId(doctorId);
     return this.microserviceService.sendWithTimeout(
       this.contentClient,
       REVIEWS_PATTERNS.GET_BY_DOCTOR,
-      { doctorId, ...query },
+      { doctorId: resolvedId, ...query },
     );
   }
 
@@ -149,6 +170,8 @@ export class ReviewsController {
     let resolvedDoctorId = dto.doctorId;
     if (resolvedDoctorId === 'me') {
       resolvedDoctorId = await this.getDoctorProfileIdByStaffId(user.sub);
+    } else {
+      resolvedDoctorId = await this.resolveDoctorId(resolvedDoctorId);
     }
 
     return this.microserviceService.sendWithTimeout(
@@ -167,10 +190,11 @@ export class ReviewsController {
     @Param('doctorId') doctorId: string,
     @Query() query: GetReviewAnalysesQueryDto,
   ) {
+    const resolvedId = await this.resolveDoctorId(doctorId);
     return this.microserviceService.sendWithTimeout(
       this.orchestratorClient,
       ORCHESTRATOR_PATTERNS.REVIEW_ANALYSIS_LIST_COMPOSITE,
-      { doctorId, query },
+      { doctorId: resolvedId, query },
     );
   }
 
