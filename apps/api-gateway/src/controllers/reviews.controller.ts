@@ -7,9 +7,11 @@ import {
   Post,
   Delete,
   Query,
+  UnauthorizedException,
 } from '@nestjs/common';
 import { ClientProxy } from '@nestjs/microservices';
 import { Throttle } from '@nestjs/throttler';
+import { firstValueFrom, timeout } from 'rxjs';
 import {
   Public,
   RequireDeletePermission,
@@ -25,6 +27,7 @@ import {
   CreateReviewDto,
   REVIEWS_PATTERNS,
   ORCHESTRATOR_PATTERNS,
+  DOCTOR_PROFILES_PATTERNS,
 } from '@app/contracts';
 import { MicroserviceService } from '../utils/microservice.service';
 import { PublicCreateThrottle } from '../utils/custom-throttle.decorator';
@@ -35,8 +38,43 @@ export class ReviewsController {
     @Inject('CONTENT_SERVICE') private readonly contentClient: ClientProxy,
     @Inject('ORCHESTRATOR_SERVICE')
     private readonly orchestratorClient: ClientProxy,
+    @Inject('PROVIDER_DIRECTORY_SERVICE')
+    private readonly providerDirectoryClient: ClientProxy,
     private readonly microserviceService: MicroserviceService,
   ) {}
+
+  private async getDoctorProfileIdByStaffId(
+    staffAccountId: string,
+  ): Promise<string> {
+    try {
+      const profile = await firstValueFrom(
+        this.providerDirectoryClient
+          .send(DOCTOR_PROFILES_PATTERNS.GET_BY_ACCOUNT_ID, { staffAccountId })
+          .pipe(timeout(5000)),
+      );
+      if (!profile || !profile.id) {
+        throw new UnauthorizedException(
+          'Doctor profile not found for this account',
+        );
+      }
+      return profile.id;
+    } catch (error) {
+      throw new UnauthorizedException(
+        'Doctor profile not found for this account',
+      );
+    }
+  }
+
+  // List all reviews (admin/staff)
+  @RequireReadPermission('reviews')
+  @Get()
+  async findAll(@Query() query: GetReviewsQueryDto) {
+    return this.microserviceService.sendWithTimeout(
+      this.contentClient,
+      REVIEWS_PATTERNS.GET_LIST,
+      query,
+    );
+  }
 
   // Public - create review
   @Public()
@@ -61,6 +99,21 @@ export class ReviewsController {
       this.contentClient,
       REVIEWS_PATTERNS.GET_BY_DOCTOR,
       { doctorId, ...query },
+    );
+  }
+
+  // List current logged-in doctor's reviews
+  @RequireReadPermission('reviews')
+  @Get('/staff/me')
+  async getMyReviews(
+    @CurrentUser() user: JwtPayloadDto,
+    @Query() query: GetReviewsQueryDto,
+  ) {
+    const profileId = await this.getDoctorProfileIdByStaffId(user.sub);
+    return this.microserviceService.sendWithTimeout(
+      this.contentClient,
+      REVIEWS_PATTERNS.GET_BY_DOCTOR,
+      { doctorId: profileId, ...query },
     );
   }
 
@@ -93,10 +146,15 @@ export class ReviewsController {
     @Body() dto: AnalyzeReviewDto,
     @CurrentUser() user: JwtPayloadDto,
   ) {
+    let resolvedDoctorId = dto.doctorId;
+    if (resolvedDoctorId === 'me') {
+      resolvedDoctorId = await this.getDoctorProfileIdByStaffId(user.sub);
+    }
+
     return this.microserviceService.sendWithTimeout(
       this.contentClient,
       REVIEWS_PATTERNS.ANALYZE,
-      { dto, userId: user.sub },
+      { dto: { ...dto, doctorId: resolvedDoctorId }, userId: user.sub },
       { timeoutMs: 15000 }, // 15 second timeout for AI operations
     );
   }
@@ -113,6 +171,21 @@ export class ReviewsController {
       this.orchestratorClient,
       ORCHESTRATOR_PATTERNS.REVIEW_ANALYSIS_LIST_COMPOSITE,
       { doctorId, query },
+    );
+  }
+
+  // Get historical analyses for current logged-in doctor
+  @RequireReadPermission('reviews')
+  @Get('staff/me/analyses')
+  async getMyReviewAnalyses(
+    @CurrentUser() user: JwtPayloadDto,
+    @Query() query: GetReviewAnalysesQueryDto,
+  ) {
+    const profileId = await this.getDoctorProfileIdByStaffId(user.sub);
+    return this.microserviceService.sendWithTimeout(
+      this.orchestratorClient,
+      ORCHESTRATOR_PATTERNS.REVIEW_ANALYSIS_LIST_COMPOSITE,
+      { doctorId: profileId, query },
     );
   }
 

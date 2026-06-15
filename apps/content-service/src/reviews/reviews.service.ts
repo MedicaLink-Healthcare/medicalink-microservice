@@ -29,9 +29,14 @@ export class ReviewsService {
   async createReview(
     createReviewDto: CreateReviewDto,
   ): Promise<ReviewResponseDto> {
-    await this.ensureDoctorExists(String(createReviewDto.doctorId));
+    const profileId = await this.ensureDoctorExists(
+      String(createReviewDto.doctorId),
+    );
 
-    return this.reviewRepository.createReview(createReviewDto);
+    return this.reviewRepository.createReview({
+      ...createReviewDto,
+      doctorId: profileId,
+    });
   }
 
   async getReviews(params: {
@@ -61,8 +66,11 @@ export class ReviewsService {
     doctorId: string;
     isPublic?: boolean;
   }) {
-    await this.ensureDoctorExists(String(params.doctorId));
-    const result = await this.reviewRepository.findReviewsByDoctorId(params);
+    const profileId = await this.ensureDoctorExists(String(params.doctorId));
+    const result = await this.reviewRepository.findReviewsByDoctorId({
+      ...params,
+      doctorId: profileId,
+    });
     const hasNext = params.page * params.limit < result.total;
     const hasPrev = params.page > 1;
     return {
@@ -102,13 +110,14 @@ export class ReviewsService {
     return this.reviewRepository.getReviewOverview();
   }
 
-  private async ensureDoctorExists(doctorId: string): Promise<void> {
+  private async ensureDoctorExists(doctorId: string): Promise<string> {
     try {
-      await firstValueFrom(
+      const profile = await firstValueFrom(
         this.providerDirectoryClient
           .send(DOCTOR_PROFILES_PATTERNS.FIND_ONE, doctorId)
           .pipe(timeout(8000)),
       );
+      return profile.id;
     } catch (_error) {
       throw new NotFoundError('Doctor not found');
     }
@@ -121,7 +130,7 @@ export class ReviewsService {
     userId: string,
   ): Promise<ReviewAnalysisResponseDto> {
     // Ensure doctor exists
-    await this.ensureDoctorExists(dto.doctorId);
+    const profileId = await this.ensureDoctorExists(dto.doctorId);
 
     // Calculate date ranges
     const dateRanges = this.calculateDateRanges(dto.dateRange);
@@ -129,13 +138,13 @@ export class ReviewsService {
     // Fetch reviews for both periods
     const [period1Reviews, period2Reviews] = await Promise.all([
       this.reviewRepository.findReviewsByDateRange({
-        doctorId: dto.doctorId,
+        doctorId: profileId,
         startDate: dateRanges.period1.start,
         endDate: dateRanges.period1.end,
         isPublic: dto.includeNonPublic ? undefined : true,
       }),
       this.reviewRepository.findReviewsByDateRange({
-        doctorId: dto.doctorId,
+        doctorId: profileId,
         startDate: dateRanges.period2.start,
         endDate: dateRanges.period2.end,
         isPublic: dto.includeNonPublic ? undefined : true,
@@ -151,7 +160,7 @@ export class ReviewsService {
     // Handle edge case: no reviews
     if (period1Stats.total === 0 && period2Stats.total === 0) {
       return this.reviewRepository.createReviewAnalysis({
-        doctorId: dto.doctorId,
+        doctorId: profileId,
         dateRange: dto.dateRange,
         includeNonPublic: dto.includeNonPublic ?? false,
         period1Total: 0,
@@ -189,7 +198,7 @@ export class ReviewsService {
 
     // Store analysis result
     return this.reviewRepository.createReviewAnalysis({
-      doctorId: dto.doctorId,
+      doctorId: profileId,
       dateRange: dto.dateRange,
       includeNonPublic: dto.includeNonPublic ?? false,
       period1Total: period1Stats.total,
@@ -212,13 +221,13 @@ export class ReviewsService {
     query: GetReviewAnalysesQueryDto,
   ) {
     // Validate doctor exists
-    await this.ensureDoctorExists(doctorId);
+    const profileId = await this.ensureDoctorExists(doctorId);
     const page = query.page ?? 1;
     const limit = query.limit ?? 10;
 
     // Query analyses via repository
     const result = await this.reviewRepository.findReviewAnalysesByDoctor({
-      doctorId,
+      doctorId: profileId,
       page,
       limit,
       dateRange: query.dateRange,
