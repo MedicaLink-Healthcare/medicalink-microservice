@@ -74,13 +74,18 @@ export class ReviewsController {
           .send(DOCTOR_PROFILES_PATTERNS.GET_BY_ACCOUNT_ID, {
             staffAccountId: id,
           })
-          .pipe(timeout(2000)),
+          .pipe(timeout(5000)),
       );
       if (profile && profile.id) {
         return profile.id;
       }
-    } catch (_error) {
+    } catch (error) {
       // If it fails (e.g., id is already a profile ID), fallback to original id
+      // Log the error for debugging purposes
+      console.warn(
+        `[resolveDoctorId] Failed to resolve staffAccountId ${id} to profileId. Falling back to original ID. Error:`,
+        error?.message || error,
+      );
     }
     return id;
   }
