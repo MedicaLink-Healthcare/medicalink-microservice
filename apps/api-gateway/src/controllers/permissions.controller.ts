@@ -96,13 +96,17 @@ export class PermissionsController {
 
   // Revoke permission from user
   @RequirePermission('permissions', 'manage')
-  @Delete('users/revoke')
+  @Delete('users/:userId/permissions/:permissionId')
   @SuccessMessage('Permission revoked from user successfully')
-  async revokeUserPermission(@Body() dto: RevokeUserPermissionDto) {
+  async revokeUserPermission(
+    @Param('userId') userId: string,
+    @Param('permissionId') permissionId: string,
+    @Query('tenantId') tenantId?: string,
+  ) {
     return this.microserviceService.sendWithTimeout(
       this.accountsClient,
       PERMISSION_PATTERNS.REVOKE_USER_PERMISSION,
-      dto,
+      { userId, permissionId, tenantId },
     );
   }
 
@@ -285,16 +289,17 @@ export class PermissionsController {
   }
 
   @RequirePermission('permissions', 'manage')
-  @Delete('groups/:groupId/permissions')
+  @Delete('groups/:groupId/permissions/:permissionId')
   @SuccessMessage('Group permission revoked successfully')
   async revokeGroupPermission(
     @Param('groupId') groupId: string,
-    @Body() dto: Omit<RevokeGroupPermissionDto, 'groupId'>,
+    @Param('permissionId') permissionId: string,
+    @Query('tenantId') tenantId?: string,
   ) {
     return this.microserviceService.sendWithTimeout(
       this.accountsClient,
       PERMISSION_GROUP_PATTERNS.REVOKE_GROUP_PERMISSION,
-      { ...dto, groupId },
+      { groupId, permissionId, tenantId },
     );
   }
 }
