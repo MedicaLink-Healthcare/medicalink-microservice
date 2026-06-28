@@ -19,8 +19,6 @@ import {
   CreatePermissionGroupDto,
   CurrentUser,
   RequirePermission,
-  RevokeGroupPermissionDto,
-  RevokeUserPermissionDto,
   UpdatePermissionGroupDto,
 } from '@app/contracts';
 import { MicroserviceService } from '../utils/microservice.service';
