@@ -35,7 +35,7 @@ export class StaffsService {
   ): Promise<PaginatedResponse<StaffResponse>> {
     const staffQuery = {
       ...query,
-      role: query.role || StaffRole.ADMIN,
+      role: query.role,
     };
     const { data, total } = await this.staffRepository.findMany(staffQuery);
     const { page = 1, limit = 10 } = query;
