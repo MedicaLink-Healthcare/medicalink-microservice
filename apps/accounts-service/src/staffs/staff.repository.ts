@@ -35,6 +35,8 @@ export class StaffRepository {
 
     if (role) {
       where.role = role;
+    } else if (query.excludeRole) {
+      where.role = { not: query.excludeRole };
     }
 
     if (search) {

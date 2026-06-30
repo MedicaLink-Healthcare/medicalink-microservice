@@ -32,6 +32,12 @@ export class StaffQueryDto {
   role?: 'SUPER_ADMIN' | 'ADMIN' | 'DOCTOR';
 
   @IsOptional()
+  @IsEnum(['SUPER_ADMIN', 'ADMIN', 'DOCTOR'], {
+    message: 'Exclude Role must be one of: SUPER_ADMIN, ADMIN, DOCTOR',
+  })
+  excludeRole?: 'SUPER_ADMIN' | 'ADMIN' | 'DOCTOR';
+
+  @IsOptional()
   @IsString({ message: 'Search term must be a string' })
   search?: string;
 
