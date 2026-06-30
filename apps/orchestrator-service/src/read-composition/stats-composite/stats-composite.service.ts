@@ -259,8 +259,8 @@ export class StatsCompositeService {
         }>
       >(
         this.providerClient,
-        DOCTOR_PROFILES_PATTERNS.GET_BY_ACCOUNT_IDS,
-        { staffAccountIds },
+        DOCTOR_PROFILES_PATTERNS.GET_BY_IDS,
+        { ids: staffAccountIds },
         { timeoutMs: 5000 },
       )
       .catch(
@@ -271,7 +271,7 @@ export class StatsCompositeService {
     // Convert array to map for easier lookup
     const profilesMap = Object.fromEntries(
       profiles.map((profile) => [
-        profile.staffAccountId,
+        profile.id,
         { id: profile.id, fullName: profile.fullName },
       ]),
     ) as Record<string, { id: string; fullName: string }>;

@@ -706,8 +706,8 @@ export class AppointmentsService {
         : AppointmentStatus.CANCELLED_BY_STAFF;
     const cancelNote = `
       <br/>
-      <p><b>Appointment cancelled by ${cancelledBy.toLowerCase()}</b></p>
-      <p><b>Reason: </b>${dto.reason || 'No reason provided'}</p>
+      <p><b>Lịch hẹn đã bị hủy bởi ${cancelledBy === 'PATIENT' ? 'bệnh nhân' : 'nhân viên'}</b></p>
+      <p><b>Lý do: </b>${dto.reason || 'Không có lý do'}</p>
     `;
 
     const updated = await this.prisma.$transaction(async (tx) => {

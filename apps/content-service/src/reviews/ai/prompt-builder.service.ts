@@ -29,7 +29,7 @@ export class PromptBuilderService {
     const period2Reviews = this.formatReviews(period2.reviews);
 
     return `
-You are a professional medical feedback analyst. Analyze the following doctor reviews and provide insights in English.
+You are a professional medical feedback analyst. Analyze the following doctor reviews and provide insights in Vietnamese language.
 
 ## Statistical Summary:
 - ${period1Name}: ${period1.total} reviews, average rating: ${period1.avg.toFixed(2)}/5
@@ -43,7 +43,7 @@ ${period1Reviews}
 ## ${period2Name} - Reviews:
 ${period2Reviews}
 
-Please provide a comprehensive analysis in English with rich HTML formatting:
+Please provide a comprehensive analysis in Vietnamese language with rich HTML formatting:
 
 1. **Summary**: Brief overview of the doctor's review performance (2-3 sentences). Use <p> tags for paragraphs and <strong> for emphasis.
 
@@ -65,7 +65,7 @@ Please provide a comprehensive analysis in English with rich HTML formatting:
    - Use <strong> to highlight action items within items
 
 IMPORTANT:
-- Return content in English language
+- Return content in Vietnamese language (Tiếng Việt)
 - All content must be properly formatted HTML
 - Use semantic HTML tags: <p>, <strong>, <ul>, <li>
 - Do NOT include wrapper <div> or <html> tags, only the content tags
