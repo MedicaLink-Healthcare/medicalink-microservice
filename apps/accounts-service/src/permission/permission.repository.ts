@@ -518,13 +518,11 @@ export class PermissionRepository {
       // First, validate that the user exists
       await this.validateUserExists(userId);
 
-      await this.prisma.userPermission.delete({
+      await this.prisma.userPermission.deleteMany({
         where: {
-          userId_permissionId_tenantId: {
-            userId,
-            permissionId,
-            tenantId,
-          },
+          userId,
+          permissionId,
+          tenantId,
         },
       });
 
@@ -585,13 +583,11 @@ export class PermissionRepository {
       // Validate that the group exists
       await this.validateGroupExists(groupId);
 
-      await this.prisma.userGroup.delete({
+      await this.prisma.userGroup.deleteMany({
         where: {
-          userId_groupId_tenantId: {
-            userId,
-            groupId,
-            tenantId,
-          },
+          userId,
+          groupId,
+          tenantId,
         },
       });
 
@@ -854,12 +850,10 @@ export class PermissionRepository {
       // Validate that the group exists
       await this.validateGroupExists(groupId);
 
-      await this.prisma.groupPermission.delete({
+      await this.prisma.groupPermission.deleteMany({
         where: {
-          groupId_permissionId: {
-            groupId,
-            permissionId,
-          },
+          groupId,
+          permissionId,
         },
       });
     } catch (error) {
