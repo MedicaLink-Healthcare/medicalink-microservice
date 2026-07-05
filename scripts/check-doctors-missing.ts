@@ -1,7 +1,7 @@
-import { PrismaClient as AccountsClient } from './apps/accounts-service/prisma/generated/client';
-import { PrismaClient as ProviderClient } from './apps/provider-directory-service/prisma/generated/client';
-import { PrismaClient as ContentClient } from './apps/content-service/prisma/generated/client';
-import { PrismaClient as BookingClient } from './apps/booking-service/prisma/generated/client';
+import { PrismaClient as AccountsClient } from '../apps/accounts-service/prisma/generated/client';
+import { PrismaClient as ProviderClient } from '../apps/provider-directory-service/prisma/generated/client';
+import { PrismaClient as ContentClient } from '../apps/content-service/prisma/generated/client';
+import { PrismaClient as BookingClient } from '../apps/booking-service/prisma/generated/client';
 
 const ACCOUNTS_DB_URL =
   'postgresql://postgres:postgres@127.0.0.1:5432/medicalink_accounts';
